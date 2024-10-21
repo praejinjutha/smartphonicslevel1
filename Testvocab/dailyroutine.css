@@ -1,0 +1,529 @@
+
+.navbar {
+  top: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../Testvocab/img/ordinal/bgdailyroutine.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+}
+
+.container {
+  width:100%; 
+  height: 100%;
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; 
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #DE56A1;
+  text-shadow: 0 0 10px #1B2654, 0 0 20px #1B2654, 0 0 30px #1B2654;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px #ffffff;
+  letter-spacing: 5px;
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+
+.image {
+  width: 110%;
+  height: 100%;
+  margin-top: 3%;
+  margin-left: -6%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -9%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 4.5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -9%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+
+/*ลุกจากที่นอน*/
+.container-getup {
+  position: absolute;
+  top: 17%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 6; 
+}
+
+/*เก็บที่นอน, ทำเตียงให้เรียบร้อย*/
+.container-makethebed {
+  position: absolute;
+  top: 16%;
+  left: 32.5%;
+  transform: translate(-50%, -50%);
+  width: 11.5%; 
+  z-index: 5; 
+}
+
+/*แปรงฟัน*/
+.container-brushteeth {
+  position: absolute;
+  top: 17%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 3; 
+}
+
+/*ล้างหน้า*/
+.container-washface {
+  position: absolute;
+  top: 16.5%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 4; 
+}
+
+/*รับประทานอาหารเช้า*/
+.container-havebreakfast{
+  position: absolute;
+  top: 49.5%;
+  left: 3.5%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 6; 
+}
+
+/*รับประทานอาหารเย็น*/
+.container-havedinner {
+  position: absolute;
+  top: 82%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 3; 
+}
+
+/*ดูโทรทัศน์*/
+.container-watchtv{
+  position: absolute;
+  top: 83%;
+  left: 32.5%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 2; 
+}
+
+/*ไปโรงเรียน*/
+.container-gotoschool {
+  position: absolute;
+  top: 51%;
+  left: 18.2%;
+  transform: translate(-50%, -50%);
+  width: 13.5%; 
+  z-index: 5; 
+}
+
+/*อาบน้ำ*/
+.container-haveashower {
+  position: absolute;
+  top: 18.5%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 2; 
+}
+
+/*แต่งตัว*/
+.container-getdressed {
+  position: absolute;
+  top: 19%;
+  left: 93.3%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 1; 
+}
+
+
+/*เรียนหนังสือ*/
+.container-learnatschool {
+  position: absolute;
+  top: 49.5%;
+  left: 34.7%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 4; 
+}
+
+/*รับประทานอาหารกลางวัน*/
+.container-havelunch {
+  position: absolute;
+  top: 48.5%;
+  left: 63.5%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 3;
+}
+
+/*กลับบ้าน*/
+.container-gobackhome {
+  position: absolute;
+  top: 48.5%;
+  left: 78.5%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 2; 
+}
+
+/*ทำการบ้าน*/
+.container-dohomework {
+  position: absolute;
+  top: 49.5%;
+  left: 93.5%;
+  transform: translate(-50%, -50%);
+  width: 12.5%; 
+  z-index: 1; 
+}
+
+/*นอนหลับ*/
+.container-gotosleep {
+  position: absolute;
+  top: 82.5%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 11.5%; 
+  z-index: 1; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -35px;
+  left: 40px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8;
+  padding-top: 5px;
+  z-index: -4; 
+}
+
+.container-gotosleep img,.container-dohomework img,.container-learnatschool img,.container-havelunch img,.container-haveashower img, .container-gotoschool img, 
+.container-washface img, .container-watchtv img, .container-havebreakfast img,.container-brushteeth img, .container-havedinner img, .container-getdressed img, .container-getup img, .container-makethebed img,.container-gobackhome img, .container-quesdailyroutine1 img,  .container-quesdailyroutine2 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.container-gotosleep img:hover,.container-dohomework img:hover,.container-havelunch img:hover,.container-haveashower img:hover,.container-gotoschool img:hover,.container-learnatschool img:hover,
+ .container-washface img:hover,.container-watchtv img:hover, .container-havebreakfast img:hover, .container-brushteeth img:hover,.container-havedinner img:hover, .container-getdressed img:hover, .container-getup img:hover, .container-makethebed img:hover,
+.container-gobackhome img:hover,.container-quesdailyroutine1 img:hover, .container-quesdailyroutine2 img:hover  {
+  transform: translateY(-10px);
+  filter: brightness(80%); 
+}
+
+/*คำถาม1*/
+.container-quesdailyroutine1 {
+  position: absolute;
+  top: 75%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 4; 
+}
+
+/*คำถาม2*/
+.container-quesdailyroutine2 {
+  position: absolute;
+  top: 75%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -4.8%;
+  right: -16.5%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 8; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: #ffd5ec;
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(27, 38, 84, 1.8); 
+    white-space: nowrap;
+  position: absolute;
+
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+
+.speech-box {
+  width: 220px;
+  height: 120px;
+  bottom: 18%; 
+  left: 160%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 170px;
+  height: 120px;
+  bottom: 18%; 
+  left: 150%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 260px;
+  height: 120px;
+  bottom: 18%; 
+  left: 190%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+  width: 260px;
+  height: 120px;
+  bottom: 18%; 
+  left: 170%; 
+  transform: translateX(-50%);
+  z-index: -1;
+  }
+
+ .speech-box4 {
+  width: 200px;
+  height: 120px;
+  bottom: 18%; 
+  left: 205%; 
+  transform: translateX(-50%);
+  z-index: -1;
+ }
+
+ .speech-box5 {
+  width: 120px;
+  height: 120px;
+  bottom: -20%; 
+  left: -50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+  .speech-box6 {
+     width: 160px; 
+     height: 120px; 
+     position: absolute;
+     top: 62%; 
+     right: 50%;
+     z-index: -1;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #C6EDEF;
+  width: 270px; 
+  height: 160px;
+  text-align: center;
+  line-height: 27px; 
+  top: 45%;
+  left: -140%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #ffe989;
+      width: 290px; 
+      height: 150px;
+      text-align: center;
+      line-height: 27px; 
+      top: 35%;
+      left: -150%;
+      z-index: -1;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      /* Adjust container sizes and positions */
+      .image {
+        width: 100%;
+        height: 100%;
+        /*margin-left: -5%;*/
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+      
+      h4 {
+        font-size: 12px;
+      }
+      
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../Testvocab/img/clothes2/speaker.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+      padding-top: 1%;
+      z-index: -4;
+      }
+
+      
+
+        .speech-box,.speech-box11,.speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box7,.speech-box8 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+        transform: translateX(-50%);
+      }
+
+      .speech-box{
+        width: 80px;
+        height: 70px;
+        top: -155%; 
+        left: -50%; 
+        z-index: -1;
+              }
+
+      .speech-box11{
+  width: 80px;
+  height: 70px;
+  bottom: 115%; 
+  left: 50%; 
+  z-index: -1;
+        }
+
+      .speech-box2 {
+    width: 80px;
+    height: 70px;
+    bottom: 67%; 
+    left: 160%; 
+
+    z-index: -1;
+        }
+    
+      .speech-box3{
+    width: 60px;
+    height: 80px;
+    bottom: 97%; 
+    left: 10%; 
+
+    z-index: -1;
+        }
+
+        .speech-box4 {
+          width: 90px;
+          height: 80px;
+          bottom: 97%; 
+          left: 130%; 
+          z-index: -1;
+              }
+          
+          .speech-box5{
+          width: 40px;
+          height: 80px;
+          bottom: 97%; 
+          left: 50%; 
+      
+          z-index: -1;
+              }
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: #FF9EAE;
+        width: 180px; 
+        height: 65px;
+        text-align: center;
+        line-height: 17px; 
+        top: -75%;
+        left: -850%;
+        z-index: -1;
+      }
+
+      .speech-box8{
+        color: #0A2963; 
+        background-color: #F2FCC8;
+        width: 180px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: 25%;
+        left: 540%;
+        z-index: -1;
+      }
+    }
+

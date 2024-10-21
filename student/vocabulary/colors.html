@@ -1,0 +1,1094 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+    <style>
+      
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/flowers/');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+.letter-1 { color: red; }
+        .letter-2 { color: lightblue; }
+        .letter-3 { color: yellow; }
+        .letter-4 { color: red; }
+        .letter-5 { color: blue; }
+        .letter-6 { color: red; }
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  text-shadow: 0 0 20px gray;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 2px #fcfcfc; /* กำหนดขอบตัวอักษร */
+  letter-spacing: 2px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+
+.image {
+  width: 120%;
+  height: 100%;
+  object-fit: cover;
+  margin-left: -9.8%;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -9%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 3.5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -9%;
+  right: -6%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -9%;
+  right: -14%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 2; 
+}
+
+
+/*สีขาว*/
+.container-white {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 8; 
+}
+
+/*สีน้ำเงินเข้ม*/
+.container-darkblue {
+  position: absolute;
+  top: 44%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 8; 
+}
+
+/*สีน้ำตาลอ่อน*/
+.container-beige {
+  position: absolute;
+  top: 36%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 7; 
+}
+
+/*สีดำ*/
+.container-black {
+  position: absolute;
+  top: 28%;
+  left: 99%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 0; 
+}
+
+/*สีม่วง*/
+.container-purple{
+  position: absolute;
+  top: 51%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 3; 
+}
+
+/*สีชมพู*/
+.container-pink {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*สีน้ำเงินอมเขียว*/
+.container-turquoise{
+  position: absolute;
+  top: 68%;
+  left: 17.5%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 3; 
+}
+
+/*สีเทา*/
+.container-gray {
+  position: absolute;
+  top: 12%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 7; 
+}
+
+/*สีแดง*/
+.container-red {
+  position: absolute;
+  top: 17%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 6; 
+}
+
+/*สีเหลือง*/
+.container-yellow {
+  position: absolute;
+  top: 22%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 5; 
+}
+
+/*สีน้ำตาล*/
+.container-brown {
+  position: absolute;
+  top: 33%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 4; 
+}
+
+/*สีน้ำเงิน*/
+.container-blue {
+  position: absolute;
+  top: 58%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 2; 
+}
+
+/*สีส้ม*/
+.container-orange {
+  position: absolute;
+  top: 35%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 6; 
+}
+
+
+/*สีฟ้า*/
+.container-lightblue {
+  position: absolute;
+  top: 39%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 5; 
+}
+
+
+/*สีเลือดหมู*/
+.container-maroon {
+  position: absolute;
+  top: 54%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 4; 
+}
+
+/*สีเขียว*/
+.container-green {
+  position: absolute;
+  top: 18%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 7.5%; 
+  z-index: 3;
+}
+
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -5px;
+  left: -43px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+  z-index: -3;
+}
+
+.container-maroon img,.container-green img,.container-brown img, .container-yellow img, .container-orange img,
+.container-black img, .container-turquoise img, .container-purple img,.container-beige img, .container-red img,.container-pink img, .container-lightblue img, .container-white img, .container-blue img, .container-gray img,.container-darkblue img, .container-quescolor1 img, .container-quescolor2 img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+.container-green img:hover,.container-brown img:hover,.container-yellow img:hover,.container-maroon img:hover,
+ .container-black img:hover,.container-turquoise img:hover, .container-purple img:hover, .container-orange img:hover,
+.container-beige img:hover, .container-blue img:hover, .container-gray img:hover, 
+.container-pink img:hover, .container-lightblue img:hover, .container-white img:hover, .container-darkblue img:hover,
+.container-quescolor1 img:hover, .container-quescolor2 img:hover , .container-red img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+/*คำถาม1*/
+.container-quescolor1 {
+  position: absolute;
+  top: 41%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  width: 1.5%; 
+  z-index: 10; 
+}
+
+/*คำถาม2*/
+.container-quescolor2 {
+  position: absolute;
+  top: 7%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  width: 1.5%; 
+  z-index: 10; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -1.8%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  width: 3.5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 1); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+
+.speech-box {
+  width: 140px;
+  height: 130px;
+  bottom: 10%; 
+  left: 150%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 180px;
+  height: 120px;
+  bottom: 25%; 
+  left: 110%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 160px;
+  height: 120px;
+  bottom: 5%; 
+  left: 180%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+  width: 180px;
+  height: 130px;
+  bottom: 30%; 
+  left: 220%; 
+  transform: translateX(-50%);
+  z-index: -1;
+  }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #FFC7C7; /* กำหนดสีพื้นหลังของ speech box */
+  width: 380px; 
+  height: 80px;
+  text-align: center;
+  line-height: 37px; 
+  top: -125%;
+  left: -40%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #D2EEE5; /* กำหนดสีพื้นหลังของ speech box */
+      width: 290px; 
+      height: 80px;
+      text-align: center;
+      line-height: 37px; 
+      top: 15%;
+      right: -25%;
+      z-index: -1;
+    }
+
+/* For screens smaller than 768px (e.g., smartphwhites) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box7,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+     <!-- Navbar Start -->
+     <div class="container-fluid bg-light position-relative shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+              <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+              <span class="text-primary">Smart Phonics</span>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav font-weight-bold mx-auto py-0">
+                  
+              <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+              <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+              <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+              <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+    <h1>
+        <span class="letter-1">C</span>
+        <span class="letter-2">O</span>
+        <span class="letter-3">L</span>
+        <span class="letter-4">O</span>
+        <span class="letter-5">R</span>
+        <span class="letter-6">S</span>
+    </h1>
+
+         <!--ส่วนที่เพิ่มเข้ามา-->
+         <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 16 คำ</h4> 
+
+         
+  <div class="container">
+    <img src="../../Testvocab/img/flowers/color.png" alt="bird" class="image">
+
+   
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Clothes1.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="insects.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--สีขาว-->
+    <div class="container-white">
+      <img src="../../Testvocab/img/flowers/white.png" alt="white" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">white</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ไว่ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีขาว</span>
+      </div>
+      <audio id="white" src="../../Testvocab/voice/white.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+       <!--สีน้ำเงินเข้ม-->
+   <div class="container-darkblue">
+      <img src="../../Testvocab/img/flowers/darkblue.png" alt="darkblue" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">dark blue</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ด้าค บลูว)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีน้ำเงินเข้ม</span>
+        <audio id="darkblue" src="../../Testvocab/voice/darkblue.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>  
+    
+    <!--สีน้ำตาลอ่อน-->
+    <div class="container-beige">
+      <img src="../../Testvocab/img/flowers/beige.png" alt="beige" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">beige</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เบจฺฉ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีน้ำตาลอ่อน</span>
+      </div>
+      <audio id="beige" src="../../Testvocab/voice/beige.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+        <!--สีดำ-->
+        <div class="container-black">
+      <img src="../../Testvocab/img/flowers/black.png" alt="black" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">black</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แบล็ค)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีดำ</span>
+      </div>
+      <audio id="black" src="../../Testvocab/voice/black.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--สีม่วง-->
+    <div class="container-purple">
+      <img src="../../Testvocab/img/flowers/purple.png" alt="purple" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">purple </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เพ้อ-เผิ่ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีม่วง</span>
+      </div>
+      <audio id="purple" src="../../Testvocab/voice/purple.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--สีชมพู-->
+ <div class="container-pink">
+      <img src="../../Testvocab/img/flowers/pink.png" alt="pink" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">pink</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(พิ่งฺค)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีชมพู</span>
+        <audio id="pink" src="../../Testvocab/voice/pink.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--สีน้ำเงินอมเขียว-->
+        <div class="container-turquoise">
+      <img src="../../Testvocab/img/flowers/turquoise.png" alt="turquoise" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">turquoise</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เท้อ-ข้อยฺส)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีน้ำเงินอมเขียว</span>
+      </div>
+      <audio id="turquoise" src="../../Testvocab/voice/turquoise.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+                    <!--สีเทา-->
+                    <div class="container-gray">
+                    <img src="../../Testvocab/img/flowers/gray.png" alt="gray" class="image">
+                    <div class="speech-box2">
+                      <span style="display: flex; justify-content: center;">gray</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(เกร-อิ่)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">สีเทา</span>
+                      <audio id="gray" src="../../Testvocab/voice/gray.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>   
+
+         <!--สีแดง-->
+         <div class="container-red">
+    <img src="../../Testvocab/img/flowers/red.png" alt="red" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">red</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เร่ด)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">สีแดง</span>
+      <audio id="red" src="../../Testvocab/voice/red.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+           <!--สีน้ำเงิน-->
+           <div class="container-blue">
+            <img src="../../Testvocab/img/flowers/blue.png" alt="blue" class="image">
+            <div class="speech-box2">
+              <span style="display: flex; justify-content: center;">blue</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(บลูว)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">สีน้ำเงิน</span>
+              <audio id="blue" src="../../Testvocab/voice/blue.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+        <!--สีส้ม-->
+        <div class="container-orange">
+            <img src="../../Testvocab/img/flowers/orange.png" alt="orange" class="image">
+            <div class="speech-box">
+              <span style="display: flex; justify-content: center;">orange</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(เอ๊าะ-หริ่นจ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">สีส้ม</span>
+              <audio id="orange" src="../../Testvocab/voice/orange.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+                <!--สีเหลือง-->
+                <div class="container-yellow">
+    <img src="../../Testvocab/img/flowers/yellow.png" alt="yellow" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">yellow</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เย-เล่อว)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">สีเหลือง</span>
+      <audio id="yellow" src="../../Testvocab/voice/yellow.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+    <!--สีน้ำตาล-->
+    <div class="container-brown">
+        <img src="../../Testvocab/img/flowers/brown.png" alt="brown" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">brown</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(บราวฺน)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สีน้ำตาล</span>
+          <audio id="brown" src="../../Testvocab/voice/brown.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--สีฟ้า-->
+    <div class="container-lightblue">
+      <img src="../../Testvocab/img/flowers/lightblue.png" alt="lightblue" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">light blue</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ไล่ท บลูว)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีฟ้า</span>
+      <audio id="lightblue" src="../../Testvocab/voice/lightblue.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--สีเลือดหมู-->
+        <div class="container-maroon">
+        <img src="../../Testvocab/img/flowers/maroon.png" alt="maroon" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">maroon</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เมอะ-รูน)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สีเลือดหมู</span>
+          <audio id="maroon" src="../../Testvocab/voice/maroon.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+             <!--สีเขียว-->
+             <div class="container-green">
+      <img src="../../Testvocab/img/flowers/green.png" alt="green" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">green</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(กรีน)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สีเขียว</span>
+        <audio id="green" src="../../Testvocab/voice/green.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+        <!--คำถาม1-->
+        <div class="container-quescolor1">
+          <img src="../../Testvocab/img/flowers/quescolor1.png" alt="quescolor1" class="image">
+          <div class="speech-box7">
+          Can you find two purple balloons ? <br>
+          <span class="thai-text">น้อง ๆ หาลูกโป่งสีม่วงสองใบเจอไหมคะ ?</span>
+          </div>
+          <audio id="quescolor1" src="../../Testvocab/voice/quescolor1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quescolor2">
+          <img src="../../Testvocab/img/flowers/quescolor2.png" alt="quescolor2" class="image">
+          <div class="speech-box8">
+          Am I a blue bird ? <br>
+          <span class="thai-text">ผมเป็นนกสีน้ำเงินใช่ไหมครับ ?</span>
+          </div>
+            <audio id="quescolor2" src="../../Testvocab/voice/quescolor2.mp3"></audio>
+        </div>
+     
+        <!--ออก-->
+              <div class="container-exit">
+                <a href="../vocab.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var greenImg = document.querySelector('.container-green img');
+var brownImg = document.querySelector('.container-brown img');
+var maroonImg = document.querySelector('.container-maroon img');
+var blackImg = document.querySelector('.container-black img');
+var purpleImg = document.querySelector('.container-purple img');
+var turquoiseImg = document.querySelector('.container-turquoise img');
+var beigeImg = document.querySelector('.container-beige img');
+var pinkImg = document.querySelector('.container-pink img');
+var lightblueImg = document.querySelector('.container-lightblue img');
+var whiteImg = document.querySelector('.container-white img');
+var darkblueImg = document.querySelector('.container-darkblue img');
+var yellowImg = document.querySelector('.container-yellow img');
+var orangeImg = document.querySelector('.container-orange img');
+var blueImg = document.querySelector('.container-blue img');
+var grayImg = document.querySelector('.container-gray img');
+var redImg = document.querySelector('.container-red img');
+var quescolor1Img = document.querySelector('.container-quescolor1 img');
+var quescolor2Img = document.querySelector('.container-quescolor2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var greenSpeechBox = document.querySelector('.container-green .speech-box');
+var pinkSpeechBox = document.querySelector('.container-pink .speech-box');
+var orangeSpeechBox = document.querySelector('.container-orange .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var darkblueSpeechBox = document.querySelector('.container-darkblue .speech-box11');
+
+
+// เลือกอีเลเมนต์ของ speech box2
+var whiteSpeechBox = document.querySelector('.container-white .speech-box2');
+var blackSpeechBox = document.querySelector('.container-black .speech-box2');
+var yellowSpeechBox = document.querySelector('.container-yellow .speech-box2');
+var graySpeechBox = document.querySelector('.container-gray .speech-box2');
+var blueSpeechBox = document.querySelector('.container-blue .speech-box2');
+var redSpeechBox = document.querySelector('.container-red .speech-box2');
+var lightblueSpeechBox = document.querySelector('.container-lightblue .speech-box2');
+
+
+// เลือกอีเลเมนต์ของ speech box3
+var maroonSpeechBox = document.querySelector('.container-maroon .speech-box3');
+var purpleSpeechBox = document.querySelector('.container-purple .speech-box3');
+var turquoiseSpeechBox = document.querySelector('.container-turquoise .speech-box3');
+var brownSpeechBox = document.querySelector('.container-brown .speech-box3');
+var beigeSpeechBox = document.querySelector('.container-beige .speech-box3');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var quescolor1SpeechBox = document.querySelector('.container-quescolor1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quescolor2SpeechBox = document.querySelector('.container-quescolor2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var whiteNumber = document.querySelector('.container-white .hover-number');
+var darkblueNumber = document.querySelector('.container-darkblue .hover-number');
+var beigeNumber = document.querySelector('.container-beige .hover-number');
+var blackNumber = document.querySelector('.container-black .hover-number');
+var purpleNumber = document.querySelector('.container-purple .hover-number');
+
+var pinkNumber = document.querySelector('.container-pink .hover-number');
+var turquoiseNumber = document.querySelector('.container-turquoise .hover-number');
+var grayNumber = document.querySelector('.container-gray .hover-number');
+var redNumber = document.querySelector('.container-red .hover-number');
+
+var blueNumber = document.querySelector('.container-blue .hover-number');
+var orangeNumber = document.querySelector('.container-orange .hover-number');
+var yellowNumber = document.querySelector('.container-yellow .hover-number');
+var brownNumber = document.querySelector('.container-brown .hover-number');
+var lightblueNumber = document.querySelector('.container-lightblue .hover-number');
+
+var maroonNumber = document.querySelector('.container-maroon .hover-number');
+var greenNumber = document.querySelector('.container-green .hover-number');
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(whiteImg, whiteSpeechBox, whiteNumber);
+setupHoverEffect(darkblueImg, darkblueSpeechBox, darkblueNumber);
+setupHoverEffect(beigeImg, beigeSpeechBox, beigeNumber);
+setupHoverEffect(blackImg, blackSpeechBox, blackNumber);
+setupHoverEffect(purpleImg, purpleSpeechBox, purpleNumber);
+
+setupHoverEffect(pinkImg, pinkSpeechBox, pinkNumber);
+setupHoverEffect(turquoiseImg, turquoiseSpeechBox, turquoiseNumber);
+setupHoverEffect(grayImg, graySpeechBox, grayNumber);
+setupHoverEffect(redImg, redSpeechBox, redNumber);
+
+setupHoverEffect(blueImg, blueSpeechBox, blueNumber);
+setupHoverEffect(orangeImg, orangeSpeechBox, orangeNumber);
+setupHoverEffect(yellowImg, yellowSpeechBox, yellowNumber);
+setupHoverEffect(brownImg, brownSpeechBox, brownNumber);
+setupHoverEffect(lightblueImg, lightblueSpeechBox, lightblueNumber);
+
+setupHoverEffect(maroonImg, maroonSpeechBox, maroonNumber);
+setupHoverEffect(greenImg, greenSpeechBox, greenNumber);
+
+
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+greenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, greenSpeechBox);
+});
+
+brownImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, brownSpeechBox);
+});
+
+blackImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, blackSpeechBox);
+}); 
+
+purpleImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, purpleSpeechBox);
+});
+
+turquoiseImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, turquoiseSpeechBox);
+}); 
+
+beigeImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, beigeSpeechBox);
+}); 
+
+pinkImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, pinkSpeechBox);
+}); 
+
+lightblueImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, lightblueSpeechBox);
+}); 
+
+whiteImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, whiteSpeechBox);
+}); 
+
+darkblueImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, darkblueSpeechBox);
+}); 
+
+maroonImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, maroonSpeechBox);
+}); 
+yellowImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, yellowSpeechBox);
+}); 
+
+orangeImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, orangeSpeechBox);
+}); 
+
+blueImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,blueSpeechBox);
+}); 
+
+grayImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,graySpeechBox);
+}); 
+
+redImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,redSpeechBox);
+}); 
+
+quescolor1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quescolor1SpeechBox);
+}); 
+
+quescolor2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quescolor2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+greenImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, greenSpeechBox);
+});
+
+brownImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, brownSpeechBox);
+});
+
+blackImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  blackSpeechBox);
+  });
+
+purpleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, purpleSpeechBox);
+  });
+
+turquoiseImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  turquoiseSpeechBox);
+  });
+
+beigeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  beigeSpeechBox);
+  });
+
+  pinkImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, pinkSpeechBox);
+  });
+
+  lightblueImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, lightblueSpeechBox);
+  });
+
+  whiteImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, whiteSpeechBox);
+  });
+  
+  darkblueImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, darkblueSpeechBox);
+  });
+
+  maroonImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   maroonSpeechBox);
+  });
+  yellowImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   yellowSpeechBox);
+  });
+
+  orangeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   orangeSpeechBox);
+  });
+  blueImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   blueSpeechBox);
+  });
+
+  grayImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   graySpeechBox);
+  });
+
+  redImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   redSpeechBox);
+  });
+
+  quescolor1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quescolor1SpeechBox);
+  });
+
+  quescolor2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quescolor2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-green img', '#green');
+playSoundWhenClick('.container-brown img', '#brown');
+playSoundWhenClick('.container-darkblue img', '#darkblue');
+playSoundWhenClick('.container-pink img', '#pink');
+playSoundWhenClick('.container-black img', '#black');
+playSoundWhenClick('.container-purple img', '#purple');
+playSoundWhenClick('.container-turquoise img', '#turquoise');
+playSoundWhenClick('.container-beige img', '#beige');
+playSoundWhenClick('.container-lightblue img', '#lightblue');
+playSoundWhenClick('.container-white img', '#white');
+
+playSoundWhenClick('.container-maroon img', '#maroon');
+playSoundWhenClick('.container-yellow img', '#yellow');
+playSoundWhenClick('.container-orange img', '#orange');
+playSoundWhenClick('.container-blue img', '#blue');
+playSoundWhenClick('.container-gray img', '#gray');
+playSoundWhenClick('.container-red img', '#red');
+playSoundWhenClick('.container-quescolor1 img', '#quescolor1');
+playSoundWhenClick('.container-quescolor2 img', '#quescolor2');
+  </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,669 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+    <link href="../../Testvocab/foods1.css" rel="stylesheet">
+    
+
+</head>
+<body>
+          <!-- Navbar Start -->
+          <div class="container-fluid bg-light position-relative shadow">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                    <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                    <span class="text-primary">Smart Phonics</span>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav font-weight-bold mx-auto py-0">
+                        
+                    <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                    <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                    <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                    <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+    <h1> FOODS 1 </h1>
+    <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 16 คำ</h4>
+  <div class="container">
+    <img src="../../Testvocab/img/bedroom/foods1.png" alt="bird" class="image">
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Counting.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="wildanimals.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--ซอสมะเขือเทศ-->
+    <div class="container-ketchup">
+      <img src="../../Testvocab/img/bedroom/ketchup.png" alt="ketchup" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">ketchup</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แค็ท-ฉั่พ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ซอสมะเขือเทศ</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="ketchup" src="../../Testvocab/voice/ketchup.mp3"></audio>
+    </div>
+
+       <!--น้ำจิ้ม-->
+   <div class="container-sauce">
+      <img src="../../Testvocab/img/bedroom/sauce.png" alt="sauce" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">sauce</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซ่อซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">น้ำจิ้ม</span>
+        <audio id="sauce" src="../../Testvocab/voice/sauce.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-sauce"></div>
+    </div>  
+    
+    <!--น้ำปลา-->
+    <div class="container-fishsauce">
+      <img src="../../Testvocab/img/bedroom/fishsauce.png" alt="fishsauce" class="image">
+      <div class="speech-box13">
+        <span style="display: flex; justify-content: center;">fish sauce</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฟิช-ซ่อซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">น้ำปลา</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="fishsauce" src="../../Testvocab/voice/fishsauce.mp3"></audio>
+    </div>  
+
+        <!--เกลือ-->
+        <div class="container-salt">
+      <img src="../../Testvocab/img/bedroom/salt.png" alt="salt" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">salt</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซ่อลฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เกลือ</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="salt" src="../../Testvocab/voice/salt.mp3"></audio>
+    </div>  
+
+    <!--น้ำตาล-->
+    <div class="container-sugar">
+      <img src="../../Testvocab/img/bedroom/sugar.png" alt="sugar" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">sugar </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ชู้-เก่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">น้ำตาล</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="sugar" src="../../Testvocab/voice/sugar.mp3"></audio>
+    </div>
+
+     <!--พิซซ่า-->
+ <div class="container-pizza">
+      <img src="../../Testvocab/img/bedroom/pizza.png" alt="pizza" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">pizza</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(พิท-ส่ะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">พิซซ่า</span>
+        <audio id="pizza" src="../../Testvocab/voice/pizza.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-pizza"></div>
+    </div>
+
+        <!--มันฝรั่งทอด-->
+        <div class="container-frenchfries">
+      <img src="../../Testvocab/img/bedroom/frenchfries.png" alt="frenchfries" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">French fries</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เฟร้นฺช-ฟร่ายฺซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">มันฝรั่งทอด</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="frenchfries" src="../../Testvocab/voice/frenchfries.mp3"></audio>
+    </div>
+
+                    <!--แฮมเบอร์เกอร์-->
+                    <div class="container-hamburger">
+                    <img src="../../Testvocab/img/bedroom/hamburger.png" alt="hamburger" class="image">
+                    <div class="speech-box3">
+                      <span style="display: flex; justify-content: center;">hamburger</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(แฮ้ม-เบอ-เก้อ)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">แฮมเบอร์เกอร์</span>
+                      <audio id="hamburger" src="../../Testvocab/voice/hamburger.mp3"></audio>
+                    </div>
+                    <div class="hover-number hover-number-hamburger"></div>
+                </div>   
+
+         <!--โดนัท-->
+         <div class="container-doughnut">
+    <img src="../../Testvocab/img/bedroom/doughnut.png" alt="doughnut" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">doughnut</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(โด๊-นั่ท)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">โดนัท</span>
+      <audio id="doughnut" src="../../Testvocab/voice/doughnut.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-body"></div>
+</div>
+
+ <!--ชีสเบอร์เกอร์-->
+ <div class="container-cheeseburger">
+            <img src="../../Testvocab/img/bedroom/cheeseburger.png" alt="cheeseburger" class="image">
+            <div class="speech-box">
+              <span style="display: flex; justify-content: center;">cheeseburger</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ชี้ซ-เบอ-เก้อ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ชีสเบอร์เกอร์</span>
+              <audio id="cheeseburger" src="../../Testvocab/voice/cheeseburger.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-body"></div>
+        </div>
+
+           <!--ซีอิ๊ว-->
+           <div class="container-soysauce">
+            <img src="../../Testvocab/img/bedroom/soysauce.png" alt="soysauce" class="image">
+            <div class="speech-box">
+            <span style="display: flex; justify-content: center;">soy sauce</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ซ้อย-ซ่อซ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ซีอิ๊ว</span>
+              <audio id="soysauce" src="../../Testvocab/voice/soysauce.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-body"></div>
+        </div>
+
+    
+
+
+    <!--สลัด-->
+    <div class="container-salad">
+      <img src="../../Testvocab/img/bedroom/salad.png" alt="salad" class="image">
+      <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">salad</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซ้า-เหลิด)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สลัด</span>
+      <audio id="salad" src="../../Testvocab/voice/salad.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+    </div>
+
+        <!--ไส้กรอก-->
+        <div class="container-sausage">
+        <img src="../../Testvocab/img/bedroom/sausage.png" alt="sausage" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">sausage</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซ้อซ-ซิ่จฺช)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ไส้กรอก</span>
+          <audio id="sausage" src="../../Testvocab/voice/sausage.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-body"></div>
+    </div>
+
+ <!--โยเกิร์ต -->
+ <div class="container-yogurt">
+        <img src="../../Testvocab/img/bedroom/yogurt.png" alt="yogurt" class="image">
+        <div class="speech-box">
+          <span style="display: flex; justify-content: center;">yogurt</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โย้-เกิต)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">โยเกิร์ต</span>
+        <audio id="yogurt" src="../../Testvocab/voice/yogurt.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-body"></div>
+    </div>
+
+
+ <!--ชาดำเย็น -->
+ <div class="container-icetea">
+    <img src="../../Testvocab/img/bedroom/icetea.png" alt="icetea" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">iced tea</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ไอ๊ซ-ที่)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ชาดำเย็น</span>
+    <audio id="icetea" src="../../Testvocab/voice/icetea.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-body"></div>
+</div>
+
+ <!--แซนด์วิชใส่ไส้กรอก -->
+ <div class="container-hotdog">
+    <img src="../../Testvocab/img/bedroom/hotdog.png" alt="hotdog" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">hot dog</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ฮ็อท-ด็อก)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">แซนด์วิชใส่ไส้กรอก</span>
+    <audio id="hotdog" src="../../Testvocab/voice/hotdog.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-hotdog"></div>
+</div>
+
+    
+<div class="container-girleat">
+      <img src="../../Testvocab/img/bedroom/girleat.png" alt="girleat" class="image">
+    </div>
+
+    <div class="container-arm">
+      <img src="../../Testvocab/img/bedroom/arm.png" alt="arm" class="image">
+    </div>
+
+    <div class="container-hand">
+      <img src="../../Testvocab/img/bedroom/hand.png" alt="hand" class="image">
+    </div>
+
+    <div class="container-handgirl">
+      <img src="../../Testvocab/img/bedroom/handgirl.png" alt="handgirl" class="image">
+    </div>
+
+    <div class="container-dog">
+      <img src="../../Testvocab/img/bedroom/dog.png" alt="dog" class="image">
+    </div>
+
+
+        <!--คำถาม1-->
+        <div class="container-quesfood1">
+          <img src="../../Testvocab/img/bedroom/quesfood1.png" alt="quesfood1" class="image">
+          <div class="speech-box7">
+          Where are the two children ? <br>
+          <span class="thai-text">เด็ก 2 คนนั้นอยู่ที่ไหนคะ ?</span>
+          </div>
+          <audio id="quesfood1" src="../../Testvocab/voice/quesfood1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesfood2">
+          <img src="../../Testvocab/img/bedroom/quesfood2.png" alt="quesfood2" class="image">
+          <div class="speech-box8">
+          What are they eating ? <br> It looks yummy ! <br>
+          <span class="thai-text"> เด็ก ๆ กำลังกินอะไรอยู่นะ ? <br>ดูน่าอร่อย ! </span>
+          </div>
+            <audio id="quesfood2" src="../../Testvocab/voice/quesfood2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              
+              <div class="container-exit">
+                <a href="../vocab.html">
+
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    var sausageImg = document.querySelector('.container-sausage img');
+var saltImg = document.querySelector('.container-salt img');
+var sugarImg = document.querySelector('.container-sugar img');
+var frenchfriesImg = document.querySelector('.container-frenchfries img');
+var fishsauceImg = document.querySelector('.container-fishsauce img');
+var pizzaImg = document.querySelector('.container-pizza img');
+var saladImg = document.querySelector('.container-salad img');
+var ketchupImg = document.querySelector('.container-ketchup img');
+var sauceImg = document.querySelector('.container-sauce img');
+var yogurtImg = document.querySelector('.container-yogurt img');
+var soysauceImg = document.querySelector('.container-soysauce img');
+var hamburgerImg = document.querySelector('.container-hamburger img');
+var cheeseburgerImg = document.querySelector('.container-cheeseburger img');
+var doughnutImg = document.querySelector('.container-doughnut img');
+var iceteaImg = document.querySelector('.container-icetea img');
+var hotdogImg = document.querySelector('.container-hotdog img');
+var quesfood1Img = document.querySelector('.container-quesfood1 img');
+var quesfood2Img = document.querySelector('.container-quesfood2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var cheeseburgerSpeechBox = document.querySelector('.container-cheeseburger .speech-box');
+var yogurtSpeechBox = document.querySelector('.container-yogurt .speech-box');
+var sauceSpeechBox = document.querySelector('.container-sauce .speech-box');
+var soysauceSpeechBox = document.querySelector('.container-soysauce .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var iceteaSpeechBox = document.querySelector('.container-icetea .speech-box11');
+var hotdogSpeechBox = document.querySelector('.container-hotdog .speech-box11');
+var pizzaSpeechBox = document.querySelector('.container-pizza .speech-box11');
+var frenchfriesSpeechBox = document.querySelector('.container-frenchfries .speech-box11');
+var sausageSpeechBox = document.querySelector('.container-sausage .speech-box11');
+var saltSpeechBox = document.querySelector('.container-salt .speech-box11');
+var saladSpeechBox = document.querySelector('.container-salad .speech-box11');
+
+var fishsauceSpeechBox = document.querySelector('.container-fishsauce .speech-box13');
+
+// เลือกอีเลเมนต์ของ speech box3
+var doughnutSpeechBox = document.querySelector('.container-doughnut .speech-box3');
+var hamburgerSpeechBox = document.querySelector('.container-hamburger .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var ketchupSpeechBox = document.querySelector('.container-ketchup .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box5
+var sugarSpeechBox = document.querySelector('.container-sugar .speech-box5');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var quesfood1SpeechBox = document.querySelector('.container-quesfood1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quesfood2SpeechBox = document.querySelector('.container-quesfood2 .speech-box8');
+
+var sausageNumber = document.querySelector('.container-sausage .hover-number');
+var saltNumber = document.querySelector('.container-salt .hover-number');
+var sugarNumber = document.querySelector('.container-sugar .hover-number');
+var frenchfriesNumber = document.querySelector('.container-frenchfries .hover-number');
+var fishsauceNumber = document.querySelector('.container-fishsauce .hover-number');
+var pizzaNumber = document.querySelector('.container-pizza .hover-number');
+var saladNumber = document.querySelector('.container-salad .hover-number');
+var ketchupNumber = document.querySelector('.container-ketchup .hover-number');
+var sauceNumber = document.querySelector('.container-sauce .hover-number');
+var yogurtNumber = document.querySelector('.container-yogurt .hover-number');
+var soysauceNumber = document.querySelector('.container-soysauce .hover-number');
+var hamburgerNumber = document.querySelector('.container-hamburger .hover-number');
+var cheeseburgerNumber = document.querySelector('.container-cheeseburger .hover-number');
+var doughnutNumber = document.querySelector('.container-doughnut .hover-number');
+var iceteaNumber = document.querySelector('.container-icetea .hover-number');
+var hotdogNumber = document.querySelector('.container-hotdog .hover-number');
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(sausageImg, sausageSpeechBox, sausageNumber);
+setupHoverEffect(saltImg, saltSpeechBox, saltNumber);
+setupHoverEffect(sugarImg, sugarSpeechBox, sugarNumber);
+setupHoverEffect(frenchfriesImg, frenchfriesSpeechBox, frenchfriesNumber);
+setupHoverEffect(fishsauceImg, fishsauceSpeechBox, fishsauceNumber);
+setupHoverEffect(pizzaImg, pizzaSpeechBox, pizzaNumber);
+setupHoverEffect(saladImg, saladSpeechBox, saladNumber);
+setupHoverEffect(ketchupImg, ketchupSpeechBox, ketchupNumber);
+setupHoverEffect(sauceImg, sauceSpeechBox, sauceNumber);
+setupHoverEffect(yogurtImg, yogurtSpeechBox, yogurtNumber);
+setupHoverEffect(soysauceImg, soysauceSpeechBox, soysauceNumber);
+setupHoverEffect(hamburgerImg, hamburgerSpeechBox, hamburgerNumber);
+setupHoverEffect(cheeseburgerImg, cheeseburgerSpeechBox, cheeseburgerNumber);
+setupHoverEffect(doughnutImg, doughnutSpeechBox, doughnutNumber);
+setupHoverEffect(iceteaImg, iceteaSpeechBox, iceteaNumber);
+setupHoverEffect(hotdogImg, hotdogSpeechBox, hotdogNumber);
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+sauceImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, sauceSpeechBox);
+});
+
+
+saltImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, saltSpeechBox);
+}); 
+
+sugarImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, sugarSpeechBox);
+});
+
+frenchfriesImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, frenchfriesSpeechBox);
+}); 
+
+fishsauceImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, fishsauceSpeechBox);
+}); 
+
+pizzaImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, pizzaSpeechBox);
+}); 
+
+saladImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, saladSpeechBox);
+}); 
+
+ketchupImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, ketchupSpeechBox);
+}); 
+
+
+
+yogurtImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, yogurtSpeechBox);
+}); 
+sausageImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, sausageSpeechBox);
+}); 
+
+
+
+
+soysauceImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,soysauceSpeechBox);
+}); 
+
+hamburgerImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,hamburgerSpeechBox);
+}); 
+
+cheeseburgerImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,cheeseburgerSpeechBox);
+}); 
+doughnutImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,doughnutSpeechBox);
+}); 
+
+iceteaImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,iceteaSpeechBox);
+}); 
+
+hotdogImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,hotdogSpeechBox);
+}); 
+
+quesfood1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesfood1SpeechBox);
+}); 
+
+quesfood2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesfood2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+
+sauceImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, sauceSpeechBox);
+});
+
+
+saltImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  saltSpeechBox);
+  });
+
+sugarImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, sugarSpeechBox);
+  });
+
+frenchfriesImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  frenchfriesSpeechBox);
+  });
+
+fishsauceImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  fishsauceSpeechBox);
+  });
+
+  pizzaImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, pizzaSpeechBox);
+  });
+
+  saladImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, saladSpeechBox);
+  });
+
+  ketchupImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, ketchupSpeechBox);
+  });
+  
+
+
+  yogurtImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   yogurtSpeechBox);
+  });
+
+  sausageImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   sausageSpeechBox);
+  });
+
+
+  soysauceImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   soysauceSpeechBox);
+  });
+
+  hamburgerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   hamburgerSpeechBox);
+  });
+  
+  cheeseburgerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   cheeseburgerSpeechBox);
+  });
+  doughnutImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   doughnutSpeechBox);
+  });
+
+  iceteaImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   iceteaSpeechBox);
+  });
+
+  hotdogImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   hotdogSpeechBox);
+  });
+
+  quesfood1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesfood1SpeechBox);
+  });
+
+  quesfood2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesfood2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-sauce img', '#sauce');
+playSoundWhenClick('.container-pizza img', '#pizza');
+playSoundWhenClick('.container-salt img', '#salt');
+playSoundWhenClick('.container-sugar img', '#sugar');
+playSoundWhenClick('.container-frenchfries img', '#frenchfries');
+playSoundWhenClick('.container-fishsauce img', '#fishsauce');
+playSoundWhenClick('.container-salad img', '#salad');
+playSoundWhenClick('.container-ketchup img', '#ketchup');
+playSoundWhenClick('.container-yogurt img', '#yogurt')
+playSoundWhenClick('.container-sausage img', '#sausage');
+playSoundWhenClick('.container-soysauce img', '#soysauce');
+playSoundWhenClick('.container-hamburger img', '#hamburger');
+playSoundWhenClick('.container-cheeseburger img', '#cheeseburger');
+playSoundWhenClick('.container-doughnut img', '#doughnut');
+playSoundWhenClick('.container-icetea img', '#icetea');
+playSoundWhenClick('.container-hotdog img', '#hotdog');
+playSoundWhenClick('.container-quesfood1 img', '#quesfood1');
+playSoundWhenClick('.container-quesfood2 img', '#quesfood2');
+  </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

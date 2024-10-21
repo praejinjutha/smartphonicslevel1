@@ -1,0 +1,1346 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+
+    
+<style>
+
+.navbar {
+  top: 0; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/clothes1/Bg6.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+}
+
+.container {
+  width: auto; 
+  height: 100%; 
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; 
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-weight: 600;
+  font-size: 60px;
+  color: rgb(	105, 230, 201);
+ text-shadow: 0 0 20px rgb(	255, 255, 255);
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 1px rgb(255, 255, 255);
+  letter-spacing: 4px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -10%;
+  left:-4%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -10%;
+  right: -3%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+
+/*ชุดติดกัน*/
+.container-dress {
+  position: absolute;
+  top: 85%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 6; 
+}
+
+/*เลกกิ้ง*/
+.container-leggings {
+  position: absolute;
+  top: 85%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 6; 
+}
+
+
+
+/*เสื้อกล้าม*/
+.container-tanktop {
+  position: absolute;
+  top: 71.7%;
+  left: 47.5%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*กางเกงขาสั้น*/
+.container-shorts {
+  position: absolute;
+  top: 80%;
+  left: 48.7%;
+  transform: translate(-50%, -50%);
+  width: 9.5%; 
+  z-index: 1; 
+}
+
+/*กระโปรง*/
+.container-skirt {
+  position: absolute;
+  top: 73%;
+  left: 65.8%;
+  transform: translate(-50%, -50%);
+  width:9.1%; 
+  z-index: 1; 
+}
+
+/*รองเท้ากีฬา*/
+.container-trainers {
+  position: absolute;
+  top: 88%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1; 
+}
+
+/*ชุดเอี๊ยม*/
+.container-overalls {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+/*เสื้อยืดคอกลมแขนสั้น*/
+.container-tshirt {
+  position: absolute;
+  top: 68%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 5;
+}
+
+
+
+/*เสื้อผู้หญิง*/
+.container-blouse {
+  position: absolute;
+  top: 61%;
+  right: 25%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 2; 
+}
+
+
+
+/*ลูกชาย*/
+.container-son {
+  position: absolute;
+  top: 72%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  width: 17%; 
+  z-index: 0; 
+}
+
+/*แม่*/
+.container-mom {
+  position: absolute;
+  top: 62%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 0; 
+}
+
+/*แขนขวาแม่*/
+.container-rightarm {
+  position: absolute;
+  top: 59%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 7; 
+}
+
+
+/*แขนซ้ายแม่*/
+.container-leftarm {
+  position: absolute;
+  top: 65%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 3; 
+}
+
+
+/*ตู้เสื้อผ้า*/
+.container-wardrobe {
+  position: absolute;
+  top: 53%;
+  left: 81%;
+  transform: translate(-50%, -50%);
+  width: 33%; 
+  z-index: 0; 
+}
+
+
+/*เสื้อกั๊ก*/
+.container-vest {
+  position: absolute;
+  top: 15%;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 2; 
+}
+
+/*กางเกงขายาว*/
+.container-pants {
+  position: absolute;
+  top: 22%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 2; 
+}
+
+/*กางเกงยีนส์*/
+.container-jeans {
+  position: absolute;
+  top: 56%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 5; 
+}
+
+/*ชุดสูท*/
+.container-suit {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 5; 
+}
+
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; 
+  padding-top: 5px;
+}
+
+.container-skirt .hover-number{
+  top: 80px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: -5px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-blouse .hover-number{
+  top: 13px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 65px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-shirt .hover-number{
+  top: 13px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 65px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-tshirt .hover-number{
+  top: 13px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 65px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+
+.container-overalls img,.container-tshirt img,.container-dress img, .container-jeans img, .container-leggings img,
+.container-shirt img,.container-swimmingtrunks img, .container-trainers img,.container-vest img, .container-pants img, .container-tanktop img, .container-shorts img,.container-blouse img,.container-suit img, .container-quesclo1 img, .container-skirt img, .container-quesclo2 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.container-overalls img:hover,.container-tshirt img:hover,.container-dress img:hover,.container-jeans img:hover,
+ .container-shirt img:hover,  .container-leggings img:hover,
+.container-swimmingtrunks img:hover, .container-tanktop img:hover, .container-shorts img:hover, .container-skirt img:hover, 
+.container-vest img:hover, .container-pants img:hover,  .container-blouse img:hover,
+.container-suit img:hover,.container-quesclo1 img:hover, .container-quesclo2 img:hover , .container-trainers img:hover {
+  transform: translateY(-10px);
+  filter: brightness(80%);
+}
+
+
+/*เสื้อเชิ๊ต*/
+.container-shirt {
+  position: absolute;
+  top: 41.7%;
+  left: 81.5%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 1; 
+}
+
+/*กางเกงว่ายน้ำผู้ชาย*/
+.container-swimmingtrunks {
+  position: absolute;
+  top: 28%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 1; 
+}
+
+
+/*คำถาม1*/
+.container-quesclo1 {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index:12; 
+}
+
+/*คำถาม2*/
+.container-quesclo2 {
+  position: absolute;
+  top: 6%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 0; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -7%;
+  right: -1%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+.speech-box {
+  width: 200px;
+  height: 120px;
+  bottom: 97%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+.speech-box11 {
+  width: 120px;
+  height: 120px;
+  top: 75%;
+  left: 15%;
+  z-index: 2; 
+}
+
+
+.speech-box2 {
+  width: 110px;
+  height: 110px;
+  text-align: center;
+  line-height: 25px;
+  top: 72%; 
+  left: -9%;
+  z-index: 4;
+}
+
+ /* ปะการัง,เสื้อเชิ๊ต,มังคุด,แอปเปิ้ล,กางเกงขายาว */
+.speech-box3 {
+    width: 120px;
+    height: 120px;
+    bottom: 97%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+ /* เสื้อเชิ๊ตเทศ,สิงโตทะเล,เสื้อผู้หญิง,ชุดติดกัน */
+ .speech-box4 {
+   width: 100px;
+   height: 120px; 
+   position: absolute;
+   top: 5%; 
+   left: 80%;
+   z-index: 3;
+ }
+
+ .speech-box5 {
+  width: 160px;
+  height: 80px; 
+  position: absolute;
+  top: 95%; 
+  left: -35%;
+  z-index: 2;
+}
+
+   
+  /* ชุดสูท */
+  .speech-box6 {
+    width: 180px;
+    height: 120px;
+    bottom: 97%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 3;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 30px; 
+  color: #0A2963; 
+  background-color: rgb(	255, 199, 199);
+  width: 430px; 
+  height: 100px;
+  text-align: center;
+  line-height: 47px; 
+  top: 95%;
+  left: -370%;
+  z-index: 1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 30px; 
+      color: #0A2963; 
+      background-color: #80cdb5;
+      width: 300px; 
+      height: 100px;
+      text-align: center;
+      line-height: 47px; 
+      top: 90%;
+  left: -20%;
+      z-index: 1;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      /* Adjust container sizes and positions */
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      h1 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+      .container-skirt {
+  position: absolute;
+  top: 70%;
+  left: 65.6%;
+  transform: translate(-50%, -50%);
+  width:9.1%; 
+  z-index: 1; 
+}
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: -10px;
+      left: 5px;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../../Testvocab/img/clothes2/speaker.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+      padding-top: 1%;
+      z-index: 5;
+      }
+
+      .container-shorts .hover-number,
+      .container-tanktop .hover-number {
+        top: 10px;
+        left:-5px;
+        z-index: 5;
+        }
+    
+      .container-trainers .hover-number,
+      .container-blouse .hover-number {
+        top: 10px;
+        left:5px;
+        z-index: 5;
+        }
+
+        .container-tshirt .hover-number,
+        .container-skirt .hover-number {
+        top: 20px;
+        left:5px;
+        z-index: 5;
+        }
+
+      .speech-box, .speech-box11,.speech-box2,.speech-box3,.speech-box6,.speech-box7,.speech-box4,.speech-box5,.speech-box8 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+      }
+
+
+    
+      /* Adjust speech box sizes and positions */
+      .speech-box{
+        width: 115px;
+        height: 60px;
+        top: -90%; 
+        left:-50%; 
+        line-height: 14px; 
+        z-index: -1;
+        }
+    
+      .speech-box11{
+        width: 80px;
+        height: 70px;
+        top: 80%; 
+        left:10%; 
+        line-height: 18px; 
+        z-index: -1;
+        }
+
+      .speech-box2 {
+        width: 75px;
+        height: 50px;
+        bottom: 10%; 
+        left:-10%; 
+        line-height: 10px; 
+        z-index: -1;
+        }
+    
+      .speech-box3{
+        width: 90px;
+    height: 80px;
+    bottom: 97%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: -1;
+        }
+
+        .speech-box4{
+          width: 100px;
+          height: 70px;
+          bottom: 100%; 
+          left:60%; 
+          line-height: 18px; 
+          z-index: -1;
+          }
+
+        .speech-box5{
+    width: 110px;
+    height: 40px;
+    top: 50%; 
+    left: 120%; 
+    transform: translateX(-50%);
+    line-height: 17px; 
+    z-index: -1;
+          }
+
+          .speech-box6{
+    width: 110px;
+    height: 60px;
+    top: 50%; 
+    left: 120%; 
+    transform: translateX(-50%);
+    line-height: 17px; 
+    z-index: -1;
+          }
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: rgb(	255, 199, 199);
+        width: 200px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: -75%;
+        left: 50%;
+        z-index: -1;
+      }
+
+      .speech-box8{
+        color: #0A2963; 
+        background-color: #80cdb5;
+        width: 220px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: -25%;
+        left: -490%;
+        z-index: -1;
+      }
+    }
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+
+</head>
+<body>
+   <!-- Navbar Start -->
+   <div class="container-fluid bg-light position-relative shadow">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+    <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+            <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+            <span class="text-primary">Smart Phonics</span>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav font-weight-bold mx-auto py-0">
+                
+            <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+            <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+            <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+            <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+
+    <h1> CLOTHES 1 </h1>
+
+
+         <h4>ประกอบด้วยคำศัพท์จำนวน 15 คำ</h4> 
+
+
+  <div class="container">
+    <img src="../../Testvocab/img/clothes1/clothes1.png" alt="bird" class="image">
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Actions1.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Colors.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+             <!--เสื้อยืดคอกลมแขนสั้น-->
+    <div class="container-tshirt">
+      <img src="../../Testvocab/img/clothes1/tshirt.png" alt="tshirt" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;"> T-shirt </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ที-เชิ่ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เสื้อยืดคอกลม <br> แขนสั้น</span>
+        <audio id="tshirt" src="../../Testvocab/voice/tshirt.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-tshirt"></div> 
+    </div>
+
+
+    <!--ชุดติดกัน-->
+    <div class="container-dress">
+        <img src="../../Testvocab/img/clothes1/dress.png" alt="dress" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">dress</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เดร้ส)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ชุดติดกัน</span>
+          <audio id="dress" src="../../Testvocab/voice/dress.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+        <!--กางเกงยีนส์-->
+        <div class="container-jeans">
+    <img src="../../Testvocab/img/clothes1/jeans.png" alt="jeans" class="image">
+    <div class="speech-box4">
+      <span style="display: flex; justify-content: center;">jeans</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(จีนฺส)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">กางเกงยีนส์</span>
+      <audio id="jeans" src="../../Testvocab/voice/jeans.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+        <!--กางเกงยืดขายาวแนบเนื้อสำหรับใส่ลำลอง-->
+        <div class="container-leggings">
+            <img src="../../Testvocab/img/clothes1/leggings.png" alt="leggings" class="image">
+            <div class="speech-box">
+            <div style="text-align: center;">
+            leggings
+    <span class="thai-text"> (เลก-กิ่งส) <br> กางเกงยืดขายาวแนบเนื้อ <br> สำหรับใส่ลำลอง</span>
+</div>
+              <audio id="leggings" src="../../Testvocab/voice/leggings.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+           <!--เสื้อกล้าม-->
+           <div class="container-tanktop">
+            <img src="../../Testvocab/img/clothes1/tanktop.png" alt="tanktop" class="image">
+            <div class="speech-box3">
+              <span style="display: flex; justify-content: center;">tank top</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(แท้งฺค-ท่อพ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">เสื้อกล้าม</span>
+              <audio id="tanktop" src="../../Testvocab/voice/tanktop.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+                <!--กางเกงขาสั้น-->
+                <div class="container-shorts">
+                    <img src="../../Testvocab/img/clothes1/shorts.png" alt="shorts" class="image">
+                    <div class="speech-box5">
+                    <div style="text-align: center;">
+    shorts <br>
+    <span class="thai-text">(ช็อทฺซ) กางเกงขาสั้น</span>
+</div>
+                      <audio id="shorts" src="../../Testvocab/voice/shorts.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>        
+
+ <!--กระโปรง-->
+ <div class="container-skirt">
+            <img src="../../Testvocab/img/clothes1/skirt.png" alt="skirt" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">skirt</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(สเกิ้ท)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">กระโปรง</span>
+              <audio id="skirt" src="../../Testvocab/voice/skirt.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-skirt"></div> 
+        </div>
+
+
+         <!--รองเท้ากีฬา-->
+ <div class="container-trainers">
+    <img src="../../Testvocab/img/clothes1/trainers.png" alt="trainers" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">trainers</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เทร้น-เหน่อะส)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">รองเท้ากีฬา</span>
+      <audio id="trainers" src="../../Testvocab/voice/trainers.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+        <!--ชุดเอี๊ยม-->
+        <div class="container-overalls">
+        <img src="../../Testvocab/img/clothes1/overalls.png" alt="overalls" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">overalls</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โอ๊ะ-เว่อะ-รอลฺส)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ชุดเอี๊ยม</span>
+          <audio id="overalls" src="../../Testvocab/voice/overalls.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--กางเกงขายาว-->
+    <div class="container-pants">
+      <img src="../../Testvocab/img/clothes1/pants.png" alt="pants" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">pants</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แพ่นฺทส)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">กางเกงขายาว</span>
+      <audio id="pants" src="../../Testvocab/voice/pants.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+ <!--ชุดสูท -->
+ <div class="container-suit">
+        <img src="../../Testvocab/img/clothes1/suit.png" alt="suit" class="image">
+        <div class="speech-box4">
+          <span style="display: flex; justify-content: center;">suit</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซู่ท)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ชุดสูท</span>
+        <audio id="suit" src="../../Testvocab/voice/suit.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+   <!--เสื้อผู้หญิง-->
+   <div class="container-blouse">
+      <img src="../../Testvocab/img/clothes1/blouse.png" alt="blouse" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">blouse</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เบล้าส)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เสื้อผู้หญิง</span>
+        <audio id="blouse" src="../../Testvocab/voice/blouse.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+    
+
+
+    <div class="container-son">
+      <img src="../../Testvocab/img/clothes1/son.png" alt="son" class="image">
+    </div>
+
+    <div class="container-wardrobe">
+      <img src="../../Testvocab/img/clothes1/wardrobe.png" alt="wardrobe" class="image">
+    </div>
+
+    <div class="container-mom">
+      <img src="../../Testvocab/img/clothes1/mom.png" alt="mom" class="image">
+    </div>
+
+    <div class="container-rightarm">
+      <img src="../../Testvocab/img/clothes1/rightarm.png" alt="rightarm" class="image">
+    </div>
+
+    <div class="container-leftarm">
+      <img src="../../Testvocab/img/clothes1/leftarm.png" alt="leftarm" class="image">
+    </div>
+
+
+    
+ <!--เสื้อกั๊ก-->
+ <div class="container-vest">
+      <img src="../../Testvocab/img/clothes1/vest.png" alt="vest" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">vest</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เว็ซฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เสื้อกั๊ก</span>
+        <audio id="vest" src="../../Testvocab/voice/vest.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>    
+     
+
+    <!--เสื้อเชิ๊ต-->
+    <div class="container-shirt">
+      <img src="../../Testvocab/img/clothes1/shirt.png" alt="shirt" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">shirt</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เชิ่ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เสื้อเชิ๊ต</span>
+      </div>
+      <audio id="shirt" src="../../Testvocab/voice/shirt.mp3"></audio>
+      <div class="hover-number hover-number-shirt"></div> 
+    </div>    
+    
+    <!--กางเกงว่ายน้ำผู้ชาย-->
+    <div class="container-swimmingtrunks">
+      <img src="../../Testvocab/img/clothes1/swimmingtrunks.png" alt="swimmingtrunks" class="image">
+      <div class="speech-box6">
+        <span style="display: flex; justify-content: center;">trunks</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ทรั่งฺค)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">กางเกงว่ายน้ำผู้ชาย</span>
+      </div>
+      <audio id="swimmingtrunks" src="../../Testvocab/voice/swimmingtrunks.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+   
+
+        <!--คำถาม1-->
+        <div class="container-quesclo1">
+          <img src="../../Testvocab/img/clothes1/quesclo1.png" alt="quesclo1" class="image">
+          <div class="speech-box7">
+          What do you see in the wardrobe ? <br>
+          <span class="thai-text">น้อง ๆ เห็นอะไรในตู้เสื้อผ้าบ้าง ?</span>
+          </div>
+          <audio id="quesclo1" src="../../Testvocab/voice/quesclo1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesclo2">
+          <img src="../../Testvocab/img/clothes1/quesclo2.png" alt="quesclo2" class="image">
+          <div class="speech-box8">
+          What is the boy doing ?<br>
+          <span class="thai-text">เด็กผู้ชายกำลังทำอะไรอยู่ ?</span>
+          </div>
+            <audio id="quesclo2" src="../../Testvocab/voice/quesclo2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              
+              <div class="container-exit">
+                <a href="../vocab.html">
+
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var tshirtImg = document.querySelector('.container-tshirt img');
+var dressImg = document.querySelector('.container-dress img');
+var overallsImg = document.querySelector('.container-overalls img');
+var shirtImg = document.querySelector('.container-shirt img');
+
+
+var swimmingtrunksImg = document.querySelector('.container-swimmingtrunks img');
+var vestImg = document.querySelector('.container-vest img');
+var pantsImg = document.querySelector('.container-pants img');
+
+var blouseImg = document.querySelector('.container-blouse img');
+var suitImg = document.querySelector('.container-suit img');
+var jeansImg = document.querySelector('.container-jeans img');
+var leggingsImg = document.querySelector('.container-leggings img');
+var tanktopImg = document.querySelector('.container-tanktop img');
+var shortsImg = document.querySelector('.container-shorts img');
+var skirtImg = document.querySelector('.container-skirt img');
+var trainersImg = document.querySelector('.container-trainers img');
+
+
+var quesclo1Img = document.querySelector('.container-quesclo1 img');
+var quesclo2Img = document.querySelector('.container-quesclo2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var leggingsSpeechBox = document.querySelector('.container-leggings .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var overallsSpeechBox = document.querySelector('.container-overalls .speech-box11');
+var shirtSpeechBox = document.querySelector('.container-shirt .speech-box11');
+var skirtSpeechBox = document.querySelector('.container-skirt .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var tshirtSpeechBox = document.querySelector('.container-tshirt .speech-box2');
+
+// เลือกอีเลเมนต์ของ speech box3
+var dressSpeechBox = document.querySelector('.container-dress .speech-box3');
+var trainersSpeechBox = document.querySelector('.container-trainers .speech-box3');
+var tanktopSpeechBox = document.querySelector('.container-tanktop .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var vestSpeechBox = document.querySelector('.container-vest .speech-box4');
+var suitSpeechBox = document.querySelector('.container-suit .speech-box4');
+var blouseSpeechBox = document.querySelector('.container-blouse .speech-box4');
+var jeansSpeechBox = document.querySelector('.container-jeans .speech-box4');
+var pantsSpeechBox = document.querySelector('.container-pants .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box5
+var shortsSpeechBox = document.querySelector('.container-shorts .speech-box5');
+var swimmingtrunksSpeechBox = document.querySelector('.container-swimmingtrunks .speech-box6');
+
+// เลือกอีเลเมนต์ของ speech box7
+var quesclo1SpeechBox = document.querySelector('.container-quesclo1 .speech-box7');
+
+// เลือกอีเลเมนต์ของ speech box8
+var quesclo2SpeechBox = document.querySelector('.container-quesclo2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var tshirtNumber = document.querySelector('.container-tshirt .hover-number');
+var dressNumber = document.querySelector('.container-dress .hover-number');
+var jeansNumber = document.querySelector('.container-jeans .hover-number');
+var leggingsNumber = document.querySelector('.container-leggings .hover-number');
+var tanktopNumber = document.querySelector('.container-tanktop .hover-number');
+
+var shortsNumber = document.querySelector('.container-shorts .hover-number');
+var skirtNumber = document.querySelector('.container-skirt .hover-number');
+var trainersNumber = document.querySelector('.container-trainers .hover-number');
+var overallsNumber = document.querySelector('.container-overalls .hover-number');
+var pantsNumber = document.querySelector('.container-pants .hover-number');
+
+var suitNumber = document.querySelector('.container-suit .hover-number');
+var blouseNumber = document.querySelector('.container-blouse .hover-number');
+var vestNumber = document.querySelector('.container-vest .hover-number');
+var shirtNumber = document.querySelector('.container-shirt .hover-number');
+var swimmingtrunksNumber = document.querySelector('.container-swimmingtrunks .hover-number');
+
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(tshirtImg, tshirtSpeechBox, tshirtNumber);
+setupHoverEffect(dressImg, dressSpeechBox, dressNumber);
+setupHoverEffect(jeansImg, jeansSpeechBox, jeansNumber);
+setupHoverEffect(leggingsImg, leggingsSpeechBox, leggingsNumber);
+setupHoverEffect(tanktopImg, tanktopSpeechBox, tanktopNumber);
+
+setupHoverEffect(shortsImg, shortsSpeechBox, shortsNumber);
+setupHoverEffect(skirtImg, skirtSpeechBox, skirtNumber);
+setupHoverEffect(trainersImg, trainersSpeechBox, trainersNumber);
+setupHoverEffect(overallsImg, overallsSpeechBox, overallsNumber);
+setupHoverEffect(pantsImg, pantsSpeechBox, pantsNumber);
+
+setupHoverEffect(suitImg, suitSpeechBox, suitNumber);
+setupHoverEffect(blouseImg, blouseSpeechBox, blouseNumber);
+setupHoverEffect(vestImg, vestSpeechBox, vestNumber);
+setupHoverEffect(shirtImg, shirtSpeechBox, shirtNumber);
+setupHoverEffect(swimmingtrunksImg, swimmingtrunksSpeechBox, swimmingtrunksNumber);
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+tshirtImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, tshirtSpeechBox);
+});
+
+dressImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, dressSpeechBox);
+});
+
+shirtImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, shirtSpeechBox);
+}); 
+
+swimmingtrunksImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, swimmingtrunksSpeechBox);
+}); 
+
+vestImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, vestSpeechBox);
+}); 
+
+pantsImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, pantsSpeechBox);
+}); 
+
+
+blouseImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, blouseSpeechBox);
+}); 
+
+suitImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, suitSpeechBox);
+}); 
+overallsImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, overallsSpeechBox);
+}); 
+jeansImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, jeansSpeechBox);
+}); 
+
+leggingsImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, leggingsSpeechBox);
+}); 
+
+tanktopImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,tanktopSpeechBox);
+}); 
+
+shortsImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,shortsSpeechBox);
+}); 
+
+skirtImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,skirtSpeechBox);
+}); 
+trainersImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,trainersSpeechBox);
+}); 
+quesclo1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesclo1SpeechBox);
+}); 
+
+quesclo2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesclo2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+tshirtImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, tshirtSpeechBox);
+});
+
+dressImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, dressSpeechBox);
+});
+
+shirtImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  shirtSpeechBox);
+  });
+
+
+swimmingtrunksImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  swimmingtrunksSpeechBox);
+  });
+
+  vestImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, vestSpeechBox);
+  });
+
+  pantsImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, pantsSpeechBox);
+  });
+
+
+  blouseImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, blouseSpeechBox);
+  });
+
+  suitImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   suitSpeechBox);
+  });
+
+  overallsImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   overallsSpeechBox);
+  });
+  jeansImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   jeansSpeechBox);
+  });
+
+  leggingsImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   leggingsSpeechBox);
+  });
+  tanktopImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   tanktopSpeechBox);
+  });
+
+  shortsImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   shortsSpeechBox);
+  });
+  
+  skirtImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   skirtSpeechBox);
+  });
+  trainersImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   trainersSpeechBox);
+  });
+  quesclo1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesclo1SpeechBox);
+  });
+
+  quesclo2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesclo2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-tshirt img', '#tshirt');
+playSoundWhenClick('.container-dress img', '#dress');
+playSoundWhenClick('.container-blouse img', '#blouse');
+playSoundWhenClick('.container-vest img', '#vest');
+playSoundWhenClick('.container-shirt img', '#shirt');
+playSoundWhenClick('.container-swimmingtrunks img', '#swimmingtrunks');
+playSoundWhenClick('.container-pants img', '#pants');
+playSoundWhenClick('.container-suit img', '#suit')
+playSoundWhenClick('.container-overalls img', '#overalls');
+playSoundWhenClick('.container-jeans img', '#jeans');
+playSoundWhenClick('.container-leggings img', '#leggings');
+playSoundWhenClick('.container-tanktop img', '#tanktop');
+playSoundWhenClick('.container-shorts img', '#shorts');
+playSoundWhenClick('.container-skirt img', '#skirt');
+playSoundWhenClick('.container-trainers img', '#trainers');
+playSoundWhenClick('.container-quesclo1 img', '#quesclo1');
+playSoundWhenClick('.container-quesclo2 img', '#quesclo2');
+ </script> 
+  
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

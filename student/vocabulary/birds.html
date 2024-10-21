@@ -1,0 +1,1319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+    <style>
+      
+.navbar {
+  top: 0; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -45px;
+  left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; 
+  padding-top: 5px;
+  z-index: -3; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/Bg33.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  left: 4%;
+  width: 75vw; 
+  height: 100vh;
+  overflow: hidden;
+  margin-bottom: 12px;
+  margin-top: 1px;
+  position: relative;
+  overflow: visible;
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 55px;
+  color: rgb(255, 192, 0);
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px rgb(237, 125, 49);
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -7%;
+  left:-5%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -7%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -7%;
+  right: -4%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*นกโรบิน*/
+.container-robin {
+  position: absolute;
+  top: 71%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1;
+}
+
+/*หงส์*/
+.container-swan {
+  position: absolute;
+  top: 86%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 9.7%; 
+  z-index: 1; 
+}
+
+/*นกฟลามิงโก*/
+.container-flamingo {
+  position: absolute;
+  top: 68%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 9.7%; 
+  z-index: 5; 
+}
+
+/*นกฮัมมิ่งเบิร์ด*/
+.container-hummingbird {
+  position: absolute;
+  top: 92%;
+  left: 39%;
+  transform: translate(-50%, -50%);
+  width: 9%;
+}
+
+/*นกกระเรียน*/
+.container-crane {
+  position: absolute;
+  top: 87%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 0; 
+}
+
+/*นกพิราบ*/
+.container-pigeon {
+  position: absolute;
+  top: 58%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 5; 
+}
+
+/*นกพิราบขาว*/
+.container-dove {
+  position: absolute;
+  top: 48%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  width: 10.1%; 
+  z-index: 1; 
+}
+
+/*นกกระจอกเทศ*/
+.container-ostrich {
+  position: absolute;
+  top: 90%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 1; 
+}
+
+/*นกแก้ว*/
+.container-parrot {
+  position: absolute;
+  top: 45%;
+  right: 3%;
+  transform: translate(-50%, -50%);
+  width: 4%; 
+  z-index: 2; 
+}
+
+
+
+/*นกพัฟฟิน*/
+.container-puffin {
+  position: absolute;
+  top: 15%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+/*นกเพนกวิน*/
+.container-penguin {
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 2;
+}
+
+/*นกกา*/
+.container-crow {
+  position: absolute;
+  top: 61%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 6.7%; 
+  z-index: 1; 
+}
+
+/*ขอนไม้นกเกาะ*/
+.container-quesbird {
+  position: absolute;
+  bottom: -25%;
+  right: -8%;
+  transform: translate(-50%, -50%);
+  width:30%; 
+  z-index: 1; 
+}
+
+.container-flamingo img,.container-robin img,.container-swan img,.container-hummingbird img,.container-crane img,
+.container-sparrow img, .container-eagle img, .container-hawk img,.container-woodpecker img, .container-penguin img,
+.container-pelican img, .container-ostrich img, .container-puffin img, .container-pigeon img, .container-peacock img,
+.container-parrot img,.container-dove img,.container-crow img, .container-ques5 img, .container-ques6 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.container-flamingo img:hover,.container-robin img:hover,.container-swan img:hover,.container-hummingbird img:hover,.container-crane img:hover,
+ .container-sparrow img:hover,.container-eagle img:hover, .container-hawk img:hover,
+.container-woodpecker img:hover, .container-penguin img:hover, .container-pelican img:hover, .container-ostrich img:hover, 
+.container-puffin img:hover, .container-pigeon img:hover, .container-peacock img:hover, .container-parrot img:hover,
+.container-dove img:hover, .container-crow img:hover, .container-ques5 img:hover, .container-ques6 img:hover  {
+  transform: translateY(-10px);
+  filter: brightness(80%);
+}
+
+/*นกกระจอก*/
+.container-sparrow {
+  position: absolute;
+  top: 60%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1; 
+}
+
+/*นกหัวขวาน*/
+.container-woodpecker {
+  position: absolute;
+  top: 44%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*เหยี่ยว*/
+.container-hawk{
+  position: absolute;
+  top: 32%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 1; 
+}
+
+/*นกอินทรี*/
+.container-eagle{
+  position: absolute;
+  top: 26%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 1; 
+}
+
+/*นกกระทุง*/
+.container-pelican{
+  position: absolute;
+  top: 75%;
+  left: 32%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 1; 
+}
+
+/*นกยูงตัวผู้*/
+.container-peacock {
+  position: absolute;
+  top: 52%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 1; 
+}
+
+/*คำถาม1*/
+.container-ques5 {
+  position: absolute;
+  top: 107.5%;
+  right: 19%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*คำถาม2*/
+.container-ques6 {
+  position: absolute;
+  top: 108%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: 30%;
+  right: -150%;
+  transform: translate(-50%, -50%);
+  width: 65%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box6,.speech-box7 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+.speech-box {
+  width: 120px; 
+  height: 120px; 
+  top: 75%;
+  z-index: 2; 
+}
+
+.speech-box11 {
+  width: 120px;
+  height: 120px;
+  top: 65%;
+  left: 25%;
+  z-index: 2; 
+}
+
+.speech-box2 {
+  width: 100px;
+  height: 70px;
+  text-align: center;
+  line-height: 20px;
+  top: 10%;
+  left: 65%;
+  z-index: 1;
+}
+
+
+.speech-box3 {
+    width: 120px;
+    height: 120px;
+    bottom: 97%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+
+
+ .speech-box4 {
+   width: 120px;
+   height: 120px; 
+   position: absolute;
+   top: 5%; 
+   left: 83%;
+   z-index: -1;
+ }
+
+  .speech-box6 {
+     width: 160px; 
+     height: 120px; 
+     position: absolute;
+     top: 62%; 
+     right: 50%;
+     z-index: 3;
+   }
+
+.speech-box7 {
+  font-size: 30px; 
+  color: #0A2963; 
+  background-color: rgb(	236, 251, 171);
+  width: 460px; 
+  height: 75px;
+  text-align: center;
+  line-height: 30px; 
+  top: -15px;
+  right: 50%;
+  z-index: -1;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) and (device-pixel-ratio: 2) {
+      /* Adjust container sizes and positions */
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      .container-peacock {
+  position: absolute;
+  top: 71%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 1; 
+}
+
+      h1 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 12px;
+}
+
+      /*คำถาม1*/
+.container-ques5 {
+  position: absolute;
+  top: 9.5%;
+  right: 19%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*คำถาม2*/
+.container-ques6 {
+  position: absolute;
+  top: 99%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+    
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: -10px;
+      left: -20px;
+      font-size: 13px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../../Testvocab/img/clothes2/speaker.png');
+      width: 25px;
+      height: 25px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+      padding-top: 1px;
+      z-index: 5;
+      }
+    
+      .container-ostrich .hover-number {
+        top: 26px;
+        left:5px;
+        }
+      .container-pelican .hover-number{
+        top: 20px;
+        left:-20px;
+        }
+
+      .container-hummingbird .hover-number{
+        top: 30px;
+        left:-3px;
+        z-index: -10;
+        }
+
+      .container-flamingo .hover-number,
+      .container-swan .hover-number{
+        top: 4px;
+        left:-4px;
+        }
+
+      .container-crane .hover-number{
+      top: 17px;
+      left:5px;
+      }
+
+      .speech-box, .speech-box11,.speech-box2,.speech-box3,.speech-box7,.speech-box4,.speech-box6 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+      }
+    
+    
+      /* Adjust speech box sizes and positions */
+      .speech-box{
+        width: 90px;
+        height: 70px;
+        top: 65%; 
+        left:-45%; 
+        z-index: -1;
+        }
+    
+      .speech-box11{
+        width: 70px;
+        height: 70px;
+        bottom: 100%; 
+        left:-20%; 
+        line-height: 18px; 
+        z-index: 2;
+        }
+
+      .speech-box2 {
+        width: 80px;
+        height: 65px;
+        bottom: 10%; 
+        left:40%; 
+        line-height: 18px; 
+        z-index: -1;
+        }
+    
+      .speech-box3{
+        width: 90px;
+    height: 80px;
+    bottom: 97%; 
+    left: 50%; 
+    transform: translateX(-50%);
+    z-index: -1;
+        }
+
+        .speech-box4{
+          width: 100px;
+          height: 70px;
+          bottom: 100%; 
+          left:60%; 
+          line-height: 18px; 
+          z-index: -1;
+          }
+
+        .speech-box6{
+          width: 110px;
+          height: 70px;
+          top: 80%; 
+          left:-90%; 
+          line-height: 18px; 
+          z-index: 10;
+          }
+    
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: rgb(	236, 251, 171);
+        width: 220px; 
+        height: 25px;
+        text-align: center;
+        line-height: 17px; 
+        top: -25%;
+        left: -480%;
+        z-index: -1;
+      }
+    }
+
+
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+        <!-- Navbar Start -->
+        <div class="container-fluid bg-light position-relative shadow">
+          <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+          <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                  <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                  <span class="text-primary">Smart Phonics</span>
+              </a>
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+           <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                  <div class="navbar-nav font-weight-bold mx-auto py-0">
+                      
+                  <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                  <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                  <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                  <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+          </nav>
+      </div>
+      <!-- Navbar End -->
+
+
+    <h1> BIRDS </h1>
+    <!--ส่วนที่เพิ่มเข้ามา-->
+<h4>ประกอบด้วยคำศัพท์จำนวน 18 คำ</h4> 
+  <div class="container">
+    <img src="../../Testvocab/img/bird1.png" alt="bird" class="image">
+    
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Opposites.html">
+             
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Counting.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+             <!--นกโรบิน-->
+    <div class="container-robin">
+      <img src="../../Testvocab/img/robin.png" alt="robin" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">robin</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โระ-บิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกโรบิน</span>
+        <audio id="robin" src="../../Testvocab/voice/robin.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+    <!--หงส์-->
+    <div class="container-swan">
+        <img src="../../Testvocab/img/swan.png" alt="swan" class="image">
+        <div class="speech-box">
+          <span style="display: flex; justify-content: center;">swan</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซว่อนฺ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">หงส์</span>
+          <audio id="swan" src="../../Testvocab/voice/swan.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+        <!--ฟลามิงโก้-->
+        <div class="container-flamingo">
+        <img src="../../Testvocab/img/flamingo.png" alt="flamingo" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">flamingo</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เฟล่อะ-มิ้ง-โก่ว)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">นกฟลามิงโก</span>
+          <audio id="flamingo" src="../../Testvocab/voice/flamingo.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+    <!--นกฮัมมิ่งเบิร์ด-->
+    <div class="container-hummingbird">
+        <img src="../../Testvocab/img/hummingbird.png" alt="hummingbird" class="image">
+        <div class="speech-box">
+        <span style="display: flex; justify-content: center;">hummingbird</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฮั้ม-หมิ่ง-เบิด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกฮัมมิ่งเบิร์ด</span>
+          <audio id="hummingbird" src="../../Testvocab/voice/hummingbird.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+        </div>
+
+
+    
+     <!--นกกระเรียน-->
+     <div class="container-crane">
+        <img src="../../Testvocab/img/crane.png" alt="crane" class="image">
+        <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">crane</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เครน)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกกระเรียน</span>
+          <audio id="crane" src="../../Testvocab/voice/crane.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+    <!--นกพิราบ-->
+    <div class="container-pigeon">
+      <img src="../../Testvocab/img/pigeon.png" alt="pigeon" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">pigeon</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(พิ-เจิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกพิราบ</span>
+      <audio id="pigeon" src="../../Testvocab/voice/pigeon.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+ <!--นกพิราบขาว -->
+ <div class="container-dove">
+        <img src="../../Testvocab/img/dove.png" alt="dove" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">dove</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ดั้ฟ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">นกพิราบขาว</span>
+        <audio id="dove" src="../../Testvocab/voice/dove.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+    <!--นกกระจอกเทศ-->
+    <div class="container-ostrich">
+      <img src="../../Testvocab/img/ostrich.png" alt="ostrich" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">ostrich</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(อ๊อซ-ตริ่จฺช)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกกระจอกเทศ</span>
+        <audio id="ostrich" src="../../Testvocab/voice/ostrich.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+  </div>
+
+
+   <!--นกแก้ว-->
+   <div class="container-parrot">
+      <img src="../../Testvocab/img/parrot.png" alt="parrot" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">parrot</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แพะ-เริ่ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกแก้ว</span>
+        <audio id="parrot" src="../../Testvocab/voice/parrot.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+    
+       
+ <!--นกพัฟฟิน-->
+ <div class="container-puffin">
+      <img src="../../Testvocab/img/puffin.png" alt="puffin" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">puffin</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(พัฟ-ฝิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกพัฟฟิน</span>
+        <audio id="puffin" src="../../Testvocab/voice/puffin.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>    
+    
+    <!--นกเพนกวิน-->
+    <div class="container-penguin">
+      <img src="../../Testvocab/img/penguin.png" alt="penguin" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">penguin</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เพ้ง-กวิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกเพนกวิน</span>
+        <audio id="penguin" src="../../Testvocab/voice/penguin.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+    <!--นกกา-->
+    <div class="container-crow">
+        <img src="../../Testvocab/img/crow.png" alt="crow" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">crow</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โครวฺ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">นกกา</span>
+        </div>
+        <audio id="crow" src="../../Testvocab/voice/crow.mp3"></audio>
+        <div class="hover-number"></div> 
+   </div>
+   
+    <!-- ขอนไม้
+    <div class="container-quesbird">
+      <img src="../../Testvocab/img/quesbird.png" alt="quesbird" class="image">
+    </div>    -->
+
+    <!--นกกระจอก-->
+    <div class="container-sparrow">
+      <img src="../../Testvocab/img/sparrow.png" alt="sparrow" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">sparrow</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซแป๊-โร่ว)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกกระจอก</span>
+      </div>
+      <audio id="sparrow" src="../../Testvocab/voice/sparrow.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>    
+    
+    <!--นกหัวขวาน-->
+    <div class="container-woodpecker">
+      <img src="../../Testvocab/img/woodpecker.png" alt="woodpecker" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">woodpecker</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(วุด-เผ็ค-เค่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกหัวขวาน</span>
+      </div>
+      <audio id="woodpecker" src="../../Testvocab/voice/woodpecker.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--เหยี่ยว-->
+    <div class="container-hawk">
+      <img src="../../Testvocab/img/hawk.png" alt="hawk" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">hawk </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฮ่อค)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เหยี่ยว</span>
+      </div>
+      <audio id="hawk" src="../../Testvocab/voice/hawk.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+    <!--นกอินทรี-->
+    <div class="container-eagle">
+      <img src="../../Testvocab/img/eagle.png" alt="eagle" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">eagle</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(อี้-เกิ่ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกอินทรี</span>
+      </div>
+      <audio id="eagle" src="../../Testvocab/voice/eagle.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+    <!--นกกระทุง-->
+    <div class="container-pelican">
+      <img src="../../Testvocab/img/pelican.png" alt="pelican" class="image">
+      <div class="speech-box6">
+        <span style="display: flex; justify-content: center;">pelican </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เพ้ลฺ-หลิ-เคิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกเพลิแกน, นกกระทุง</span>
+      </div>
+      <audio id="pelican" src="../../Testvocab/voice/pelican.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+    <!--นกยูงตัวผู้-->
+    <div class="container-peacock">
+      <img src="../../Testvocab/img/peacock.png" alt="peacock" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">peacock</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(พิ-ค็อคฺ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นกยูงตัวผู้</span>
+      </div>
+      <audio id="peacock" src="../../Testvocab/voice/peacock.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--คำถาม1-->
+        <div class="container-ques5">
+          <img src="../../Testvocab/img/ques5.png" alt="ques5" class="image">
+          <div class="speech-box7">
+          What does the flamingo look like ?<br>
+          <span class="thai-text">นกฟลามิงโกรูปร่างหน้าตาเป็นอย่างไร ?</span>
+          </div>
+          <audio id="ques5" src="../../Testvocab/voice/ques5.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-ques6">
+          <img src="../../Testvocab/img/ques6.png" alt="ques6" class="image">
+          <div class="speech-box7">
+          What birds do you like ? <br>
+          <span class="thai-text">น้อง ๆ ชอบนกอะไรบ้างไร ?</span>
+            <audio id="ques6" src="../../Testvocab/voice/ques6.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              <a href="../vocab.html">
+              <div class="container-exit">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+
+  </div>
+
+<script>
+// เลือกอีเลเมนต์ของรูปภาพ
+var robinImg = document.querySelector('.container-robin img');
+var swanImg = document.querySelector('.container-swan img');
+var flamingoImg = document.querySelector('.container-flamingo img');
+var hummingbirdImg = document.querySelector('.container-hummingbird img');
+var craneImg = document.querySelector('.container-crane img');
+var sparrowImg = document.querySelector('.container-sparrow img');
+var hawkImg = document.querySelector('.container-hawk img');
+var eagleImg = document.querySelector('.container-eagle img');
+var woodpeckerImg = document.querySelector('.container-woodpecker img');
+var penguinImg = document.querySelector('.container-penguin img');
+var pelicanImg = document.querySelector('.container-pelican img');
+var ostrichImg = document.querySelector('.container-ostrich img');
+var puffinImg = document.querySelector('.container-puffin img');
+var pigeonImg = document.querySelector('.container-pigeon img');
+var peacockImg = document.querySelector('.container-peacock img');
+var parrotImg = document.querySelector('.container-parrot img');
+var doveImg = document.querySelector('.container-dove img');
+var crowImg = document.querySelector('.container-crow img');
+
+var ques5Img = document.querySelector('.container-ques5 img');
+var ques6Img = document.querySelector('.container-ques6 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+
+var hummingbirdSpeechBox = document.querySelector('.container-hummingbird .speech-box');
+var swanSpeechBox = document.querySelector('.container-swan .speech-box');
+var peacockSpeechBox = document.querySelector('.container-peacock .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var ostrichSpeechBox = document.querySelector('.container-ostrich .speech-box11');
+var parrotSpeechBox = document.querySelector('.container-parrot .speech-box11');
+
+var crowSpeechBox = document.querySelector('.container-crow .speech-box11');
+var sparrowSpeechBox = document.querySelector('.container-sparrow .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var robinSpeechBox = document.querySelector('.container-robin .speech-box2');
+
+
+// เลือกอีเลเมนต์ของ speech box3
+
+var woodpeckerSpeechBox = document.querySelector('.container-woodpecker .speech-box3');
+var hawkSpeechBox = document.querySelector('.container-hawk .speech-box3');
+var eagleSpeechBox = document.querySelector('.container-eagle .speech-box3');
+var pigeonSpeechBox = document.querySelector('.container-pigeon .speech-box3');
+var doveSpeechBox = document.querySelector('.container-dove .speech-box3');
+var flamingoSpeechBox = document.querySelector('.container-flamingo .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var puffinSpeechBox = document.querySelector('.container-puffin .speech-box4');
+var craneSpeechBox = document.querySelector('.container-crane .speech-box4');
+var penguinSpeechBox = document.querySelector('.container-penguin .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box6
+var pelicanSpeechBox = document.querySelector('.container-pelican .speech-box6');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var ques5SpeechBox = document.querySelector('.container-ques5 .speech-box7');
+var ques6SpeechBox = document.querySelector('.container-ques6 .speech-box7');
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var robinNumber = document.querySelector('.container-robin .hover-number');
+var swanNumber = document.querySelector('.container-swan .hover-number');
+var flamingoNumber = document.querySelector('.container-flamingo .hover-number');
+var hummingbirdNumber = document.querySelector('.container-hummingbird .hover-number');
+var craneNumber = document.querySelector('.container-crane .hover-number');
+var sparrowNumber = document.querySelector('.container-sparrow .hover-number');
+var hawkNumber = document.querySelector('.container-hawk .hover-number');
+var eagleNumber = document.querySelector('.container-eagle .hover-number');
+var woodpeckerNumber = document.querySelector('.container-woodpecker .hover-number');
+var penguinNumber = document.querySelector('.container-penguin .hover-number');
+var pelicanNumber = document.querySelector('.container-pelican .hover-number');
+var ostrichNumber = document.querySelector('.container-ostrich .hover-number');
+var puffinNumber = document.querySelector('.container-puffin .hover-number');
+var pigeonNumber = document.querySelector('.container-pigeon .hover-number');
+var peacockNumber = document.querySelector('.container-peacock .hover-number');
+var parrotNumber = document.querySelector('.container-parrot .hover-number');
+var doveNumber = document.querySelector('.container-dove .hover-number');
+var crowNumber = document.querySelector('.container-crow .hover-number');
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(robinImg, robinSpeechBox, robinNumber);
+setupHoverEffect(swanImg, swanSpeechBox, swanNumber);
+setupHoverEffect(flamingoImg, flamingoSpeechBox, flamingoNumber);
+setupHoverEffect(hummingbirdImg, hummingbirdSpeechBox, hummingbirdNumber);
+setupHoverEffect(craneImg, craneSpeechBox, craneNumber);
+setupHoverEffect(sparrowImg, sparrowSpeechBox, sparrowNumber);
+setupHoverEffect(hawkImg, hawkSpeechBox, hawkNumber);
+setupHoverEffect(eagleImg, eagleSpeechBox, eagleNumber);
+setupHoverEffect(woodpeckerImg, woodpeckerSpeechBox, woodpeckerNumber);
+setupHoverEffect(penguinImg, penguinSpeechBox, penguinNumber);
+setupHoverEffect(pelicanImg, pelicanSpeechBox, pelicanNumber);
+setupHoverEffect(ostrichImg, ostrichSpeechBox, ostrichNumber);
+setupHoverEffect(puffinImg, puffinSpeechBox, puffinNumber);
+setupHoverEffect(pigeonImg, pigeonSpeechBox, pigeonNumber);
+setupHoverEffect(peacockImg, peacockSpeechBox, peacockNumber);
+setupHoverEffect(parrotImg, parrotSpeechBox, parrotNumber);
+setupHoverEffect(doveImg, doveSpeechBox, doveNumber);
+setupHoverEffect(crowImg, crowSpeechBox, crowNumber);
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+robinImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, robinSpeechBox);
+});
+
+swanImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, swanSpeechBox);
+});
+
+hummingbirdImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, hummingbirdSpeechBox);
+});
+
+craneImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, craneSpeechBox);
+}); 
+
+
+sparrowImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, sparrowSpeechBox);
+}); 
+
+hawkImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, hawkSpeechBox);
+});
+
+eagleImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, eagleSpeechBox);
+}); 
+
+woodpeckerImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, woodpeckerSpeechBox);
+}); 
+
+penguinImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, penguinSpeechBox);
+}); 
+
+pelicanImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, pelicanSpeechBox);
+}); 
+
+ostrichImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, ostrichSpeechBox);
+}); 
+
+puffinImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, puffinSpeechBox);
+}); 
+
+pigeonImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, pigeonSpeechBox);
+}); 
+
+peacockImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, peacockSpeechBox);
+}); 
+
+parrotImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, parrotSpeechBox);
+}); 
+
+doveImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, doveSpeechBox);
+}); 
+
+crowImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, crowSpeechBox);
+}); 
+
+ques5Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, ques5SpeechBox);
+}); 
+
+ques6Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, ques6SpeechBox);
+}); 
+
+flamingoImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, flamingoSpeechBox);
+}); 
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+robinImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, robinSpeechBox);
+});
+
+swanImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, swanSpeechBox);
+});
+
+hummingbirdImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, hummingbirdSpeechBox);
+});
+
+craneImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, craneSpeechBox);
+  });
+
+
+
+sparrowImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  sparrowSpeechBox);
+  });
+
+hawkImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, hawkSpeechBox);
+  });
+
+eagleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  eagleSpeechBox);
+  });
+
+woodpeckerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  woodpeckerSpeechBox);
+  });
+
+  penguinImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  penguinSpeechBox);
+  });
+
+ pelicanImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   pelicanSpeechBox);
+  });
+
+  ostrichImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  ostrichSpeechBox);
+  });
+
+  puffinImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, puffinSpeechBox);
+  });
+
+  pigeonImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, pigeonSpeechBox);
+  });
+
+  peacockImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, peacockSpeechBox);
+  });
+  
+  parrotImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, parrotSpeechBox);
+  });
+
+  doveImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   doveSpeechBox);
+  });
+
+  crowImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   crowSpeechBox);
+  });
+  
+  ques5Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   ques5SpeechBox);
+  });
+
+  ques6Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   ques6SpeechBox);
+  });
+
+  flamingoImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   flamingoSpeechBox);
+  });
+
+  
+
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-robin img', '#robin');
+playSoundWhenClick('.container-swan img', '#swan');
+playSoundWhenClick('.container-hummingbird img', '#hummingbird');
+playSoundWhenClick('.container-parrot img', '#parrot');
+playSoundWhenClick('.container-ostrich img', '#ostrich');
+playSoundWhenClick('.container-puffin img', '#puffin');
+playSoundWhenClick('.container-penguin img', '#penguin');
+playSoundWhenClick('.container-crane img', '#crane');
+
+playSoundWhenClick('.container-sparrow img', '#sparrow');
+playSoundWhenClick('.container-hawk img', '#hawk');
+playSoundWhenClick('.container-eagle img', '#eagle');
+playSoundWhenClick('.container-woodpecker img', '#woodpecker');
+playSoundWhenClick('.container-pelican img', '#pelican');
+playSoundWhenClick('.container-pigeon img', '#pigeon');
+playSoundWhenClick('.container-peacock img', '#peacock');
+playSoundWhenClick('.container-dove img', '#dove');
+playSoundWhenClick('.container-crow img', '#crow');
+playSoundWhenClick('.container-ques5 img', '#ques5');
+playSoundWhenClick('.container-ques6 img', '#ques6');
+
+playSoundWhenClick('.container-flamingo img', '#flamingo');
+
+</script>
+  
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

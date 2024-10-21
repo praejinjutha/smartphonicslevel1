@@ -1,0 +1,1262 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+    <style>
+      
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/clothes1/bgtoys.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #FFC000;
+ text-shadow: 0 0 25px #1F4E79;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px #ffffff; /* กำหนดขอบตัวอักษร */
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+
+.image {
+  width: 110%;
+  height: 100%;
+  margin-left: -4.7%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -4%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -4%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -4%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+
+/*รถลากของเล่น*/
+.container-toywagon {
+  position: absolute;
+  top: 88%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 29%; 
+  z-index: 9; 
+}
+
+.container-girl1 {
+  position: absolute;
+  top: 69%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 14.5%; 
+  z-index: 5; 
+}
+
+
+/*รถของเล่น*/
+.container-toycar {
+  position: absolute;
+  top: 95%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 10; 
+}
+
+/*ตุ๊กตาทหาร*/
+.container-toysoldier {
+  position: absolute;
+  top: 89%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 7; 
+}
+
+/*ลูกโป่ง*/
+.container-balloons{
+  position: absolute;
+  top: 35%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1; 
+}
+
+/*เป็ดยาง*/
+.container-rubberduck {
+  position: absolute;
+  top: 79.1%;
+  left: 25.3%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 10; 
+}
+
+/*หุ่นยนต์ของเล่น*/
+.container-toyrobot{
+  position: absolute;
+  top: 78%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 1; 
+}
+
+
+/*ม้าโยก*/
+.container-rockinghorse {
+  position: absolute;
+  top: 69.5%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 17%; 
+  z-index: 0; 
+}
+
+/*ตัวต่อไม้หรือพลาสติก*/
+.container-buildingblocks {
+  position: absolute;
+  top: 79%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 2; 
+}
+
+/*ลูกหิน*/
+.container-marbles {
+  position: absolute;
+  top: 97.5%;
+  left: 88%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 6; 
+}
+
+/*ตัวตลก*/
+.container-clown {
+  position: absolute;
+  top: 82%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 3; 
+}
+
+/*ลูกดิ่ง*/
+.container-yoyo {
+  position: absolute;
+  top: 89%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 4.5%; 
+  z-index: 4; 
+}
+
+/*นกหวีด*/
+.container-whistle {
+  position: absolute;
+  top: 96%;
+  left: 99%;
+  transform: translate(-50%, -50%);
+  width: 4%; 
+  z-index: 3; 
+}
+
+/*เครื่องบินกระดาษ*/
+.container-paperplane {
+  position: absolute;
+  top: 52%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 0; 
+}
+
+/*ตุ๊กตา*/
+.container-doll {
+  position: absolute;
+  top: 82%;
+  left: 99%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+
+/*เชือกสำหรับแกว่งกระโดดเล่น*/
+.container-skippingrope {
+  position: absolute;
+  top: 75%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 1; 
+}
+
+/*บ้านตุ๊กตา*/
+.container-dollhouse {
+  position: absolute;
+  top: 73%;
+  left: 94.5%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 0;
+}
+
+/*ตัวต่อโดมิโน่*/
+.container-dominoes {
+  position: absolute;
+  top: 94%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 5; 
+}
+
+/*หุ่นเชิด*/
+.container-puppet {
+  position: absolute;
+  top: 67%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 0; 
+}
+
+/*ภาพต่อจิ๊กซอว์*/
+.container-jigsawpuzzle {
+  position: absolute;
+  top: 91%;
+  left: 53%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 6; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -35px;
+  left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+  z-index: -3; 
+}
+
+.container-toywagon .hover-number{
+  top: 55px;
+  left: 195px;
+  z-index: 3;
+}
+.container-toyrobot .hover-number{
+  top: 65px;
+  left: 50px;
+  z-index: 3;
+}
+.container-toysoldier .hover-number{
+  top: 105px;
+  left: 5px;
+  z-index: 3;
+}
+.container-jigsawpuzzle .hover-number{
+  top: 75px;
+  left: 35px;
+  z-index: 3;
+}
+
+.container-skippingrope .hover-number{
+  top: 5px;
+  left: 45px;
+  z-index: 3;
+}
+
+.container-dollhouse .hover-number{
+  top: 55px;
+  left: 155px;
+  z-index: 3;
+}
+
+.container-doll .hover-number,
+.container-clown .hover-number{
+  top: 45px;
+  left: 50px;
+  z-index: 3;
+}
+
+.container-marbles .hover-number{
+  top: 35px;
+  left: 10px;
+  z-index: 3;
+}
+
+.container-jigsawpuzzle img,.container-puppet img,.container-skippingrope img,.container-dollhouse img,.container-paperplane img, .container-whistle img, .container-yoyo img,
+.container-toysoldier img, .container-toyrobot img, .container-balloons img,.container-toycar img, .container-buildingblocks img,.container-rubberduck img, .container-doll img, .container-toywagon img, .container-clown img, .container-rockinghorse img,.container-dominoes img, .container-questoys1 img, .container-marbles img, .container-questoys2 img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+.container-jigsawpuzzle img:hover,.container-puppet img:hover,.container-dollhouse img:hover,.container-paperplane img:hover,.container-whistle img:hover,.container-skippingrope img:hover,
+ .container-toysoldier img:hover,.container-toyrobot img:hover, .container-balloons img:hover, .container-yoyo img:hover,
+.container-toycar img:hover, .container-clown img:hover, .container-rockinghorse img:hover, .container-marbles img:hover, 
+.container-rubberduck img:hover, .container-doll img:hover, .container-toywagon img:hover,.container-dominoes img:hover,.container-questoys1 img:hover, .container-questoys2 img:hover , .container-buildingblocks img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+
+/*คำถาม1*/
+.container-questoys1 {
+  position: absolute;
+  top: 34%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 4; 
+}
+
+/*คำถาม2*/
+.container-questoys2 {
+  position: absolute;
+  top: 16%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -3%;
+  right: -16%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 1); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+
+.speech-box {
+  width: 240px;
+  height: 120px;
+  bottom: 1%; 
+  left: 130%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 210px;
+  height: 120px;
+  bottom: 97%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box2 {
+  width: 190px;
+  height: 120px;
+  bottom: 1%; 
+  left: 180%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+    width: 140px;
+    height: 120px;
+    bottom: 5%; 
+    left: -70%; 
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+
+ .speech-box4 {
+  width: 190px;
+  height: 120px;
+  bottom: 1%; 
+  left: 150%; 
+  transform: translateX(-50%);
+  z-index: -1;
+ }
+
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #C5E0B4; /* กำหนดสีพื้นหลังของ speech box */
+  width: 430px; 
+  height: 100px;
+  text-align: center;
+  line-height: 27px; 
+  top: 5%;
+  left: 30%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #FFE699; /* กำหนดสีพื้นหลังของ speech box */
+      width: 330px; 
+      height: 100px;
+      text-align: center;
+      line-height: 27px; 
+      top: -45%;
+      left: 90%;
+      z-index: -1;
+    }
+
+
+/* For screens smaller than 768px (e.g., smartphtoywagons) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box4,
+  .speech-box5,
+  .speech-box6,
+  .speech-box7,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+    @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+      <!-- Navbar Start -->
+      <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+        <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                <span class="text-primary">Smart Phonics</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    
+                <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <h1> TOYS </h1>
+
+         <!--ส่วนที่เพิ่มเข้ามา-->
+         <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 19 คำ</h4> 
+
+         
+  <div class="container">
+    <img src="../../Testvocab/img/clothes1/toys.png" alt="bird" class="image">
+
+   
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Occupations1.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Underthesea.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--รถลากของเล่น-->
+    <div class="container-toywagon">
+      <img src="../../Testvocab/img/clothes1/toywagon.png" alt="toywagon" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">toy wagon</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ท้อย แว-เกิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รถลากของเล่น</span>
+      </div>
+      <audio id="toywagon" src="../../Testvocab/voice/toywagon.mp3"></audio>
+      <div class="hover-number hover-number-toywagon"></div> 
+    </div>
+
+    <div class="container-girl1">
+      <img src="../../Testvocab/img/clothes1/girl1.png" alt="girl1" class="image">
+    </div>
+
+    
+    <!--รถของเล่น-->
+    <div class="container-toycar">
+      <img src="../../Testvocab/img/clothes1/toycar.png" alt="toycar" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">toy car</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ท้อย ข่า)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รถของเล่น</span>
+      </div>
+      <audio id="toycar" src="../../Testvocab/voice/toycar.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+        <!--ตุ๊กตาทหาร-->
+        <div class="container-toysoldier">
+      <img src="../../Testvocab/img/clothes1/toysoldier.png" alt="toysoldier" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">toy soldier</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ท้อย โซล-เจ่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ตุ๊กตาทหาร</span>
+      </div>
+      <audio id="toysoldier" src="../../Testvocab/voice/toysoldier.mp3"></audio>
+      <div class="hover-number hover-number-toysoldier"></div> 
+    </div>  
+
+    <!--ลูกโป่ง-->
+    <div class="container-balloons">
+      <img src="../../Testvocab/img/clothes1/balloons.png" alt="balloons" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">balloons </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เบอะ-ลู่นซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ลูกโป่ง</span>
+      </div>
+      <audio id="balloons" src="../../Testvocab/voice/balloons.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--เป็ดยาง-->
+ <div class="container-rubberduck">
+      <img src="../../Testvocab/img/clothes1/rubberduck.png" alt="rubberduck" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">rubber duck</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(รับ-เบ่อะ ดั่ค)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เป็ดยาง</span>
+        <audio id="rubberduck" src="../../Testvocab/voice/rubberduck.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--หุ่นยนต์ของเล่น-->
+        <div class="container-toyrobot">
+      <img src="../../Testvocab/img/clothes1/toyrobot.png" alt="toyrobot" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">toy robot</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ท้อย โระ-บ็อท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">หุ่นยนต์ของเล่น</span>
+      </div>
+      <audio id="toyrobot" src="../../Testvocab/voice/toyrobot.mp3"></audio>
+      <div class="hover-number hover-number-toyrobot"></div> 
+    </div>
+
+                    <!--ม้าโยก-->
+                    <div class="container-rockinghorse">
+                    <img src="../../Testvocab/img/clothes1/rockinghorse.png" alt="rockinghorse" class="image">
+                    <div class="speech-box11">
+                      <span style="display: flex; justify-content: center;">rocking horse</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(ร็อค-ขิ่ง ฮ่อซ)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">ม้าโยก</span>
+                      <audio id="rockinghorse" src="../../Testvocab/voice/rockinghorse.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>   
+
+         <!--ตัวต่อไม้หรือพลาสติก-->
+         <div class="container-buildingblocks">
+    <img src="../../Testvocab/img/clothes1/buildingblocks.png" alt="buildingblocks" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">building blocks</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(บิ๊ล-ดิ่ง บล่อคฺซ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ตัวต่อไม้หรือพลาสติก</span>
+      <audio id="buildingblocks" src="../../Testvocab/voice/buildingblocks.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--ลูกหิน-->
+ <div class="container-marbles">
+            <img src="../../Testvocab/img/clothes1/marbles.png" alt="marbles" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">marbles</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ม้า-เบิ่ลฺส)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ลูกหิน</span>
+              <audio id="marbles" src="../../Testvocab/voice/marbles.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-marbles"></div> 
+        </div>
+
+           <!--ตัวตลก-->
+           <div class="container-clown">
+            <img src="../../Testvocab/img/clothes1/clown.png" alt="clown" class="image">
+            <div class="speech-box2">
+              <span style="display: flex; justify-content: center;">clown</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(คล่าวฺน)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ตัวตลก</span>
+              <audio id="clown" src="../../Testvocab/voice/clown.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-clown"></div> 
+        </div>
+
+        <!--ลูกดิ่ง-->
+        <div class="container-yoyo">
+            <img src="../../Testvocab/img/clothes1/yoyo.png" alt="yoyo" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">yo-yo</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(โย้ว-โหย่ว)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ลูกดิ่ง</span>
+              <audio id="yoyo" src="../../Testvocab/voice/yoyo.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+                <!--นกหวีด-->
+                <div class="container-whistle">
+    <img src="../../Testvocab/img/clothes1/whistle.png" alt="whistle" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">whistle</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(วิซ-เสิ่ล)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">นกหวีด</span>
+      <audio id="whistle" src="../../Testvocab/voice/whistle.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+    <!--เครื่องบินกระดาษ-->
+    <div class="container-paperplane">
+        <img src="../../Testvocab/img/clothes1/paperplane.png" alt="paperplane" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">paper plane</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เพ้-เพ่อะ เพล่นฺซ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เครื่องบินกระดาษ</span>
+          <audio id="paperplane" src="../../Testvocab/voice/paperplane.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--ตุ๊กตา-->
+    <div class="container-doll">
+      <img src="../../Testvocab/img/clothes1/doll.png" alt="doll" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">doll</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ด้อลฺล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ตุ๊กตา</span>
+      <audio id="doll" src="../../Testvocab/voice/doll.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-doll"></div> 
+    </div>
+
+        <!--เชือกสำหรับแกว่งกระโดดเล่น-->
+        <div class="container-skippingrope">
+        <img src="../../Testvocab/img/clothes1/skippingrope.png" alt="skippingrope" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">skipping rope</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซกิ้พ-ผิ่ง โร่พ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เชือกสำหรับแกว่งกระโดดเล่น</span>
+          <audio id="skippingrope" src="../../Testvocab/voice/skippingrope.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-skippingrope"></div>
+    </div>
+
+             <!--บ้านตุ๊กตา-->
+             <div class="container-dollhouse">
+      <img src="../../Testvocab/img/clothes1/dollhouse.png" alt="dollhouse" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">dollhouse</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ด๊อล-เฮ่าซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">บ้านตุ๊กตา</span>
+        <audio id="dollhouse" src="../../Testvocab/voice/dollhouse.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-dollhouse"></div>
+    </div>
+
+
+ <!--ตัวต่อโดมิโน่ -->
+ <div class="container-dominoes">
+        <img src="../../Testvocab/img/clothes1/dominoes.png" alt="dominoes" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">dominoes</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ด๊อม-หมิ-โน่ว-ซ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ตัวต่อโดมิโน่</span>
+        <audio id="dominoes" src="../../Testvocab/voice/dominoes.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+ <!--หุ่นเชิด -->
+ <div class="container-puppet">
+    <img src="../../Testvocab/img/clothes1/puppet.png" alt="puppet" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">puppet</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(พัพ-พิ่ท)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">หุ่นเชิด</span>
+    <audio id="puppet" src="../../Testvocab/voice/puppet.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--ภาพต่อจิ๊กซอว์ -->
+ <div class="container-jigsawpuzzle">
+    <img src="../../Testvocab/img/clothes1/jigsawpuzzle.png" alt="jigsawpuzzle" class="image">
+    <div class="speech-box4">
+      <span style="display: flex; justify-content: center;">jigsaw puzzle</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(จิ๊ก-ส่อ ผัส-เสิ่ล)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ภาพต่อจิ๊กซอว์</span>
+    <audio id="jigsawpuzzle" src="../../Testvocab/voice/jigsawpuzzle.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-jigsawpuzzle"></div> 
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-questoys1">
+          <img src="../../Testvocab/img/clothes1/questoys1.png" alt="questoys1" class="image">
+          <div class="speech-box7">
+          Wow ! Look at all the toys.<br>
+How many balloons do you see ? <br>
+          <span class="thai-text">โอ้โฮ ดูที่ของเล่นพวกนั้นสิ น้อง ๆ เห็นลูกโป่งกี่ใบ ?</span>
+          </div>
+          <audio id="questoys1" src="../../Testvocab/voice/questoys1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-questoys2">
+          <img src="../../Testvocab/img/clothes1/questoys2.png" alt="questoys2" class="image">
+          <div class="speech-box8">
+          Is the clown in the dollhouse <br>
+or in front of it ? <br>
+          <span class="thai-text">ตัวตลกอยู่ข้างในหรืออยู่ข้างหน้าบ้านตุ๊กตา ?</span>
+          </div>
+            <audio id="questoys2" src="../../Testvocab/voice/questoys2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              <div class="container-exit">
+                <a href="../vocab2.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var dollhouseImg = document.querySelector('.container-dollhouse img');
+var paperplaneImg = document.querySelector('.container-paperplane img');
+var skippingropeImg = document.querySelector('.container-skippingrope img');
+var toysoldierImg = document.querySelector('.container-toysoldier img');
+var balloonsImg = document.querySelector('.container-balloons img');
+var toyrobotImg = document.querySelector('.container-toyrobot img');
+var toycarImg = document.querySelector('.container-toycar img');
+var rubberduckImg = document.querySelector('.container-rubberduck img');
+var dollImg = document.querySelector('.container-doll img');
+var toywagonImg = document.querySelector('.container-toywagon img');
+var dominoesImg = document.querySelector('.container-dominoes img');
+var whistleImg = document.querySelector('.container-whistle img');
+var yoyoImg = document.querySelector('.container-yoyo img');
+var clownImg = document.querySelector('.container-clown img');
+var rockinghorseImg = document.querySelector('.container-rockinghorse img');
+var marblesImg = document.querySelector('.container-marbles img');
+var buildingblocksImg = document.querySelector('.container-buildingblocks img');
+var puppetImg = document.querySelector('.container-puppet img');
+var jigsawpuzzleImg = document.querySelector('.container-jigsawpuzzle img');
+var questoys1Img = document.querySelector('.container-questoys1 img');
+var questoys2Img = document.querySelector('.container-questoys2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var toywagonSpeechBox = document.querySelector('.container-toywagon .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var dollhouseSpeechBox = document.querySelector('.container-dollhouse .speech-box11');
+var dominoesSpeechBox = document.querySelector('.container-dominoes .speech-box11');
+var yoyoSpeechBox = document.querySelector('.container-yoyo .speech-box11');
+var marblesSpeechBox = document.querySelector('.container-marbles .speech-box11');
+var buildingblocksSpeechBox = document.querySelector('.container-buildingblocks .speech-box11');
+var puppetSpeechBox = document.querySelector('.container-puppet .speech-box11');
+var rockinghorseSpeechBox = document.querySelector('.container-rockinghorse .speech-box11');
+var jigsawpuzzleSpeechBox = document.querySelector('.container-jigsawpuzzle .speech-box11');
+var toyrobotSpeechBox = document.querySelector('.container-toyrobot .speech-box11');
+var rubberduckSpeechBox = document.querySelector('.container-rubberduck .speech-box11');
+var whistleSpeechBox = document.querySelector('.container-whistle .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var dollSpeechBox = document.querySelector('.container-doll .speech-box2');
+var clownSpeechBox = document.querySelector('.container-clown .speech-box2');
+var paperplaneSpeechBox = document.querySelector('.container-paperplane .speech-box2');
+var toysoldierSpeechBox = document.querySelector('.container-toysoldier .speech-box2');
+var balloonsSpeechBox = document.querySelector('.container-balloons .speech-box2');
+var skippingropeSpeechBox = document.querySelector('.container-skippingrope .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box3
+var toycarSpeechBox = document.querySelector('.container-toycar .speech-box3');
+
+
+// เลือกอีเลเมนต์ของ speech box4
+var jigsawpuzzleSpeechBox = document.querySelector('.container-jigsawpuzzle .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box7
+var questoys1SpeechBox = document.querySelector('.container-questoys1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var questoys2SpeechBox = document.querySelector('.container-questoys2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var toywagonNumber = document.querySelector('.container-toywagon .hover-number');
+var toycarNumber = document.querySelector('.container-toycar .hover-number');
+var toysoldierNumber = document.querySelector('.container-toysoldier .hover-number');
+var balloonsNumber = document.querySelector('.container-balloons .hover-number');
+
+var rubberduckNumber = document.querySelector('.container-rubberduck .hover-number');
+var toyrobotNumber = document.querySelector('.container-toyrobot .hover-number');
+var rockinghorseNumber = document.querySelector('.container-rockinghorse .hover-number');
+var buildingblocksNumber = document.querySelector('.container-buildingblocks .hover-number');
+var marblesNumber = document.querySelector('.container-marbles .hover-number');
+
+var clownNumber = document.querySelector('.container-clown .hover-number');
+var yoyoNumber = document.querySelector('.container-yoyo .hover-number');
+var whistleNumber = document.querySelector('.container-whistle .hover-number');
+var paperplaneNumber = document.querySelector('.container-paperplane .hover-number');
+var dollNumber = document.querySelector('.container-doll .hover-number');
+
+var skippingropeNumber = document.querySelector('.container-skippingrope .hover-number');
+var dollhouseNumber = document.querySelector('.container-dollhouse .hover-number');
+var dominoesNumber = document.querySelector('.container-dominoes .hover-number');
+var puppetNumber = document.querySelector('.container-puppet .hover-number');
+var jigsawpuzzleNumber = document.querySelector('.container-jigsawpuzzle .hover-number');
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(toywagonImg, toywagonSpeechBox, toywagonNumber);
+setupHoverEffect(toycarImg, toycarSpeechBox, toycarNumber);
+setupHoverEffect(toysoldierImg, toysoldierSpeechBox, toysoldierNumber);
+setupHoverEffect(balloonsImg, balloonsSpeechBox, balloonsNumber);
+
+setupHoverEffect(rubberduckImg, rubberduckSpeechBox, rubberduckNumber);
+setupHoverEffect(toyrobotImg, toyrobotSpeechBox, toyrobotNumber);
+setupHoverEffect(rockinghorseImg, rockinghorseSpeechBox, rockinghorseNumber);
+setupHoverEffect(buildingblocksImg, buildingblocksSpeechBox, buildingblocksNumber);
+setupHoverEffect(marblesImg, marblesSpeechBox, marblesNumber);
+
+setupHoverEffect(clownImg, clownSpeechBox, clownNumber);
+setupHoverEffect(yoyoImg, yoyoSpeechBox, yoyoNumber);
+setupHoverEffect(whistleImg, whistleSpeechBox, whistleNumber);
+setupHoverEffect(paperplaneImg, paperplaneSpeechBox, paperplaneNumber);
+setupHoverEffect(dollImg, dollSpeechBox, dollNumber);
+
+setupHoverEffect(skippingropeImg, skippingropeSpeechBox, skippingropeNumber);
+setupHoverEffect(dollhouseImg, dollhouseSpeechBox, dollhouseNumber);
+setupHoverEffect(dominoesImg, dominoesSpeechBox, dominoesNumber);
+setupHoverEffect(puppetImg, puppetSpeechBox, puppetNumber);
+setupHoverEffect(jigsawpuzzleImg, jigsawpuzzleSpeechBox, jigsawpuzzleNumber);
+
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+dollhouseImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, dollhouseSpeechBox);
+});
+
+paperplaneImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, paperplaneSpeechBox);
+});
+
+toysoldierImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, toysoldierSpeechBox);
+}); 
+
+balloonsImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, balloonsSpeechBox);
+});
+
+toyrobotImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, toyrobotSpeechBox);
+}); 
+
+toycarImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, toycarSpeechBox);
+}); 
+
+rubberduckImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, rubberduckSpeechBox);
+}); 
+
+dollImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, dollSpeechBox);
+}); 
+
+toywagonImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, toywagonSpeechBox);
+}); 
+
+dominoesImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, dominoesSpeechBox);
+}); 
+skippingropeImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, skippingropeSpeechBox);
+}); 
+whistleImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, whistleSpeechBox);
+}); 
+
+yoyoImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, yoyoSpeechBox);
+}); 
+
+clownImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,clownSpeechBox);
+}); 
+
+rockinghorseImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,rockinghorseSpeechBox);
+}); 
+
+marblesImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,marblesSpeechBox);
+}); 
+buildingblocksImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,buildingblocksSpeechBox);
+}); 
+
+puppetImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,puppetSpeechBox);
+}); 
+
+jigsawpuzzleImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,jigsawpuzzleSpeechBox);
+}); 
+
+questoys1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, questoys1SpeechBox);
+}); 
+
+questoys2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, questoys2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+dollhouseImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, dollhouseSpeechBox);
+});
+
+paperplaneImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, paperplaneSpeechBox);
+});
+
+toysoldierImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  toysoldierSpeechBox);
+  });
+
+balloonsImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, balloonsSpeechBox);
+  });
+
+toyrobotImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  toyrobotSpeechBox);
+  });
+
+toycarImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  toycarSpeechBox);
+  });
+
+  rubberduckImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, rubberduckSpeechBox);
+  });
+
+  dollImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, dollSpeechBox);
+  });
+
+  toywagonImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, toywagonSpeechBox);
+  });
+  dominoesImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   dominoesSpeechBox);
+  });
+
+  skippingropeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   skippingropeSpeechBox);
+  });
+  whistleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   whistleSpeechBox);
+  });
+
+  yoyoImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   yoyoSpeechBox);
+  });
+  clownImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   clownSpeechBox);
+  });
+
+  rockinghorseImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   rockinghorseSpeechBox);
+  });
+  
+  marblesImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   marblesSpeechBox);
+  });
+  buildingblocksImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   buildingblocksSpeechBox);
+  });
+
+  puppetImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   puppetSpeechBox);
+  });
+
+  jigsawpuzzleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   jigsawpuzzleSpeechBox);
+  });
+
+  questoys1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   questoys1SpeechBox);
+  });
+
+  questoys2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   questoys2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-dollhouse img', '#dollhouse');
+playSoundWhenClick('.container-paperplane img', '#paperplane');
+playSoundWhenClick('.container-rubberduck img', '#rubberduck');
+playSoundWhenClick('.container-toysoldier img', '#toysoldier');
+playSoundWhenClick('.container-balloons img', '#balloons');
+playSoundWhenClick('.container-toyrobot img', '#toyrobot');
+playSoundWhenClick('.container-toycar img', '#toycar');
+playSoundWhenClick('.container-doll img', '#doll');
+playSoundWhenClick('.container-toywagon img', '#toywagon');
+playSoundWhenClick('.container-dominoes img', '#dominoes')
+
+playSoundWhenClick('.container-skippingrope img', '#skippingrope');
+playSoundWhenClick('.container-whistle img', '#whistle');
+playSoundWhenClick('.container-yoyo img', '#yoyo');
+playSoundWhenClick('.container-clown img', '#clown');
+playSoundWhenClick('.container-rockinghorse img', '#rockinghorse');
+playSoundWhenClick('.container-marbles img', '#marbles');
+playSoundWhenClick('.container-buildingblocks img', '#buildingblocks');
+playSoundWhenClick('.container-puppet img', '#puppet');
+playSoundWhenClick('.container-jigsawpuzzle img', '#jigsawpuzzle');
+playSoundWhenClick('.container-questoys1 img', '#questoys1');
+playSoundWhenClick('.container-questoys2 img', '#questoys2');
+  </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

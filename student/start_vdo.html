@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="../img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Flaticon Font -->
+    <link href="../assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+
+    
+
+    <style>
+
+.section {
+  max-height: 550px;
+  padding: 1rem;
+  overflow-y: auto;
+  direction: ltr;
+  scrollbar-color: #636135 #e4e4e4;
+
+
+  .section::-webkit-scrollbar {
+  width: 60px;
+}
+
+.section::-webkit-scrollbar-track {
+  background-color: #e4e4e4;
+  border-radius: 100px;
+}
+
+.section::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background-image: linear-gradient(180deg, #d0368a 0%, #708ad4 99%);
+  box-shadow: inset 2px 2px 5px 0 rgba(#fff, 0.5);
+}
+
+* {
+  box-sizing: border-box;
+}
+}
+
+
+
+.button-container {
+  display: flex;
+  align-items: center; /* จัดให้ปุ่มอยู่ตรงกลางสูงสุด */
+}
+
+
+
+.video-number {
+  margin-left: 10px;
+    margin-right: 10px;
+    flex: 0 0 auto; /* กำหนดให้เลขหน้าไม่ยืดขยายขนาดตามข้อความ */
+}
+
+
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+
+
+</head>
+<body>
+     <!-- Navbar Start -->
+     <div class="container-fluid bg-light position-relative shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="../student/home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+              <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+              <span class="text-primary">Smart Phonics</span>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav font-weight-bold mx-auto py-0">
+                  
+              <a href="../student/home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+              <a href="../student/vdo.html" class="nav-item nav-link active"style="font-size: 20px;">วิดีโอสอน</a>
+              <a href="../student/gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+              <a href="../student/vocab.html" class="nav-item nav-link"style="font-size: 20px;">คลังคำศัพท์</a>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+
+
+
+
+  <div class="container py-5">
+    <div class="row">
+        <div class="col-lg-7">
+            <div class="d-flex flex-column text-left mb-3" style="margin-bottom: 10px;">
+                <p class="section-title pr-5 mb-1"><span class="pr-2">เริ่มเรียนกันเลย</span></p>
+                <h1 class="mb-1" id="lesson-header"></h1>
+                <p class="mb-0" id="lesson-title"></p>
+            </div>
+
+            <div class="mb-5">
+                <video id="lessonVideo" width="100%" height="auto" controls style="margin-top: -10px;">
+                    <source id="video-source" src="" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <br>
+
+               
+
+                <br>
+                <a href="vdo.html" class="btn btn-secondary px-4 mx-auto my-2">ย้อนกลับ</a>
+                <a href="../student/gallery.html" class="btn btn-primary px-4 mx-auto my-2">เล่มสมุดภาพ</a>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="mb mx-n3 text-center">
+                <h2 class="mb-4 ml-3">บทเรียนของฉัน</h2>
+
+                <div class="section">
+                    <p class="text-left mb-0" id="current-lesson" style="font-size: 20px; color: #7e7373; background-color: #FFEBD8; padding: 5px 10px; border-radius: 5px;"></p>
+                    <br>
+
+                    <div class="mb mx-n9 text-center" id="lesson-list">
+                        <!-- บทเรียนจะถูกเพิ่มเข้าที่นี่โดย JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+const lessons = {
+    1: { title: "Animal", video: "../assets/video/EP1.mp4", image: "EP1.png" },
+    2: { title: "Garden", video: "../assets/video/EP2.mp4", image: "EP2.png" },
+    3: { title: "Colors", video: "../assets/video/EP3.mp4", image: "EP3.png" },
+    4: { title: "Numbers", video: "../assets/video/EP4.mp4", image: "EP4.png" },
+    5: { title: "Body parts 1", video: "../assets/video/EP5.mp4", image: "EP5.png" },
+    6: { title: "Body parts 2", video: "../assets/video/EP6.mp4", image: "EP6.png" },
+    7: { title: "Clothes 1", video: "../assets/video/EP7.mp4", image: "EP7.png" },
+    8: { title: "Clothes 2", video: "../assets/video/EP8.mp4", image: "EP8.png" },
+    9: { title: "Opposite", video: "../assets/video/EP9.mp4", image: "EP9.png" },
+    10: { title: "Family", video: "../assets/video/EP10.mp4", image: "EP10.png" },
+    11: { title: "Feelings", video: "../assets/video/EP11.mp4", image: "EP11.png" },
+    12: { title: "Actions 1", video: "../assets/video/EP12.mp4", image: "EP12.png" },
+    13: { title: "Actions 2", video: "../assets/video/EP13.mp4", image: "EP13.png" },
+    14: { title: "Kitchenware", video: "../assets/video/EP14.mp4", image: "EP14.png" },
+    15: { title: "Foods & Drinks", video: "../assets/video/EP15.mp4", image: "EP5.png" },
+    16: { title: "Fruits & Vegetable", video: "../assets/video/EP16.mp4", image: "EP16.png" },
+    17: { title: "Houses", video: "../assets/video/EP17.mp4", image: "EP17.png" },
+    18: { title: "Household Object", video: "../assets/video/EP18.mp4", image: "EP18.png" },
+    19: { title: "School objects", video: "../assets/video/EP19.mp4", image: "EP19.png" },
+    20: { title: "Vehicles", video: "../assets/video/EP20.mp4", image: "EP20.png" }
+};
+
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const lesson = urlParams.get('lesson') || 1; // ดึงค่า lesson จาก URL หรือใช้ 1 เป็นค่าเริ่มต้น
+
+    document.getElementById('lesson-header').innerText = `บทเรียนที่ ${lesson}`;
+    document.getElementById('lesson-title').innerText = `เรื่อง ${lessons[lesson].title}`;
+    document.getElementById('video-source').src = lessons[lesson].video;
+    document.getElementById('lessonVideo').load();
+    document.getElementById('current-lesson').innerText = `กำลังเล่นจาก ${lesson}/20`;
+
+    const lessonList = document.getElementById('lesson-list');
+    for (let i = 1; i <= 60; i++) { 
+        const lessonDiv = document.createElement('div');
+        lessonDiv.className = `d-flex align-items-center ${lesson == i ? 'bg-custom' : 'bg-light2'} shadow-sm rounded overflow-hidden mb-3 position-relative`;
+        lessonDiv.innerHTML = `
+            <p class="video-number" style="font-size: 16px;">${i}</p>
+            <a href="?lesson=${i}" class="text-decoration-none d-flex">
+                <img src="../assets/video/${lessons[i].image}" width="200" height="120" class="mr-3" alt="Lesson ${i}">
+                <div class="d-flex flex-column justify-content-center">
+                    <p class="text-left mb-0" style="font-size: 20px;">บทที่ ${i}</p>
+                    <p class="text-left mb-0" style="font-size: 16px; color: ${lesson == i ? '#888' : '#666'};">
+                        ${lesson == i ? 'กำลังเล่นอยู่' : `เรื่อง ${lessons[i].title}`}
+                    </p>
+                </div>
+            </a>
+        `;
+        lessonList.appendChild(lessonDiv);
+    }
+
+</script>
+
+
+
+    
+  <!-- Footer Start -->
+  <div class="container-fluid bg-secondary text-white mt-1 py-3 px-sm-1 px-md-1">
+    <div class="container container-sm pt-3">
+        <p class="m-0 text-center text-white">
+            <span style="color: #EDEDAE;">&copy;</span> 
+            <a class="text-white font-weight-bold" style="font-size: 16px;" href="#">Smart Phonics</a> 
+            <span style="color: #EDEDAE; font-size: 16px;">All Rights Reserved. Designed by</span>
+            <a class="text-white font-weight-bold" style="font-size: 16px;" href="https://www.modesolutions.co.th/?page=index">Mode Solutions</a>
+        </p>
+    </div>
+</div>
+<!-- Footer End -->
+
+    <!-- Back to Top -->
+    
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/lib/easing/easing.min.js"></script>
+    <script src="../assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="../assets/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/signin.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>
+

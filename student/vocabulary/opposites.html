@@ -1,0 +1,1261 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="<?= $themes ?>assets/css/style.css" rel="stylesheet">
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+    <style>
+      
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/flowers/bgoppo.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #FE501A;
+  text-shadow: 0 0 5px #558B4E, 0 0 10px #558B4E, 0 0 15px #558B4E;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 4px #ffffff; /* กำหนดขอบตัวอักษร */
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+
+.image {
+  width: 120%;
+  height: 100%;
+  margin-left: -10%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -10%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 4.2%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -10%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -10%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 1; 
+}
+
+/*ร้อน*/
+.container-hot {
+  position: absolute;
+  top: 17%;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*เย็น*/
+.container-cold {
+  position: absolute;
+  top: 17.5%;
+  left: 14%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 3; 
+}
+
+/*ผอม, บาง*/
+.container-thin {
+  position: absolute;
+  top: 47%;
+  left: 1.5%;
+  transform: translate(-50%, -50%);
+  width: 4%; 
+  z-index: 1; 
+}
+
+/*อ้วน*/
+.container-fat {
+  position: absolute;
+  top: 47%;
+  left: 13%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+/*ด้านหน้า*/
+.container-infront{
+  position: absolute;
+  top: 77%;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 2; 
+}
+
+.container-fence{
+  position: absolute;
+  top: 77%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 1; 
+}
+
+/*ข้างหลัง*/
+.container-behind {
+  position: absolute;
+  top: 76%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 7.5%; 
+  z-index: 0; 
+}
+
+/*ข้างใต้*/
+.container-below{
+  position: absolute;
+  top: 89%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 2; 
+}
+
+
+/*เหนือ*/
+.container-above {
+  position: absolute;
+  top: 77%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*เตี้ย*/
+.container-short {
+  position: absolute;
+  top: 55%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 2; 
+}
+
+/*ใหญ่*/
+.container-big {
+  position: absolute;
+  top: 33%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 1; 
+}
+
+/*เล็ก*/
+.container-small {
+  position: absolute;
+  top: 36%;
+  left: 43.5%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 2; 
+}
+
+/*สูง*/
+.container-tall {
+  position: absolute;
+  top: 50.6%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  width: 6.7%; 
+  z-index: 1; 
+}
+
+/*ข้างนอก*/
+.container-out {
+  position: absolute;
+  top: 18%;
+  left: 83%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 3; 
+}
+
+/*ข้างใน*/
+.container-in {
+  position: absolute;
+  top: 18%;
+  left: 97%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 2; 
+}
+
+/*ปิด*/
+.container-close {
+  position: absolute;
+  top: 47%;
+  left: 84%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 2; 
+}
+
+.container-finishline {
+  position: absolute;
+  top: 81.5%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 2; 
+}
+
+/*เปิด*/
+.container-open {
+  position: absolute;
+  top: 47%;
+  left: 96.5%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+/*ช้า*/
+.container-slow {
+  position: absolute;
+  top: 75%;
+  left: 96%;
+  transform: translate(-50%, -50%);
+  width: 4%; 
+  z-index: 1;
+}
+
+/*เร็ว*/
+.container-fast {
+  position: absolute;
+  top: 76%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1; 
+}
+
+/*เก่า*/
+.container-old {
+  position: absolute;
+  top: 84%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 3; 
+}
+
+/*ใหม่*/
+.container-new {
+  position: absolute;
+  top: 84%;
+  left: 56%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 4; 
+}
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -35px;
+  left: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+  z-index: -3;
+}
+
+.container-new img,.container-old img,.container-open img,.container-slow img,.container-in img, .container-out img, .container-tall img,
+.container-fat img, .container-below img, .container-infront img,.container-thin img, .container-short img,.container-behind img, .container-close img, .container-hot img, .container-small img, .container-above img,.container-cold img,.container-fast img, .container-quesoppo1 img, .container-big img, .container-quesoppo2 img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+.container-new img:hover,.container-old img:hover,.container-slow img:hover,.container-in img:hover,.container-out img:hover,.container-open img:hover,
+ .container-fat img:hover,.container-below img:hover, .container-infront img:hover, .container-tall img:hover,
+.container-thin img:hover, .container-small img:hover, .container-above img:hover, .container-big img:hover, 
+.container-behind img:hover, .container-close img:hover, .container-hot img:hover, .container-cold img:hover,
+.container-fast img:hover,.container-quesoppo1 img:hover, .container-quesoppo2 img:hover , .container-short img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+
+/*คำถาม1*/
+.container-quesoppo1 {
+  position: absolute;
+  top: 63%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 4; 
+}
+
+/*คำถาม2*/
+.container-quesoppo2 {
+  position: absolute;
+  top:54%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -1.8%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  width: 4.5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgb(255, 255, 255, 1); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+  border: 2px solid #2EC4B6; /* กำหนดสีกรอบของ speech box */
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+
+.speech-box {
+  width: 160px;
+  height: 120px;
+  bottom: 50%; 
+  left: 190%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 110px;
+  height: 120px;
+  bottom: 105%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box2 {
+  width: 160px;
+  height: 120px;
+  bottom: 1%; 
+  left: 190%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+    width: 200px;
+    height: 120px;
+    bottom: 20%; 
+    left: -80%; 
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+
+ .speech-box4 {
+  width: 160px;
+  height: 120px;
+  bottom: 1%; 
+  left: 280%; 
+  transform: translateX(-50%);
+  z-index: -1;
+ }
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 28px; 
+  color: #0A2963; 
+  background-color: #C6EDEF; /* กำหนดสีพื้นหลังของ speech box */
+  width:450px; 
+  height: 80px;
+  text-align: center;
+  line-height: 30px; 
+  top: 70%;
+  left: 40%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 28px; 
+      color: #0A2963; 
+      background-color: #F8D8E2; /* กำหนดสีพื้นหลังของ speech box */
+      width: 320px; 
+      height: 80px;
+      text-align: center;
+      line-height: 30px; 
+      top: -200%;
+      left: -200%;
+      z-index: -1;
+    }
+
+
+/* For screens smaller than 768px (e.g., smartphhots) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box4,
+  .speech-box7,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+          <!-- Navbar Start -->
+          <div class="container-fluid bg-light position-relative shadow">
+            <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+            <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                    <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                    <span class="text-primary">Smart Phonics</span>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav font-weight-bold mx-auto py-0">
+                        
+                    <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                    <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                    <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                    <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+
+    <h1> OPPOSITES </h1>
+
+         <!--ส่วนที่เพิ่มเข้ามา-->
+         <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 20 คำ</h4> 
+         <div style="font-size: 18px; color: #333; background-color: rgba(240, 240, 240, 0.7); padding: 5px; border-radius: 5px;">
+          คลิ๊กที่รูปเพื่อฟังเสียง
+      </div>
+      
+        
+         
+  <div class="container">
+    <img src="../../Testvocab/img/flowers/opposites.png" alt="bird" class="image">
+
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon next-->
+            <a href="birds.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--ร้อน-->
+    <div class="container-hot">
+      <img src="../../Testvocab/img/flowers/hot.png" alt="hot" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">hot</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฮ่อท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ร้อน</span>
+      </div>
+      <audio id="hot" src="../../Testvocab/voice/hot.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+       <!--เย็น-->
+   <div class="container-cold">
+      <img src="../../Testvocab/img/flowers/cold.png" alt="cold" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">cold</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โค่ล-ด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เย็น</span>
+        <audio id="cold" src="../../Testvocab/voice/cold2.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>  
+    
+    <!--ผอม, บาง-->
+    <div class="container-thin">
+      <img src="../../Testvocab/img/flowers/thin.png" alt="thin" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">thin</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ธิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ผอม, บาง</span>
+      </div>
+      <audio id="thin" src="../../Testvocab/voice/thin.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+        <!--อ้วน-->
+        <div class="container-fat">
+      <img src="../../Testvocab/img/flowers/fat.png" alt="fat" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">fat</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แฟ่ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">อ้วน</span>
+      </div>
+      <audio id="fat" src="../../Testvocab/voice/fat.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--ด้านหน้า-->
+    <div class="container-infront">
+      <img src="../../Testvocab/img/flowers/infront.png" alt="infront" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">in front </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(อิ่น ฟร่อนฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ด้านหน้า</span>
+      </div>
+      <audio id="infront" src="../../Testvocab/voice/infront.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--ข้างหลัง-->
+ <div class="container-behind">
+      <img src="../../Testvocab/img/flowers/behind.png" alt="behind" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">behind</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(บิ-ฮ่ายฺน-ด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ข้างหลัง</span>
+        <audio id="behind" src="../../Testvocab/voice/behind.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--ข้างใต้-->
+        <div class="container-below">
+      <img src="../../Testvocab/img/flowers/below.png" alt="below" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">below</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(บิ-โล่ว)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ข้างใต้</span>
+      </div>
+      <audio id="below" src="../../Testvocab/voice/below.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+                    <!--ข้างบน-->
+                    <div class="container-above">
+                    <img src="../../Testvocab/img/flowers/above.png" alt="above" class="image">
+                    <div class="speech-box3">
+                      <span style="display: flex; justify-content: center;">above</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(เออะ-บั้ฟ)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">เหนือ</span>
+                      <audio id="above" src="../../Testvocab/voice/above.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>   
+
+         <!--เตี้ย-->
+         <div class="container-short">
+    <img src="../../Testvocab/img/flowers/short.png" alt="short" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">short</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ช่อท)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">เตี้ย</span>
+      <audio id="short" src="../../Testvocab/voice/short.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--ใหญ่-->
+ <div class="container-big">
+            <img src="../../Testvocab/img/flowers/big.png" alt="big" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">big</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(บิ้ก)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ใหญ่</span>
+              <audio id="big" src="../../Testvocab/voice/big.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+           <!--เล็ก-->
+           <div class="container-small">
+            <img src="../../Testvocab/img/flowers/small.png" alt="small" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">small</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ซม่อลฺ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">เล็ก</span>
+              <audio id="small" src="../../Testvocab/voice/small.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+        <!--สูง-->
+        <div class="container-tall">
+            <img src="../../Testvocab/img/flowers/tall.png" alt="tall" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">tall</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ท่อล)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">สูง</span>
+              <audio id="tall" src="../../Testvocab/voice/tall.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+                <!--ข้างนอก-->
+                <div class="container-out">
+    <img src="../../Testvocab/img/flowers/out.png" alt="out" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">out</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เอ้าท)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ข้างนอก</span>
+      <audio id="out" src="../../Testvocab/voice/out.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+    <!--ข้างใน-->
+    <div class="container-in">
+        <img src="../../Testvocab/img/flowers/in.png" alt="in" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">in</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(อิ้น)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ข้างใน</span>
+          <audio id="in" src="../../Testvocab/voice/in.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--ปิด-->
+    <div class="container-close">
+      <img src="../../Testvocab/img/flowers/close.png" alt="close" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">close</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โคล่สฺ-ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ปิด</span>
+      <audio id="close" src="../../Testvocab/voice/close.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--เปิด-->
+        <div class="container-open">
+        <img src="../../Testvocab/img/flowers/open.png" alt="open" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">open</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โอ๊-เพ่น)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เปิด</span>
+          <audio id="open" src="../../Testvocab/voice/open.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+             <!--ช้า-->
+             <div class="container-slow">
+      <img src="../../Testvocab/img/flowers/slow.png" alt="slow" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">slow</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซโล่ว)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ช้า</span>
+        <audio id="slow" src="../../Testvocab/voice/slow.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+ <!--เร็ว -->
+ <div class="container-fast">
+        <img src="../../Testvocab/img/flowers/fast.png" alt="fast" class="image">
+        <div class="speech-box">
+          <span style="display: flex; justify-content: center;">fast</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ฟ่าซฺท)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เร็ว</span>
+        <audio id="fast" src="../../Testvocab/voice/fast.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+ <!--เก่า -->
+ <div class="container-old">
+    <img src="../../Testvocab/img/flowers/old.png" alt="old" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">old</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(โอ้ลฺด)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">เก่า</span>
+    <audio id="old" src="../../Testvocab/voice/old.mp3"></audio>
+    </div>
+    <div class="hover-number"></div>
+</div>
+
+ <!--ใหม่ -->
+ <div class="container-new">
+    <img src="../../Testvocab/img/flowers/new.png" alt="new" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">new</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(นิ่ว)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ใหม่</span>
+    <audio id="new" src="../../Testvocab/voice/new.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+<div class="container-fence">
+    <img src="../../Testvocab/img/flowers/fence2.png" alt="fence" class="image">
+</div>
+
+<div class="container-finishline">
+    <img src="../../Testvocab/img/flowers/finishline.png" alt="finishline" class="image">
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-quesoppo1">
+          <img src="../../Testvocab/img/flowers/quesoppo1.png" alt="quesoppo1" class="image">
+          <div class="speech-box7">
+          Is the rabbit hiding behind the fence ? <br>
+          <span class="thai-text">กระต่ายแอบอยู่หลังรั้วใช่ไหมเพื่อน ๆ ?</span>
+          </div>
+          <audio id="quesoppo1" src="../../Testvocab/voice/quesoppo1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesoppo2">
+          <img src="../../Testvocab/img/flowers/quesoppo2.png" alt="quesoppo2" class="image">
+          <div class="speech-box8">
+          Can you find a blue bird ? <br>
+          <span class="thai-text">น้อง ๆ หานกสีน้ำเงินเจอไหมคะ ?</span>
+          </div>
+            <audio id="quesoppo2" src="../../Testvocab/voice/quesoppo2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+        <div class="container-exit">
+          <a href="../vocab.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var slowImg = document.querySelector('.container-slow img');
+var inImg = document.querySelector('.container-in img');
+var openImg = document.querySelector('.container-open img');
+var fatImg = document.querySelector('.container-fat img');
+var infrontImg = document.querySelector('.container-infront img');
+var belowImg = document.querySelector('.container-below img');
+var thinImg = document.querySelector('.container-thin img');
+var behindImg = document.querySelector('.container-behind img');
+var closeImg = document.querySelector('.container-close img');
+var hotImg = document.querySelector('.container-hot img');
+var coldImg = document.querySelector('.container-cold img');
+var fastImg = document.querySelector('.container-fast img');
+var outImg = document.querySelector('.container-out img');
+var tallImg = document.querySelector('.container-tall img');
+var smallImg = document.querySelector('.container-small img');
+var aboveImg = document.querySelector('.container-above img');
+var bigImg = document.querySelector('.container-big img');
+var shortImg = document.querySelector('.container-short img');
+var oldImg = document.querySelector('.container-old img');
+var newImg = document.querySelector('.container-new img');
+var quesoppo1Img = document.querySelector('.container-quesoppo1 img');
+var quesoppo2Img = document.querySelector('.container-quesoppo2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var fastSpeechBox = document.querySelector('.container-fast .speech-box');
+
+
+
+// เลือกอีเลเมนต์ของ speech box11
+var smallSpeechBox = document.querySelector('.container-small .speech-box11');
+var bigSpeechBox = document.querySelector('.container-big .speech-box11');
+var shortSpeechBox = document.querySelector('.container-short .speech-box11');
+var tallSpeechBox = document.querySelector('.container-tall .speech-box11');
+var oldSpeechBox = document.querySelector('.container-old .speech-box11');
+
+
+// เลือกอีเลเมนต์ของ speech box2
+var closeSpeechBox = document.querySelector('.container-close .speech-box2');
+var openSpeechBox = document.querySelector('.container-open .speech-box2');
+var inSpeechBox = document.querySelector('.container-in .speech-box2');
+var outSpeechBox = document.querySelector('.container-out .speech-box2');
+var coldSpeechBox = document.querySelector('.container-cold .speech-box2');
+var fatSpeechBox = document.querySelector('.container-fat .speech-box2');
+var behindSpeechBox = document.querySelector('.container-behind .speech-box2');
+var newSpeechBox = document.querySelector('.container-new .speech-box2');
+
+
+// เลือกอีเลเมนต์ของ speech box3
+var hotSpeechBox = document.querySelector('.container-hot .speech-box3');
+var infrontSpeechBox = document.querySelector('.container-infront .speech-box3');
+var thinSpeechBox = document.querySelector('.container-thin .speech-box3');
+var belowSpeechBox = document.querySelector('.container-below .speech-box3');
+var aboveSpeechBox = document.querySelector('.container-above .speech-box3');
+
+
+// เลือกอีเลเมนต์ของ speech box4
+var slowSpeechBox = document.querySelector('.container-slow .speech-box4');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var quesoppo1SpeechBox = document.querySelector('.container-quesoppo1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quesoppo2SpeechBox = document.querySelector('.container-quesoppo2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var hotNumber = document.querySelector('.container-hot .hover-number');
+var coldNumber = document.querySelector('.container-cold .hover-number');
+var thinNumber = document.querySelector('.container-thin .hover-number');
+var fatNumber = document.querySelector('.container-fat .hover-number');
+var infrontNumber = document.querySelector('.container-infront .hover-number');
+
+var behindNumber = document.querySelector('.container-behind .hover-number');
+var belowNumber = document.querySelector('.container-below .hover-number');
+var aboveNumber = document.querySelector('.container-above .hover-number');
+var shortNumber = document.querySelector('.container-short .hover-number');
+var bigNumber = document.querySelector('.container-big .hover-number');
+
+var smallNumber = document.querySelector('.container-small .hover-number');
+var tallNumber = document.querySelector('.container-tall .hover-number');
+var outNumber = document.querySelector('.container-out .hover-number');
+var inNumber = document.querySelector('.container-in .hover-number');
+var closeNumber = document.querySelector('.container-close .hover-number');
+
+var openNumber = document.querySelector('.container-open .hover-number');
+var slowNumber = document.querySelector('.container-slow .hover-number');
+var fastNumber = document.querySelector('.container-fast .hover-number');
+var oldNumber = document.querySelector('.container-old .hover-number');
+var newNumber = document.querySelector('.container-new .hover-number');
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(hotImg, hotSpeechBox, hotNumber);
+setupHoverEffect(coldImg, coldSpeechBox, coldNumber);
+setupHoverEffect(thinImg, thinSpeechBox, thinNumber);
+setupHoverEffect(fatImg, fatSpeechBox, fatNumber);
+setupHoverEffect(infrontImg, infrontSpeechBox, infrontNumber);
+
+setupHoverEffect(behindImg, behindSpeechBox, behindNumber);
+setupHoverEffect(belowImg, belowSpeechBox, belowNumber);
+setupHoverEffect(aboveImg, aboveSpeechBox, aboveNumber);
+setupHoverEffect(shortImg, shortSpeechBox, shortNumber);
+setupHoverEffect(bigImg, bigSpeechBox, bigNumber);
+
+setupHoverEffect(smallImg, smallSpeechBox, smallNumber);
+setupHoverEffect(tallImg, tallSpeechBox, tallNumber);
+setupHoverEffect(outImg, outSpeechBox, outNumber);
+setupHoverEffect(inImg, inSpeechBox, inNumber);
+setupHoverEffect(closeImg, closeSpeechBox, closeNumber);
+
+setupHoverEffect(openImg, openSpeechBox, openNumber);
+setupHoverEffect(slowImg, slowSpeechBox, slowNumber);
+setupHoverEffect(fastImg, fastSpeechBox, fastNumber);
+setupHoverEffect(oldImg, oldSpeechBox, oldNumber);
+setupHoverEffect(newImg, newSpeechBox, newNumber);
+
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+slowImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, slowSpeechBox);
+});
+
+inImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, inSpeechBox);
+});
+
+fatImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, fatSpeechBox);
+}); 
+
+infrontImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, infrontSpeechBox);
+});
+
+belowImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, belowSpeechBox);
+}); 
+
+thinImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, thinSpeechBox);
+}); 
+
+behindImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, behindSpeechBox);
+}); 
+
+closeImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, closeSpeechBox);
+}); 
+
+hotImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, hotSpeechBox);
+}); 
+
+coldImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, coldSpeechBox);
+}); 
+
+fastImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, fastSpeechBox);
+}); 
+openImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, openSpeechBox);
+}); 
+outImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, outSpeechBox);
+}); 
+
+tallImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, tallSpeechBox);
+}); 
+
+smallImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,smallSpeechBox);
+}); 
+
+aboveImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,aboveSpeechBox);
+}); 
+
+bigImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,bigSpeechBox);
+}); 
+shortImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,shortSpeechBox);
+}); 
+
+oldImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,oldSpeechBox);
+}); 
+
+newImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,newSpeechBox);
+}); 
+
+quesoppo1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesoppo1SpeechBox);
+}); 
+
+quesoppo2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesoppo2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+slowImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, slowSpeechBox);
+});
+
+inImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, inSpeechBox);
+});
+
+fatImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  fatSpeechBox);
+  });
+
+infrontImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, infrontSpeechBox);
+  });
+
+belowImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  belowSpeechBox);
+  });
+
+thinImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  thinSpeechBox);
+  });
+
+  behindImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, behindSpeechBox);
+  });
+
+  closeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, closeSpeechBox);
+  });
+
+  hotImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, hotSpeechBox);
+  });
+  
+  coldImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, coldSpeechBox);
+  });
+
+  fastImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   fastSpeechBox);
+  });
+
+  openImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   openSpeechBox);
+  });
+  outImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   outSpeechBox);
+  });
+
+  tallImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   tallSpeechBox);
+  });
+  smallImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   smallSpeechBox);
+  });
+
+  aboveImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   aboveSpeechBox);
+  });
+  
+  bigImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   bigSpeechBox);
+  });
+  shortImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   shortSpeechBox);
+  });
+
+  oldImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   oldSpeechBox);
+  });
+
+  newImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   newSpeechBox);
+  });
+
+  quesoppo1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesoppo1SpeechBox);
+  });
+
+  quesoppo2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesoppo2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-slow img', '#slow');
+playSoundWhenClick('.container-in img', '#in');
+playSoundWhenClick('.container-cold img', '#cold');
+playSoundWhenClick('.container-behind img', '#behind');
+playSoundWhenClick('.container-fat img', '#fat');
+playSoundWhenClick('.container-infront img', '#infront');
+playSoundWhenClick('.container-below img', '#below');
+playSoundWhenClick('.container-thin img', '#thin');
+playSoundWhenClick('.container-close img', '#close');
+playSoundWhenClick('.container-hot img', '#hot');
+playSoundWhenClick('.container-fast img', '#fast')
+
+playSoundWhenClick('.container-open img', '#open');
+playSoundWhenClick('.container-out img', '#out');
+playSoundWhenClick('.container-tall img', '#tall');
+playSoundWhenClick('.container-small img', '#small');
+playSoundWhenClick('.container-above img', '#above');
+playSoundWhenClick('.container-big img', '#big');
+playSoundWhenClick('.container-short img', '#short');
+playSoundWhenClick('.container-old img', '#old');
+playSoundWhenClick('.container-new img', '#new');
+playSoundWhenClick('.container-quesoppo1 img', '#quesoppo1');
+playSoundWhenClick('.container-quesoppo2 img', '#quesoppo2');
+  </script>
+  
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,694 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link href="../../Testvocab/occupations1.css" rel="stylesheet">
+    
+
+</head>
+<body>
+      <!-- Navbar Start -->
+      <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+        <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                <span class="text-primary">Smart Phonics</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    
+                <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <h1> OCCUPATIONS 1 </h1>
+    <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 18 คำ</h4>
+  <div class="container">
+    <img src="../../Testvocab/img/occupation/occupations1.png" alt="bird" class="image">
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Insects.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Toys.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--นักเขียนโปรแกรมคอมพิวเตอร์-->
+    <div class="container-computerprogrammer">
+      <img src="../../Testvocab/img/occupation/computerprogrammer.png" alt="computerprogrammer" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">computer programmer</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(คอม-พิ้ว-เท่อ โพร้-แกรม-เม่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นักเขียนโปรแกรมคอมพิวเตอร์</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="computerprogrammer" src="../../Testvocab/voice/computerprogrammer.mp3"></audio>
+    </div>
+
+       <!--นักวิทยาศาสตร์-->
+   <div class="container-scientist">
+      <img src="../../Testvocab/img/occupation/scientist.png" alt="scientist" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">scientist</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซ้าย-เอิน-ทิ่ซฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นักวิทยาศาสตร์</span>
+        <audio id="scientist" src="../../Testvocab/voice/scientist.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+    </div>  
+    
+    <!--หมอ-->
+    <div class="container-doctor">
+      <img src="../../Testvocab/img/occupation/doctor.png" alt="doctor" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">doctor</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ด้อค-เท่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">หมอ</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="doctor" src="../../Testvocab/voice/doctor.mp3"></audio>
+    </div>  
+
+        <!--ครู-->
+        <div class="container-teacher">
+      <img src="../../Testvocab/img/occupation/teacher.png" alt="teacher" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">teacher</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ทิ-เฉ่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ครู</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="teacher" src="../../Testvocab/voice/teacher.mp3"></audio>
+    </div>  
+
+    <!--นักเรียน, นักศึกษา-->
+    <div class="container-student">
+      <img src="../../Testvocab/img/occupation/student.png" alt="student" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">student </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซติ๊ว-เด้นฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นักเรียน, นักศึกษา</span>
+      </div>
+      <div class="hover-number hover-number-student"></div>
+      <audio id="student" src="../../Testvocab/voice/student.mp3"></audio>
+    </div>
+
+     <!--คนขับแท็กซี่-->
+ <div class="container-taxidriver">
+      <img src="../../Testvocab/img/occupation/taxidriver.png" alt="taxidriver" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">taxi driver</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แท็ก-ซี่-ดราย-เว่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">คนขับแท็กซี่</span>
+        <audio id="taxidriver" src="../../Testvocab/voice/taxidriver.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+    </div>
+
+        <!--คนขับรถ-->
+        <div class="container-driver">
+      <img src="../../Testvocab/img/occupation/driver.png" alt="driver" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">driver</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ดราย-เว่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">คนขับรถ</span>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+      <audio id="driver" src="../../Testvocab/voice/driver1.mp3"></audio>
+    </div>
+
+                    <!--นักบิน-->
+                    <div class="container-pilot">
+                    <img src="../../Testvocab/img/occupation/pilot.png" alt="pilot" class="image">
+                    <div class="speech-box2">
+                      <span style="display: flex; justify-content: center;">pilot</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(พ้าย-เลิ่ท)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">นักบิน</span>
+                      <audio id="pilot" src="../../Testvocab/voice/pilot.mp3"></audio>
+                    </div>
+                    <div class="hover-number hover-number-body"></div>
+                </div>   
+
+         <!--พยาบาล-->
+         <div class="container-nurse">
+    <img src="../../Testvocab/img/occupation/nurse.png" alt="nurse" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">nurse</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เนิ่ส)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">พยาบาล</span>
+      <audio id="nurse" src="../../Testvocab/voice/nurse.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-body"></div>
+</div>
+
+        <!--ทันตแพทย์-->
+        <div class="container-dentist">
+            <img src="../../Testvocab/img/occupation/dentist.png" alt="dentist" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">dentist</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(เด้น-ทิ่ซฺท)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ทันตแพทย์</span>
+              <audio id="dentist" src="../../Testvocab/voice/dentist.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-body"></div>
+        </div>
+
+                <!--เภสัชกร-->
+                <div class="container-pharmacist">
+    <img src="../../Testvocab/img/occupation/pharmacist.png" alt="pharmacist" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">pharmacist</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ฟ้า-มา-ซิ่ซฺท)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">เภสัชกร</span>
+      <audio id="pharmacist" src="../../Testvocab/voice/pharmacist.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-body"></div>
+</div>
+
+
+    <!--ทหาร-->
+    <div class="container-soldier">
+        <img src="../../Testvocab/img/occupation/soldier.png" alt="soldier" class="image">
+        <div class="speech-box">
+          <span style="display: flex; justify-content: center;">soldier</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โซ้ล-เจ่อ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ทหาร</span>
+          <audio id="soldier" src="../../Testvocab/voice/soldier.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-body"></div>
+    </div>
+
+
+    <!--ตำรวจ-->
+    <div class="container-policeman">
+      <img src="../../Testvocab/img/occupation/policeman.png" alt="policeman" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">policeman</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เพอะ-ลิซ-เมิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ตำรวจ</span>
+      <audio id="policeman" src="../../Testvocab/voice/policeman.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+    </div>
+
+        <!--นักดนตรี-->
+        <div class="container-musician">
+        <img src="../../Testvocab/img/occupation/musician.png" alt="musician" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">musician</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(มิว-ซิ-เชี่ยน)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">นักดนตรี</span>
+          <audio id="musician" src="../../Testvocab/voice/musician.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-body"></div>
+    </div>
+
+             <!--ทนายความ, นักกฎหมาย-->
+             <div class="container-lawyer">
+      <img src="../../Testvocab/img/occupation/lawyer.png" alt="lawyer" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">lawyer</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ล้อ-เหย่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ทนายความ, นักกฎหมาย</span>
+        <audio id="lawyer" src="../../Testvocab/voice/lawyer.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-body"></div>
+    </div>
+
+
+ <!--นักร้อง -->
+ <div class="container-singer">
+        <img src="../../Testvocab/img/occupation/singer.png" alt="singer" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">singer</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซิ้ง-เง่อะ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">นักร้อง</span>
+        <audio id="singer" src="../../Testvocab/voice/singer.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-body"></div>
+    </div>
+
+
+ <!--นักเต้นรำ -->
+ <div class="container-dancer">
+    <img src="../../Testvocab/img/occupation/dancer.png" alt="dancer" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">dancer</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ด๊าน-เซ่อ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">นักเต้นรำ</span>
+    <audio id="dancer" src="../../Testvocab/voice/dancer.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-body"></div>
+</div>
+
+ <!--นักแสดง -->
+ <div class="container-actor">
+    <img src="../../Testvocab/img/occupation/actor.png" alt="actor" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">actor</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(แอ๊ค-เท่อ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">นักแสดง</span>
+    <audio id="actor" src="../../Testvocab/voice/actor.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-body"></div>
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-quesoc1">
+          <img src="../../Testvocab/img/occupation/quesoc1.png" alt="quesoc1" class="image">
+          <div class="speech-box7">
+          Look at the hospital.<br> Who are standing in front of it ? <br>
+          <span class="thai-text">ดูที่โรงพยาบาลสิ <br> ใครยืนอยู่หน้าโรงพยาบาลบ้าง ?</span>
+          </div>
+          <audio id="quesoc1" src="../../Testvocab/voice/quesoc1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesoc2">
+          <img src="../../Testvocab/img/occupation/quesoc2.png" alt="quesoc2" class="image">
+          <div class="speech-box8">
+          Is the dentist holding a piece of <br> cake in his hand ? <br>
+          <span class="thai-text">หมอฟันถือขนมเค้กอยู่ใช่ไหม ?</span>
+          </div>
+            <audio id="quesoc2" src="../../Testvocab/voice/quesoc2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              
+    <div class="container-exit">
+      <a href="../vocab2.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+
+
+  </div>
+
+  <script>
+    var lawyerImg = document.querySelector('.container-lawyer img');
+var soldierImg = document.querySelector('.container-soldier img');
+var musicianImg = document.querySelector('.container-musician img');
+var teacherImg = document.querySelector('.container-teacher img');
+var studentImg = document.querySelector('.container-student img');
+var driverImg = document.querySelector('.container-driver img');
+var doctorImg = document.querySelector('.container-doctor img');
+var taxidriverImg = document.querySelector('.container-taxidriver img');
+var policemanImg = document.querySelector('.container-policeman img');
+var computerprogrammerImg = document.querySelector('.container-computerprogrammer img');
+var scientistImg = document.querySelector('.container-scientist img');
+var singerImg = document.querySelector('.container-singer img');
+var pharmacistImg = document.querySelector('.container-pharmacist img');
+var dentistImg = document.querySelector('.container-dentist img');
+var pilotImg = document.querySelector('.container-pilot img');
+var nurseImg = document.querySelector('.container-nurse img');
+var dancerImg = document.querySelector('.container-dancer img');
+var actorImg = document.querySelector('.container-actor img');
+var quesoc1Img = document.querySelector('.container-quesoc1 img');
+var quesoc2Img = document.querySelector('.container-quesoc2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var taxidriverSpeechBox = document.querySelector('.container-taxidriver .speech-box');
+
+
+// เลือกอีเลเมนต์ของ speech box11
+var lawyerSpeechBox = document.querySelector('.container-lawyer .speech-box11');
+var dancerSpeechBox = document.querySelector('.container-dancer .speech-box11');
+var singerSpeechBox = document.querySelector('.container-singer .speech-box11');
+var musicianSpeechBox = document.querySelector('.container-musician .speech-box11');
+var actorSpeechBox = document.querySelector('.container-actor .speech-box11');
+
+var pharmacistSpeechBox = document.querySelector('.container-pharmacist .speech-box11');
+var doctorSpeechBox = document.querySelector('.container-doctor .speech-box11');
+var dentistSpeechBox = document.querySelector('.container-dentist .speech-box11');
+var nurseSpeechBox = document.querySelector('.container-nurse .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var pilotSpeechBox = document.querySelector('.container-pilot .speech-box2');
+var policemanSpeechBox = document.querySelector('.container-policeman .speech-box2');
+
+
+
+// เลือกอีเลเมนต์ของ speech box3
+var teacherSpeechBox = document.querySelector('.container-teacher .speech-box3');
+var driverSpeechBox = document.querySelector('.container-driver .speech-box3');
+var scientistSpeechBox = document.querySelector('.container-scientist .speech-box3');
+var soldierSpeechBox = document.querySelector('.container-soldier .speech-box');
+
+
+// เลือกอีเลเมนต์ของ speech box4
+var computerprogrammerSpeechBox = document.querySelector('.container-computerprogrammer .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box5
+var studentSpeechBox = document.querySelector('.container-student .speech-box5');
+
+// เลือกอีเลเมนต์ของ speech box7
+var quesoc1SpeechBox = document.querySelector('.container-quesoc1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quesoc2SpeechBox = document.querySelector('.container-quesoc2 .speech-box8');
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var lawyerNumber = document.querySelector('.container-lawyer .hover-number');
+var soldierNumber = document.querySelector('.container-soldier .hover-number');
+var musicianNumber = document.querySelector('.container-musician .hover-number');
+var teacherNumber = document.querySelector('.container-teacher .hover-number');
+var studentNumber = document.querySelector('.container-student .hover-number');
+var driverNumber = document.querySelector('.container-driver .hover-number');
+var doctorNumber = document.querySelector('.container-doctor .hover-number');
+var taxidriverNumber = document.querySelector('.container-taxidriver .hover-number');
+var policemanNumber = document.querySelector('.container-policeman .hover-number');
+var scientistNumber = document.querySelector('.container-scientist .hover-number');
+var singerNumber = document.querySelector('.container-singer .hover-number');
+var pharmacistNumber = document.querySelector('.container-pharmacist .hover-number');
+var dentistNumber = document.querySelector('.container-dentist .hover-number');
+var pilotNumber = document.querySelector('.container-pilot .hover-number');
+var nurseNumber = document.querySelector('.container-nurse .hover-number');
+var dancerNumber = document.querySelector('.container-dancer .hover-number');
+var actorNumber = document.querySelector('.container-actor .hover-number');
+var computerprogrammerNumber = document.querySelector('.container-computerprogrammer .hover-number');
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(lawyerImg, lawyerSpeechBox, lawyerNumber);
+setupHoverEffect(soldierImg, soldierSpeechBox, soldierNumber);
+setupHoverEffect(musicianImg, musicianSpeechBox, musicianNumber);
+setupHoverEffect(teacherImg, teacherSpeechBox, teacherNumber);
+setupHoverEffect(studentImg, studentSpeechBox, studentNumber);
+setupHoverEffect(driverImg, driverSpeechBox, driverNumber);
+setupHoverEffect(doctorImg, doctorSpeechBox, doctorNumber);
+setupHoverEffect(taxidriverImg, taxidriverSpeechBox, taxidriverNumber);
+setupHoverEffect(policemanImg, policemanSpeechBox, policemanNumber);
+setupHoverEffect(scientistImg, scientistSpeechBox, scientistNumber);
+setupHoverEffect(singerImg, singerSpeechBox, singerNumber);
+setupHoverEffect(pharmacistImg, pharmacistSpeechBox, pharmacistNumber);
+setupHoverEffect(dentistImg, dentistSpeechBox, dentistNumber);
+setupHoverEffect(pilotImg, pilotSpeechBox, pilotNumber);
+setupHoverEffect(nurseImg, nurseSpeechBox, nurseNumber);
+setupHoverEffect(dancerImg, dancerSpeechBox, dancerNumber);
+setupHoverEffect(actorImg, actorSpeechBox, actorNumber);
+setupHoverEffect(computerprogrammerImg, computerprogrammerSpeechBox, computerprogrammerNumber);
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+lawyerImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, lawyerSpeechBox);
+});
+
+soldierImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, soldierSpeechBox);
+});
+
+teacherImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, teacherSpeechBox);
+}); 
+
+studentImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, studentSpeechBox);
+});
+
+driverImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, driverSpeechBox);
+}); 
+
+doctorImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, doctorSpeechBox);
+}); 
+
+taxidriverImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, taxidriverSpeechBox);
+}); 
+
+policemanImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, policemanSpeechBox);
+}); 
+
+computerprogrammerImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, computerprogrammerSpeechBox);
+}); 
+
+scientistImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, scientistSpeechBox);
+}); 
+
+singerImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, singerSpeechBox);
+}); 
+musicianImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, musicianSpeechBox);
+}); 
+pharmacistImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, pharmacistSpeechBox);
+}); 
+
+dentistImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, dentistSpeechBox);
+}); 
+
+pilotImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,pilotSpeechBox);
+}); 
+
+
+nurseImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,nurseSpeechBox);
+}); 
+
+dancerImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,dancerSpeechBox);
+}); 
+
+actorImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,actorSpeechBox);
+}); 
+
+quesoc1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesoc1SpeechBox);
+}); 
+
+quesoc2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesoc2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+lawyerImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, lawyerSpeechBox);
+});
+
+soldierImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, soldierSpeechBox);
+});
+
+teacherImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  teacherSpeechBox);
+  });
+
+studentImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, studentSpeechBox);
+  });
+
+driverImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  driverSpeechBox);
+  });
+
+doctorImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  doctorSpeechBox);
+  });
+
+  taxidriverImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, taxidriverSpeechBox);
+  });
+
+  policemanImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, policemanSpeechBox);
+  });
+
+  computerprogrammerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, computerprogrammerSpeechBox);
+  });
+  
+  scientistImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, scientistSpeechBox);
+  });
+
+  singerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   singerSpeechBox);
+  });
+
+  musicianImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   musicianSpeechBox);
+  });
+  pharmacistImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   pharmacistSpeechBox);
+  });
+
+  dentistImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   dentistSpeechBox);
+  });
+
+  pilotImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   pilotSpeechBox);
+  });
+
+  nurseImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   nurseSpeechBox);
+  });
+
+  dancerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   dancerSpeechBox);
+  });
+
+  actorImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   actorSpeechBox);
+  });
+
+  quesoc1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesoc1SpeechBox);
+  });
+
+  quesoc2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesoc2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-lawyer img', '#lawyer');
+playSoundWhenClick('.container-soldier img', '#soldier');
+playSoundWhenClick('.container-scientist img', '#scientist');
+playSoundWhenClick('.container-taxidriver img', '#taxidriver');
+playSoundWhenClick('.container-teacher img', '#teacher');
+playSoundWhenClick('.container-student img', '#student');
+playSoundWhenClick('.container-driver img', '#driver');
+playSoundWhenClick('.container-doctor img', '#doctor');
+playSoundWhenClick('.container-policeman img', '#policeman');
+playSoundWhenClick('.container-computerprogrammer img', '#computerprogrammer');
+playSoundWhenClick('.container-singer img', '#singer')
+playSoundWhenClick('.container-musician img', '#musician');
+playSoundWhenClick('.container-pharmacist img', '#pharmacist');
+playSoundWhenClick('.container-dentist img', '#dentist');
+playSoundWhenClick('.container-pilot img', '#pilot');
+playSoundWhenClick('.container-nurse img', '#nurse');
+playSoundWhenClick('.container-dancer img', '#dancer');
+playSoundWhenClick('.container-actor img', '#actor');
+playSoundWhenClick('.container-quesoc1 img', '#quesoc1');
+playSoundWhenClick('.container-quesoc2 img', '#quesoc2');
+  </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

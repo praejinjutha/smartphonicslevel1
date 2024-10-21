@@ -1,0 +1,1717 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+   
+  
+    <style>
+      
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/Bg2.png');
+  background-size: cover;
+  background-position: center;
+  /* height: auto; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* เอฟเฟกต์การเคลื่อนไหว */
+@keyframes hintAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.hint {
+    animation: hintAnimation 1s infinite;
+}
+
+/* สไตล์อื่นๆ */
+.image {
+    width: 100px; /* ปรับขนาดตามต้องการ */
+    height: auto;
+}
+
+.container-seawater, .container-sandybeach, .container-girl {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -35px;
+  left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+  z-index: -3; 
+}
+
+
+.container-starfish .hover-number,
+.container-seashell .hover-number{
+  top: 35px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 10px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: -3; 
+}
+
+.speech-box12, .speech-box4 {
+    display: none; /* ซ่อน speech box */
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.container-seawater:hover .speech-box12, .container-sandybeach:hover .speech-box12, .container-girl:hover .speech-box4 {
+    display: block; /* แสดง speech box เมื่อ hover */
+}
+
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #FFC000;
+  text-shadow: 0 0 20px rgb(235, 225, 195);
+  margin-bottom: 2px;
+  margin-top: 1vw;
+  letter-spacing: 5px;
+  -webkit-text-stroke: 1px rgb(245, 189, 17); /* กำหนดขอบตัวอักษร */
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+.container {
+  left: -5%;
+  width: 80vw; 
+  height: 100vh; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-bottom: 12px;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+}
+
+.image {
+  width: 90%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -8%;
+  left: 103%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -8%;
+  left: 109%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+
+/*ว่าว*/
+.container-kite {
+  position: absolute;
+  top: 33%;
+  left: 30.8%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 3;
+}
+
+/*เด็กเล่นว่าว*/
+.container-playkite {
+  position: absolute;
+  top: 56%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 3;
+}
+
+/*เด็กผู้หญิง*/
+.container-girl {
+  position: absolute;
+  top: 64%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 9; 
+}
+
+/*น้ำทะเล*/
+.container-seawater {
+  position: absolute;
+  top: 49.8%;
+  left: 48.99%;
+  transform: translate(-50%, -50%);
+  width: 97.6%; 
+  z-index: 2; 
+}
+
+/*หาดทราย*/
+.container-sandybeach {
+  position: absolute;
+  top: 84%;
+  left:49.1%;
+  transform: translate(-50%, -50%);
+  width: 97.6%; 
+  z-index: 1; 
+}
+
+
+/*ผ้าเช็ดตัว*/
+.container-beachtowel {
+  position: absolute;
+  top: 91%;
+  left:22%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 11;
+}
+
+/*ถังน้ำ*/
+.container-bucket {
+  position: absolute;
+  top: 85%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 5.8%; 
+  z-index: 5; 
+}
+
+/*ทราย*/
+.container-sand {
+  position: absolute;
+  top: 90%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 1; 
+}
+
+/*ปราสาททราย*/
+.container-sandcastle {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 5; 
+}
+
+/*หอย*/
+.container-seashell {
+  position: absolute;
+  top: 90%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 2; 
+}
+
+/*ปลาดาว*/
+.container-starfish {
+  position: absolute;
+  top: 87%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 6; 
+}
+
+/*นักประดาน้ำ*/
+.container-diver {
+  position: absolute;
+  top: 51%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 1; 
+}
+
+/*ต้นมะพร้าว*/
+.container-coconut {
+  position: absolute;
+  top: 50%;
+  left: 15.5%;
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  z-index: 2; 
+}
+
+/*เก้าอี้ทะเล*/
+.container-beachchair {
+  position: absolute;
+  top: 77.5%;
+  left: 17.5%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 10; 
+}
+
+/*boy*/
+.container-boy {
+  position: absolute;
+  top: 70%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 6; 
+}
+
+/*เด็กเล่นทราย*/
+.container-playsand {
+  position: absolute;
+  top: 68%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 4; 
+}
+
+/*surf*/
+.container-surfboard {
+  position: absolute;
+  top: 71%;
+  left: 108%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 6; 
+}
+
+/*playsurf*/
+.container-playsurf {
+  position: absolute;
+  top: 55%;
+  left: 108%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 7; 
+}
+
+/*อาบแดด*/
+.container-sleep {
+  position: absolute;
+  top: 28%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+  width: 25%; 
+  z-index: 1; 
+}
+
+/*ร่ม*/
+.container-umbrella {
+  position: absolute;
+  top: 14%;
+  left: 101.9%;
+  transform: translate(-50%, -50%);
+  width: 16.3%; 
+  z-index: 5; 
+}
+
+
+/*พลั่ว*/
+.container-shovel {
+  position: absolute;
+  top: 65.6%;
+  left: 76.4%;
+  transform: translate(-50%, -50%);
+  width: 3%; 
+  z-index: 6; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -35px;
+  left: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8;
+  padding-top: 5px;
+  z-index: -3; 
+}
+
+
+.container-starfish .hover-number,
+.container-seashell .hover-number{
+  top: 35px; 
+  left: 10px; 
+  z-index: -3; 
+}
+
+.container-bucket .hover-number {
+  top: 50px; 
+  left: -2px; 
+  z-index: -3; 
+}
+
+.container-kite .hover-number,
+.container-island .hover-number {
+  top: -45px; 
+  left: 80px; 
+  z-index: -3; 
+}
+
+.container-seawater .hover-number,
+.container-sandybeach .hover-number {
+  top: 80px; 
+  left: 970px; 
+  z-index: 3; 
+}
+
+.container-juice .hover-number{
+  top: 5px; 
+  left: 50px; 
+  z-index: -3; 
+}
+
+.container-girl .hover-number,
+.container-beachtowel .hover-number {
+  top: 25px; 
+  left: 120px; 
+  z-index: -3; 
+}
+
+
+.container-coconut img,.container-beachchair img,.container-beachtowel img,.container-girl img,.container-juice img,.container-kite img, .container-island img,.container-bucket img,.container-seashell img, .container-starfish img, .container-sandcastle img, .container-boy img,.container-shovel img,.container-sand img, .container-rubberring img, .container-sunglasses img,.container-snorkel img,.container-straw img, .container-surfboard img, .container-umbrella img,.container-ques3 img,.container-ques4 img,.container-seawater img, .container-sandybeach img {
+transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+
+.container-coconut img:hover,.container-beachchair img:hover,.container-beachtowel img:hover,.container-girl img:hover,.container-juice img:hover,.container-kite img:hover, .container-island img:hover, .container-bucket img:hover, .container-seashell img:hover, .container-starfish img:hover, .container-sandcastle img:hover, .container-boy img:hover,.container-shovel img:hover,.container-sand img:hover, .container-rubberring img:hover, .container-sunglasses img:hover, .container-snorkel img:hover, .container-straw img:hover, .container-surfboard img:hover, .container-umbrella img:hover,.container-ques3 img:hover,.container-ques4 img:hover, .container-seawater img:hover, .container-sandybeach img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+/*เกาะ*/
+.container-island{
+  position: absolute;
+  top: 30%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 4; 
+}
+
+/*นั่งบนเป็ด*/
+.container-sitonduck{
+  position: absolute;
+  top: 38%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 2; 
+}
+
+
+/*แว่นกันแดด*/
+.container-sunglasses{
+  position: absolute;
+  top: 30%;
+  left: 53.4%;
+  transform: translate(-50%, -50%);
+  width: 5.4%; 
+  z-index: 6; 
+}
+
+
+/*ห่วงยาง*/
+.container-rubberring{
+  position: absolute;
+  top: 43%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 3; 
+}
+
+/*เด็กดำน้ำ*/
+.container-boysnor{
+  position: absolute;
+  top: 32%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 1; 
+}
+
+/*แว่นดำน้ำ*/
+.container-snorkel{
+  position: absolute;
+  top: 28.1%;
+  left: 82.2%;
+  transform: translate(-50%, -50%);
+  width: 7.4%; 
+  z-index: 1; 
+}
+
+
+/*น้ำมะพร้าว*/
+.container-juice{
+  position: absolute;
+  top: 78%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 7; 
+}
+
+/*หลอด*/
+.container-straw{
+  position: absolute;
+  top: 73.5%;
+  left: 33.5%;
+  transform: translate(-50%, -50%);
+  width: 4%; 
+  z-index: 8; 
+}
+
+/*คำถาม1*/
+.container-ques3 {
+  position: absolute;
+  top: 82%;
+  left: 110%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 6; 
+}
+
+/*คำถาม2*/
+.container-ques4 {
+  position: absolute;
+  top: 97%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  top: 75%;
+  left: -1400%;
+  transform: translate(-50%, -50%);
+  width: 70%; 
+  z-index: 1; 
+}
+
+
+/* กำหนด speech box*/
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7, .speech-box8, .speech-box9, .speech-box12 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 0.8); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+  
+/* ว่าว */
+.speech-box {
+  width: 120px;
+  height: 80px;
+  top: 5px;
+  left: -20px;
+  z-index: -1; 
+}
+
+/*ต้นมะพร้าว*/
+.speech-box11 {
+   width: 160px;
+   height: 130px;
+   top: -24%; /* จัดตำแหน่งให้ speech box ตรงกลางของพ่อของมัน (container) */
+   left: 35%;
+   z-index: -1;
+}
+
+/*น้ำทะเล*/
+.speech-box12 {
+  width: 140px;
+  height: 130px;
+  top: 15%; /* จัดตำแหน่งให้ speech box ตรงกลางของพ่อของมัน (container) */
+  left: 89%;
+  z-index: 1;
+}
+
+
+ /* พลั่ว,ถังน้ำ,หอย,ปลาดาว */
+.speech-box2 {
+  width: 160px;
+  height: 50px;
+  text-align: center;
+  line-height: 20px;
+  top: 85%;
+  left: -80%;
+  z-index: -1;
+}
+
+ /* แว่นกันแดด,ท่อหายใจ */
+.speech-box3 {
+    width: 150px;
+    height: 120px;
+    bottom: 99%;
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+ /* ผ้าเช็ดตัว,น้ำมะพร้าว */
+ .speech-box4 {
+   width: 180px;
+   height: 120px;
+   top: 3%;
+   left: 70%;
+   z-index: -1;
+ }
+
+  /* เก้าอี้ชายหาด */
+  .speech-box5 {
+     width: 140px;
+     height: 120px;
+     top: 28%;
+     left: -38%;
+     z-index: -1;
+   }
+   
+  /* boy */
+  .speech-box6 {
+    width: 140px;
+     height: 140px;
+     top: 50%;
+     right: 75%;
+     z-index: -1;
+   }
+
+    /* ปราสาททราย, เกาะ */
+.speech-box7 {
+  width: 160px;
+  height: 120px;
+  top: -67%;
+  bottom: 99%;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+/*คำถาม1*/
+.speech-box8 {
+  width: 240px;
+  height: 87px;
+  text-align: left;
+  line-height: 37px;
+  background-color: rgb(146, 207, 222); 
+  top: -25px;
+  right: 50%;
+  z-index: -1;
+}
+
+/*คำถาม2*/
+.speech-box9 {
+  width: 430px;
+  height: 87px;
+  text-align: left;
+  line-height: 37px;
+  background-color: rgb(146, 207, 222); 
+  top: -25px;
+  right: 50%;
+  z-index: -1;
+}
+
+
+
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+
+h1 {
+  font-size: 50px;
+}
+
+h4 {
+  font-size: 30px;
+}
+
+/*แว่นกันแดด*/
+.container-sunglasses{
+  position: absolute;
+  top: 32%;
+  left: 53.4%;
+  transform: translate(-50%, -50%);
+  width: 5.4%; 
+  z-index: 6; 
+}
+
+.container-snorkel{
+  position: absolute;
+  top: 29.1%;
+  left: 82%;
+  transform: translate(-50%, -50%);
+  width: 7.4%; 
+  z-index: 1; 
+}
+
+  .container-seawater {
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 96.5%; 
+  z-index: 2; 
+}
+
+.container-sandybeach {
+  position: absolute;
+  top: 86.5%;
+  left:48.5%;
+  transform: translate(-50%, -50%);
+  width: 95.5%; 
+  z-index: 1; 
+}
+
+.container-island{
+  position: absolute;
+  top: 32%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 4; 
+}
+
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top:-20px;
+      left: 5px;
+      font-size: 13px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../../Testvocab/img/clothes2/speaker.png');
+      width: 25px;
+      height: 25px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8;
+      padding-top: 1px;
+      z-index: -4;
+      }
+    
+      .container-starfish .hover-number,
+      .container-seashell .hover-number{
+        top: 26px;
+        left:-5px;
+        }
+
+      .container-bucket .hover-number {
+        top: 26px;
+        left:-10px;
+        }
+      
+      .container-kite .hover-number,
+      .container-island .hover-number{
+        top: -20px;
+        left:30px;
+        }
+
+      .container-girl .hover-number{
+      top: 5px;
+      left:1px;
+      z-index: 5;
+      }
+      .container-beachtowel .hover-number{
+      top: 17px;
+      left:5px;
+      z-index: 5;
+      }
+
+      .container-straw .hover-number,
+      .container-juice .hover-number{
+        top: 5px;
+        left:-20px;
+        }
+
+
+        .container-sandybeach .hover-number{
+        top: 60px;
+        left:450px;
+        z-index: 1;
+        }
+        .container-seawater .hover-number{
+        top: 20px;
+        left:740px;
+        z-index: 1;
+        }
+
+
+
+      .speech-box, .speech-box11,.speech-box12,.speech-box2,.speech-box3,.speech-box7,.speech-box8,.speech-box4,.speech-box6,.speech-box5,.speech-box9 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 20px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+      }
+    
+    
+      /* Adjust speech box sizes and positions */
+      .speech-box{
+        width: 100px;
+        height: 80px;
+        top: -10%; 
+        left:-15%; 
+        z-index: -1;
+        }
+    
+      .speech-box11{
+        width: 120px;
+        height: 80px;
+        top:-17%; 
+        left:20%; 
+        line-height: 18px; 
+        z-index: -1;
+        }
+
+        .speech-box12{
+        width: 100px;
+        height: 70px;
+        top: 10%; 
+        left: 89%; 
+        line-height: 18px; 
+        z-index: 4;
+        }
+      .speech-box2{
+        width: 110px;
+        height: 40px;
+        top: 100%; 
+        left:-70%; 
+        line-height: 15px; 
+        z-index: -1;
+        }
+        .speech-box3 {
+    width: 150px;
+    height: 110px;
+    bottom: 99%;
+    left: 40%;
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+    
+      .speech-box4{
+        width: 190px;
+        height: 75px;
+        top: -10%; 
+        left:70%; 
+        line-height: 17px; 
+        z-index: -1;
+        }
+
+
+        .speech-box5 {
+     width: 140px;
+     height: 120px;
+     top: 28%;
+     left: -45%;
+     z-index: -1;
+   }
+
+   .speech-box6 {
+    width: 140px;
+     height: 120px;
+     top: 50%;
+     right: 75%;
+     z-index: -1;
+   }
+
+
+.speech-box7 {
+  width: 160px;
+  height: 120px;
+  top: -89%;
+  bottom: 99%;
+  left: 40%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box8 {
+  width: 240px;
+  height: 47px;
+  text-align: left;
+  line-height: 47px;
+  background-color: rgb(146, 207, 222); 
+  top: 0%;
+  right: 50%;
+  z-index: -1;
+}
+
+.speech-box9 {
+  width: 430px;
+  height: 47px;
+  text-align: left;
+  line-height: 47px;
+  background-color: rgb(146, 207, 222); 
+  top: 0%;
+  right: 50%;
+  z-index: -1;
+}
+    }
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+
+</head>
+<body>
+     <!-- Navbar Start -->
+     <div class="container-fluid bg-light position-relative shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+              <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+              <span class="text-primary">Smart Phonics</span>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav font-weight-bold mx-auto py-0">
+                  
+              <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+              <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+              <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+              <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+
+    <h1> On the beach </h1>
+    <h4>ประกอบด้วยคำศัพท์จำนวน 22 คำ</h4>
+  <div class="container">
+    <img src="../../Testvocab/img/Asset10.png" alt="Onthebeach" class="image">
+
+              <!--icon home-->
+    <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="School.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+
+    <!--ว่าว-->
+    <div class="container-kite">
+      <img src="../../Testvocab/img/kite.png" alt="kite" class="image">
+      <div class="speech-box" style="text-align: center;">
+        kite<br>
+        <span class="thai-text">(ไค่ท) ว่าว</span>
+        <audio id="kite" src="../../Testvocab/voice/kite.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--เด็กเล่นว่าว-->
+        <div class="container-playkite">
+          <img id="playkite" src="../../Testvocab/img/playkite.png" alt="playkite" class="image">
+        </div>
+    
+        <!--น้ำทะเล-->
+        <div class="container-seawater">
+          <img src="../../Testvocab/img/seawater.png" alt="seawater" class="image">
+          <div class="speech-box12">
+          <span style="display: flex; justify-content: center;">sea water</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซี ว้อ-เถ่อะ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">น้ำทะเล</span>
+          <audio id="seawater" src="../../Testvocab/voice/seawater.wav"></audio>
+        </div>
+        <div class="hover-number"></div> 
+        </div>
+
+
+        <!--หาดทราย-->
+          <div class="container-sandybeach">
+          <img src="../../Testvocab/img/sandybeach.png" alt="sandybeach" class="image">
+          <div class="speech-box12">
+          <span style="display: flex; justify-content: center;">sandy beach</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(แซ้น-ดิ บีช)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">หาดทราย</span>
+          <audio id="sandybeach" src="../../Testvocab/voice/sandybeach.wav"></audio>
+        </div>
+        <div class="hover-number"></div> 
+        </div>
+
+
+    <!--เด็กผู้หญิง-->
+    <div class="container-girl">
+        <img src="../../Testvocab/img/girl.png" alt="girl" class="image">
+        <div class="speech-box4">
+          <span style="display: flex; justify-content: center;">girl</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เกิล)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เด็กผู้หญิง</span>
+          <audio id="girl" src="../../Testvocab/voice/girl.wav"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+    <!--ผ้าเช็ดตัว-->
+    <div class="container-beachtowel">
+        <img src="../../Testvocab/img/beachtowel.png" alt="beachtowel" class="image">
+        <div class="speech-box4">
+          <span style="display: flex; justify-content: center;">beach towel</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(บีช ทาว-เวิล)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ผ้าเช็ดตัวสำหรับชายหาด</span>
+          <audio id="beachtowel" src="../../Testvocab/voice/beachtowel.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+      <!--ต้นมะพร้าว-->
+      <div class="container-coconut">
+        <img src="../../Testvocab/img/coconut.png" alt="coconut" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">coconut tree</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โค้ว-เคอะ-เนิ่ท ทรี)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ต้นมะพร้าว</span>
+          <audio id="coconut" src="../../Testvocab/voice/coconuttree.wav"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+    <!--เก้าอี้ทะเล-->
+    <div class="container-beachchair">
+      <img src="../../Testvocab/img/beachchair.png" alt="beachchair" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">beachchair</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(บีช แช)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เก้าอี้ชายหาด</span>
+        <audio id="beachchair" src="../../Testvocab/voice/beachchair.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+  </div>
+
+    <!--เล่น playsurf -->
+    <div class="container-playsurf">
+      <img src="../../Testvocab/img/playsurf.png" alt="playsurf" class="image">
+ </div>
+
+    <!--surf -->
+    <div class="container-surfboard">
+      <img src="../../Testvocab/img/surfboard.png" alt="surfboard" class="image">
+      <div class="speech-box6">
+        <span style="display: flex; justify-content: center;">surfboard</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เซิ่ฟ-บอด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">กระดานโต้คลื่น</span>
+      </div>
+      <audio id="surfboard" src="../../Testvocab/voice/surfboard.mp3"></audio>
+      <div class="hover-number"></div> 
+ </div>
+
+    <!--อาบแดด -->
+    <div class="container-sleep">
+      <img src="../../Testvocab/img/sleep.png" alt="sleep" class="image">
+ </div>
+
+    <!--ร่ม -->
+    <div class="container-umbrella">
+      <img src="../../Testvocab/img/umbrella.png" alt="umbrella" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">beach umbrella</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(บีช-อัม-เบรลฺ-เล่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ร่มชายหาด</span>
+      </div>
+      <audio id="beachumbrella" src="../../Testvocab/voice/beachumbrella.mp3"></audio>
+      <div class="hover-number"></div> 
+ </div>
+
+ 
+    <!--เด็กนั่งเล่นทราย -->
+    <div class="container-playsand">
+        <img src="../../Testvocab/img/playsand.png" alt="playsand" class="image">
+   </div>
+
+   <!--พลั่ว -->
+   <div class="container-shovel">
+    <img src="../../Testvocab/img/shovel.png" alt="shovel" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">shovel</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ชัฟ-วึล) พลั่ว</span>
+    </div>
+    <audio id="shovel" src="../../Testvocab/voice/shovel.wav"></audio>
+    <div class="hover-number"></div> 
+</div>
+
+       <!--ถังน้ำ-->
+       <div class="container-bucket">
+        <img src="../../Testvocab/img/bucket.png" alt="bucket" class="image">
+        <div class="speech-box2">
+          bucket <br>
+          <span class="thai-text">(บั๊ค-คิ่ท) ถังน้ำ</span>
+        </div>
+        <audio id="bucket" src="../../Testvocab/voice/bucket.mp3"></audio>
+        <div class="hover-number hover-number-bucket"></div> 
+    </div>
+
+           <!--ทราย-->
+           <div class="container-sand">
+            <img src="../../Testvocab/img/sand.png" alt="sand" class="image">
+            <div class="speech-box2">
+              sand<br>
+              <span class="thai-text">(แซนฺด) ทราย</span>
+            </div>
+            <audio id="sand" src="../../Testvocab/voice/sand.wav"></audio>
+            <div class="hover-number"></div> 
+          </div>
+
+    <!--หอย-->
+    <div class="container-seashell">
+      <img src="../../Testvocab/img/seashell.png" alt="seashell" class="image">
+      <div class="speech-box2">
+        seashell <br>
+        <span class="thai-text">(ซี-เชลฺ) หอย</span>
+      </div>
+      <audio id="seashell" src="../../Testvocab/voice/seashell.wav"></audio>
+      <div class="hover-number hover-number-seashell"></div> 
+    </div>   
+
+    <!--ปลาดาว-->
+    <div class="container-starfish">
+      <img src="../../Testvocab/img/starfish.png" alt="starfish" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">starfish</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซึ-ตา-ฟิ่ช) ปลาดาว</span>
+      </div>
+      <audio id="starfish" src="../../Testvocab/voice/starfish.mp3"></audio>
+      <div class="hover-number hover-number-starfish"></div> 
+    </div>    
+    
+    <!--ปราสาททราย-->
+    <div class="container-sandcastle">
+      <img src="../../Testvocab/img/sandcastle.png" alt="sandcastle" class="image">
+      <div class="speech-box7">
+        <span style="display: flex; justify-content: center;">sandcastle</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แซนฺด คาส-เซิล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ปราสาททราย</span>
+      </div>
+      <audio id="sandcastle" src="../../Testvocab/voice/sandcastle.wav"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--เกาะ-->
+    <div class="container-island">
+      <img src="../../Testvocab/img/island.png" alt="island" class="image">
+      <div class="speech-box7">
+        <span style="display: flex; justify-content: center;">island</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(อ้าย-เลิ่นฺด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เกาะ</span>
+        <audio id="island" src="../../Testvocab/voice/island.wav"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+
+    <!--นั่งบนเป็ด-->
+    <div class="container-sitonduck">
+      <img src="../../Testvocab/img/sitonduck.png" alt="sitonduck" class="image">
+    </div>
+
+        <!--แว่นกันแดด-->
+        <div class="container-sunglasses">
+          <img src="../../Testvocab/img/sunglasses.png" alt="sunglasses" class="image">
+          <div class="speech-box3">
+            <span style="display: flex; justify-content: center;">sunglasses</span>
+            <span class="thai-text" style="display: flex; justify-content: center;">(ซัน-กล้าซ-ซึส)</span>
+            <span class="thai-text" style="display: flex; justify-content: center;">แว่นกันแดด</span>
+          </div>
+          <audio id="sunglasses" src="../../Testvocab/voice/sunglasses.wav"></audio>
+          <div class="hover-number"></div> 
+        </div>
+
+
+        <!--เด็กดำน้ำ-->
+          <div class="container-boysnor">
+          <img src="../../Testvocab/img/boysnor.png" alt="boysnor" class="image">
+           </div>
+
+
+                   <!--แว่นดำน้ำ-->
+          <div class="container-snorkel">
+            <img src="../../Testvocab/img/snorkel.png" alt="snorkel" class="image">
+            <div class="speech-box3">
+              <span style="display: flex; justify-content: center;">snorkel</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ซึ-น้อ-เคิ่ล)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ท่อช่วยหายใจในน้ำ</span>
+            </div>
+            <audio id="snorkel" src="../../Testvocab/voice/snorkel.wav"></audio>
+            <div class="hover-number"></div> 
+             </div>
+
+        <!--ห่วงยาง-->
+        <div class="container-rubberring">
+          <img src="../../Testvocab/img/rubberring.png" alt="rubberring" class="image">
+          <div class="speech-box3">
+              <span style="display: flex; justify-content: center;">rubber ring</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(รับ-เบอะ ริง)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ห่วงยาง</span>
+            </div>
+          <audio id="rubberring" src="../../Testvocab/voice/rubberring.wav"></audio>
+          <div class="hover-number"></div> 
+        </div>
+
+
+
+    <!--น้ำมะพร้าว-->
+    <div class="container-juice">
+      <img src="../../Testvocab/img/juice.png" alt="juice" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">coconut juice </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โค้ว-เคอะ-เนิ่ท จุ้ซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">น้ำมะพร้าว</span>
+        <audio id="juice" src="../../Testvocab/voice/coconutjuice.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+    <!--หลอด-->
+    <div class="container-straw">
+      <img src="../../Testvocab/img/straw.png" alt="straw" class="image">
+      <div class="speech-box2" style="text-align: center;">
+        straw <br>
+        <span class="thai-text">(ซึ-ตรอ) หลอด</span>
+      </div>
+      <audio id="straw" src="../../Testvocab/voice/straw.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+
+    <!--boy-->
+    <div class="container-boy">
+      <img src="../../Testvocab/img/boy.png" alt="boy" class="image">
+      <div class="speech-box6">
+        <span style="display: flex; justify-content: center;">boy</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(บอย)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เด็กผู้ชาย</span>
+        <audio id="boy" src="../../Testvocab/voice/boy.wav"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--คำถาม1-->
+        <div class="container-ques3">
+          <img src="../../Testvocab/img/ques3.png" alt="ques3" class="image">
+          <div class="speech-box8">
+            Do you see an island ?<br>
+          <span class="thai-text">เด็ก ๆ เห็นเกาะไหม ?</span>
+          </div>
+          <audio id="ques3" src="../../Testvocab/voice/ques1.wav"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-ques4">
+          <img src="../../Testvocab/img/ques4.png" alt="ques2" class="image">
+          <div class="speech-box9">
+            How many boys are playing on the beach ? <br>
+            <span class="thai-text">มีเด็กผู้ชายก้าลังเล่นอยู่ที่ชายหาดกี่คน ?</span>
+        </div>
+        <audio id="ques4" src="../../Testvocab/voice/ques2.wav"></audio>
+
+
+              <!--ออก-->
+              <a href="../vocab3.html">
+              <div class="container-exit">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+
+<script>
+  // เลือกอีเลเมนต์ของรูปภาพ
+var coconutImg = document.querySelector('.container-coconut img');
+var beachchairImg = document.querySelector('.container-beachchair img');
+var beachtowelImg = document.querySelector('.container-beachtowel img');
+var girlImg = document.querySelector('.container-girl img');
+var juiceImg = document.querySelector('.container-juice img');
+var kiteImg = document.querySelector('.container-kite img');
+var islandImg = document.querySelector('.container-island img');
+var boyImg = document.querySelector('.container-boy img');
+var sandcastleImg = document.querySelector('.container-sandcastle img');
+var shovelImg = document.querySelector('.container-shovel img');
+var bucketImg = document.querySelector('.container-bucket img');
+var seashellImg = document.querySelector('.container-seashell img');
+var starfishImg = document.querySelector('.container-starfish img');
+var sandImg = document.querySelector('.container-sand img');
+var snorkelImg = document.querySelector('.container-snorkel img');
+var rubberringImg = document.querySelector('.container-rubberring img');
+var sunglassesImg = document.querySelector('.container-sunglasses img');
+var strawImg = document.querySelector('.container-straw img');
+var surfboardImg = document.querySelector('.container-surfboard img');
+var umbrellaImg = document.querySelector('.container-umbrella img');
+var ques3Img = document.querySelector('.container-ques3 img');
+var ques4Img = document.querySelector('.container-ques4 img');
+var seawaterImg = document.querySelector('.container-seawater img');
+var sandybeachImg = document.querySelector('.container-sandybeach img');
+
+
+
+// เลือกอีเลเมนต์ของ speech box กับ box11
+var kiteSpeechBox = document.querySelector('.container-kite .speech-box');
+
+var coconutSpeechBox = document.querySelector('.container-coconut .speech-box11');
+
+var seawaterSpeechBox = document.querySelector('.container-seawater .speech-box12');
+var sandybeachSpeechBox = document.querySelector('.container-sandybeach .speech-box12');
+
+
+// เลือกอีเลเมนต์ของ speech box2
+var shovelSpeechBox = document.querySelector('.container-shovel .speech-box2');
+var bucketSpeechBox = document.querySelector('.container-bucket .speech-box2');
+var seashellSpeechBox = document.querySelector('.container-seashell .speech-box2');
+var starfishSpeechBox = document.querySelector('.container-starfish .speech-box2');
+var sandSpeechBox = document.querySelector('.container-sand .speech-box2');
+var strawSpeechBox = document.querySelector('.container-straw .speech-box2');
+
+// เลือกอีเลเมนต์ของ speech box3
+var snorkelSpeechBox = document.querySelector('.container-snorkel .speech-box3');
+var sunglassesSpeechBox = document.querySelector('.container-sunglasses .speech-box3');
+var rubberringSpeechBox = document.querySelector('.container-rubberring .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var beachtowelSpeechBox = document.querySelector('.container-beachtowel .speech-box4');
+var juiceSpeechBox = document.querySelector('.container-juice .speech-box4');
+var girlSpeechBox = document.querySelector('.container-girl .speech-box4');
+
+
+
+// เลือกอีเลเมนต์ของ speech box5
+var beachchairSpeechBox = document.querySelector('.container-beachchair .speech-box5');
+var umbrellaSpeechBox = document.querySelector('.container-umbrella .speech-box5');
+
+
+// เลือกอีเลเมนต์ของ speech box6
+var boySpeechBox = document.querySelector('.container-boy .speech-box6');
+var surfboardSpeechBox = document.querySelector('.container-surfboard .speech-box6');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var sandcastleSpeechBox = document.querySelector('.container-sandcastle .speech-box7');
+var islandSpeechBox = document.querySelector('.container-island .speech-box7');
+
+// เลือกอีเลเมนต์ของ speech box8+9
+var ques3SpeechBox = document.querySelector('.container-ques3 .speech-box8');
+var ques4SpeechBox = document.querySelector('.container-ques4 .speech-box9');
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var coconutNumber = document.querySelector('.container-coconut .hover-number');
+var beachchairNumber = document.querySelector('.container-beachchair .hover-number');
+var beachtowelNumber = document.querySelector('.container-beachtowel .hover-number');
+var girlNumber = document.querySelector('.container-girl .hover-number');
+var juiceNumber = document.querySelector('.container-juice .hover-number');
+
+var kiteNumber = document.querySelector('.container-kite .hover-number');
+var islandNumber = document.querySelector('.container-island .hover-number');
+var boyNumber = document.querySelector('.container-boy .hover-number');
+var sandcastleNumber = document.querySelector('.container-sandcastle .hover-number');
+var shovelNumber = document.querySelector('.container-shovel .hover-number');
+
+var bucketNumber = document.querySelector('.container-bucket .hover-number');
+var seashellNumber = document.querySelector('.container-seashell .hover-number');
+var starfishNumber = document.querySelector('.container-starfish .hover-number');
+var sandNumber = document.querySelector('.container-sand .hover-number');
+var snorkelNumber = document.querySelector('.container-snorkel .hover-number');
+
+var rubberringNumber = document.querySelector('.container-rubberring .hover-number');
+var sunglassesNumber = document.querySelector('.container-sunglasses .hover-number');
+var strawNumber = document.querySelector('.container-straw .hover-number');
+var surfboardNumber = document.querySelector('.container-surfboard .hover-number');
+var umbrellaNumber = document.querySelector('.container-umbrella .hover-number');
+
+var seawaterNumber = document.querySelector('.container-seawater .hover-number');
+var sandybeachNumber = document.querySelector('.container-sandybeach .hover-number');
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(coconutImg, coconutSpeechBox, coconutNumber);
+setupHoverEffect(beachchairImg, beachchairSpeechBox, beachchairNumber);
+setupHoverEffect(beachtowelImg, beachtowelSpeechBox, beachtowelNumber);
+setupHoverEffect(girlImg, girlSpeechBox, girlNumber);
+setupHoverEffect(juiceImg, juiceSpeechBox, juiceNumber);
+
+setupHoverEffect(kiteImg, kiteSpeechBox, kiteNumber);
+setupHoverEffect(islandImg, islandSpeechBox, islandNumber);
+setupHoverEffect(boyImg, boySpeechBox, boyNumber);
+setupHoverEffect(sandcastleImg, sandcastleSpeechBox, sandcastleNumber);
+setupHoverEffect(shovelImg, shovelSpeechBox, shovelNumber);
+
+setupHoverEffect(bucketImg, bucketSpeechBox, bucketNumber);
+setupHoverEffect(seashellImg, seashellSpeechBox, seashellNumber);
+setupHoverEffect(starfishImg, starfishSpeechBox, starfishNumber);
+setupHoverEffect(sandImg, sandSpeechBox, sandNumber);
+setupHoverEffect(snorkelImg, snorkelSpeechBox, snorkelNumber);
+
+setupHoverEffect(rubberringImg, rubberringSpeechBox, rubberringNumber);
+setupHoverEffect(sunglassesImg, sunglassesSpeechBox, sunglassesNumber);
+setupHoverEffect(strawImg, strawSpeechBox, strawNumber);
+setupHoverEffect(surfboardImg, surfboardSpeechBox, surfboardNumber);
+setupHoverEffect(umbrellaImg, umbrellaSpeechBox, umbrellaNumber);
+
+setupHoverEffect(seawaterImg, seawaterSpeechBox, seawaterNumber);
+setupHoverEffect(sandybeachImg, sandybeachSpeechBox, sandybeachNumber);
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ //
+coconutImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, coconutSpeechBox);
+}); 
+beachchairImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, beachchairSpeechBox);
+}); 
+beachtowelImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, beachtowelSpeechBox);
+}); 
+girlImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, girlSpeechBox);
+}); 
+juiceImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, juiceSpeechBox);
+}); 
+kiteImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, kiteSpeechBox);
+}); 
+islandImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, islandSpeechBox);
+}); 
+boyImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, boySpeechBox);
+}); 
+sandcastleImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, sandcastleSpeechBox);
+}); 
+shovelImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, shovelSpeechBox);
+}); 
+bucketImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, bucketSpeechBox);
+}); 
+seashellImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, seashellSpeechBox);
+}); 
+starfishImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, starfishSpeechBox);
+}); 
+sandImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, sandSpeechBox);
+}); 
+snorkelImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, snorkelSpeechBox);
+});
+rubberringImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, rubberringSpeechBox);
+});
+sunglassesImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, sunglassesSpeechBox);
+});
+strawImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, strawSpeechBox);
+});
+surfboardImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, surfboardSpeechBox);
+});
+umbrellaImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, umbrellaSpeechBox);
+});
+ques3Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, ques3SpeechBox);
+});
+ques4Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, ques4SpeechBox);
+});
+seawaterImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, seawaterSpeechBox);
+});
+sandybeachImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, sandybeachSpeechBox);
+});
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ //
+  coconutImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,coconutSpeechBox);
+  });
+  beachchairImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,beachchairSpeechBox);
+  });
+  beachtowelImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,beachtowelSpeechBox);
+  });
+  girlImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,girlSpeechBox);
+  });
+  juiceImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,juiceSpeechBox);
+  });
+  kiteImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,kiteSpeechBox);
+  });
+  islandImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,islandSpeechBox);
+  });
+  boyImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,boySpeechBox);
+  });
+  sandcastleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,sandcastleSpeechBox);
+  });
+  shovelImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,shovelSpeechBox);
+  });
+  bucketImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,bucketSpeechBox);
+  });
+  seashellImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,seashellSpeechBox);
+  });
+  starfishImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,starfishSpeechBox);
+  });
+  sandImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,sandSpeechBox);
+  });
+  snorkelImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,snorkelSpeechBox);
+  });
+  rubberringImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,rubberringSpeechBox);
+  });
+  sunglassesImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,sunglassesSpeechBox);
+  });
+  strawImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,strawSpeechBox);
+  });
+  surfboardImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,surfboardSpeechBox);
+  });
+  umbrellaImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,umbrellaSpeechBox);
+  });
+  ques3Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,ques3SpeechBox);
+  });
+  ques4Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,ques4SpeechBox);
+  });
+  seawaterImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,seawaterSpeechBox);
+  });
+  sandybeachImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,sandybeachSpeechBox);
+  });
+
+  
+
+  function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+  
+  playSoundWhenClick('.container-beachchair img', '#beachchair');
+  playSoundWhenClick('.container-beachtowel img', '#beachtowel');
+  playSoundWhenClick('.container-umbrella img', '#beachumbrella');
+  playSoundWhenClick('.container-boy img', '#boy');
+  playSoundWhenClick('.container-bucket img', '#bucket');
+  playSoundWhenClick('.container-juice img', '#juice');
+  playSoundWhenClick('.container-coconut img', '#coconut');
+  playSoundWhenClick('.container-girl img', '#girl');
+  playSoundWhenClick('.container-kite img','#kite');
+  playSoundWhenClick('.container-island img', '#island');
+  playSoundWhenClick('.container-rubberring  img', '#rubberring');
+  playSoundWhenClick('.container-sand img','#sand');
+  playSoundWhenClick('.container-sandcastle  img', '#sandcastle ');
+  playSoundWhenClick('.container-snorkel img', '#snorkel');
+  playSoundWhenClick('.container-starfish  img', '#starfish');
+  playSoundWhenClick('.container-shovel img','#shovel');
+  playSoundWhenClick('.container-seashell  img', '#seashell');
+  playSoundWhenClick('.container-surfboard  img', '#surfboard ');
+  playSoundWhenClick('.container-straw img','#straw');
+  playSoundWhenClick('.container-sunglasses  img', '#sunglasses');
+  playSoundWhenClick('.container-seawater img','#seawater');
+  playSoundWhenClick('.container-sandybeach  img','#sandybeach');
+  playSoundWhenClick('.container-ques3 img','#ques3');
+  playSoundWhenClick('.container-ques4  img', '#ques4');
+
+
+</script>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

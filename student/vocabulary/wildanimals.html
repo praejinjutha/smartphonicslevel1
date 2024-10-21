@@ -1,0 +1,1346 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+
+    
+    <style>
+
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/garden/bgwildanimals.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #FFC000;
+ text-shadow: 0 0 20px rgb(3, 2, 0);
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px rgb(255, 255, 255); /* กำหนดขอบตัวอักษร */
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  margin-left: 5%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -4%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -4%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -4%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*คาราแคล*/
+.container-caracal {
+  position: absolute;
+  top: 21%;
+  left: -5%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 1; 
+}
+
+.container-queswild {
+  position: absolute;
+  top: 91%;
+  left: -1%;
+  transform: translate(-50%, -50%);
+  width: 25%; 
+  z-index: 0; 
+}
+
+/*แคพิบารา*/
+.container-capybara {
+  position: absolute;
+  top: 51%;
+  left: -6%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 3; 
+}
+
+/*อูฐ*/
+.container-camel {
+  position: absolute;
+  top: 59%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  width: 35%; 
+  z-index: 1; 
+}
+
+/*กอริลล่า*/
+.container-gorilla {
+  position: absolute;
+  top: 57%;
+  left: 39%;
+  transform: translate(-50%, -50%);
+  width: 24%; 
+  z-index: 1; 
+}
+
+/*แรด*/
+.container-rhinoceros{
+  position: absolute;
+  top: 75%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 3; 
+}
+
+/*เสือ*/
+.container-tiger {
+  position: absolute;
+  top: 83%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 34%; 
+  z-index: 1; 
+}
+
+.container-rock {
+  position: absolute;
+  top: 94%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  width: 83%; 
+  z-index: 7; 
+}
+
+.container-rock1 {
+  position: absolute;
+  top: 94.5%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 23%; 
+  z-index: 0; 
+}
+
+/*จิงโจ้*/
+.container-kangaroo{
+  position: absolute;
+  top: 74%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  width: 26.5%; 
+  z-index: 2; 
+}
+
+/*แพนด้า*/
+.container-panda {
+  position: absolute;
+  top: 86%;
+  left: 31%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 3; 
+}
+
+/*โคอาลา*/
+.container-koala {
+  position: absolute;
+  top: 81%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 6; 
+}
+
+/*หมี*/
+.container-bear {
+  position: absolute;
+  top: 70%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+  width: 29%; 
+  z-index: 3; 
+}
+
+/*กวาง*/
+.container-deer {
+  position: absolute;
+  top: 64%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 2; 
+}
+
+.container-leaf {
+  position: absolute;
+  top: 76%;
+  left: 104%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 6; 
+}
+
+/*สิงโต*/
+.container-lion {
+  position: absolute;
+  top: 55%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 25%; 
+  z-index: 1; 
+}
+
+/*ม้าลาย*/
+.container-zebra {
+  position: absolute;
+  top: 50%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 1; 
+}
+
+/*ฮิปโปโปเตมัส*/
+.container-hippopotamus {
+  position: absolute;
+  top: 82%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  width: 23%; 
+  z-index: 3; 
+}
+
+/*หมาจิ้งจอก*/
+.container-fox {
+  position: absolute;
+  top: 86%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 4; 
+}
+
+/*ช้าง*/
+.container-elephant {
+  position: absolute;
+  top: 61%;
+  left: 62%;
+  transform: translate(-50%, -50%);
+  width: 32%; 
+  z-index: 4;
+}
+
+/*ลิง*/
+.container-monkey {
+  position: absolute;
+  top: 82%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 6; 
+}
+
+/*ยีราฟ*/
+.container-giraffe {
+  position: absolute;
+  top: 70%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 5; 
+}
+
+/*เสือดาว*/
+.container-leopard {
+  position: absolute;
+  top: 78%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 23%; 
+  z-index: 5; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -25px;
+  left: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+}
+
+.container-leopard .hover-number,
+.container-deer .hover-number{
+  top: 45px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 140px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-bear .hover-number{
+  top: -15px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 240px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+.container-zebra .hover-number,
+.container-lion .hover-number{
+  top: -45px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 170px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-leopard img,.container-giraffe img,.container-fox img,.container-elephant img,.container-zebra img, .container-lion img, .container-deer img,
+.container-gorilla img, .container-kangaroo img, .container-rhinoceros img,.container-camel img, .container-koala img,.container-tiger img, .container-hippopotamus img, .container-caracal img, .container-bear img, .container-panda img,.container-capybara img,.container-monkey img, .container-queswild1 img, .container-queswild2 img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+.container-leopard img:hover,.container-giraffe img:hover,.container-elephant img:hover,.container-zebra img:hover,.container-lion img:hover,.container-fox img:hover,
+ .container-gorilla img:hover,.container-kangaroo img:hover, .container-rhinoceros img:hover, .container-deer img:hover,
+.container-camel img:hover, .container-bear img:hover, .container-panda img:hover,
+.container-tiger img:hover, .container-hippopotamus img:hover, .container-caracal img:hover, .container-capybara img:hover,
+.container-monkey img:hover,.container-queswild1 img:hover, .container-queswild2 img:hover , .container-koala img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+
+/*คำถาม1*/
+.container-queswild1 {
+  position: absolute;
+  top: 89%;
+  left: -10%;
+  transform: translate(-50%, -50%);
+  width: 1.5%; 
+  z-index: 5; 
+}
+
+/*คำถาม2*/
+.container-queswild2 {
+  position: absolute;
+  top: 70%;
+  left: -3%;
+  transform: translate(-50%, -50%);
+  width: 1.5%; 
+  z-index: 4; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  top: 105%;
+  right: -17%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 1); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+.speech-box {
+  width: 160px;
+  height: 120px;
+  bottom: 50%; 
+  left: -10%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 180px;
+  height: 120px;
+  bottom: 99%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box2 {
+  width: 140px;
+  height: 120px;
+  bottom: 60%; 
+  left: 120%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box3 {
+    width: 150px;
+    height: 120px;
+    bottom: 50%; 
+    left: -40%; 
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+ .speech-box4 {
+   width: 145px;
+   height: 120px; 
+   position: absolute;
+   top: 5%; 
+   left: 90%;
+   z-index: -1;
+ }
+
+ .speech-box5 {
+  width: 150px;
+  height: 120px;
+  bottom: -20%; 
+  left: 30%; 
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
+   
+  /* สิบแปด */
+  .speech-box6 {
+     width: 160px; 
+     height: 120px; 
+     position: absolute;
+     top: -34%; 
+     right: 50%;
+     z-index: -1;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #B7E3D5; /* กำหนดสีพื้นหลังของ speech box */
+  width: 300px; 
+  height: 120px;
+  text-align: center;
+  line-height: 27px; 
+  top: -165%;
+  left: -240%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #FFC7C7; /* กำหนดสีพื้นหลังของ speech box */
+      width: 370px; 
+      height: 80px;
+      text-align: center;
+      line-height: 27px; 
+      top: -175%;
+      left: -540%;
+      z-index: -1;
+    }
+
+    /* สไตล์สำหรับป๊อปอัป */
+#audio-unlock-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    z-index: 1000;
+    flex-direction: column;
+}
+#unlock-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+
+/* For screens smaller than 768px (e.g., smartphcaracals) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box4,
+  .speech-box5,
+  .speech-box6,
+  .speech-box7,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+    @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+     <!-- Navbar Start -->
+     <div class="container-fluid bg-light position-relative shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+              <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+              <span class="text-primary">Smart Phonics</span>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav font-weight-bold mx-auto py-0">
+                  
+              <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+              <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+              <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+              <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+    <h1> WILD ANIMALS </h1>
+    <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 19 คำ</h4> 
+
+  <div class="container">
+    <img src="../../Testvocab/img/garden/wildanimals.png" alt="bird" class="image">
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Foods1.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+              <!--icon next-->
+              <a href="Actions1.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--คาราแคล-->
+    <div class="container-caracal">
+      <img src="../../Testvocab/img/garden/caracal.png" alt="caracal" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">caracal</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ค้า-เร่อะ-ข่าล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">คาราแคล</span>
+      </div>
+      <audio id="caracal" src="../../Testvocab/voice/caracal.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+       <!--แคพิบารา-->
+   <div class="container-capybara">
+      <img src="../../Testvocab/img/garden/capybara.png" alt="capybara" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">capybara</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แค็พ-พิ-บา-เร่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">แคพิบารา</span>
+        <audio id="capybara" src="../../Testvocab/voice/capybara.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>  
+    
+    <!--อูฐ-->
+    <div class="container-camel">
+      <img src="../../Testvocab/img/garden/camel.png" alt="camel" class="image">
+      <div class="speech-box6">
+        <span style="display: flex; justify-content: center;">camel</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(คะ-เมิ่ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">อูฐ</span>
+      </div>
+      <audio id="camel" src="../../Testvocab/voice/camel.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+        <!--กอริลล่า-->
+        <div class="container-gorilla">
+      <img src="../../Testvocab/img/garden/gorilla.png" alt="gorilla" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">gorilla</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เกอะ-ริ้ล-เล่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">กอริลล่า</span>
+      </div>
+      <audio id="gorilla" src="../../Testvocab/voice/gorilla.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--แรด-->
+    <div class="container-rhinoceros">
+      <img src="../../Testvocab/img/garden/rhinoceros.png" alt="rhinoceros" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">rhinoceros </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ไร-เนาะ-ซรัส)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">แรด</span>
+      </div>
+      <audio id="rhinoceros" src="../../Testvocab/voice/rhinoceros.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--เสือ-->
+ <div class="container-tiger">
+      <img src="../../Testvocab/img/garden/tiger.png" alt="tiger" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">tiger</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ไท้-เก่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เสือ</span>
+        <audio id="tiger" src="../../Testvocab/voice/tiger.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--จิงโจ้-->
+        <div class="container-kangaroo">
+      <img src="../../Testvocab/img/garden/kangaroo.png" alt="kangaroo" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">kangaroo</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แค็ง-เกอะ-รู่)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">จิงโจ้</span>
+      </div>
+      <audio id="kangaroo" src="../../Testvocab/voice/kangaroo.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+                    <!--แพนด้า-->
+                    <div class="container-panda">
+                    <img src="../../Testvocab/img/garden/panda.png" alt="panda" class="image">
+                    <div class="speech-box3">
+                      <span style="display: flex; justify-content: center;">panda</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(แพ้น-เด่อะ)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">แพนด้า</span>
+                      <audio id="panda" src="../../Testvocab/voice/panda.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>   
+
+         <!--โคอาลา-->
+         <div class="container-koala">
+    <img src="../../Testvocab/img/garden/koala.png" alt="koala" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">koala</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(โค-อา-เล่อะ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">โคอาลา</span>
+      <audio id="koala" src="../../Testvocab/voice/koala.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+           <!--หมี-->
+           <div class="container-bear">
+            <img src="../../Testvocab/img/garden/bear.png" alt="bear" class="image">
+            <div class="speech-box2">
+              <span style="display: flex; justify-content: center;">bear</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(แบ้)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">หมี</span>
+              <audio id="bear" src="../../Testvocab/voice/bear.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-bear"></div>
+        </div>
+
+        <!--กวาง-->
+        <div class="container-deer">
+            <img src="../../Testvocab/img/garden/deer.png" alt="deer" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">deer</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(เดี้ย)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">กวาง</span>
+              <audio id="deer" src="../../Testvocab/voice/deer.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-deer"></div>
+        </div>
+
+                <!--สิงโต-->
+                <div class="container-lion">
+    <img src="../../Testvocab/img/garden/lion.png" alt="lion" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">lion</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ลาย-เอิ้น)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">สิงโต</span>
+      <audio id="lion" src="../../Testvocab/voice/lion.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-lion"></div>
+</div>
+
+    <!--ม้าลาย-->
+    <div class="container-zebra">
+        <img src="../../Testvocab/img/garden/zebra.png" alt="zebra" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">zebra</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซี้-เบร่อะ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ม้าลาย</span>
+          <audio id="zebra" src="../../Testvocab/voice/zebra.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-zebra"></div>
+    </div>
+
+    <!--ฮิปโปโปเตมัส-->
+    <div class="container-hippopotamus">
+      <img src="../../Testvocab/img/garden/hippopotamus.png" alt="hippopotamus" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">hippopotamus</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฮิ-เพอะ-พ้อ-เทอะ-เมิซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ฮิปโปโปเตมัส</span>
+      <audio id="hippopotamus" src="../../Testvocab/voice/hippopotamus.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--หมาจิ้งจอก-->
+        <div class="container-fox">
+        <img src="../../Testvocab/img/garden/fox.png" alt="fox" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">fox</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ฟ็อกฺซ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">หมาจิ้งจอก</span>
+          <audio id="fox" src="../../Testvocab/voice/fox.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+             <!--ช้าง-->
+             <div class="container-elephant">
+      <img src="../../Testvocab/img/garden/elephant.png" alt="elephant" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">elephant</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เอ้-ลิ-เฟิ่นฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ช้าง</span>
+        <audio id="elephant" src="../../Testvocab/voice/elephant.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+ <!--ลิง -->
+ <div class="container-monkey">
+        <img src="../../Testvocab/img/garden/monkey.png" alt="monkey" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">monkey</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(มั้ง-คิ่)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ลิง</span>
+        <audio id="monkey" src="../../Testvocab/voice/monkey.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+ <!--ยีราฟ -->
+ <div class="container-giraffe">
+    <img src="../../Testvocab/img/garden/giraffe.png" alt="giraffe" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">giraffe</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(จิ-ร่าฟ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ยีราฟ</span>
+    <audio id="giraffe" src="../../Testvocab/voice/giraffe.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--เสือดาว -->
+ <div class="container-leopard">
+    <img src="../../Testvocab/img/garden/leopard.png" alt="leopard" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">leopard</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เล็พ-เผิด)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">เสือดาว</span>
+    <audio id="leopard" src="../../Testvocab/voice/leopard.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-leopard"></div>
+</div>
+
+<div class="container-rock">
+    <img src="../../Testvocab/img/garden/rock.png" alt="rock" class="image">
+</div>
+<div class="container-rock1">
+    <img src="../../Testvocab/img/garden/rock1.png" alt="rock1" class="image">
+</div>
+
+<div class="container-leaf">
+    <img src="../../Testvocab/img/garden/leaf.png" alt="leaf" class="image">
+</div>
+
+<div class="container-queswild">
+    <img src="../../Testvocab/img/garden/queswild.png" alt="queswild" class="image">
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-queswild1">
+          <img src="../../Testvocab/img/garden/queswild1.png" alt="queswild1" class="image">
+          <div class="speech-box7">
+          What animals are <br> black and white ? <br>
+          <span class="thai-text">ตัวอะไร<br> มีสีขาวดำคะ ?</span>
+          </div>
+          <audio id="queswild1" src="../../Testvocab/voice/queswild1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-queswild2">
+          <img src="../../Testvocab/img/garden/queswild2.png" alt="queswild2" class="image">
+          <div class="speech-box8">
+          What animal has the biggest ears ? <br>
+          <span class="thai-text">สัตว์ตัวไหนมีหูใหญ่ที่สุดคะ ?</span>
+          </div>
+            <audio id="queswild2" src="../../Testvocab/voice/queswild2.mp3"></audio>
+        </div>
+
+        <!-- <div id="audio-unlock-overlay">
+          <div>คลิกที่ปุ่มด้านล่างเพื่อเปิดใช้งานเสียง</div>
+          <button id="unlock-button">เปิดเสียง</button>
+      </div> -->
+      
+     
+
+        <!--ออก-->
+              
+              <div class="container-exit">
+                <a href="../vocab.html">
+
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var elephantImg = document.querySelector('.container-elephant img');
+var zebraImg = document.querySelector('.container-zebra img');
+var foxImg = document.querySelector('.container-fox img');
+var gorillaImg = document.querySelector('.container-gorilla img');
+var rhinocerosImg = document.querySelector('.container-rhinoceros img');
+var kangarooImg = document.querySelector('.container-kangaroo img');
+var camelImg = document.querySelector('.container-camel img');
+var tigerImg = document.querySelector('.container-tiger img');
+var hippopotamusImg = document.querySelector('.container-hippopotamus img');
+var caracalImg = document.querySelector('.container-caracal img');
+var capybaraImg = document.querySelector('.container-capybara img');
+var monkeyImg = document.querySelector('.container-monkey img');
+var lionImg = document.querySelector('.container-lion img');
+var deerImg = document.querySelector('.container-deer img');
+var bearImg = document.querySelector('.container-bear img');
+var pandaImg = document.querySelector('.container-panda img');
+var koalaImg = document.querySelector('.container-koala img');
+var giraffeImg = document.querySelector('.container-giraffe img');
+var leopardImg = document.querySelector('.container-leopard img');
+var queswild1Img = document.querySelector('.container-queswild1 img');
+var queswild2Img = document.querySelector('.container-queswild2 img');
+
+// เลือกอีเลเมนต์ของ speech box
+var kangarooSpeechBox = document.querySelector('.container-kangaroo .speech-box');
+var rhinocerosSpeechBox = document.querySelector('.container-rhinoceros .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var elephantSpeechBox = document.querySelector('.container-elephant .speech-box11');
+var monkeySpeechBox = document.querySelector('.container-monkey .speech-box11');
+var gorillaSpeechBox = document.querySelector('.container-gorilla .speech-box11');
+var leopardSpeechBox = document.querySelector('.container-leopard .speech-box11');
+var lionSpeechBox = document.querySelector('.container-lion .speech-box2');
+var giraffeSpeechBox = document.querySelector('.container-giraffe .speech-box11');
+var deerSpeechBox = document.querySelector('.container-deer .speech-box11');
+var hippopotamusSpeechBox = document.querySelector('.container-hippopotamus .speech-box11');
+
+var camelSpeechBox = document.querySelector('.container-camel .speech-box6');
+
+// เลือกอีเลเมนต์ของ speech box2
+var bearSpeechBox = document.querySelector('.container-bear .speech-box2');
+var zebraSpeechBox = document.querySelector('.container-zebra .speech-box2');
+var foxSpeechBox = document.querySelector('.container-fox .speech-box2');
+
+// เลือกอีเลเมนต์ของ speech box3
+var koalaSpeechBox = document.querySelector('.container-koala .speech-box3');
+var pandaSpeechBox = document.querySelector('.container-panda .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var caracalSpeechBox = document.querySelector('.container-caracal .speech-box4');
+var capybaraSpeechBox = document.querySelector('.container-capybara .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box5
+var tigerSpeechBox = document.querySelector('.container-tiger .speech-box5');
+
+// เลือกอีเลเมนต์ของ speech box7
+var queswild1SpeechBox = document.querySelector('.container-queswild1 .speech-box7');
+
+// เลือกอีเลเมนต์ของ speech box8
+var queswild2SpeechBox = document.querySelector('.container-queswild2 .speech-box8');
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var elephantNumber = document.querySelector('.container-elephant .hover-number');
+var zebraNumber = document.querySelector('.container-zebra .hover-number');
+var foxNumber = document.querySelector('.container-fox .hover-number');
+var gorillaNumber = document.querySelector('.container-gorilla .hover-number');
+var rhinocerosNumber = document.querySelector('.container-rhinoceros .hover-number');
+
+var kangarooNumber = document.querySelector('.container-kangaroo .hover-number');
+var camelNumber = document.querySelector('.container-camel .hover-number');
+var tigerNumber = document.querySelector('.container-tiger .hover-number');
+var hippopotamusNumber = document.querySelector('.container-hippopotamus .hover-number');
+var caracalNumber = document.querySelector('.container-caracal .hover-number');
+
+var capybaraNumber = document.querySelector('.container-capybara .hover-number');
+var monkeyNumber = document.querySelector('.container-monkey .hover-number');
+var lionNumber = document.querySelector('.container-lion .hover-number');
+var deerNumber = document.querySelector('.container-deer .hover-number');
+var bearNumber = document.querySelector('.container-bear .hover-number');
+
+var pandaNumber = document.querySelector('.container-panda .hover-number');
+var koalaNumber = document.querySelector('.container-koala .hover-number');
+var giraffeNumber = document.querySelector('.container-giraffe .hover-number');
+var leopardNumber = document.querySelector('.container-leopard .hover-number');
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(elephantImg, elephantSpeechBox, elephantNumber);
+setupHoverEffect(zebraImg, zebraSpeechBox, zebraNumber);
+setupHoverEffect(foxImg, foxSpeechBox, foxNumber);
+setupHoverEffect(gorillaImg, gorillaSpeechBox, gorillaNumber);
+setupHoverEffect(rhinocerosImg, rhinocerosSpeechBox, rhinocerosNumber);
+
+setupHoverEffect(kangarooImg, kangarooSpeechBox, kangarooNumber);
+setupHoverEffect(camelImg, camelSpeechBox, camelNumber);
+setupHoverEffect(tigerImg, tigerSpeechBox, tigerNumber);
+setupHoverEffect(hippopotamusImg, hippopotamusSpeechBox, hippopotamusNumber);
+setupHoverEffect(caracalImg, caracalSpeechBox, caracalNumber);
+
+setupHoverEffect(capybaraImg, capybaraSpeechBox, capybaraNumber);
+setupHoverEffect(monkeyImg, monkeySpeechBox, monkeyNumber);
+setupHoverEffect(lionImg, lionSpeechBox, lionNumber);
+setupHoverEffect(deerImg, deerSpeechBox, deerNumber);
+setupHoverEffect(bearImg, bearSpeechBox, bearNumber);
+
+setupHoverEffect(pandaImg, pandaSpeechBox, pandaNumber);
+setupHoverEffect(koalaImg, koalaSpeechBox, koalaNumber);
+setupHoverEffect(giraffeImg, giraffeSpeechBox, giraffeNumber);
+setupHoverEffect(leopardImg, leopardSpeechBox, leopardNumber);
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+elephantImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, elephantSpeechBox);
+});
+
+zebraImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, zebraSpeechBox);
+});
+
+gorillaImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, gorillaSpeechBox);
+}); 
+
+rhinocerosImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, rhinocerosSpeechBox);
+});
+
+kangarooImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, kangarooSpeechBox);
+}); 
+
+camelImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, camelSpeechBox);
+}); 
+
+tigerImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, tigerSpeechBox);
+}); 
+
+hippopotamusImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, hippopotamusSpeechBox);
+}); 
+
+caracalImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, caracalSpeechBox);
+}); 
+
+capybaraImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, capybaraSpeechBox);
+}); 
+
+monkeyImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, monkeySpeechBox);
+}); 
+foxImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, foxSpeechBox);
+}); 
+lionImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, lionSpeechBox);
+}); 
+
+deerImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, deerSpeechBox);
+}); 
+
+bearImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,bearSpeechBox);
+}); 
+
+pandaImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,pandaSpeechBox);
+}); 
+
+koalaImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,koalaSpeechBox);
+}); 
+
+giraffeImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,giraffeSpeechBox);
+}); 
+
+leopardImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,leopardSpeechBox);
+}); 
+
+queswild1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, queswild1SpeechBox);
+}); 
+
+queswild2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, queswild2SpeechBox);
+}); 
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+elephantImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, elephantSpeechBox);
+});
+
+zebraImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, zebraSpeechBox);
+});
+
+gorillaImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  gorillaSpeechBox);
+  });
+
+rhinocerosImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, rhinocerosSpeechBox);
+  });
+
+kangarooImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  kangarooSpeechBox);
+  });
+
+camelImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  camelSpeechBox);
+  });
+
+  tigerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, tigerSpeechBox);
+  });
+
+  hippopotamusImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, hippopotamusSpeechBox);
+  });
+
+  caracalImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, caracalSpeechBox);
+  });
+  
+  capybaraImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, capybaraSpeechBox);
+  });
+
+  monkeyImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   monkeySpeechBox);
+  });
+
+  foxImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   foxSpeechBox);
+  });
+  lionImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   lionSpeechBox);
+  });
+
+  deerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   deerSpeechBox);
+  });
+  bearImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   bearSpeechBox);
+  });
+
+  pandaImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   pandaSpeechBox);
+  });
+  
+  koalaImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   koalaSpeechBox);
+  });
+
+  giraffeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   giraffeSpeechBox);
+  });
+
+  leopardImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   leopardSpeechBox);
+  });
+
+  queswild1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   queswild1SpeechBox);
+  });
+
+  queswild2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   queswild2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-elephant img', '#elephant');
+playSoundWhenClick('.container-zebra img', '#zebra');
+playSoundWhenClick('.container-capybara img', '#capybara');
+playSoundWhenClick('.container-tiger img', '#tiger');
+playSoundWhenClick('.container-gorilla img', '#gorilla');
+playSoundWhenClick('.container-rhinoceros img', '#rhinoceros');
+playSoundWhenClick('.container-kangaroo img', '#kangaroo');
+playSoundWhenClick('.container-camel img', '#camel');
+playSoundWhenClick('.container-hippopotamus img', '#hippopotamus');
+playSoundWhenClick('.container-caracal img', '#caracal');
+playSoundWhenClick('.container-monkey img', '#monkey')
+
+playSoundWhenClick('.container-fox img', '#fox');
+playSoundWhenClick('.container-lion img', '#lion');
+playSoundWhenClick('.container-deer img', '#deer');
+playSoundWhenClick('.container-bear img', '#bear');
+playSoundWhenClick('.container-panda img', '#panda');
+playSoundWhenClick('.container-koala img', '#koala');
+playSoundWhenClick('.container-giraffe img', '#giraffe');
+playSoundWhenClick('.container-leopard img', '#leopard');
+playSoundWhenClick('.container-queswild1 img', '#queswild1');
+playSoundWhenClick('.container-queswild2 img', '#queswild2');
+
+// const unlockOverlay = document.getElementById('audio-unlock-overlay');
+// const unlockButton = document.getElementById('unlock-button');
+
+// // สร้าง AudioContext
+// const AudioContext = window.AudioContext || window.webkitAudioContext;
+// const audioContext = new AudioContext();
+
+// // ปิดป๊อปอัพเมื่อคลิก
+// unlockButton.addEventListener('click', () => {
+//     unlockOverlay.style.display = 'none'; // ซ่อนป๊อปอัพ
+//     audioContext.resume(); // เริ่ม AudioContext
+// });
+
+// // ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+// const containers = document.querySelectorAll('.container'); // เลือกทุก container ที่มีคลาส .container
+
+// containers.forEach(container => {
+//     const imgElement = container.querySelector('.image'); // ดึงอีเลเมนต์ภาพ
+//     const sound = container.querySelector('audio'); // ดึงอีเลเมนต์เสียง
+//     let hoverCounter = 0;
+//     let hovered = false;
+
+//     imgElement.addEventListener('mouseover', function() {
+//         if (audioContext.state === 'suspended') {
+//             return; // ไม่เล่นเสียงถ้า AudioContext ถูกระงับ
+//         }
+//         sound.currentTime = 0; // รีเซ็ตเสียง
+//         sound.play().catch(error => console.error('ไม่สามารถเล่นเสียงได้:', error));
+
+//         if (!hovered) {
+//             hoverCounter++;
+//             const numberElement = container.querySelector('.hover-number');
+//             numberElement.textContent = hoverCounter;
+//             numberElement.style.display = 'block'; // แสดงหมายเลข
+//             hovered = true;
+//         }
+//     });
+
+//     imgElement.addEventListener('mouseout', function() {
+//         hovered = false; // รีเซ็ตการโฮเวอร์
+//         sound.pause();
+//         sound.currentTime = 0; // รีเซ็ตเสียง
+//     });
+// });
+  </script>
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>
+

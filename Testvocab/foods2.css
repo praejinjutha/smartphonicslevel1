@@ -1,0 +1,558 @@
+
+.navbar {
+  top: 0;
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: 20px;
+  left: 75px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+  text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+  }
+
+  .container-toast .hover-number,
+  .container-friedrice .hover-number{
+    top: 20px;
+    left:-10px;
+    }
+  .container-soup .hover-number{
+    top: -40px;
+    left:-10px;
+    }
+
+  .container-friedegg .hover-number,
+  .container-omelette .hover-number{
+  top: 20px;
+  left:30px;
+  }
+  
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('img/city/food2/bgfood2.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.container {
+  width: auto; 
+  height: 100%;
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible;
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #9B2226;
+ text-shadow: 0 0 40px #F4A261; 
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 5px;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  margin-left: -10%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -4%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -4%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 0; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -4%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 0; 
+}
+
+/*ข้าวเหนียว*/
+.container-stickyrice {
+  position: absolute;
+  top: 14%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 1; 
+}
+
+/*ขนมปังปิ้ง*/
+.container-toast {
+  position: absolute;
+  top: 51%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+/*ติ่มซำ*/
+.container-dimsum {
+  position: absolute;
+  top: 12%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 2; 
+}
+
+/*ไข่ดาว*/
+.container-friedegg {
+  position: absolute;
+  top: 51%;
+  left: 12%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 5; 
+}
+
+/*ไก่ทอด*/
+.container-friedchicken {
+  position: absolute;
+  top:86%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 6; 
+}
+
+
+/*ไข่เจียว*/
+.container-omelette {
+  position: absolute;
+  top: 74%;
+  left: 52.6%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 4; 
+}
+
+  /*ราเม็ง, บะหมี่น้ำของญี่ปุ่น*/
+.container-ramen {
+  position: absolute;
+  top: 68%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 3; 
+}
+
+
+/*เค้ก*/
+.container-cake {
+  position: absolute;
+  top: 57%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 2; 
+}
+
+/*ก๋วยเตี๋ยว, บะหมี่, เส้นหมี่*/
+.container-noodles {
+  position: absolute;
+  top: 26%;
+  left: 98%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 0; 
+}
+
+
+/*ข้าวผัด*/
+.container-friedrice{
+  position: absolute;
+  top: 78%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 7; 
+}
+
+/*ผัดผัก*/
+.container-stirredfriedvegetables{
+  position: absolute;
+  top: 26%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  width: 16.5%; 
+  z-index: 3; 
+}
+
+
+/*ปลานึ่ง*/
+.container-steamedfish {
+  position: absolute;
+  top: 69%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 6; 
+}
+
+/*แกงเผ็ด*/
+.container-curry {
+  position: absolute;
+  top: 59.5%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 8.3%; 
+  z-index: 3; 
+}
+
+/*ซุป*/
+.container-soup {
+  position: absolute;
+  top: 68%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 5; 
+}
+
+/*หมูเค็ม, เบคอน*/
+.container-bacon {
+  position: absolute;
+  top: 42%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 0;
+}
+
+/*ต้มยำกุ้ง*/
+.container-tomyamgoong {
+  position: absolute;
+  top: 41%;
+  left: 36%;
+  transform: translate(-50%, -50%);
+  width: 11.5%; 
+  z-index: 2; 
+}
+
+/*ไก่ย่าง*/
+.container-grilledchicken {
+  position: absolute;
+  top: 21%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 16.5%; 
+  z-index: 1; 
+}
+
+.container-ramen img,.container-cake img,.container-grilledchicken img,.container-bacon img,.container-fourteenth img, .container-thirteenth img, .container-twelfth img,
+.container-friedegg img, .container-friedrice img, .container-stirredfriedvegetables img,.container-toast img, .container-curry img,.container-omelette img, .container-dimsum img, .container-tomyamgoong img, .container-steamedfish img,.container-stickyrice img,.container-noodles img,.container-friedchicken img, .container-quesfood3 img, .container-soup img, .container-quesfood4 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.container-friedchicken img:hover,.container-ramen img:hover,.container-cake img:hover,.container-bacon img:hover,.container-fourteenth img:hover,.container-thirteenth img:hover,.container-grilledchicken img:hover,
+ .container-friedegg img:hover,.container-friedrice img:hover, .container-stirredfriedvegetables img:hover, .container-twelfth img:hover,
+.container-toast img:hover, .container-tomyamgoong img:hover, .container-steamedfish img:hover, .container-soup img:hover, 
+.container-omelette img:hover,  .container-dimsum img:hover, .container-stickyrice img:hover,
+.container-noodles img:hover,.container-quesfood3 img:hover, .container-quesfood4 img:hover , .container-curry img:hover {
+  transform: translateY(-10px);
+  filter: brightness(80%);
+}
+
+
+
+
+
+
+
+
+/*คำถาม1*/
+.container-quesfood3 {
+  position: absolute;
+  top: 77%;
+  left: 4%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 10; 
+}
+
+/*คำถาม2*/
+.container-quesfood4 {
+  position: absolute;
+  top: 76%;
+  left:20%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 9; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -4%;
+  right: -17%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11,.speech-box2,.speech-box3,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+  font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 1.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+
+.speech-box {
+  width: 150px; 
+  height: 120px; 
+  top: -20%;
+  left: 70%; 
+  z-index: -1; 
+}
+
+.speech-box11 {
+  width: 200px;
+  height: 120px;
+  bottom: 97%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 200px;
+  height: 100px;
+  bottom: 97%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  line-height: 26px; 
+  z-index: -1;
+}
+
+
+.speech-box3 {
+  width: 120px;
+  height: 130px;
+  bottom: 10%; 
+  left:-40%; 
+  transform: translateX(-50%);
+  z-index: -1;
+  }
+
+
+  .speech-box6 {
+    width: 260px; 
+    height: 110px; 
+    top: 10%;
+    left: 80%; 
+    z-index: -1; 
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #FFBDBD;
+  width: 290px; 
+  height: 70px;
+  text-align: center;
+  line-height: 27px; 
+  top: -125%;
+  left: -90%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #F2FCC8;
+      width: 370px; 
+      height: 80px;
+      text-align: center;
+      line-height: 27px; 
+      top: -150%;
+      left: -10%;
+      z-index: -1;
+    }
+
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  /*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: 20px;
+  left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../Testvocab/img/clothes2/speaker.png');
+  width: 25px;
+  height: 25px;
+  background-size: cover; 
+  text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 1px;
+  }
+
+  .container-toast .hover-number {
+    top: -20px;
+    left:-10px;
+    }
+  .container-soup .hover-number{
+    top: -20px;
+    left:-10px;
+    }
+  .container-friedegg .hover-number{
+    top: 25px;
+    left:-5px;
+    }
+  .container-omelette .hover-number{
+  top: -5px;
+  left:33px;
+  z-index: -4;
+  }
+
+
+
+  .speech-box, .speech-box11,.speech-box2,.speech-box3,.speech-box6,.speech-box7,.speech-box8 {
+    display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+      font-size: 14px;
+      color: black;
+      background-color: rgba(255, 255, 255, 1.8);
+      padding: 5px 10px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      white-space: nowrap;
+    position: absolute;
+  }
+
+
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box{
+    width: 110px;
+    height: 70px;
+    bottom: 100%; 
+    left:60%; 
+    z-index: -1;
+    }
+
+  .speech-box11{
+    width: 110px;
+    height: 80px;
+    bottom: 110%; 
+    left:40%; 
+    z-index: -1;
+    }
+  .speech-box2{
+    width: 120px;
+    height: 80px;
+    bottom: 120%; 
+    left:40%; 
+    z-index: 4;
+    }
+  .speech-box3 {
+    width: 80px;
+    height: 80px;
+    bottom: 10%; 
+    left:-40%; 
+    z-index: -1;
+    }
+
+  .speech-box6{
+    width: 140px;
+    height: 75px;
+    top: -140%; 
+    left:60%; 
+    z-index: -1;
+    }
+
+
+  .speech-box7{
+    color: #0A2963; 
+    background-color: #FFBDBD;
+    width: 190px; 
+    height: 50px;
+    text-align: center;
+    line-height: 17px; 
+    top: -185%;
+    left: -90%;
+    z-index: -1;
+  }
+  .speech-box8 {
+    color: #0A2963; 
+    background-color: #F2FCC8;
+    width: 240px; 
+    height: 50px;
+    text-align: center;
+    line-height: 17px; 
+    top: -150%;
+    left: -10%;
+    z-index: -1;
+  }
+}

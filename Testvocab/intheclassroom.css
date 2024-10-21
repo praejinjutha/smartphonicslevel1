@@ -1,0 +1,700 @@
+
+.navbar {
+  top: 0; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('img/classroom1/Bg2.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+}
+
+.container {
+  width: auto; 
+  height: 100%; 
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; 
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #A9D18E;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px #C9A557;
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -10%;
+  left:-4%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -10%;
+  right: -3%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*เด็กหญิงคำถาม*/
+.container-girl {
+  position: absolute;
+  top: 86%;
+  left: -5%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 1; 
+}
+
+
+
+
+/*ครู*/
+.container-teacher {
+  position: absolute;
+  top: 57%;
+  left: 81%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 1; 
+}
+
+/*แผนที่*/
+.container-map {
+  position: absolute;
+  top: 27%;
+  left: 29%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 1; 
+}
+
+/*ปฎิทิน*/
+.container-calendar {
+  position: absolute;
+  top: 29%;
+  left: 72%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 1; 
+}
+
+/*เพื่อน ๆ*/
+.container-friends {
+  position: absolute;
+  top: 69%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 28%; 
+  z-index: 1; 
+}
+
+
+
+/*ไม้บรรทัด*/
+.container-ruler {
+  position: absolute;
+  top: 112%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  width: 23%; 
+  z-index: 9; 
+}
+
+/*ดินสอ*/
+.container-pencil {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 9;
+}
+
+
+  /*ปากกามาร์กเกอร์*/
+.container-marker {
+  position: absolute;
+  top: 110%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  width: 17%; 
+  z-index: 4; 
+}
+
+/*ปากกา*/
+.container-pen {
+  position: absolute;
+  top: 100%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 3; 
+}
+
+/*ชุดนักเรียน, เครื่องแบบ*/
+.container-uniform {
+  position: absolute;
+  top: 51%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 0; 
+}
+
+
+/*โต๊ะครู, โต๊ะนักเรียน*/
+.container-desk{
+  position: absolute;
+  top: 84%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  width: 35%; 
+  z-index: 5; 
+}
+
+/*ยางลบ*/
+.container-eraser{
+  position: absolute;
+  top: 76%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+  width: 2.7%; 
+  z-index: 6; 
+}
+
+/*เก้าอี้*/
+.container-chair {
+  position: absolute;
+  top: 88%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  width: 26%; 
+  z-index: 6; 
+}
+
+
+/*กระเป๋านักเรียน*/
+.container-schoolbag {
+  position: absolute;
+  top: 87%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 7; 
+}
+
+/*หนังสือ*/
+.container-book {
+  position: absolute;
+  top: 76%;
+  left: 41%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 5; 
+}
+
+/*ลูกโลก*/
+.container-globe {
+  position: absolute;
+  top: 50%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 4; 
+}
+
+/*กระดาน*/
+.container-board {
+  position: absolute;
+  top: 25%;
+  left: 50.5%;
+  transform: translate(-50%, -50%);
+  width: 29%; 
+  z-index: 0; 
+}
+
+/*นักเรียน*/
+.container-pupil {
+  position: absolute;
+  top: 67%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+
+.container-marker img,.container-pen img,.container-pupil img,.container-pencil img,.container-fourteenth img, .container-thirteenth img, .container-twelfth img,
+.container-friends img, .container-desk img, .container-eraser img,.container-map img, .container-book img,.container-ruler img, .container-chair img, .container-calendar img, .container-board img, .container-schoolbag img,.container-teacher img,.container-uniform img, .container-quesitc1 img, .container-globe img, .container-quesitc2 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.container-marker img:hover,.container-pen img:hover,.container-pencil img:hover,.container-fourteenth img:hover,.container-thirteenth img:hover,.container-pupil img:hover,
+ .container-friends img:hover,.container-desk img:hover, .container-eraser img:hover, .container-twelfth img:hover,
+.container-map img:hover, .container-board img:hover, .container-schoolbag img:hover, .container-globe img:hover, 
+.container-ruler img:hover, .container-chair img:hover, .container-calendar img:hover, .container-teacher img:hover,
+.container-uniform img:hover,.container-quesitc1 img:hover, .container-quesitc2 img:hover , .container-book img:hover {
+  transform: translateY(-10px);
+  filter: brightness(80%);
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -20px;
+  left: -25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; 
+  padding-top: 5px;
+}
+
+.container-teacher .hover-number{
+  top: -20px;
+  left:135px; 
+  z-index: -3; 
+}
+.container-uniform .hover-number,
+.container-pen .hover-number{
+  top: -20px;
+  left:45px; 
+  z-index: -3; 
+}
+
+.container-eraser .hover-number{
+  top: -20px;
+  left:30px;
+}
+
+.container-globe .hover-number{
+  top: 20px;
+  left:75px;
+  z-index: -3; 
+}
+
+.container-schoolbag .hover-number,
+.container-book .hover-number{
+  top: -20px;
+  left:45px; 
+}
+
+.container-friends .hover-number{
+  top: 85px; 
+  left: 185px;
+}
+
+.container-desk .hover-number{
+  top: 20px; 
+  left: 375px;
+  z-index: -3; 
+}
+
+.container-chair .hover-number{
+  top: 30px;
+  left: 250px;
+}
+
+
+/*คำถาม1*/
+.container-quesitc1 {
+  position: absolute;
+  top: 65%;
+  left: -8%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 4; 
+}
+
+/*คำถาม2*/
+.container-quesitc2 {
+  position: absolute;
+  top: 70%;
+  left: 1%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 4; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -1.8%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box12, .speech-box13, .speech-box2,.speech-box3,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+
+.speech-box {
+  width: 120px; 
+  height: 120px; 
+  top: -20%;
+  left: 70%; 
+  z-index: -1; 
+}
+
+.speech-box11 {
+  width: 160px;
+  height: 120px;
+  bottom: 97%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 180px;
+  height: 55px;
+  bottom: -29%; 
+  left: 90%; 
+  text-align: center;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+    width: 120px;
+    height: 140px;
+    bottom: 90%; 
+    left: 60%; 
+
+    z-index: -1;
+  }
+
+  .speech-box13 {
+    width: 110px;
+    height: 130px;
+    bottom: 10%; 
+    left: -90%; 
+    z-index: -1;
+  }
+
+  .speech-box12 {
+    width: 120px;
+    height: 130px;
+    bottom: 50%; 
+    left: 70%; 
+
+    z-index: 2;
+  }
+
+ .speech-box5 {
+  width: 90x;
+  height: 120px;
+  bottom: -20%; 
+  left: -90%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+  .speech-box6 {
+    width: 220px;
+    height: 130px;
+    bottom: 57%; 
+    left: 90%; 
+    z-index: -1;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #C5E0B4;
+  width: 270px; 
+  height: 90px;
+  text-align: center;
+  line-height: 27px; 
+  top: -125%;
+  left: -50%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #FFF2CC;
+      width: 320px; 
+      height: 70px;
+      text-align: right;
+      line-height: 27px; 
+      top: -50%;
+      left: 20%;
+      z-index: -1;
+    }
+
+
+
+    @media screen and (max-width: 768px) {
+      /* Adjust container sizes and positions */
+      .image {
+        width: 100%;
+        height: 100%;
+        /*margin-left: -5%;*/
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+      
+      h4 {
+        font-size: 12px;
+      }
+
+      .container-exit {
+        position: absolute;
+        bottom: -5.8%;
+        right: 2%;
+        width: 5%; 
+        z-index: 1; 
+      }
+      
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../Testvocab/img/clothes2/speaker.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+      padding-top: 1%;
+      z-index: 4;
+      }
+
+      .container-teacher .hover-number{
+        top: 20px;
+        left:55px; 
+        
+      }
+      .container-uniform .hover-number,
+      .container-pen .hover-number{
+        top: -20px;
+        left:45px; 
+        z-index: -3; 
+      }
+      
+      .container-eraser .hover-number{
+        top: 7px;
+        left:-16px;
+      }
+      
+      .container-globe .hover-number{
+        top: 20px;
+        left:35px;
+        z-index: -4; 
+      }
+      
+      .container-schoolbag .hover-number,
+      .container-book .hover-number{
+        top: 10px;
+        left:-10px; 
+      }
+      
+      .container-friends .hover-number{
+        top: 85px; 
+        left: 185px;
+      }
+      
+      .container-desk .hover-number{
+        top: 7px; 
+        left: 180px;
+        z-index: -4;
+      }
+      
+      .container-chair .hover-number{
+        top: 7px;
+        left: 110px;
+      }
+
+
+        .speech-box,.speech-box11,.speech-box2,.speech-box3,.speech-box12,.speech-box5,.speech-box6,.speech-box7,.speech-box8,.speech-box13 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+    
+      }
+
+      .speech-box{
+        width: 100px;
+        height: 70px;
+        bottom: 7%; 
+        left: 70%; 
+        z-index: -1;
+              }
+
+      .speech-box11{
+  width: 100px;
+  height: 70px;
+  bottom: 115%; 
+  left: 40%; 
+  z-index: 1;
+        }
+
+        .speech-box12 {
+          width: 80px;
+          height: 60px;
+         top: -45%; 
+          left: 20%; 
+          line-height: 17px; 
+          z-index: 5;
+              }
+
+              .speech-box13 {
+                width: 110px;
+                height: 60px;
+               top: -20%; 
+                left: 90%; 
+                line-height: 17px; 
+                z-index: -1;
+                    }
+
+      .speech-box2 {
+    width: 100px;
+    height: 25px;
+    top: 65%; 
+    left: 100%;
+    line-height: 17px; 
+    z-index: -1;
+        }
+    
+      .speech-box3{
+        width: 90px;
+        height: 60px;
+        bottom: 90%; 
+        left: 60%; 
+        line-height: 17px; 
+        z-index: -1;
+        }
+
+          
+          .speech-box5{
+          width: 60px;
+          height: 70px;
+          bottom: 97%; 
+          left: 50%; 
+          z-index: -1;
+              }
+
+          .speech-box6{
+            width: 110px;
+          height: 70px;
+         top: -10%; 
+          left: 90%; 
+          line-height: 20px; 
+          z-index: -1;
+              }
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: #C5E0B4;
+        width: 180px; 
+        height: 45px;
+        text-align: center;
+        line-height: 17px; 
+        top: -145%;
+        left: 30%;
+        z-index: -1;
+      }
+
+      .speech-box8{
+        color: #0A2963; 
+        background-color: #FFF2CC;
+        width: 180px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: -180%;
+        left: 40%;
+        z-index: -1;
+      }
+    }

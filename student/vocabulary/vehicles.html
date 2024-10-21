@@ -1,0 +1,1172 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link href="<?= $themes ?>Testvocab/vehicles.css" rel="stylesheet">
+    
+<style>
+
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/fruit/Bgvehicles.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #00B0F0;
+ text-shadow: 0 0 20px rgb(255, 255, 255);
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 2px red; /* กำหนดขอบตัวอักษร */
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+
+.image {
+  width: 65%;
+  height: 100%;
+  margin-top: 15px;
+  margin-left: 20%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -6%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 7.5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -6%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  width: 10.5%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -6%;
+  right: -18%;
+  transform: translate(-50%, -50%);
+  width: 10.5%; 
+  z-index: 2; 
+}
+
+
+/*รถส่งของ*/
+.container-deliveryvan {
+  position: absolute;
+  top: 9%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 4; 
+}
+
+/*รถตู้*/
+.container-van {
+  position: absolute;
+  top: 11%;
+  left: -2%;
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  z-index: 4; 
+}
+
+/*รถไฟ*/
+.container-train {
+  position: absolute;
+  top: 39%;
+  left: -2%;
+  transform: translate(-50%, -50%);
+  width: 25%; 
+  z-index: 1; 
+}
+
+/*เรือขนาดใหญ่*/
+.container-ship{
+  position: absolute;
+  top: 69%;
+  left: 101%;
+  transform: translate(-50%, -50%);
+  width: 32%; 
+  z-index: 1; 
+}
+
+/*รถโดยสาร*/
+.container-bus {
+  position: absolute;
+  top: 66%;
+  left:-2%;
+  transform: translate(-50%, -50%);
+  width: 28%; 
+  z-index: 1; 
+}
+
+/*เรือ*/
+.container-boat{
+  position: absolute;
+  top: 86%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 4; 
+}
+
+
+.container-boyveh{
+  position: absolute;
+  top: 93%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 3; 
+}
+
+
+/*รถจักรยานยนต์*/
+.container-motorcycle {
+  position: absolute;
+  top: 71%;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 2; 
+}
+
+/*รถบรรทุก*/
+.container-truck {
+  position: absolute;
+  top: 48%;
+  left: 49%;
+  transform: translate(-50%, -50%);
+  width: 24%; 
+  z-index: 2; 
+}
+
+/*รถจักรยาน*/
+.container-bike {
+  position: absolute;
+  top: 13%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 0; 
+}
+
+/*เครื่องบิน*/
+.container-plane {
+  position: absolute;
+  top: 28%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 21%; 
+  z-index: 4; 
+}
+
+/*เฮลิคอปเตอร์*/
+.container-helicopter {
+  position: absolute;
+  top: 39%;
+  left: 27.5%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 3; 
+}
+
+/*รถแท็กซี่*/
+.container-taxi {
+  position: absolute;
+  top: 9%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 2; 
+}
+
+/*เรือใบ*/
+.container-sailingboat {
+  position: absolute;
+  top: 12%;
+  left: 101%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 1; 
+}
+
+
+/*รถพยาบาล*/
+.container-ambulance {
+  position: absolute;
+  top: 47%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 4; 
+}
+
+/*เรือยอช์ท, เรือท่องเที่ยว*/
+.container-yacht {
+  position: absolute;
+  top: 32%;
+  left: 101%;
+  transform: translate(-50%, -50%);
+  width: 32%; 
+  z-index: 7;
+}
+
+/*เรือข้ามฟาก, แพขนานยนต์*/
+.container-ferry {
+  position: absolute;
+  top: 51%;
+  left:101%;
+  transform: translate(-50%, -50%);
+  width: 32%; 
+  z-index: 6; 
+}
+
+.container-girlveh {
+  position: absolute;
+  top: 93%;
+  left:88%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 6; 
+}
+
+/*รถยนต์*/
+.container-car {
+  position: absolute;
+  top: 79%;
+  left: 63%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 1; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: 15px;
+  left: 45px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+}
+
+.container-ship .hover-number,
+.container-yacht .hover-number,
+.container-ferry .hover-number{
+  top: 15px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 100px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-car img,.container-ambulance img,.container-yacht img,.container-taxi img, .container-helicopter img, .container-plane img,
+.container-train img, .container-boat img, .container-ship img,.container-truck img,.container-bus img, .container-sailingboat img, .container-deliveryvan img, .container-bike img, .container-motorcycle img,.container-van img,.container-ferry img, .container-quesveh1 img,.container-quesveh2 img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+.container-car img:hover,.container-yacht img:hover,.container-taxi img:hover,.container-helicopter img:hover,.container-ambulance img:hover,
+ .container-train img:hover,.container-boat img:hover, .container-ship img:hover, .container-plane img:hover,
+ .container-bike img:hover, .container-motorcycle img:hover, .container-bus img:hover, .container-sailingboat img:hover, .container-deliveryvan img:hover, .container-van img:hover,
+.container-ferry img:hover,.container-quesveh1 img:hover, .container-quesveh2 img:hover , .container-truck img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+/*คำถาม1*/
+.container-quesveh1 {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 1; 
+}
+
+/*คำถาม2*/
+.container-quesveh2 {
+  position: absolute;
+  top: 85%;
+  left: 97%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 7; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -13%;
+  right: -20%;
+  transform: translate(-50%, -50%);
+  width: 7.5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 0.9); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+
+.speech-box {
+  width: 190px; 
+  height: 120px; 
+  top: 83%;
+  left: 20%; 
+  z-index: -1; 
+}
+
+.speech-box11 {
+  width: 240px;
+  height: 120px;
+  bottom: -35%; 
+  left: -1%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 240px;
+  height: 120px; 
+  position: absolute;
+  top: 5%; 
+  left: 55%;
+  z-index: -1;
+}
+
+
+.speech-box3 {
+    width: 180px;
+    height: 120px;
+    bottom: 90%; 
+    left: 55%; 
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+
+ .speech-box4 {
+   width: 180px;
+   height: 120px; 
+   position: absolute;
+   top: 5%; 
+   left: 75%;
+   z-index: -1;
+ }
+
+ .speech-box5 {
+  width: 190px;
+  height: 120px;
+  bottom: 5%; 
+  left: -10%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #BDE0FE; /* กำหนดสีพื้นหลังของ speech box */
+  width: 240px; 
+  height: 140px;
+  text-align: center;
+  line-height: 27px; 
+  top: -80%;
+  left: 40%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #FBE5D6; /* กำหนดสีพื้นหลังของ speech box */
+      width: 290px; 
+      height: 80px;
+      text-align: center;
+      line-height: 27px; 
+      top: -75%;
+      left: -40%;
+      z-index: -1;
+    }
+
+
+/* For screens smaller than 768px (e.g., smartphdeliveryvans) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box4,
+  .speech-box5,
+  .speech-box7,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+  @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+
+</head>
+<body>
+      <!-- Navbar Start -->
+      <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+        <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                <span class="text-primary">Smart Phonics</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    
+                <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <h1> VEHICLES </h1>
+    <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 17 คำ</h4> 
+
+  <div class="container">
+    <img src="../../Testvocab/img/fruit/vehicles.png" alt="bird" class="image">
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Underthesea.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Bodyparts.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--รถส่งของ-->
+    <div class="container-deliveryvan">
+      <img src="../../Testvocab/img/fruit/deliveryvan.png" alt="deliveryvan" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">delivery van</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ดิ-ลิ-เหวอะ-รี่ แวน)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รถส่งของ</span>
+      </div>
+      <audio id="deliveryvan" src="../../Testvocab/voice/deliveryvan.mp3"></audio>
+      <div class="hover-number"></div> 
+    
+    </div>
+
+       <!--รถตู้-->
+   <div class="container-van">
+      <img src="../../Testvocab/img/fruit/van.png" alt="van" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">van</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แวน)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รถตู้</span>
+        <audio id="van" src="../../Testvocab/voice/van.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>  
+        <!--รถไฟ-->
+        <div class="container-train">
+      <img src="../../Testvocab/img/fruit/train.png" alt="train" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">train</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เทรนฺ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รถไฟ</span>
+      </div>
+      <audio id="train" src="../../Testvocab/voice/train.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--เรือขนาดใหญ่-->
+    <div class="container-ship">
+      <img src="../../Testvocab/img/fruit/ship.png" alt="ship" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">ship </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ชิ่พ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เรือขนาดใหญ่</span>
+      </div>
+      <audio id="ship" src="../../Testvocab/voice/ship.mp3"></audio>
+      <div class="hover-number hover-number-ship"></div>
+    </div>
+
+     <!--รถโดยสาร-->
+ <div class="container-bus">
+      <img src="../../Testvocab/img/fruit/bus.png" alt="bus" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">bus</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(บั่ส)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รถโดยสาร</span>
+        <audio id="bus" src="../../Testvocab/voice/bus.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--เรือ-->
+        <div class="container-boat">
+      <img src="../../Testvocab/img/fruit/boat.png" alt="boat" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">boat</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โบ้ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เรือ</span>
+      </div>
+      <audio id="boat" src="../../Testvocab/voice/boat.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+                    <!--รถจักรยานยนต์-->
+                    <div class="container-motorcycle">
+                    <img src="../../Testvocab/img/fruit/motorcycle.png" alt="motorcycle" class="image">
+                    <div class="speech-box2">
+                      <span style="display: flex; justify-content: center;">motorbike, motorcycle</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(โม้ว-เถอะ-ไซ-เคิ่ล)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">รถจักรยานยนต์</span>
+                      <audio id="motorcycle" src="../../Testvocab/voice/motorcycle.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>   
+
+         <!--รถบรรทุก-->
+         <div class="container-truck">
+    <img src="../../Testvocab/img/fruit/truck.png" alt="truck" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">truck</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ทรั่ค)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">รถบรรทุก</span>
+      <audio id="truck" src="../../Testvocab/voice/truck.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+           <!--รถจักรยาน-->
+           <div class="container-bike">
+            <img src="../../Testvocab/img/fruit/bike.png" alt="bike" class="image">
+            <div class="speech-box">
+              <span style="display: flex; justify-content: center;">bike, bicycle</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ไบค์,ไบ๊-สิ-เคิ่ล)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">รถจักรยาน</span>
+              <audio id="bike" src="../../Testvocab/voice/bike.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+        <!--เครื่องบิน-->
+        <div class="container-plane">
+            <img src="../../Testvocab/img/fruit/plane.png" alt="plane" class="image">
+            <div class="speech-box5">
+              <span style="display: flex; justify-content: center;">plane, airplane</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(เพลนฺ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">เครื่องบิน</span>
+              <audio id="plane" src="../../Testvocab/voice/plane.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+                <!--เฮลิคอปเตอร์-->
+                <div class="container-helicopter">
+    <img src="../../Testvocab/img/fruit/helicopter.png" alt="helicopter" class="image">
+    <div class="speech-box4">
+      <span style="display: flex; justify-content: center;">helicopter</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เฮ้-ลิ-ค็อพ-เท่อะ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">เฮลิคอปเตอร์</span>
+      <audio id="helicopter" src="../../Testvocab/voice/helicopter.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+    <!--รถแท็กซี่-->
+    <div class="container-taxi">
+        <img src="../../Testvocab/img/fruit/taxi.png" alt="taxi" class="image">
+        <div class="speech-box4">
+          <span style="display: flex; justify-content: center;">taxi</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(แท็ก-ซี่)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">รถแท็กซี่</span>
+          <audio id="taxi" src="../../Testvocab/voice/taxi.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--เรือใบ-->
+    <div class="container-sailingboat">
+      <img src="../../Testvocab/img/fruit/sailingboat.png" alt="sailingboat" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">sailing boat</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เซ้-หลิ่ง โบท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เรือใบ</span>
+      <audio id="sailingboat" src="../../Testvocab/voice/sailingboat.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--รถพยาบาล-->
+        <div class="container-ambulance">
+        <img src="../../Testvocab/img/fruit/ambulance.png" alt="ambulance" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">ambulance</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(แอ๊ม-บิว-เลินฺซ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">รถพยาบาล</span>
+          <audio id="ambulance" src="../../Testvocab/voice/ambulance.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+             <!--เรือยอช์ท, เรือท่องเที่ยว-->
+             <div class="container-yacht">
+      <img src="../../Testvocab/img/fruit/yacht.png" alt="yacht" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">yacht</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ย่อท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เรือยอช์ท, เรือท่องเที่ยว</span>
+        <audio id="yacht" src="../../Testvocab/voice/yacht.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-yacht"></div>
+    </div>
+
+
+ <!--เรือข้ามฟาก, แพขนานยนต์ -->
+ <div class="container-ferry">
+        <img src="../../Testvocab/img/fruit/ferry.png" alt="ferry" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">ferry</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เฟ้-รี่)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เรือข้ามฟาก, แพขนานยนต์</span>
+        <audio id="ferry" src="../../Testvocab/voice/ferry.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-ferry"></div>
+    </div>
+
+ <!--รถยนต์ -->
+ <div class="container-car">
+    <img src="../../Testvocab/img/fruit/car.png" alt="car" class="image">
+    <div class="speech-box4">
+      <span style="display: flex; justify-content: center;">car</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ค่า)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">รถยนต์</span>
+    <audio id="car" src="../../Testvocab/voice/car.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+<div class="container-boyveh">
+    <img src="../../Testvocab/img/fruit/boyveh.png" alt="boyveh" class="image">
+</div>
+
+<div class="container-girlveh">
+    <img src="../../Testvocab/img/fruit/girlveh.png" alt="girlveh" class="image">
+</div>
+
+
+        <!--คำถาม1-->
+        <div class="container-quesveh1">
+          <img src="../../Testvocab/img/fruit/quesveh1.png" alt="quesveh1" class="image">
+          <div class="speech-box7">
+          Is the plane <br> blue or yellow ? <br>
+          <span class="thai-text">เครื่องบินลำนั้น <br> สีฟ้าหรือสีเหลืองคะ ?</span>
+          </div>
+          <audio id="quesveh1" src="../../Testvocab/voice/quesveh1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesveh2">
+          <img src="../../Testvocab/img/fruit/quesveh2.png" alt="quesveh2" class="image">
+          <div class="speech-box8">
+          Look ! What is in the river ? <br>
+          <span class="thai-text">ดูสิ ! มีอะไรอยู่ในแม่น้ำด้วย ?</span>
+          </div>
+            <audio id="quesveh2" src="../../Testvocab/voice/quesveh2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              <div class="container-exit">
+                <a href="../vocab2.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var yachtImg = document.querySelector('.container-yacht img');
+var taxiImg = document.querySelector('.container-taxi img');
+var ambulanceImg = document.querySelector('.container-ambulance img');
+var trainImg = document.querySelector('.container-train img');
+var shipImg = document.querySelector('.container-ship img');
+var boatImg = document.querySelector('.container-boat img');
+var busImg = document.querySelector('.container-bus img');
+var sailingboatImg = document.querySelector('.container-sailingboat img');
+var deliveryvanImg = document.querySelector('.container-deliveryvan img');
+var vanImg = document.querySelector('.container-van img');
+var ferryImg = document.querySelector('.container-ferry img');
+var helicopterImg = document.querySelector('.container-helicopter img');
+var planeImg = document.querySelector('.container-plane img');
+var bikeImg = document.querySelector('.container-bike img');
+var motorcycleImg = document.querySelector('.container-motorcycle img');
+var truckImg = document.querySelector('.container-truck img');
+var carImg = document.querySelector('.container-car img');
+var quesveh1Img = document.querySelector('.container-quesveh1 img');
+var quesveh2Img = document.querySelector('.container-quesveh2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var deliveryvanSpeechBox = document.querySelector('.container-deliveryvan .speech-box');
+var bikeSpeechBox = document.querySelector('.container-bike .speech-box');
+
+
+// เลือกอีเลเมนต์ของ speech box11
+var yachtSpeechBox = document.querySelector('.container-yacht .speech-box11');
+var ferrySpeechBox = document.querySelector('.container-ferry .speech-box11');
+var shipSpeechBox = document.querySelector('.container-ship .speech-box11');
+
+
+// เลือกอีเลเมนต์ของ speech box2
+var motorcycleSpeechBox = document.querySelector('.container-motorcycle .speech-box2');
+
+
+
+// เลือกอีเลเมนต์ของ speech box3
+var truckSpeechBox = document.querySelector('.container-truck .speech-box3');
+var ambulanceSpeechBox = document.querySelector('.container-ambulance .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var helicopterSpeechBox = document.querySelector('.container-helicopter .speech-box4');
+var vanSpeechBox = document.querySelector('.container-van .speech-box4');
+var trainSpeechBox = document.querySelector('.container-train .speech-box4');
+var busSpeechBox = document.querySelector('.container-bus .speech-box4');
+var taxiSpeechBox = document.querySelector('.container-taxi .speech-box4');
+var carSpeechBox = document.querySelector('.container-car .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box5
+var boatSpeechBox = document.querySelector('.container-boat .speech-box5');
+var planeSpeechBox = document.querySelector('.container-plane .speech-box5');
+var sailingboatSpeechBox = document.querySelector('.container-sailingboat .speech-box5');
+
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var quesveh1SpeechBox = document.querySelector('.container-quesveh1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quesveh2SpeechBox = document.querySelector('.container-quesveh2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var yachtNumber = document.querySelector('.container-yacht .hover-number');
+var taxiNumber = document.querySelector('.container-taxi .hover-number');
+var ambulanceNumber = document.querySelector('.container-ambulance .hover-number');
+var trainNumber = document.querySelector('.container-train .hover-number');
+var shipNumber = document.querySelector('.container-ship .hover-number');
+var boatNumber = document.querySelector('.container-boat .hover-number');
+var busNumber = document.querySelector('.container-bus .hover-number');
+var sailingboatNumber = document.querySelector('.container-sailingboat .hover-number');
+var deliveryvanNumber = document.querySelector('.container-deliveryvan .hover-number');
+var vanNumber = document.querySelector('.container-van .hover-number');
+var ferryNumber = document.querySelector('.container-ferry .hover-number');
+var helicopterNumber = document.querySelector('.container-helicopter .hover-number');
+var planeNumber = document.querySelector('.container-plane .hover-number');
+var bikeNumber = document.querySelector('.container-bike .hover-number');
+var motorcycleNumber = document.querySelector('.container-motorcycle .hover-number');
+var truckNumber = document.querySelector('.container-truck .hover-number');
+var carNumber = document.querySelector('.container-car .hover-number');
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(yachtImg, yachtSpeechBox, yachtNumber);
+setupHoverEffect(taxiImg, taxiSpeechBox, taxiNumber);
+setupHoverEffect(ambulanceImg, ambulanceSpeechBox, ambulanceNumber);
+setupHoverEffect(trainImg, trainSpeechBox, trainNumber);
+setupHoverEffect(shipImg, shipSpeechBox, shipNumber);
+
+setupHoverEffect(boatImg, boatSpeechBox, boatNumber);
+setupHoverEffect(busImg, busSpeechBox, busNumber);
+setupHoverEffect(sailingboatImg, sailingboatSpeechBox, sailingboatNumber);
+setupHoverEffect(deliveryvanImg, deliveryvanSpeechBox, deliveryvanNumber);
+setupHoverEffect(vanImg, vanSpeechBox, vanNumber);
+setupHoverEffect(ferryImg, ferrySpeechBox, ferryNumber);
+setupHoverEffect(helicopterImg, helicopterSpeechBox, helicopterNumber);
+setupHoverEffect(planeImg, planeSpeechBox, planeNumber);
+setupHoverEffect(bikeImg, bikeSpeechBox, bikeNumber);
+setupHoverEffect(motorcycleImg, motorcycleSpeechBox, motorcycleNumber);
+setupHoverEffect(truckImg, truckSpeechBox, truckNumber);
+setupHoverEffect(carImg, carSpeechBox, carNumber);
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+yachtImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, yachtSpeechBox);
+});
+
+taxiImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, taxiSpeechBox);
+});
+
+trainImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, trainSpeechBox);
+}); 
+
+shipImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, shipSpeechBox);
+});
+
+boatImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, boatSpeechBox);
+}); 
+
+busImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, busSpeechBox);
+}); 
+
+sailingboatImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, sailingboatSpeechBox);
+}); 
+
+deliveryvanImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, deliveryvanSpeechBox);
+}); 
+
+vanImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, vanSpeechBox);
+}); 
+
+ferryImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, ferrySpeechBox);
+}); 
+ambulanceImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, ambulanceSpeechBox);
+}); 
+helicopterImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, helicopterSpeechBox);
+}); 
+
+planeImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, planeSpeechBox);
+}); 
+
+bikeImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,bikeSpeechBox);
+}); 
+
+motorcycleImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,motorcycleSpeechBox);
+}); 
+
+truckImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,truckSpeechBox);
+}); 
+
+carImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,carSpeechBox);
+}); 
+
+
+quesveh1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesveh1SpeechBox);
+}); 
+
+quesveh2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesveh2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+yachtImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, yachtSpeechBox);
+});
+
+taxiImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, taxiSpeechBox);
+});
+
+trainImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  trainSpeechBox);
+  });
+
+shipImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, shipSpeechBox);
+  });
+
+boatImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  boatSpeechBox);
+  });
+
+  busImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, busSpeechBox);
+  });
+
+  sailingboatImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, sailingboatSpeechBox);
+  });
+
+  deliveryvanImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, deliveryvanSpeechBox);
+  });
+  
+  vanImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, vanSpeechBox);
+  });
+
+  ferryImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   ferrySpeechBox);
+  });
+
+  ambulanceImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   ambulanceSpeechBox);
+  });
+  helicopterImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   helicopterSpeechBox);
+  });
+
+  planeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   planeSpeechBox);
+  });
+  bikeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   bikeSpeechBox);
+  });
+
+  motorcycleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   motorcycleSpeechBox);
+  });
+
+  truckImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   truckSpeechBox);
+  });
+
+  carImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   carSpeechBox);
+  });
+
+  quesveh1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesveh1SpeechBox);
+  });
+
+  quesveh2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesveh2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-yacht img', '#yacht');
+playSoundWhenClick('.container-taxi img', '#taxi');
+playSoundWhenClick('.container-van img', '#van');
+playSoundWhenClick('.container-bus img', '#bus');
+playSoundWhenClick('.container-train img', '#train');
+playSoundWhenClick('.container-ship img', '#ship');
+playSoundWhenClick('.container-boat img', '#boat');
+playSoundWhenClick('.container-sailingboat img', '#sailingboat');
+playSoundWhenClick('.container-deliveryvan img', '#deliveryvan');
+playSoundWhenClick('.container-ferry img', '#ferry')
+playSoundWhenClick('.container-ambulance img', '#ambulance');
+playSoundWhenClick('.container-helicopter img', '#helicopter');
+playSoundWhenClick('.container-plane img', '#plane');
+playSoundWhenClick('.container-bike img', '#bike');
+playSoundWhenClick('.container-motorcycle img', '#motorcycle');
+playSoundWhenClick('.container-truck img', '#truck');
+playSoundWhenClick('.container-car img', '#car');
+playSoundWhenClick('.container-quesveh1 img', '#quesveh1');
+playSoundWhenClick('.container-quesveh2 img', '#quesveh2');
+  </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>Testvocab/vehicles.js"></script>
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1373 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+    <style>
+      
+.navbar {
+  top: 0; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -25px;
+  left: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: transparent;
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; 
+  padding-top: 5px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/counting/Bg1.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+}
+
+.container {
+  width: auto; 
+  height: 100%; 
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; 
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #8ED3F2;
+ /* text-shadow: 0 0 20px rgb(168, 92, 21); เงา*/
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px white;
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -10%;
+  left:-1%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -10%;
+  right: -3%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+
+
+/*แม่เป็ด*/
+.container-momduck {
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 0; 
+}
+
+
+/*หนึ่ง*/
+.container-one {
+  position: absolute;
+  top: 48%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*สอง*/
+.container-two {
+  position: absolute;
+  top: 49%;
+  left: 52%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*สาม*/
+.container-three {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 1; 
+}
+
+/*สี่*/
+.container-four {
+  position: absolute;
+  top: 54%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*ห้า*/
+.container-five{
+  position: absolute;
+  top: 60%;
+  left: 77%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 0; 
+}
+
+/*หก*/
+.container-six {
+  position: absolute;
+  top: 61%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*เจ็ด*/
+.container-seven{
+  position: absolute;
+  top: 64%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1; 
+}
+
+
+/*แปด*/
+.container-eight {
+  position: absolute;
+  top: 82%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*เก้า*/
+.container-nine {
+  position: absolute;
+  top: 81%;
+  left: 87%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 1; 
+}
+
+/*สิบ*/
+.container-ten {
+  position: absolute;
+  top: 86%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1; 
+}
+
+/*สิบเอ็ด*/
+.container-eleven {
+  position: absolute;
+  top: 90%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 2; 
+}
+
+/*สิบสอง*/
+.container-twelve {
+  position: absolute;
+  top: 91%;
+  left: 58%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 2; 
+}
+
+/*สิบสาม*/
+.container-thirteen {
+  position: absolute;
+  top: 93%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 2; 
+}
+
+/*สิบสี่*/
+.container-fourteen {
+  position: absolute;
+  top: 91%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 2; 
+}
+
+/*สิบห้า*/
+.container-fifteen {
+  position: absolute;
+  top: 88%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  width: 5.6%; 
+  z-index: 4; 
+}
+
+/*สิบหก*/
+.container-sixteen {
+  position: absolute;
+  top: 81%;
+  left: 21%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 5; 
+}
+
+/*รั้ว*/
+.container-fence {
+  position: absolute;
+  top: 90%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  z-index: 1; 
+}
+
+
+/*สิบเจ็ด*/
+.container-seventeen {
+  position: absolute;
+  top: 60%;
+  left: 17%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1;
+}
+
+/*สิบแปด*/
+.container-eighteen {
+  position: absolute;
+  top: 60%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 1; 
+}
+
+/*สิบเก้า*/
+.container-nineteen {
+  position: absolute;
+  top: 70%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+/*ยี่สิบ*/
+.container-twenty {
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+.container-twenty img,.container-nineteen img,.container-sixteen img,.container-seventeen img,.container-fourteen img, .container-thirteen img, .container-twelve img,
+.container-four img, .container-seven img, .container-five img,.container-three img, .container-nine img,.container-six img, .container-fifteen img, .container-one img, .container-eleven img, .container-eight img,.container-two img,.container-eighteen img, .container-quescount1 img, .container-ten img, .container-quescount2 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.container-twenty img:hover,.container-nineteen img:hover,.container-seventeen img:hover,.container-fourteen img:hover,.container-thirteen img:hover,.container-sixteen img:hover,
+ .container-four img:hover,.container-seven img:hover, .container-five img:hover, .container-twelve img:hover,
+.container-three img:hover, .container-eleven img:hover, .container-eight img:hover, .container-ten img:hover, 
+.container-six img:hover, .container-fifteen img:hover, .container-one img:hover, .container-two img:hover,
+.container-eighteen img:hover,.container-quescount1 img:hover, .container-quescount2 img:hover , .container-nine img:hover {
+  transform: translateY(-10px);
+  filter: brightness(80%);
+}
+
+/*คำถาม1*/
+.container-quescount1 {
+  position: absolute;
+  top: 13%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+  width: 1.5%; 
+  z-index: 6; 
+}
+
+/*คำถาม2*/
+.container-quescount2 {
+  position: absolute;
+  top: 10%;
+  left: 76%;
+  transform: translate(-50%, -50%);
+  width: 1.5%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -1.8%;
+  right: -1%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+ /* สาม,นกเพนกวินซ้าย,หนึ่งม่วง */
+.speech-box {
+  width: 120px; 
+  height: 120px; 
+  top: 79%;
+  z-index: 2; 
+}
+
+/*สิบเจ็ด,นกกระทุง*/
+.speech-box11 {
+  width: 110px;
+  height: 120px;
+  bottom: 97%; 
+  left: 50%; 
+  
+  z-index: 3;
+}
+
+
+ /* นกฮัมมิ่งเบิร์ด,นกกระเรียน */
+.speech-box2 {
+  width: 90px;
+  height: 120px;
+  bottom: 97%; 
+  left: 50%; 
+  
+  z-index: 3;
+}
+
+ /* ปะการัง,สี่,ห้า,เจ็ด,สิบห้า */
+.speech-box3 {
+    width: 80px;
+    height: 120px;
+    bottom: 97%; 
+    left: 50%; 
+    
+    z-index: 3;
+  }
+
+   
+  /* สิบแปด */
+  .speech-box6 {
+     width: 160px; 
+     height: 120px; 
+     position: absolute;
+     top: 62%; 
+     right: 50%;
+     z-index: 3;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: rgb(	236, 251, 171);
+  width: 412px; 
+  height: 100px;
+  text-align: center;
+  line-height: 47px; 
+  top: 35%;
+  left: -40%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #CCD2FC;
+      width: 280px; 
+      height: 100px;
+      text-align: center;
+      line-height: 47px; 
+      top: 50%;
+  left: -250%;
+      z-index: -1;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      /* Adjust container sizes and positions */
+      .container {
+        width: 100vw;
+        height: 100vh;
+      }
+
+      h1 {
+  font-size: 30px;
+}
+
+h4 {
+  font-size: 12px;
+}
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../../Testvocab/img/clothes2/speaker.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+      padding-top: 1%;
+      z-index: -4;
+      }
+
+      
+      .container-sandals .hover-number,
+      .container-slippers .hover-number {
+        top: 10px;
+        left:-5px;
+        z-index: 5;
+        }
+
+
+    .container-shoes .hover-number,
+    .container-flipflops .hover-number{
+        top: -10px;
+        left:-5px;
+        z-index: 5;
+        }
+
+        .container-stocking .hover-number {
+        top: 20px;
+        left:5px;
+        z-index: 5;
+        }
+
+     .speech-box11,.speech-box2,.speech-box3,.speech-box7,.speech-box8 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+          transform: translateX(-50%);
+        position: absolute;
+      }
+
+      .speech-box11{
+        width: 80px;
+  height: 70px;
+  bottom: 115%; 
+  left: 50%; 
+  z-index: -1;
+        }
+
+      .speech-box2 {
+    width: 50px;
+    height: 80px;
+    bottom: 97%; 
+    left: 50%; 
+    z-index: -1;
+        }
+    
+      .speech-box3{
+        width: 40px;
+    height: 80px;
+    bottom: 97%; 
+    left: 50%; 
+    z-index: -1;
+        }
+
+
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: #FF9EAE;
+        width: 240px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: -75%;
+        left: 50%;
+        z-index: -1;
+      }
+
+      .speech-box8{
+        color: #0A2963; 
+        background-color: #F2FCC8;
+        width: 180px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: 25%;
+        left: -940%;
+        z-index: -1;
+      }
+    }
+
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+        <!-- Navbar Start -->
+        <div class="container-fluid bg-light position-relative shadow">
+          <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+          <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                  <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                  <span class="text-primary">Smart Phonics</span>
+              </a>
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+           <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                  <div class="navbar-nav font-weight-bold mx-auto py-0">
+                      
+                  <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                  <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                  <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                  <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+          </nav>
+      </div>
+      <!-- Navbar End -->
+
+    <h1> COUNTING </h1>
+    <!--ส่วนที่เพิ่มเข้ามา-->
+<h4>ประกอบด้วยคำศัพท์จำนวน 20 คำ</h4> 
+
+  <div class="container">
+    <img src="../../Testvocab/img/counting/counting.png" alt="bird" class="image">
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Birds.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Foods1.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--หนึ่ง-->
+    <div class="container-one">
+      <img src="../../Testvocab/img/counting/one.png" alt="one" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">one</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(วัน)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">หนึ่ง</span>
+      </div>
+      <audio id="one" src="../../Testvocab/voice/one.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+       <!--สอง-->
+   <div class="container-two">
+      <img src="../../Testvocab/img/counting/two.png" alt="two" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">two</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ทู)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สอง</span>
+        <audio id="two" src="../../Testvocab/voice/two.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>  
+    
+    <!--สาม-->
+    <div class="container-three">
+      <img src="../../Testvocab/img/counting/three.png" alt="three" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">three</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ทรี)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สาม</span>
+      </div>
+      <audio id="three" src="../../Testvocab/voice/three.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+        <!--สี่-->
+        <div class="container-four">
+      <img src="../../Testvocab/img/counting/four.png" alt="four" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">four</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โฟ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สี่</span>
+      </div>
+      <audio id="four" src="../../Testvocab/voice/four.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--ห้า-->
+    <div class="container-five">
+      <img src="../../Testvocab/img/counting/five.png" alt="five" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">five </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฟ่ายฺฟ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ห้า</span>
+      </div>
+      <audio id="five" src="../../Testvocab/voice/five.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--หก-->
+ <div class="container-six">
+      <img src="../../Testvocab/img/counting/six.png" alt="six" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">six</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซิ่กฺซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">หก</span>
+        <audio id="six" src="../../Testvocab/voice/six.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--เจ็ด-->
+        <div class="container-seven">
+      <img src="../../Testvocab/img/counting/seven.png" alt="seven" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">seven</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เซฟ-เอิ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เจ็ด</span>
+      </div>
+      <audio id="seven" src="../../Testvocab/voice/seven.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+                    <!--แปด-->
+                    <div class="container-eight">
+                    <img src="../../Testvocab/img/counting/eight.png" alt="eight" class="image">
+                    <div class="speech-box3">
+                      <span style="display: flex; justify-content: center;">eight</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(เอ้ท)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">แปด</span>
+                      <audio id="eight" src="../../Testvocab/voice/eight.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>   
+
+         <!--เก้า-->
+         <div class="container-nine">
+    <img src="../../Testvocab/img/counting/nine.png" alt="nine" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">nine</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(นายฺน)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">เก้า</span>
+      <audio id="nine" src="../../Testvocab/voice/nine.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--สิบ-->
+ <div class="container-ten">
+            <img src="../../Testvocab/img/counting/ten.png" alt="ten" class="image">
+            <div class="speech-box3">
+              <span style="display: flex; justify-content: center;">ten</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(เท็น)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">สิบ</span>
+              <audio id="ten" src="../../Testvocab/voice/ten.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+           <!--สิบเอ็ด-->
+           <div class="container-eleven">
+            <img src="../../Testvocab/img/counting/eleven.png" alt="eleven" class="image">
+            <div class="speech-box2">
+              <span style="display: flex; justify-content: center;">eleven</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(อิ-เล็ฟ-เวิ่น)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">สิบเอ็ด</span>
+              <audio id="eleven" src="../../Testvocab/voice/eleven.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+        <!--สิบสอง-->
+        <div class="container-twelve">
+            <img src="../../Testvocab/img/counting/twelve.png" alt="twelve" class="image">
+            <div class="speech-box2">
+              <span style="display: flex; justify-content: center;">twelve</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ทเว็ลฺฟ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">สิบสอง</span>
+              <audio id="twelve" src="../../Testvocab/voice/twelve.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+                <!--สิบสาม-->
+                <div class="container-thirteen">
+    <img src="../../Testvocab/img/counting/thirteen.png" alt="thirteen" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">thirteen</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เธอ-ทีน)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">สิบสาม</span>
+      <audio id="thirteen" src="../../Testvocab/voice/thirteen.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+    <!--สิบสี่-->
+    <div class="container-fourteen">
+        <img src="../../Testvocab/img/counting/fourteen.png" alt="fourteen" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">fourteen</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โฟ-ทีน)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สิบสี่</span>
+          <audio id="fourteen" src="../../Testvocab/voice/fourteen.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--สิบห้า-->
+    <div class="container-fifteen">
+      <img src="../../Testvocab/img/counting/fifteen.png" alt="fifteen" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">fifteen</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฟิฟ-ทีน)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สิบห้า</span>
+      <audio id="fifteen" src="../../Testvocab/voice/fifteen.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--สิบหก-->
+        <div class="container-sixteen">
+        <img src="../../Testvocab/img/counting/sixteen.png" alt="sixteen" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">sixteen</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ซิกฺซ-ทีน)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สิบหก</span>
+          <audio id="sixteen" src="../../Testvocab/voice/sixteen.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+
+             <!--สิบเจ็ด-->
+             <div class="container-seventeen">
+      <img src="../../Testvocab/img/counting/seventeen.png" alt="seventeen" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">seventeen</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เซฟ-เอิ่น-ทีน)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สิบเจ็ด</span>
+        <audio id="seventeen" src="../../Testvocab/voice/seventeen.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+ <!--สิบแปด -->
+ <div class="container-eighteen">
+        <img src="../../Testvocab/img/counting/eighteen.png" alt="eighteen" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">eighteen</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เอ้ท-ทีน)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สิบแปด</span>
+        <audio id="eighteen" src="../../Testvocab/voice/eighteen.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+ <!--สิบเก้า -->
+ <div class="container-nineteen">
+    <img src="../../Testvocab/img/counting/nineteen.png" alt="nineteen" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">nineteen</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(นายฺน-ทีน)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">สิบเก้า</span>
+    <audio id="nineteen" src="../../Testvocab/voice/nineteen.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--ยี่สิบ -->
+ <div class="container-twenty">
+    <img src="../../Testvocab/img/counting/twenty.png" alt="twenty" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">twenty</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ทเว่น-ถิ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ยี่สิบ</span>
+    <audio id="twenty" src="../../Testvocab/voice/twenty.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+    <div class="container-momduck">
+      <img src="../../Testvocab/img/counting/momduck.png" alt="momduck" class="image">
+    </div>
+
+    
+    <div class="container-fence">
+      <img src="../../Testvocab/img/counting/fence.png" alt="fence" class="image">
+    </div>
+
+        <!--คำถาม1-->
+        <div class="container-quescount1">
+          <img src="../../Testvocab/img/counting/quescount1.png" alt="quescount1" class="image">
+          <div class="speech-box7">
+          Can you find three ducklings in the pond ? <br>
+          <span class="thai-text">เด็ก ๆ หาลูกเป็ดสามตัวที่อยู่ในสระน้ำเจอไหมคะ ?</span>
+          </div>
+          <audio id="quescount1" src="../../Testvocab/voice/quescount1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quescount2">
+          <img src="../../Testvocab/img/counting/quescount2.png" alt="quescount2" class="image">
+          <div class="speech-box8">
+          Which duckling do you like ? <br>
+          <span class="thai-text">เด็ก ๆ ชอบลูกเป็ดตัวไหนกันบ้างคะ ?</span>
+          </div>
+            <audio id="quescount2" src="../../Testvocab/voice/quescount2.mp3"></audio>
+        </div>
+    
+        <!--ออก-->
+              
+              <div class="container-exit">
+              <a href="../vocab.html">
+                
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var seventeenImg = document.querySelector('.container-seventeen img');
+var fourteenImg = document.querySelector('.container-fourteen img');
+var sixteenImg = document.querySelector('.container-sixteen img');
+var fourImg = document.querySelector('.container-four img');
+var fiveImg = document.querySelector('.container-five img');
+var sevenImg = document.querySelector('.container-seven img');
+var threeImg = document.querySelector('.container-three img');
+var sixImg = document.querySelector('.container-six img');
+var fifteenImg = document.querySelector('.container-fifteen img');
+var oneImg = document.querySelector('.container-one img');
+var twoImg = document.querySelector('.container-two img');
+var eighteenImg = document.querySelector('.container-eighteen img');
+var thirteenImg = document.querySelector('.container-thirteen img');
+var twelveImg = document.querySelector('.container-twelve img');
+var elevenImg = document.querySelector('.container-eleven img');
+var eightImg = document.querySelector('.container-eight img');
+var tenImg = document.querySelector('.container-ten img');
+var nineImg = document.querySelector('.container-nine img');
+var nineteenImg = document.querySelector('.container-nineteen img');
+var twentyImg = document.querySelector('.container-twenty img');
+
+var quescount1Img = document.querySelector('.container-quescount1 img');
+var quescount2Img = document.querySelector('.container-quescount2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+
+
+
+// เลือกอีเลเมนต์ของ speech box11
+var seventeenSpeechBox = document.querySelector('.container-seventeen .speech-box11');
+var eighteenSpeechBox = document.querySelector('.container-eighteen .speech-box11');
+var nineteenSpeechBox = document.querySelector('.container-nineteen .speech-box11');
+var twentySpeechBox = document.querySelector('.container-twenty .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var elevenSpeechBox = document.querySelector('.container-eleven .speech-box2');
+var twelveSpeechBox = document.querySelector('.container-twelve .speech-box2');
+var thirteenSpeechBox = document.querySelector('.container-thirteen .speech-box2');
+var fourteenSpeechBox = document.querySelector('.container-fourteen .speech-box2');
+var fifteenSpeechBox = document.querySelector('.container-fifteen .speech-box2');
+var sixteenSpeechBox = document.querySelector('.container-sixteen .speech-box2');
+
+
+
+// เลือกอีเลเมนต์ของ speech box3
+var oneSpeechBox = document.querySelector('.container-one .speech-box3');
+var twoSpeechBox = document.querySelector('.container-two .speech-box3');
+var threeSpeechBox = document.querySelector('.container-three .speech-box3');
+var fourSpeechBox = document.querySelector('.container-four .speech-box3');
+var fiveSpeechBox = document.querySelector('.container-five .speech-box3');
+var sixSpeechBox = document.querySelector('.container-six .speech-box3');
+var sevenSpeechBox = document.querySelector('.container-seven .speech-box3');
+var eightSpeechBox = document.querySelector('.container-eight .speech-box3');
+var nineSpeechBox = document.querySelector('.container-nine .speech-box3');
+var tenSpeechBox = document.querySelector('.container-ten .speech-box3');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var quescount1SpeechBox = document.querySelector('.container-quescount1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quescount2SpeechBox = document.querySelector('.container-quescount2 .speech-box8');
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var seventeenNumber = document.querySelector('.container-seventeen .hover-number');
+var fourteenNumber = document.querySelector('.container-fourteen .hover-number');
+var sixteenNumber = document.querySelector('.container-sixteen .hover-number');
+var fourNumber = document.querySelector('.container-four .hover-number');
+var fiveNumber = document.querySelector('.container-five .hover-number');
+
+var sevenNumber = document.querySelector('.container-seven .hover-number');
+var threeNumber = document.querySelector('.container-three .hover-number');
+var sixNumber = document.querySelector('.container-six .hover-number');
+var fifteenNumber = document.querySelector('.container-fifteen .hover-number');
+var oneNumber = document.querySelector('.container-one .hover-number');
+
+var twoNumber = document.querySelector('.container-two .hover-number');
+var eighteenNumber = document.querySelector('.container-eighteen .hover-number');
+var thirteenNumber = document.querySelector('.container-thirteen .hover-number');
+var twelveNumber = document.querySelector('.container-twelve .hover-number');
+var elevenNumber = document.querySelector('.container-eleven .hover-number');
+
+var eightNumber = document.querySelector('.container-eight .hover-number');
+var tenNumber = document.querySelector('.container-ten .hover-number');
+var nineNumber = document.querySelector('.container-nine .hover-number');
+var nineteenNumber = document.querySelector('.container-nineteen .hover-number');
+var twentyNumber = document.querySelector('.container-twenty .hover-number');
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(seventeenImg, seventeenSpeechBox, seventeenNumber);
+setupHoverEffect(fourteenImg, fourteenSpeechBox, fourteenNumber);
+setupHoverEffect(sixteenImg, sixteenSpeechBox, sixteenNumber);
+setupHoverEffect(fourImg, fourSpeechBox, fourNumber);
+setupHoverEffect(fiveImg, fiveSpeechBox, fiveNumber);
+
+setupHoverEffect(sevenImg, sevenSpeechBox, sevenNumber);
+setupHoverEffect(threeImg, threeSpeechBox, threeNumber);
+setupHoverEffect(sixImg, sixSpeechBox, sixNumber);
+setupHoverEffect(fifteenImg, fifteenSpeechBox, fifteenNumber);
+setupHoverEffect(oneImg, oneSpeechBox, oneNumber);
+
+setupHoverEffect(twoImg, twoSpeechBox, twoNumber);
+setupHoverEffect(eighteenImg, eighteenSpeechBox, eighteenNumber);
+setupHoverEffect(thirteenImg, thirteenSpeechBox, thirteenNumber);
+setupHoverEffect(twelveImg, twelveSpeechBox, twelveNumber);
+setupHoverEffect(elevenImg, elevenSpeechBox, elevenNumber);
+
+setupHoverEffect(eightImg, eightSpeechBox, eightNumber);
+setupHoverEffect(tenImg, tenSpeechBox, tenNumber);
+setupHoverEffect(nineImg, nineSpeechBox, nineNumber);
+setupHoverEffect(nineteenImg, nineteenSpeechBox, nineteenNumber);
+setupHoverEffect(twentyImg, twentySpeechBox, twentyNumber);
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+seventeenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, seventeenSpeechBox);
+});
+
+fourteenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, fourteenSpeechBox);
+});
+
+fourImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, fourSpeechBox);
+}); 
+
+fiveImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, fiveSpeechBox);
+});
+
+sevenImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, sevenSpeechBox);
+}); 
+
+threeImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, threeSpeechBox);
+}); 
+
+sixImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, sixSpeechBox);
+}); 
+
+fifteenImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, fifteenSpeechBox);
+}); 
+
+oneImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, oneSpeechBox);
+}); 
+
+twoImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, twoSpeechBox);
+}); 
+
+eighteenImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, eighteenSpeechBox);
+}); 
+sixteenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, sixteenSpeechBox);
+}); 
+thirteenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, thirteenSpeechBox);
+}); 
+
+twelveImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, twelveSpeechBox);
+}); 
+
+elevenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,elevenSpeechBox);
+}); 
+
+eightImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,eightSpeechBox);
+}); 
+
+tenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,tenSpeechBox);
+}); 
+nineImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,nineSpeechBox);
+}); 
+
+nineteenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,nineteenSpeechBox);
+}); 
+
+twentyImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,twentySpeechBox);
+}); 
+
+quescount1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quescount1SpeechBox);
+}); 
+
+quescount2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quescount2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+seventeenImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, seventeenSpeechBox);
+});
+
+fourteenImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, fourteenSpeechBox);
+});
+
+fourImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  fourSpeechBox);
+  });
+
+fiveImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, fiveSpeechBox);
+  });
+
+sevenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  sevenSpeechBox);
+  });
+
+threeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  threeSpeechBox);
+  });
+
+  sixImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, sixSpeechBox);
+  });
+
+  fifteenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, fifteenSpeechBox);
+  });
+
+  oneImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, oneSpeechBox);
+  });
+  
+  twoImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, twoSpeechBox);
+  });
+
+  eighteenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   eighteenSpeechBox);
+  });
+
+  sixteenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   sixteenSpeechBox);
+  });
+  thirteenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   thirteenSpeechBox);
+  });
+
+  twelveImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   twelveSpeechBox);
+  });
+  elevenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   elevenSpeechBox);
+  });
+
+  eightImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   eightSpeechBox);
+  });
+  
+  tenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   tenSpeechBox);
+  });
+  nineImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   nineSpeechBox);
+  });
+
+  nineteenImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   nineteenSpeechBox);
+  });
+
+  twentyImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   twentySpeechBox);
+  });
+
+  quescount1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quescount1SpeechBox);
+  });
+
+  quescount2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quescount2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-seventeen img', '#seventeen');
+playSoundWhenClick('.container-fourteen img', '#fourteen');
+playSoundWhenClick('.container-two img', '#two');
+playSoundWhenClick('.container-six img', '#six');
+playSoundWhenClick('.container-four img', '#four');
+playSoundWhenClick('.container-five img', '#five');
+playSoundWhenClick('.container-seven img', '#seven');
+playSoundWhenClick('.container-three img', '#three');
+playSoundWhenClick('.container-fifteen img', '#fifteen');
+playSoundWhenClick('.container-one img', '#one');
+playSoundWhenClick('.container-eighteen img', '#eighteen')
+
+playSoundWhenClick('.container-sixteen img', '#sixteen');
+playSoundWhenClick('.container-thirteen img', '#thirteen');
+playSoundWhenClick('.container-twelve img', '#twelve');
+playSoundWhenClick('.container-eleven img', '#eleven');
+playSoundWhenClick('.container-eight img', '#eight');
+playSoundWhenClick('.container-ten img', '#ten');
+playSoundWhenClick('.container-nine img', '#nine');
+playSoundWhenClick('.container-nineteen img', '#nineteen');
+playSoundWhenClick('.container-twenty img', '#twenty');
+playSoundWhenClick('.container-quescount1 img', '#quescount1');
+playSoundWhenClick('.container-quescount2 img', '#quescount2');
+
+
+
+
+    </script>
+  
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1202 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+</head>
+
+<style>
+.navbar {
+  top: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/concert/bganimalhomes.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+}
+
+.container {
+  width:100%; 
+  height: 100%;
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; 
+  
+}
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #FFC000;
+ text-shadow: 0 0 20px #0070C0;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px #ffffff;
+  letter-spacing: 0.5px;
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+.image {
+  width: 95%;
+  height: 100%;
+  margin-left: -13%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -9%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -9%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -9%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+
+/*รู*/
+.container-hole {
+  position: absolute;
+  top: 59.9%;
+  left: -3.5%;
+  transform: translate(-50%, -50%);
+  width: 12.5%; 
+  z-index: 8; 
+}
+
+.container-rat {
+  position: absolute;
+  top: 60%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 7; 
+}
+
+/*รังนก*/
+.container-nest {
+  position: absolute;
+  top: 61%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 9; 
+}
+
+/*คอก*/
+.container-pen {
+  position: absolute;
+  top: 51%;  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 43%; 
+  z-index: 6; 
+}
+
+.container-pen2 {
+  position: absolute;
+  top: 48%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 15.5%; 
+  z-index: 7; 
+}
+
+/*คอกม้า*/
+.container-stable {
+  position: absolute;
+  top: 28%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  width: 26%; 
+  z-index: 0; 
+}
+
+/*รังมด*/
+.container-anthill{
+  position: absolute;
+  top: 47%;
+  left: 3.5%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 1; 
+}
+
+/*บ้านสุนัข*/
+.container-kennel {
+  position: absolute;
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 10; 
+}
+
+/*โพรง*/
+.container-burrow{
+  position: absolute;
+  top: 88%;
+  left: 46%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 13; 
+}
+
+/*ตู้ปลา*/
+.container-aquarium {
+  position: absolute;
+  top: 60%;
+  left: 107%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 2; 
+}
+
+/*รังผึ้ง*/
+.container-beehive {
+  position: absolute;
+  top: 60%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 8; 
+}
+
+
+/*ถ้ำ*/
+.container-cave {
+  position: absolute;
+  top: 11%;
+  left: 103%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 1; 
+}
+
+.container-cave2 {
+  position: absolute;
+  top: 30%;
+  left: 93%;
+  transform: translate(-50%, -50%);
+  width: 17%; 
+  z-index: 1; 
+}
+
+
+/*กรง*/
+.container-cage {
+  position: absolute;
+  top: 50%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 8;
+}
+
+/*เล้าหมู, คอกหมู*/
+.container-pigsty {
+  position: absolute;
+  top: 87%;
+  left: 103%;
+  transform: translate(-50%, -50%);
+  width: 25%; 
+  z-index: 13; 
+}
+
+/*โพรง*/
+.container-den {
+  position: absolute;
+  top: 78%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 11; 
+}
+
+.container-grass {
+  position: absolute;
+  top: 89%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 12; 
+}
+
+.container-sleep {
+  position: absolute;
+  top: 89%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 12; 
+}
+
+.container-tree {
+  position: absolute;
+  top: 43%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  width: 52%; 
+  z-index: 6; 
+}
+
+/*ใยแมงมุม*/
+.container-spiderweb {
+  position: absolute;
+  top: 35%;
+  left: 108%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 1; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: 55px;
+  left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8;
+  padding-top: 5px;
+  z-index: 2; 
+}
+
+
+.container-den .hover-number,
+.container-burrow .hover-number{
+  top: 90px;
+  left:90px;
+  }
+
+.container-hole  .hover-number,
+.container-nest .hover-number,
+.container-anthill .hover-number{
+  top: 30px;
+  left:5px;
+  }
+  
+
+.container-spiderweb img,.container-den img,.container-cave img,.container-cage img,.container-aquarium img,
+.container-stable img, .container-burrow img, .container-anthill img,.container-pen img,.container-kennel img, .container-beehive img, .container-hole img,.container-nest img,.container-pigsty img, .container-quesanimal1 img, .container-quesanimal2 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.container-spiderweb img:hover,.container-den img:hover,.container-cage img:hover,.container-aquarium img:hover,.container-cave img:hover,
+ .container-stable img:hover,.container-burrow img:hover, .container-anthill img:hover,
+.container-pen img:hover,
+.container-kennel img:hover, .container-beehive img:hover, .container-hole img:hover, .container-nest img:hover,
+.container-pigsty img:hover,.container-quesanimal1 img:hover, .container-quesanimal2 img:hover{
+  transform: translateY(-10px);
+  filter: brightness(80%); 
+}
+
+/*คำถาม1*/
+.container-quesanimal1 {
+  position: absolute;
+  top: 80%;
+  left: 2%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 13; 
+}
+
+/*คำถาม2*/
+.container-quesanimal2 {
+  position: absolute;
+  top: 88%;
+  left: 23%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 13; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -3%;
+  right: -17.5%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 15; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    white-space: nowrap;
+  position: absolute;
+
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+
+.speech-box {
+  width: 160px;
+  height: 150px;
+  bottom: 37%; 
+  left: -20%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 140px;
+  height: 150px;
+  bottom: 77%; 
+  left: 40%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 200px;
+  height: 150px;
+  bottom: 88%; 
+  left: 40%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+  width: 210px;
+  height: 150px;
+  bottom: 87%; 
+  left: 40%; 
+  transform: translateX(-50%);
+  z-index: -1;
+  }
+
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #CAF0F8;
+  width: 330px; 
+  height: 100px;
+  text-align: center;
+  line-height: 25px; 
+  top: -255%;
+  left: -90%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #DAEFC3;
+      width: 250px; 
+      height: 70px;
+      text-align: center;
+      line-height: 25px; 
+      top: -65%;
+      left: 60%;
+      z-index: -1;
+    }
+
+    @media screen and (max-width: 768px) {
+      /* Adjust container sizes and positions */
+      .image {
+        width: 100%;
+        height: 100%;
+        /*margin-left: -5%;*/
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+      
+      h4 {
+        font-size: 12px;
+      }
+
+      .container-cage {
+        position: absolute;
+        top: 80%;
+        left: 87%;
+        transform: translate(-50%, -50%);
+        width: 12%; 
+        z-index: 4;
+      }
+      
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: 25px;
+      left: 10px;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../../Testvocab/img/clothes2/nest.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ nest.png จางลง */
+      padding-top: 1%;
+      z-index: 4;
+      }
+
+.container-pigsty .hover-number{
+  top: 40px;
+  left:30px;
+  }
+.container-anthill .hover-number{
+top: 20px;
+left:80px;
+}
+
+
+      
+
+        .speech-box,.speech-box11,.speech-box2,.speech-box3,.speech-box7,.speech-box8 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 0.9);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+        transform: translateX(-50%);
+      }
+
+      .speech-box{
+        width: 80px;
+        height: 90px;
+        top: -85%; 
+        left: 35%; 
+        z-index: -1;
+              }
+
+      .speech-box11{
+  width: 80px;
+  height: 90px;
+  bottom: 85%; 
+  left: 30%; 
+  z-index: -1;
+        }
+
+      .speech-box2 {
+    width: 160px;
+    height: 80px;
+    bottom: 98%; 
+    left: 40%; 
+    z-index: -1;
+        }
+    
+    .speech-box3{
+    width: 130px;
+    height: 80px;
+    bottom: 97%; 
+    left: 40%; 
+    z-index: -1;
+        }
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: #FF9EAE;
+        width: 180px; 
+        height: 65px;
+        text-align: center;
+        line-height: 17px; 
+        top: -75%;
+        left: -850%;
+        z-index: -1;
+      }
+
+      .speech-box8{
+        color: #0A2963; 
+        background-color: #F2FCC8;
+        width: 180px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: 25%;
+        left: 540%;
+        z-index: -1;
+      }
+    }
+@media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+
+<body>
+   <!-- Navbar Start -->
+   <div class="container-fluid bg-light position-relative shadow">
+    <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+    <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+            <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+            <span class="text-primary">Smart Phonics</span>
+        </a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+            <div class="navbar-nav font-weight-bold mx-auto py-0">
+                
+            <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+            <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+            <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+            <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+    </nav>
+</div>
+<!-- Navbar End -->
+
+
+    <h1>ANIMAL HOMES</h1>
+
+         <!--ส่วนที่เพิ่มเข้ามา-->
+         <h4>ประกอบด้วยคำศัพท์จำนวน 14 คำ</h4> 
+
+         
+  <div class="container">
+    <img src="../../Testvocab/img/concert/animalhomes.png" alt="bird" class="image">
+
+   
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Bodyparts.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Intheclassroom.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--รู-->
+    <div class="container-hole">
+      <img src="../../Testvocab/img/concert/hole.png" alt="hole" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">hole</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โฮ่ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รู</span>
+      </div>
+      <audio id="hole" src="../../Testvocab/voice/hole.mp3"></audio>
+      <div class="hover-number hover-number-hole"></div>
+    </div>
+
+    <div class="container-rat">
+      <img src="../../Testvocab/img/concert/rat.png" alt="rat" class="image">
+    </div>
+
+       <!--รังนก-->
+   <div class="container-nest">
+      <img src="../../Testvocab/img/concert/nest.png" alt="nest" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">nest</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เน่สฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รังนก</span>
+        <audio id="nest" src="../../Testvocab/voice/nest.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-nest"></div>
+    </div>  
+    
+    <!--คอก-->
+    <div class="container-pen">
+      <img src="../../Testvocab/img/concert/pen.png" alt="pen" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">pen</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เพ่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">คอก</span>
+      </div>
+      <audio id="pen" src="../../Testvocab/voice/pen2.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <div class="container-pen2">
+      <img src="../../Testvocab/img/concert/pen2.png" alt="pen2" class="image">
+    </div>  
+
+        <!--คอกม้า-->
+        <div class="container-stable">
+      <img src="../../Testvocab/img/concert/stable.png" alt="stable" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">stable</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซเต้-เบิ่ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">คอกม้า</span>
+      </div>
+      <audio id="stable" src="../../Testvocab/voice/stable.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--รังมด-->
+    <div class="container-anthill">
+      <img src="../../Testvocab/img/concert/anthill.png" alt="anthill" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">anthill </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แอ๊น-ทิ่ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รังมด</span>
+      </div>
+      <audio id="anthill" src="../../Testvocab/voice/anthill.mp3"></audio>
+      <div class="hover-number hover-number-anthill"></div>
+    </div>
+
+     <!--บ้านสุนัข-->
+ <div class="container-kennel">
+      <img src="../../Testvocab/img/concert/kennel.png" alt="kennel" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">kennel</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เค้น-เนิ่ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">บ้านสุนัข</span>
+        <audio id="kennel" src="../../Testvocab/voice/kennel.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--โพรง-->
+        <div class="container-burrow">
+      <img src="../../Testvocab/img/concert/burrow.png" alt="burrow" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">burrow</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เบ๊อ-โหร่ว)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">โพรง</span>
+      </div>
+      <audio id="burrow" src="../../Testvocab/voice/burrow.mp3"></audio>
+      <div class="hover-number hover-number-burrow"></div>
+    </div>
+
+
+    <!--ตู้ปลา-->
+    <div class="container-aquarium">
+        <img src="../../Testvocab/img/concert/aquarium.png" alt="aquarium" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">aquarium</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เออะ-เคว้-เรี่ยม)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ตู้ปลา</span>
+          <audio id="aquarium" src="../../Testvocab/voice/aquarium.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--รังผึ้ง-->
+    <div class="container-beehive">
+      <img src="../../Testvocab/img/concert/beehive.png" alt="beehive" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">beehive</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(บี๊-ฮ่ายฺฟ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">รังผึ้ง</span>
+      <audio id="beehive" src="../../Testvocab/voice/beehive.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--ถ้ำ-->
+        <div class="container-cave">
+        <img src="../../Testvocab/img/concert/cave.png" alt="cave" class="image">
+        <div class="speech-box">
+          <span style="display: flex; justify-content: center;">cave</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เค่ฟ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ถ้ำ</span>
+          <audio id="cave" src="../../Testvocab/voice/cave.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+    <div class="container-cave2">
+        <img src="../../Testvocab/img/concert/cave2.png" alt="cave2" class="image">
+    </div>
+             <!--กรง-->
+             <div class="container-cage">
+      <img src="../../Testvocab/img/concert/cage.png" alt="cage" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">cage</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เค่จฺฉ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">กรง</span>
+        <audio id="cage" src="../../Testvocab/voice/cage.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+ <!--เล้าหมู, คอกหมู -->
+ <div class="container-pigsty">
+        <img src="../../Testvocab/img/concert/pigsty.png" alt="pigsty" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">pigsty</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(พิ่ก-ซตาย)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เล้าหมู, คอกหมู</span>
+        <audio id="pigsty" src="../../Testvocab/voice/pigsty.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-pigsty"></div>
+    </div>
+
+
+ <!--โพรง -->
+ <div class="container-den">
+    <img src="../../Testvocab/img/concert/den.png" alt="den" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">den</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เด้น)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">โพรง</span>
+    <audio id="den" src="../../Testvocab/voice/den.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-burrow"></div>
+</div>
+
+
+ <div class="container-grass">
+    <img src="../../Testvocab/img/concert/grass.png" alt="grass" class="image">
+</div>
+
+<div class="container-tree">
+    <img src="../../Testvocab/img/concert/tree.png" alt="tree" class="image">
+</div>
+
+<div class="container-sleep">
+    <img src="../../Testvocab/img/concert/sleep.png" alt="sleep" class="image">
+</div>
+
+ <!--ใยแมงมุม -->
+ <div class="container-spiderweb">
+    <img src="../../Testvocab/img/concert/spiderweb.png" alt="spiderweb" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">spiderweb</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ซไป๊-เดอะ-เว็บ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ใยแมงมุม</span>
+    <audio id="spiderweb" src="../../Testvocab/voice/spiderweb.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-quesanimal1">
+          <img src="../../Testvocab/img/concert/quesanimal1.png" alt="quesanimal1" class="image">
+          <div class="speech-box7">
+          How many kinds of animals can <br>
+you see in this picture ? <br>
+          <span class="thai-text">เพื่อน ๆ เห็นสัตว์กี่ชนิดในภาพนี้ ?</span>
+          </div>
+          <audio id="quesanimal1" src="../../Testvocab/voice/quesanimal1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesanimal2">
+          <img src="../../Testvocab/img/concert/quesanimal2.png" alt="quesanimal2" class="image">
+          <div class="speech-box8">
+          Where is the fox ? <br>
+          <span class="thai-text">จิ้งจอกอยู่ที่ไหนนะเพื่อน ๆ ?</span>
+          </div>
+            <audio id="quesanimal2" src="../../Testvocab/voice/quesanimal2.mp3"></audio>
+        </div>
+
+        <!--ออก-->      
+              <div class="container-exit">
+                <a href="../vocab2.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+        // เลือกอีเลเมนต์ของรูปภาพ
+        var cageImg = document.querySelector('.container-cage img');
+    var aquariumImg = document.querySelector('.container-aquarium img');
+    var caveImg = document.querySelector('.container-cave img');
+    var stableImg = document.querySelector('.container-stable img');
+    var anthillImg = document.querySelector('.container-anthill img');
+    var burrowImg = document.querySelector('.container-burrow img');
+    var penImg = document.querySelector('.container-pen img');
+    var kennelImg = document.querySelector('.container-kennel img');
+    var beehiveImg = document.querySelector('.container-beehive img');
+    var holeImg = document.querySelector('.container-hole img');
+    var nestImg = document.querySelector('.container-nest img');
+    var pigstyImg = document.querySelector('.container-pigsty img');
+    var denImg = document.querySelector('.container-den img');
+    var spiderwebImg = document.querySelector('.container-spiderweb img');
+    var quesanimal1Img = document.querySelector('.container-quesanimal1 img');
+    var quesanimal2Img = document.querySelector('.container-quesanimal2 img');
+    
+    
+    // เลือกอีเลเมนต์ของ speech box
+   var caveSpeechBox = document.querySelector('.container-cave .speech-box');
+
+    // เลือกอีเลเมนต์ของ speech box11
+    var holeSpeechBox = document.querySelector('.container-hole .speech-box11');
+    var anthillSpeechBox = document.querySelector('.container-anthill .speech-box11');
+   var nestSpeechBox = document.querySelector('.container-nest .speech-box11');
+    var beehiveSpeechBox = document.querySelector('.container-beehive .speech-box11');
+var cageSpeechBox = document.querySelector('.container-cage .speech-box11');
+
+    // เลือกอีเลเมนต์ของ speech box2
+    var kennelSpeechBox = document.querySelector('.container-kennel .speech-box2');
+    var stableSpeechBox = document.querySelector('.container-stable .speech-box2');
+    var denSpeechBox = document.querySelector('.container-den .speech-box2');
+
+    // เลือกอีเลเมนต์ของ speech box3
+  var burrowSpeechBox = document.querySelector('.container-burrow .speech-box3');
+  var pigstySpeechBox = document.querySelector('.container-pigsty .speech-box3');
+    var aquariumSpeechBox = document.querySelector('.container-aquarium .speech-box3');
+    var penSpeechBox = document.querySelector('.container-pen .speech-box3');
+      var spiderwebSpeechBox = document.querySelector('.container-spiderweb .speech-box3');
+    
+    // เลือกอีเลเมนต์ของ speech box7
+    var quesanimal1SpeechBox = document.querySelector('.container-quesanimal1 .speech-box7');
+    
+    // เลือกอีเลเมนต์ของ speech box8
+    var quesanimal2SpeechBox = document.querySelector('.container-quesanimal2 .speech-box8');
+    
+    
+    // ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+    var holeNumber = document.querySelector('.container-hole .hover-number');
+    var nestNumber = document.querySelector('.container-nest .hover-number');
+    var penNumber = document.querySelector('.container-pen .hover-number');
+    var stableNumber = document.querySelector('.container-stable .hover-number');
+    var anthillNumber = document.querySelector('.container-anthill .hover-number');
+    
+    var kennelNumber = document.querySelector('.container-kennel .hover-number');
+    var burrowNumber = document.querySelector('.container-burrow .hover-number');
+    var aquariumNumber = document.querySelector('.container-aquarium .hover-number');
+    var beehiveNumber = document.querySelector('.container-beehive .hover-number');
+    
+    var caveNumber = document.querySelector('.container-cave .hover-number');
+    var cageNumber = document.querySelector('.container-cage .hover-number');
+    var pigstyNumber = document.querySelector('.container-pigsty .hover-number');
+    var denNumber = document.querySelector('.container-den .hover-number');
+    var spiderwebNumber = document.querySelector('.container-spiderweb .hover-number');
+    
+    
+    
+    var hoverCounter = 0;
+    var hoveredElements = [];
+    
+    // ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+    function setupHoverEffect(imgElement, speechBox, numberElement) {
+      imgElement.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, speechBox);
+        if (!hoveredElements.includes(imgElement)) {
+          hoverCounter++;
+          numberElement.textContent = hoverCounter;
+          numberElement.style.display = 'block';
+          hoveredElements.push(imgElement);
+        }
+      });
+    }
+    
+    setupHoverEffect(holeImg, holeSpeechBox, holeNumber);
+    setupHoverEffect(nestImg, nestSpeechBox, nestNumber);
+    setupHoverEffect(penImg, penSpeechBox, penNumber);
+    setupHoverEffect(stableImg, stableSpeechBox, stableNumber);
+    setupHoverEffect(anthillImg, anthillSpeechBox, anthillNumber);
+    
+    setupHoverEffect(kennelImg, kennelSpeechBox, kennelNumber);
+    setupHoverEffect(burrowImg, burrowSpeechBox, burrowNumber);
+    setupHoverEffect(aquariumImg, aquariumSpeechBox, aquariumNumber);
+    setupHoverEffect(beehiveImg, beehiveSpeechBox, beehiveNumber);
+    
+    setupHoverEffect(caveImg, caveSpeechBox, caveNumber);
+    setupHoverEffect(cageImg, cageSpeechBox, cageNumber);
+    setupHoverEffect(pigstyImg, pigstySpeechBox, pigstyNumber);
+    setupHoverEffect(denImg, denSpeechBox, denNumber);
+    setupHoverEffect(spiderwebImg, spiderwebSpeechBox, spiderwebNumber);
+    
+    
+    // ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+    function showSpeechBox(event, speechBox) {
+      speechBox.style.display = 'block';
+    }
+    
+    // ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+    function hideSpeechBox(event, speechBox) {
+      speechBox.style.display = 'none';
+    }
+    
+    
+    
+    // เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+    cageImg.addEventListener('mouseover', function(event) {
+      showSpeechBox(event, cageSpeechBox);
+    });
+    
+    aquariumImg.addEventListener('mouseover', function(event) {
+      showSpeechBox(event, aquariumSpeechBox);
+    });
+    
+    stableImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, stableSpeechBox);
+    }); 
+    
+    anthillImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, anthillSpeechBox);
+    });
+    
+    burrowImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, burrowSpeechBox);
+    }); 
+    
+    penImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, penSpeechBox);
+    }); 
+    
+    kennelImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, kennelSpeechBox);
+    }); 
+    
+    beehiveImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, beehiveSpeechBox);
+    }); 
+    
+    holeImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, holeSpeechBox);
+    }); 
+    
+    nestImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, nestSpeechBox);
+    }); 
+    
+    pigstyImg.addEventListener('mouseover', function(event) {
+        showSpeechBox(event, pigstySpeechBox);
+    }); 
+    caveImg.addEventListener('mouseover', function(event) {
+      showSpeechBox(event, caveSpeechBox);
+    }); 
+    denImg.addEventListener('mouseover', function(event) {
+      showSpeechBox(event,denSpeechBox);
+    }); 
+    
+    spiderwebImg.addEventListener('mouseover', function(event) {
+      showSpeechBox(event,spiderwebSpeechBox);
+    }); 
+    
+    quesanimal1Img.addEventListener('mouseover', function(event) {
+      showSpeechBox(event, quesanimal1SpeechBox);
+    }); 
+    
+    quesanimal2Img.addEventListener('mouseover', function(event) {
+      showSpeechBox(event, quesanimal2SpeechBox);
+    }); 
+    
+    // เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+    cageImg.addEventListener('mouseout', function(event) {
+      hideSpeechBox(event, cageSpeechBox);
+    });
+    
+    aquariumImg.addEventListener('mouseout', function(event) {
+      hideSpeechBox(event, aquariumSpeechBox);
+    });
+    
+    stableImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,  stableSpeechBox);
+      });
+    
+    anthillImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event, anthillSpeechBox);
+      });
+    
+    burrowImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,  burrowSpeechBox);
+      });
+    
+    penImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,  penSpeechBox);
+      });
+    
+      kennelImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event, kennelSpeechBox);
+      });
+    
+      beehiveImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event, beehiveSpeechBox);
+      });
+    
+      holeImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event, holeSpeechBox);
+      });
+      
+      nestImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event, nestSpeechBox);
+      });
+    
+      pigstyImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,   pigstySpeechBox);
+      });
+    
+      caveImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,   caveSpeechBox);
+      });
+    
+      denImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,   denSpeechBox);
+      });
+    
+      spiderwebImg.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,   spiderwebSpeechBox);
+      });
+    
+      quesanimal1Img.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,   quesanimal1SpeechBox);
+      });
+    
+      quesanimal2Img.addEventListener('mouseout', function(event) {
+        hideSpeechBox(event,   quesanimal2SpeechBox);
+      });
+    
+      
+    
+    // ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+    function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+    
+    // สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+    playSoundWhenClick('.container-cage img', '#cage');
+    playSoundWhenClick('.container-aquarium img', '#aquarium');
+    playSoundWhenClick('.container-nest img', '#nest');
+    playSoundWhenClick('.container-kennel img', '#kennel');
+    playSoundWhenClick('.container-stable img', '#stable');
+    playSoundWhenClick('.container-anthill img', '#anthill');
+    playSoundWhenClick('.container-burrow img', '#burrow');
+    playSoundWhenClick('.container-pen img', '#pen');
+    playSoundWhenClick('.container-beehive img', '#beehive');
+    playSoundWhenClick('.container-hole img', '#hole');
+    playSoundWhenClick('.container-pigsty img', '#pigsty')
+    playSoundWhenClick('.container-cave img', '#cave');
+    playSoundWhenClick('.container-den img', '#den');
+    playSoundWhenClick('.container-spiderweb img', '#spiderweb');
+    playSoundWhenClick('.container-quesanimal1 img', '#quesanimal1');
+    playSoundWhenClick('.container-quesanimal2 img', '#quesanimal2');
+  </script>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

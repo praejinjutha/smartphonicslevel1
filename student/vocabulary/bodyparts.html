@@ -1,0 +1,1313 @@
+
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+
+    
+    <style>    
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/christmas/bgbody.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #27D0FF;
+ text-shadow: 0 0 20px #AFABAB;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 1px #ffffff; /* กำหนดขอบตัวอักษร */
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  margin-left: -6%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -4%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -4%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -4%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*ตา*/
+.container-eye {
+  position: absolute;
+  top: 20%;
+  left: 17.8%;
+  transform: translate(-50%, -50%);
+  width: 28%; 
+  z-index: 1; 
+}
+
+/*คอ*/
+.container-neck {
+  position: absolute;
+  top: 43.5%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+  width: 31%; 
+  z-index: 1; 
+}
+
+/*แขน*/
+.container-arm{
+  position: absolute;
+  top: 64%;
+  left: 16%;
+  transform: translate(-50%, -50%);
+  width: 25%; 
+  z-index: 1; 
+}
+
+
+/*จมูก*/
+.container-nose {
+  position: absolute;
+  top: 30.5%;
+  left: 24.5%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 3; 
+}
+
+/*ไหล่*/
+.container-shoulder {
+  position: absolute;
+  top: 48%;
+  left: 22.5%;
+  transform: translate(-50%, -50%);
+  width: 16.5%; 
+  z-index: 4; 
+}
+
+
+/*นิ้วมือ*/
+.container-finger {
+  position: absolute;
+  top: 71.5%;
+  left: 19%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 3; 
+}
+
+/*เข่า*/
+.container-knee{
+  position: absolute;
+  top: 85.4%;
+  left: 18%;
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  z-index: 1; 
+}
+
+
+/*ข้อเท้า*/
+.container-ankle {
+  position: absolute;
+  top:90.8%;
+  left: 24.8%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 4; 
+}
+
+/*นิ้วเท้า*/
+.container-toe {
+  position: absolute;
+  top: 106%;
+  left: 18.8%;
+  transform: translate(-50%, -50%);
+  width: 30%; 
+  z-index: 2; 
+}
+
+/*ลำตัว*/
+.container-body {
+  position: absolute;
+  top: 76%;
+  left: 43%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 5; 
+}
+
+/*หัว, ศีรษะ*/
+.container-head {
+  position: absolute;
+  top: 9%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 3; 
+}
+
+/*ผม*/
+.container-hair {
+  position: absolute;
+  top: 13%;
+  left: 77.5%;
+  transform: translate(-50%, -50%);
+  width: 26%; 
+  z-index: 1; 
+}
+
+/*หู*/
+.container-ear {
+  position: absolute;
+  top: 30%;
+  left: 69.8%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 6; 
+}
+
+/*ปาก*/
+.container-mouth {
+  position: absolute;
+  top: 32.5%;
+  left: 75.5%;
+  transform: translate(-50%, -50%);
+  width: 29%; 
+  z-index: 4; 
+}
+
+/*ลิ้น*/
+.container-tongue {
+  position: absolute;
+  top: 46.5%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 4; 
+}
+
+
+/*ฟัน*/
+.container-teeth {
+  position: absolute;
+  top: 44.5%;
+  left: 74.5%;
+  transform: translate(-50%, -50%);
+  width: 29%; 
+  z-index: 3; 
+}
+
+/*มือ*/
+.container-hand {
+  position: absolute;
+  top: 60%;
+  left: 64%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 3;
+}
+
+/*เอว*/
+.container-waist {
+  position: absolute;
+  top: 67%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  width: 28%; 
+  z-index: 2; 
+}
+
+/*ขา*/
+.container-leg {
+  position: absolute;
+  top: 96%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 3; 
+}
+
+/*ข้อศอก*/
+.container-elbow {
+  position: absolute;
+  top: 74%;
+  left: 71%;
+  transform: translate(-50%, -50%);
+  width: 37%; 
+  z-index: 1; 
+}
+
+.container-bird {
+  position: absolute;
+  top: 95%;
+  left: 97%;
+  transform: translate(-50%, -50%);
+  width: 15%; 
+  z-index: 0; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: 70px;
+  left: -15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+}
+
+.container-elbow .hover-number{
+  top: 250px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 380px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-body .hover-number {
+  top: 210px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 160px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-ear .hover-number,
+.container-head .hover-number{
+top: 70px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+left: 110px; 
+}
+
+.container-hand .hover-number,
+.container-tongue .hover-number{
+  top: 170px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 170px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-waist .hover-number{
+  top: 120px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 280px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-teeth .hover-number{
+  top: 160px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 280px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-leg .hover-number{
+  top: 80px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 150px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-mouth .hover-number,
+.container-hair .hover-number {
+  top: 70px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 260px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-elbow img,.container-leg img,.container-teeth img,.container-hand img,.container-mouth img, .container-ear img, .container-hair img,
+.container-neck img, .container-knee img, .container-arm img,.container-shoulder img, .container-toe img,.container-finger img, .container-tongue img, .container-eye img, .container-head img, .container-ankle img,.container-nose img,.container-waist img, .container-quesbody1 img, .container-body img, .container-quesbody2 img {
+  transition: transform 0.3s ease, filter 0.1s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+.container-elbow img:hover,.container-leg img:hover,.container-hand img:hover,.container-mouth img:hover,.container-ear img:hover,.container-teeth img:hover,
+ .container-neck img:hover,.container-knee img:hover, .container-arm img:hover, .container-hair img:hover,
+.container-shoulder img:hover, .container-head img:hover, .container-ankle img:hover, .container-body img:hover, 
+.container-finger img:hover, .container-tongue img:hover, .container-eye img:hover, .container-nose img:hover,
+.container-waist img:hover,.container-quesbody1 img:hover, .container-quesbody2 img:hover , .container-toe img:hover {
+  transform: translateY(-2px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+/*คำถาม1*/
+.container-quesbody1 {
+  position: absolute;
+  top: 64%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 0; 
+}
+
+/*คำถาม2*/
+.container-quesbody2 {
+  position: absolute;
+  top: 89%;
+  left: 108%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -22.8%;
+  right: -17%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 8; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 1); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+
+.speech-box {
+  width: 110px;
+  height: 160px;
+  bottom: -40%; 
+  left: 87%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 110px;
+  height: 120px;
+  bottom: -1%; 
+  left: 45%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 200px;
+  height: 120px;
+  bottom: -1%; 
+  left: -30%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+  width: 200px;
+  height: 120px;
+  bottom: -1%; 
+  left: -90%; 
+  transform: translateX(-50%);
+  z-index: -1;
+  }
+
+
+ .speech-box4 {
+   width: 160px;
+   height: 120px; 
+   position: absolute;
+   top: 5%; 
+   left: 90%;
+   z-index: -1;
+ }
+
+ .speech-box5 {
+  width: 160px;
+  height: 120px; 
+  position: absolute;
+  top: 45%; 
+  left: 90%;
+  z-index: -1;
+}
+
+  .speech-box6 {
+    width: 200px;
+    height: 120px;
+    bottom: -1%; 
+    left: 5%; 
+    transform: translateX(-50%);
+    z-index: -1;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #FFBDBD; /* กำหนดสีพื้นหลังของ speech box */
+  width: 310px; 
+  height: 140px;
+  text-align: center;
+  line-height: 27px; 
+  top: -205%;
+  left: -140%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #C6EDEF; /* กำหนดสีพื้นหลังของ speech box */
+      width: 290px; 
+      height: 130px;
+      text-align: center;
+      line-height: 27px; 
+      top: 95%;
+      left: -240%;
+      z-index: -1;
+    }
+
+
+/* For screens smaller than 768px (e.g., smartpheyes) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box4,
+  .speech-box5,
+  .speech-box6,
+  .speech-box7,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+     <!-- Navbar Start -->
+     <div class="container-fluid bg-light position-relative shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+              <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+              <span class="text-primary">Smart Phonics</span>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav font-weight-bold mx-auto py-0">
+                  
+              <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+              <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+              <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+              <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+
+    <h1> BODY PARTS </h1>
+
+         <!--ส่วนที่เพิ่มเข้ามา-->
+         <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 20 คำ</h4> 
+
+         
+  <div class="container">
+    <img src="../../Testvocab/img/christmas/bodys.png" alt="bird" class="image">
+
+  
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Vehicles.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next  -->
+              <a href="Animalhomes.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--ตา-->
+    <div class="container-eye">
+      <img src="../../Testvocab/img/christmas/eye.png" alt="eye" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">eye</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(อาย)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ตา</span>
+      </div>
+      <audio id="eye" src="../../Testvocab/voice/eye.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+       <!--จมูก-->
+   <div class="container-nose">
+      <img src="../../Testvocab/img/christmas/nose.png" alt="nose" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">nose</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โน่ส)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">จมูก</span>
+        <audio id="nose" src="../../Testvocab/voice/nose.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>  
+    
+    <!--ไหล่-->
+    <div class="container-shoulder">
+      <img src="../../Testvocab/img/christmas/shoulder.png" alt="shoulder" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">shoulder</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(โช้ล-เด่อะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ไหล่</span>
+      </div>
+      <audio id="shoulder" src="../../Testvocab/voice/shoulder.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+        <!--คอ-->
+        <div class="container-neck">
+      <img src="../../Testvocab/img/christmas/neck.png" alt="neck" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">neck</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เน็ค)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">คอ</span>
+      </div>
+      <audio id="neck" src="../../Testvocab/voice/neck.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--แขน-->
+    <div class="container-arm">
+      <img src="../../Testvocab/img/christmas/arm.png" alt="arm" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">arm </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(อาม)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">แขน</span>
+      </div>
+      <audio id="arm" src="../../Testvocab/voice/arm.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--นิ้วมือ-->
+ <div class="container-finger">
+      <img src="../../Testvocab/img/christmas/finger.png" alt="finger" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">finger</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฟิ้ง-เกอะ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">นิ้วมือ</span>
+        <audio id="finger" src="../../Testvocab/voice/finger.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--เข่า-->
+        <div class="container-knee">
+      <img src="../../Testvocab/img/christmas/knee.png" alt="knee" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">knee</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(นี)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เข่า</span>
+      </div>
+      <audio id="knee" src="../../Testvocab/voice/knee.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+                    <!--ข้อเท้า-->
+                    <div class="container-ankle">
+                    <img src="../../Testvocab/img/christmas/ankle.png" alt="ankle" class="image">
+                    <div class="speech-box2">
+                      <span style="display: flex; justify-content: center;">ankle</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(แอ๊ง-เขิ่ล)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">ข้อเท้า</span>
+                      <audio id="ankle" src="../../Testvocab/voice/ankle.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>   
+
+         <!--นิ้วเท้า-->
+         <div class="container-toe">
+    <img src="../../Testvocab/img/christmas/toe.png" alt="toe" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">toe</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(โทว)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">นิ้วเท้า</span>
+      <audio id="toe" src="../../Testvocab/voice/toe.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--ลำตัว-->
+ <div class="container-body">
+            <img src="../../Testvocab/img/christmas/body.png" alt="body" class="image">
+            <div class="speech-box6">
+              <span style="display: flex; justify-content: center;">body</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(บอ-ดิ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ลำตัว</span>
+              <audio id="body" src="../../Testvocab/voice/body.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-body"></div>
+        </div>
+
+           <!--หัว, ศีรษะ-->
+           <div class="container-head">
+            <img src="../../Testvocab/img/christmas/head.png" alt="head" class="image">
+            <div class="speech-box4">
+              <span style="display: flex; justify-content: center;">head</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(เฮดฺด)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">หัว, ศีรษะ</span>
+              <audio id="head" src="../../Testvocab/voice/head.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-head"></div> 
+        </div>
+
+        <!--ผม-->
+        <div class="container-hair">
+            <img src="../../Testvocab/img/christmas/hair.png" alt="hair" class="image">
+            <div class="speech-box4">
+              <span style="display: flex; justify-content: center;">hair</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(แฮ)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ผม</span>
+              <audio id="hair" src="../../Testvocab/voice/hair.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-hair"></div> 
+        </div>
+
+                <!--หู-->
+                <div class="container-ear">
+    <img src="../../Testvocab/img/christmas/ear.png" alt="ear" class="image">
+    <div class="speech-box4">
+      <span style="display: flex; justify-content: center;">ear</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(อิ-เออะ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">หู</span>
+      <audio id="ear" src="../../Testvocab/voice/ear.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-ear"></div> 
+</div>
+
+
+    <!--ปาก-->
+    <div class="container-mouth">
+        <img src="../../Testvocab/img/christmas/mouth.png" alt="mouth" class="image">
+        <div class="speech-box4">
+          <span style="display: flex; justify-content: center;">mouth</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เม่าธ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ปาก</span>
+          <audio id="mouth" src="../../Testvocab/voice/mouth.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-mouth"></div> 
+    </div>
+
+
+    <!--ลิ้น-->
+    <div class="container-tongue">
+      <img src="../../Testvocab/img/christmas/tongue.png" alt="tongue" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">tongue</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ทัง)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ลิ้น</span>
+      <audio id="tongue" src="../../Testvocab/voice/tongue.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-tongue"></div> 
+    </div>
+
+        <!--ฟัน-->
+        <div class="container-teeth">
+        <img src="../../Testvocab/img/christmas/teeth.png" alt="teeth" class="image">
+        <div class="speech-box5">
+          <span style="display: flex; justify-content: center;">teeth</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ที่ธ)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ฟัน</span>
+          <audio id="teeth" src="../../Testvocab/voice/teeth.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-teeth"></div> 
+    </div>
+
+             <!--มือ-->
+             <div class="container-hand">
+      <img src="../../Testvocab/img/christmas/hand.png" alt="hand" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">hand</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(แฮนฺด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">มือ</span>
+        <audio id="hand" src="../../Testvocab/voice/hand.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-hand"></div> 
+    </div>
+
+
+ <!--เอว -->
+ <div class="container-waist">
+        <img src="../../Testvocab/img/christmas/waist.png" alt="waist" class="image">
+        <div class="speech-box5">
+          <span style="display: flex; justify-content: center;">waist</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(เว่ซฺท)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เอว</span>
+        <audio id="waist" src="../../Testvocab/voice/waist.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-waist"></div> 
+    </div>
+
+
+ <!--ขา -->
+ <div class="container-leg">
+    <img src="../../Testvocab/img/christmas/leg.png" alt="leg" class="image">
+    <div class="speech-box4">
+      <span style="display: flex; justify-content: center;">leg</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เลก)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ขา</span>
+    <audio id="leg" src="../../Testvocab/voice/leg.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-leg"></div> 
+</div>
+
+ <!--ข้อศอก -->
+ <div class="container-elbow">
+    <img src="../../Testvocab/img/christmas/elbow.png" alt="elbow" class="image">
+    <div class="speech-box">
+      <span style="display: flex; justify-content: center;"> <br>elbow</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เอ๊ล-โบ่ว)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ข้อศอก</span>
+    <audio id="elbow" src="../../Testvocab/voice/elbow.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-elbow"></div> 
+</div>
+
+ <div class="container-bird">
+    <img src="../../Testvocab/img/christmas/bird.png" alt="bird" class="image">
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-quesbody1">
+          <img src="../../Testvocab/img/christmas/quesbody1.png" alt="quesbody1" class="image">
+          <div class="speech-box7">
+          Does the girl have <br> black hair or brown hair ? <br>
+          <span class="thai-text">เด็กผู้หญิงคนนั้น <br> มีผมสีดำหรือสีน้ำตาลคะน้อง ๆ ?</span>
+          </div>
+          <audio id="quesbody1" src="../../Testvocab/voice/quesbody1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesbody2">
+          <img src="../../Testvocab/img/christmas/quesbody2.png" alt="quesbody2" class="image">
+          <div class="speech-box8">
+          What is the color  <br> of the boy’s T-shirt ? <br>
+          <span class="thai-text">เสื้อยืดของเด็กผู้ชายคนนั้น <br> สีอะไรคะน้อง ๆ ?</span>
+          </div>
+            <audio id="quesbody2" src="../../Testvocab/voice/quesbody2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              <div class="container-exit">
+                <a href="../vocab2.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var handImg = document.querySelector('.container-hand img');
+var mouthImg = document.querySelector('.container-mouth img');
+var teethImg = document.querySelector('.container-teeth img');
+var neckImg = document.querySelector('.container-neck img');
+var armImg = document.querySelector('.container-arm img');
+var kneeImg = document.querySelector('.container-knee img');
+var shoulderImg = document.querySelector('.container-shoulder img');
+var fingerImg = document.querySelector('.container-finger img');
+var tongueImg = document.querySelector('.container-tongue img');
+var eyeImg = document.querySelector('.container-eye img');
+var noseImg = document.querySelector('.container-nose img');
+var waistImg = document.querySelector('.container-waist img');
+var earImg = document.querySelector('.container-ear img');
+var hairImg = document.querySelector('.container-hair img');
+var headImg = document.querySelector('.container-head img');
+var ankleImg = document.querySelector('.container-ankle img');
+var bodyImg = document.querySelector('.container-body img');
+var toeImg = document.querySelector('.container-toe img');
+var legImg = document.querySelector('.container-leg img');
+var elbowImg = document.querySelector('.container-elbow img');
+var quesbody1Img = document.querySelector('.container-quesbody1 img');
+var quesbody2Img = document.querySelector('.container-quesbody2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var elbowSpeechBox = document.querySelector('.container-elbow .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var handSpeechBox = document.querySelector('.container-hand .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var eyeSpeechBox = document.querySelector('.container-eye .speech-box2');
+var neckSpeechBox = document.querySelector('.container-neck .speech-box2');
+var armSpeechBox = document.querySelector('.container-arm .speech-box2');
+var kneeSpeechBox = document.querySelector('.container-knee .speech-box2');
+var toeSpeechBox = document.querySelector('.container-toe .speech-box2');
+var noseSpeechBox = document.querySelector('.container-nose .speech-box2');
+var shoulderSpeechBox = document.querySelector('.container-shoulder .speech-box2');
+var ankleSpeechBox = document.querySelector('.container-ankle .speech-box2');
+
+
+// เลือกอีเลเมนต์ของ speech box3
+var fingerSpeechBox = document.querySelector('.container-finger .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var earSpeechBox = document.querySelector('.container-ear .speech-box4');
+var headSpeechBox = document.querySelector('.container-head .speech-box4');
+var legSpeechBox = document.querySelector('.container-leg .speech-box4');
+var hairSpeechBox = document.querySelector('.container-hair .speech-box4');
+var mouthSpeechBox = document.querySelector('.container-mouth .speech-box4');
+
+
+// เลือกอีเลเมนต์ของ speech box5
+var tongueSpeechBox = document.querySelector('.container-tongue .speech-box5');
+var teethSpeechBox = document.querySelector('.container-teeth .speech-box5');
+var waistSpeechBox = document.querySelector('.container-waist .speech-box5');
+
+var bodySpeechBox = document.querySelector('.container-body .speech-box6');
+
+// เลือกอีเลเมนต์ของ speech box7
+var quesbody1SpeechBox = document.querySelector('.container-quesbody1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quesbody2SpeechBox = document.querySelector('.container-quesbody2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var eyeNumber = document.querySelector('.container-eye .hover-number');
+var noseNumber = document.querySelector('.container-nose .hover-number');
+var shoulderNumber = document.querySelector('.container-shoulder .hover-number');
+var neckNumber = document.querySelector('.container-neck .hover-number');
+var armNumber = document.querySelector('.container-arm .hover-number');
+
+var fingerNumber = document.querySelector('.container-finger .hover-number');
+var kneeNumber = document.querySelector('.container-knee .hover-number');
+var ankleNumber = document.querySelector('.container-ankle .hover-number');
+var toeNumber = document.querySelector('.container-toe .hover-number');
+var bodyNumber = document.querySelector('.container-body .hover-number');
+
+var headNumber = document.querySelector('.container-head .hover-number');
+var hairNumber = document.querySelector('.container-hair .hover-number');
+var earNumber = document.querySelector('.container-ear .hover-number');
+var mouthNumber = document.querySelector('.container-mouth .hover-number');
+var tongueNumber = document.querySelector('.container-tongue .hover-number');
+
+var teethNumber = document.querySelector('.container-teeth .hover-number');
+var handNumber = document.querySelector('.container-hand .hover-number');
+var waistNumber = document.querySelector('.container-waist .hover-number');
+var legNumber = document.querySelector('.container-leg .hover-number');
+var elbowNumber = document.querySelector('.container-elbow .hover-number');
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(eyeImg, eyeSpeechBox, eyeNumber);
+setupHoverEffect(noseImg, noseSpeechBox, noseNumber);
+setupHoverEffect(shoulderImg, shoulderSpeechBox, shoulderNumber);
+setupHoverEffect(neckImg, neckSpeechBox, neckNumber);
+setupHoverEffect(armImg, armSpeechBox, armNumber);
+
+setupHoverEffect(fingerImg, fingerSpeechBox, fingerNumber);
+setupHoverEffect(kneeImg, kneeSpeechBox, kneeNumber);
+setupHoverEffect(ankleImg, ankleSpeechBox, ankleNumber);
+setupHoverEffect(toeImg, toeSpeechBox, toeNumber);
+setupHoverEffect(bodyImg, bodySpeechBox, bodyNumber);
+
+setupHoverEffect(headImg, headSpeechBox, headNumber);
+setupHoverEffect(hairImg, hairSpeechBox, hairNumber);
+setupHoverEffect(earImg, earSpeechBox, earNumber);
+setupHoverEffect(mouthImg, mouthSpeechBox, mouthNumber);
+setupHoverEffect(tongueImg, tongueSpeechBox, tongueNumber);
+
+setupHoverEffect(teethImg, teethSpeechBox, teethNumber);
+setupHoverEffect(handImg, handSpeechBox, handNumber);
+setupHoverEffect(waistImg, waistSpeechBox, waistNumber);
+setupHoverEffect(legImg, legSpeechBox, legNumber);
+setupHoverEffect(elbowImg, elbowSpeechBox, elbowNumber);
+
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+handImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, handSpeechBox);
+});
+
+mouthImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, mouthSpeechBox);
+});
+
+neckImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, neckSpeechBox);
+}); 
+
+armImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, armSpeechBox);
+});
+
+kneeImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, kneeSpeechBox);
+}); 
+
+shoulderImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, shoulderSpeechBox);
+}); 
+
+fingerImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, fingerSpeechBox);
+}); 
+
+tongueImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, tongueSpeechBox);
+}); 
+
+eyeImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, eyeSpeechBox);
+}); 
+
+noseImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, noseSpeechBox);
+}); 
+
+waistImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, waistSpeechBox);
+}); 
+teethImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, teethSpeechBox);
+}); 
+earImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, earSpeechBox);
+}); 
+
+hairImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, hairSpeechBox);
+}); 
+
+headImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,headSpeechBox);
+}); 
+
+ankleImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,ankleSpeechBox);
+}); 
+
+bodyImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,bodySpeechBox);
+}); 
+toeImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,toeSpeechBox);
+}); 
+
+legImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,legSpeechBox);
+}); 
+
+elbowImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,elbowSpeechBox);
+}); 
+
+quesbody1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesbody1SpeechBox);
+}); 
+
+quesbody2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesbody2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+handImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, handSpeechBox);
+});
+
+mouthImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, mouthSpeechBox);
+});
+
+neckImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  neckSpeechBox);
+  });
+
+armImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, armSpeechBox);
+  });
+
+kneeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  kneeSpeechBox);
+  });
+
+shoulderImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  shoulderSpeechBox);
+  });
+
+  fingerImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, fingerSpeechBox);
+  });
+
+  tongueImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, tongueSpeechBox);
+  });
+
+  eyeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, eyeSpeechBox);
+  });
+  
+  noseImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, noseSpeechBox);
+  });
+
+  waistImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   waistSpeechBox);
+  });
+
+  teethImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   teethSpeechBox);
+  });
+  earImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   earSpeechBox);
+  });
+
+  hairImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   hairSpeechBox);
+  });
+  headImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   headSpeechBox);
+  });
+
+  ankleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   ankleSpeechBox);
+  });
+  
+  bodyImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   bodySpeechBox);
+  });
+  toeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   toeSpeechBox);
+  });
+
+  legImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   legSpeechBox);
+  });
+
+  elbowImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   elbowSpeechBox);
+  });
+
+  quesbody1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesbody1SpeechBox);
+  });
+
+  quesbody2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesbody2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-hand img', '#hand');
+playSoundWhenClick('.container-mouth img', '#mouth');
+playSoundWhenClick('.container-nose img', '#nose');
+playSoundWhenClick('.container-finger img', '#finger');
+playSoundWhenClick('.container-neck img', '#neck');
+playSoundWhenClick('.container-arm img', '#arm');
+playSoundWhenClick('.container-knee img', '#knee');
+playSoundWhenClick('.container-shoulder img', '#shoulder');
+playSoundWhenClick('.container-tongue img', '#tongue');
+playSoundWhenClick('.container-eye img', '#eye');
+playSoundWhenClick('.container-waist img', '#waist')
+
+playSoundWhenClick('.container-teeth img', '#teeth');
+playSoundWhenClick('.container-ear img', '#ear');
+playSoundWhenClick('.container-hair img', '#hair');
+playSoundWhenClick('.container-head img', '#head');
+playSoundWhenClick('.container-ankle img', '#ankle');
+playSoundWhenClick('.container-body img', '#body');
+playSoundWhenClick('.container-toe img', '#toe');
+playSoundWhenClick('.container-leg img', '#leg');
+playSoundWhenClick('.container-elbow img', '#elbow');
+playSoundWhenClick('.container-quesbody1 img', '#quesbody1');
+playSoundWhenClick('.container-quesbody2 img', '#quesbody2');
+  </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

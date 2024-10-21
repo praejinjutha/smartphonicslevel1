@@ -1,0 +1,1229 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    
+    <style>
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/christmas/bgchris.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+.letter-1 { color: #548235; }
+        .letter-2 { color: red; }
+        .letter-3 { color: #548235; }
+        .letter-4 { color: red; }
+        .letter-5 { color: #548235; }
+        .letter-6 { color: red; }
+        .letter-7 { color: #548235; }
+        .letter-8 { color: red; }
+        .letter-9 { color: #548235; }
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  text-shadow: 0 0 20px #C5E0B4;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 2px #C5E0B4; /* กำหนดขอบตัวอักษร */
+  letter-spacing: -1px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+
+.image {
+  width: 90%;
+  height: 100%;
+  margin-left: 5%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -4%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -4%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -4%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+
+/*ต้นฮอลลี่*/
+.container-holly {
+  position: absolute;
+  top: 17%;
+  left: -5%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 1; 
+}
+
+
+/*เครื่องประดับตกแต่ง*/
+.container-ornaments {
+  position: absolute;
+  top: 40%;
+  left: -5%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 1; 
+}
+
+/*ถุงเท้ายาว*/
+.container-stocking {
+  position: absolute;
+  top: 65%;
+  left: -5%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 1; 
+}
+
+.container-christ{
+  position: absolute;
+  top: 100%;
+  left: -5%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 1; 
+}
+
+/*พวงมาลัย, พวงดอกไม้*/
+.container-wreath{
+  position: absolute;
+  top: 27%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 6; 
+}
+
+/*ต้นคริสมาสต์*/
+.container-christmastree {
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 33%; 
+  z-index: 1; 
+}
+
+/*ของขวัญ*/
+.container-present{
+  position: absolute;
+  top: 91%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 5; 
+}
+
+
+/*ซานตาคลอส*/
+.container-santaclaus {
+  position: absolute;
+  top: 73%;
+  left: 76%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 3; 
+}
+
+
+/*หยาดน้ำแข็ง*/
+.container-icicle {
+  position: absolute;
+  top: 58%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 6; 
+}
+
+/*หิมะ*/
+.container-snow {
+  position: absolute;
+  top: 47%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 2; 
+}
+
+/*เกล็ดหิมะ*/
+.container-snowflakes {
+  position: absolute;
+  top: 17%;
+  left: 105%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 3; 
+}
+
+/*โบว์*/
+.container-bow {
+  position: absolute;
+  top: 39%;
+  left: 108%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 2; 
+}
+
+/*ระฆัง*/
+.container-bell {
+  position: absolute;
+  top: 61%;
+  left: 102%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 1; 
+}
+
+/*สายรุ้ง*/
+.container-tinsel {
+  position: absolute;
+  top: 17%;
+  left: 68%;
+  transform: translate(-50%, -50%);
+  width: 45%; 
+  z-index: 0; 
+}
+
+/*ตุ๊กตาหิมะ*/
+.container-snowman {
+  position: absolute;
+  top: 88%;
+  left: 110%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 6;
+}
+
+/*ทอฟฟี่เป็นแท่งลายขาวแดง*/
+.container-candycane {
+  position: absolute;
+  top: 97%;
+  left: 99%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 5; 
+}
+
+/*นางฟ้า*/
+.container-angel {
+  position: absolute;
+  top: 70%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 4; 
+}
+
+/*ก้อนหิมะ*/
+.container-snowball {
+  position: absolute;
+  top: 99%;
+  left: 86%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 4; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -25px;
+  left: 85px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+  z-index: -4; 
+}
+
+.container-christmastree .hover-number{
+  top: -45px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 170px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-santaclaus .hover-number {
+  top: -15px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 120px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-ornaments .hover-number {
+  top: -15px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 180px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: 4; 
+}
+.container-snowflakes .hover-number ,
+.container-bow .hover-number{
+  top: -15px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 100px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: 4; 
+}
+
+.container-present .hover-number {
+  top: 65px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: -25px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: 4; 
+}
+
+.container-snowball .hover-number{
+  top: 105px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: -20px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: 4; 
+}
+
+
+
+.container-snowball img,.container-angel img,.container-tinsel img,.container-snowman img,.container-bow img, .container-snowflakes img, .container-snow img,
+.container-stocking img, .container-present img, .container-wreath img,.container-ornaments img, .container-christmastree img, .container-bell img, .container-holly img, .container-icicle img, .container-santaclaus img,.container-candycane img, .container-queschrist1 img,  .container-queschrist2 img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+.container-snowball img:hover,.container-angel img:hover,.container-snowman img:hover,.container-bow img:hover,.container-snowflakes img:hover,.container-tinsel img:hover,
+ .container-stocking img:hover,.container-present img:hover, .container-wreath img:hover, .container-snow img:hover,
+.container-ornaments img:hover, .container-icicle img:hover, .container-santaclaus img:hover,
+.container-christmastree img:hover, .container-bell img:hover, .container-holly img:hover,
+.container-candycane img:hover,.container-queschrist1 img:hover, .container-queschrist2 img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+/*คำถาม1*/
+.container-queschrist1 {
+  position: absolute;
+  top: 87%;
+  left: -1%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 4; 
+}
+
+/*คำถาม2*/
+.container-queschrist2 {
+  position: absolute;
+  top: 98%;
+  left: 6%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -17%;
+  right: -18%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 0.8); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+
+.speech-box {
+  width: 165px;
+  height: 120px; 
+  position: absolute;
+  top: 15%; 
+  left: -70%;
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 190px;
+  height: 120px;
+  bottom: 99%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 180px;
+  height: 120px;
+  bottom: 1%; 
+  left: 125%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+  width: 210px;
+  height: 120px;
+  bottom: -10%; 
+  left: -40%; 
+  transform: translateX(-50%);
+  z-index: -1;
+  }
+
+
+ .speech-box4 {
+   width: 165px;
+   height: 120px; 
+   position: absolute;
+   top: 5%; 
+   left: 80%;
+   z-index: -1;
+ }
+
+ .speech-box5 {
+  width: 180px;
+  height: 120px; 
+  position: absolute;
+  top: -15%; 
+  left: -120%;
+  z-index: -1;
+}
+
+  .speech-box6 {
+    width: 190px;
+    height: 120px;
+    bottom: 99%; 
+    left: 70%; 
+    transform: translateX(-50%);
+    z-index: -1;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #D7FFC5; /* กำหนดสีพื้นหลังของ speech box */
+  width: 380px; 
+  height: 120px;
+  text-align: center;
+  line-height: 27px; 
+  top: -115%;
+  left: 20%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #FFF7AB; /* กำหนดสีพื้นหลังของ speech box */
+      width: 380px; 
+      height: 120px;
+      text-align: center;
+      line-height: 27px; 
+      top: -105%;
+      left: 30%;
+      z-index: -1;
+    }
+
+
+/* For screens smaller than 768px (e.g., smartphhollys) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box4,
+  .speech-box5,
+  .speech-box6,
+  .speech-box7,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+      <!-- Navbar Start -->
+      <div class="container-fluid bg-light position-relative shadow">
+        <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+        <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+                <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+                <span class="text-primary">Smart Phonics</span>
+            </a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav font-weight-bold mx-auto py-0">
+                    
+                <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+                <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+                <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+                <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <h1>
+        <span class="letter-1">C</span>
+        <span class="letter-2">H</span>
+        <span class="letter-3">R</span>
+        <span class="letter-4">I</span>
+        <span class="letter-5">S</span>
+        <span class="letter-6">T</span>
+        <span class="letter-7">M</span>
+        <span class="letter-8">A</span>
+        <span class="letter-9">S</span>
+    </h1>
+
+         <!--ส่วนที่เพิ่มเข้ามา-->
+         <h4 class="card-title" style="color: green; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 17 คำ</h4> 
+
+         
+  <div class="container">
+    <img src="../../Testvocab/img/christmas/christmas.png" alt="bird" class="image">
+
+   
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Intheclassroom.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="ahouse.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--ต้นฮอลลี่-->
+    <div class="container-holly">
+      <img src="../../Testvocab/img/christmas/holly.png" alt="holly" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">holly</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฮ้อล-ลี่)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ต้นฮอลลี่</span>
+      </div>
+      <audio id="holly" src="../../Testvocab/voice/holly.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+    
+    <!--เครื่องประดับตกแต่ง-->
+    <div class="container-ornaments">
+      <img src="../../Testvocab/img/christmas/ornaments.png" alt="ornaments" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">ornaments</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(อ๊อ-น่ะ-เม่นฺท-ซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">เครื่องประดับตกแต่ง</span>
+      </div>
+      <audio id="ornaments" src="../../Testvocab/voice/ornaments.mp3"></audio>
+      <div class="hover-number hover-number-ornaments"></div> 
+    </div>  
+
+        <!--ถุงเท้ายาว-->
+        <div class="container-stocking">
+      <img src="../../Testvocab/img/christmas/stocking.png" alt="stocking" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">stocking</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซต็อค-กิ่ง)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ถุงเท้ายาว</span>
+      </div>
+      <audio id="stocking" src="../../Testvocab/voice/stocking2.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--พวงมาลัย, พวงดอกไม้-->
+    <div class="container-wreath">
+      <img src="../../Testvocab/img/christmas/wreath.png" alt="wreath" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">wreath </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(รี่ธ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">พวงมาลัย, พวงดอกไม้</span>
+      </div>
+      <audio id="wreath" src="../../Testvocab/voice/wreath.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--ต้นคริสมาสต์-->
+ <div class="container-christmastree">
+      <img src="../../Testvocab/img/christmas/christmastree.png" alt="christmastree" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">Christmas tree</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(คริซ-เมิ่ซ ทรี่)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ต้นคริสมาสต์</span>
+        <audio id="christmastree" src="../../Testvocab/voice/christmastree.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-christmastree"></div> 
+    </div>
+
+        <!--ของขวัญ-->
+        <div class="container-present">
+      <img src="../../Testvocab/img/christmas/present.png" alt="present" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">present</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เพระ-สึ่นฺท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ของขวัญ</span>
+      </div>
+      <audio id="present" src="../../Testvocab/voice/present.mp3"></audio>
+      <div class="hover-number hover-number-present"></div> 
+    </div>
+
+                    <!--ซานตาคลอส-->
+                    <div class="container-santaclaus">
+                    <img src="../../Testvocab/img/christmas/santaclaus.png" alt="santaclaus" class="image">
+                    <div class="speech-box11">
+                      <span style="display: flex; justify-content: center;">Santa Claus</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">(ซ้าน-ต่ะ คล่อส)</span>
+                      <span class="thai-text" style="display: flex; justify-content: center;">ซานตาคลอส</span>
+                      <audio id="santaclaus" src="../../Testvocab/voice/santaclaus.mp3"></audio>
+                    </div>
+                    <div class="hover-number hover-number-santaclaus"></div> 
+                </div>   
+
+
+           <!--หยาดน้ำแข็ง-->
+           <div class="container-icicle">
+            <img src="../../Testvocab/img/christmas/icicle.png" alt="icicle" class="image">
+            <div class="speech-box">
+              <span style="display: flex; justify-content: center;">icicle</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ไอ๊-สิ-เคิ่ล)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">หยาดน้ำแข็ง</span>
+              <audio id="icicle" src="../../Testvocab/voice/icicle.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+        <!--หิมะ-->
+        <div class="container-snow">
+            <img src="../../Testvocab/img/christmas/snow.png" alt="snow" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">snow</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ซโน่ว)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">หิมะ</span>
+              <audio id="snow" src="../../Testvocab/voice/snow.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+                <!--เกล็ดหิมะ-->
+                <div class="container-snowflakes">
+    <img src="../../Testvocab/img/christmas/snowflakes.png" alt="snowflakes" class="image">
+    <div class="speech-box">
+      <span style="display: flex; justify-content: center;">snowflakes</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ซโนว-เฟล่คฺซ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">เกล็ดหิมะ</span>
+      <audio id="snowflakes" src="../../Testvocab/voice/snowflakes.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-snowflakes"></div> 
+</div>
+
+
+    <!--โบว์-->
+    <div class="container-bow">
+        <img src="../../Testvocab/img/christmas/bow.png" alt="bow" class="image">
+        <div class="speech-box5">
+          <span style="display: flex; justify-content: center;">bow</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(โบ้ว)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">โบว์</span>
+          <audio id="bow" src="../../Testvocab/voice/bow.mp3"></audio>
+        </div>
+        <div class="hover-number hover-number-bow"></div> 
+    </div>
+
+
+    <!--ระฆัง-->
+    <div class="container-bell">
+      <img src="../../Testvocab/img/christmas/bell.png" alt="bell" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">bell</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เบ้ล)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ระฆัง</span>
+      <audio id="bell" src="../../Testvocab/voice/bell.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--สายรุ้ง-->
+        <div class="container-tinsel">
+        <img src="../../Testvocab/img/christmas/tinsel.png" alt="tinsel" class="image">
+        <div class="speech-box6">
+          <span style="display: flex; justify-content: center;">tinsel</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ทิ้น-เซิ่ล)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สายรุ้ง</span>
+          <audio id="tinsel" src="../../Testvocab/voice/tinsel.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+             <!--ตุ๊กตาหิมะ-->
+             <div class="container-snowman">
+      <img src="../../Testvocab/img/christmas/snowman.png" alt="snowman" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">snowman</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซโน้ว-แหม่น)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ตุ๊กตาหิมะ</span>
+        <audio id="snowman" src="../../Testvocab/voice/snowman.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+ <!--ทอฟฟี่เป็นแท่งลายขาวแดง -->
+ <div class="container-candycane">
+        <img src="../../Testvocab/img/christmas/candycane.png" alt="candycane" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">candy cane</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(แค้น-ดิ เค่น)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ทอฟฟี่เป็นแท่งลายขาวแดง</span>
+        <audio id="candycane" src="../../Testvocab/voice/candycane.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+ <!--นางฟ้า -->
+ <div class="container-angel">
+    <img src="../../Testvocab/img/christmas/angel.png" alt="angel" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">angel</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เอ๊น-เจิ่ล)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">นางฟ้า</span>
+    <audio id="angel" src="../../Testvocab/voice/angel.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--ก้อนหิมะ -->
+ <div class="container-snowball">
+    <img src="../../Testvocab/img/christmas/snowball.png" alt="snowball" class="image">
+    <div class="speech-box">
+      <span style="display: flex; justify-content: center;">snowball</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ซโน้ว-บ่อล)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ก้อนหิมะ</span>
+    <audio id="snowball" src="../../Testvocab/voice/snowball.mp3"></audio>
+    </div>
+    <div class="hover-number hover-number-snowball"></div> 
+</div>
+
+<div class="container-christ">
+    <img src="../../Testvocab/img/christmas/christ.png" alt="christ" class="image">
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-queschrist1">
+          <img src="../../Testvocab/img/christmas/queschrist1.png" alt="queschrist1" class="image">
+          <div class="speech-box7">
+          Wow ! It looks so cold outside. <br>
+Can you see the snow ? <br>
+          <span class="thai-text">โอ้โฮ ข้างนอกท่าทางอากาศหนาวมาก <br>
+          เพื่อน ๆ เห็นหิมะกันไหม ?</span>
+          </div>
+          <audio id="queschrist1" src="../../Testvocab/voice/queschrist1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-queschrist2">
+          <img src="../../Testvocab/img/christmas/queschrist2.png" alt="queschrist2" class="image">
+          <div class="speech-box8">
+          Guess ! How many candy canes <br>
+are there on the Christmas tree ? <br>
+          <span class="thai-text">เพื่อน ๆ ทายสิว่ามีทอฟฟี่ที่เป็นแท่งลาย <br>
+          ขาวแดงบนต้นคริสต์มาสกี่อัน ?</span>
+          </div>
+            <audio id="queschrist2" src="../../Testvocab/voice/queschrist2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              
+              <div class="container-exit">
+                <a href="../vocab3.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var snowmanImg = document.querySelector('.container-snowman img');
+var bowImg = document.querySelector('.container-bow img');
+var tinselImg = document.querySelector('.container-tinsel img');
+var stockingImg = document.querySelector('.container-stocking img');
+var wreathImg = document.querySelector('.container-wreath img');
+var presentImg = document.querySelector('.container-present img');
+var ornamentsImg = document.querySelector('.container-ornaments img');
+var christmastreeImg = document.querySelector('.container-christmastree img');
+var bellImg = document.querySelector('.container-bell img');
+var hollyImg = document.querySelector('.container-holly img');
+var candycaneImg = document.querySelector('.container-candycane img');
+var snowflakesImg = document.querySelector('.container-snowflakes img');
+var snowImg = document.querySelector('.container-snow img');
+var icicleImg = document.querySelector('.container-icicle img');
+var santaclausImg = document.querySelector('.container-santaclaus img');
+var angelImg = document.querySelector('.container-angel img');
+var snowballImg = document.querySelector('.container-snowball img');
+var queschrist1Img = document.querySelector('.container-queschrist1 img');
+var queschrist2Img = document.querySelector('.container-queschrist2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var snowballSpeechBox = document.querySelector('.container-snowball .speech-box');
+var bellSpeechBox = document.querySelector('.container-bell .speech-box');
+var snowflakesSpeechBox = document.querySelector('.container-snowflakes .speech-box');
+var icicleSpeechBox = document.querySelector('.container-icicle .speech-box');
+
+
+// เลือกอีเลเมนต์ของ speech box11
+var angelSpeechBox = document.querySelector('.container-angel .speech-box11');
+
+var presentSpeechBox = document.querySelector('.container-present .speech-box11');
+var christmastreeSpeechBox = document.querySelector('.container-christmastree .speech-box11');
+var santaclausSpeechBox = document.querySelector('.container-santaclaus .speech-box11');
+var snowSpeechBox = document.querySelector('.container-snow .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var ornamentsSpeechBox = document.querySelector('.container-ornaments .speech-box2');
+
+// เลือกอีเลเมนต์ของ speech box3
+var candycaneSpeechBox = document.querySelector('.container-candycane .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var hollySpeechBox = document.querySelector('.container-holly .speech-box4');
+var stockingSpeechBox = document.querySelector('.container-stocking .speech-box4');
+var wreathSpeechBox = document.querySelector('.container-wreath .speech-box4');
+
+
+// เลือกอีเลเมนต์ของ speech box5
+var snowmanSpeechBox = document.querySelector('.container-snowman .speech-box5');
+var bowSpeechBox = document.querySelector('.container-bow .speech-box5');
+
+var tinselSpeechBox = document.querySelector('.container-tinsel .speech-box6');
+
+// เลือกอีเลเมนต์ของ speech box7
+var queschrist1SpeechBox = document.querySelector('.container-queschrist1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var queschrist2SpeechBox = document.querySelector('.container-queschrist2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var hollyNumber = document.querySelector('.container-holly .hover-number');
+var ornamentsNumber = document.querySelector('.container-ornaments .hover-number');
+var stockingNumber = document.querySelector('.container-stocking .hover-number');
+var wreathNumber = document.querySelector('.container-wreath .hover-number');
+
+var christmastreeNumber = document.querySelector('.container-christmastree .hover-number');
+var presentNumber = document.querySelector('.container-present .hover-number');
+var santaclausNumber = document.querySelector('.container-santaclaus .hover-number');
+
+var icicleNumber = document.querySelector('.container-icicle .hover-number');
+var snowNumber = document.querySelector('.container-snow .hover-number');
+var snowflakesNumber = document.querySelector('.container-snowflakes .hover-number');
+var bowNumber = document.querySelector('.container-bow .hover-number');
+var bellNumber = document.querySelector('.container-bell .hover-number');
+
+var tinselNumber = document.querySelector('.container-tinsel .hover-number');
+var snowmanNumber = document.querySelector('.container-snowman .hover-number');
+var candycaneNumber = document.querySelector('.container-candycane .hover-number');
+var angelNumber = document.querySelector('.container-angel .hover-number');
+var snowballNumber = document.querySelector('.container-snowball .hover-number');
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(hollyImg, hollySpeechBox, hollyNumber);
+setupHoverEffect(ornamentsImg, ornamentsSpeechBox, ornamentsNumber);
+setupHoverEffect(stockingImg, stockingSpeechBox, stockingNumber);
+setupHoverEffect(wreathImg, wreathSpeechBox, wreathNumber);
+
+setupHoverEffect(christmastreeImg, christmastreeSpeechBox, christmastreeNumber);
+setupHoverEffect(presentImg, presentSpeechBox, presentNumber);
+setupHoverEffect(santaclausImg, santaclausSpeechBox, santaclausNumber);
+
+setupHoverEffect(icicleImg, icicleSpeechBox, icicleNumber);
+setupHoverEffect(snowImg, snowSpeechBox, snowNumber);
+setupHoverEffect(snowflakesImg, snowflakesSpeechBox, snowflakesNumber);
+setupHoverEffect(bowImg, bowSpeechBox, bowNumber);
+setupHoverEffect(bellImg, bellSpeechBox, bellNumber);
+
+setupHoverEffect(tinselImg, tinselSpeechBox, tinselNumber);
+setupHoverEffect(snowmanImg, snowmanSpeechBox, snowmanNumber);
+setupHoverEffect(candycaneImg, candycaneSpeechBox, candycaneNumber);
+setupHoverEffect(angelImg, angelSpeechBox, angelNumber);
+setupHoverEffect(snowballImg, snowballSpeechBox, snowballNumber);
+
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+snowmanImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, snowmanSpeechBox);
+});
+
+bowImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, bowSpeechBox);
+});
+
+stockingImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, stockingSpeechBox);
+}); 
+
+wreathImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, wreathSpeechBox);
+});
+
+presentImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, presentSpeechBox);
+}); 
+
+ornamentsImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, ornamentsSpeechBox);
+}); 
+
+christmastreeImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, christmastreeSpeechBox);
+}); 
+
+bellImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, bellSpeechBox);
+}); 
+
+hollyImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, hollySpeechBox);
+}); 
+
+
+candycaneImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, candycaneSpeechBox);
+}); 
+tinselImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, tinselSpeechBox);
+}); 
+snowflakesImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, snowflakesSpeechBox);
+}); 
+
+snowImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, snowSpeechBox);
+}); 
+
+icicleImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,icicleSpeechBox);
+}); 
+
+santaclausImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,santaclausSpeechBox);
+}); 
+
+angelImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,angelSpeechBox);
+}); 
+
+snowballImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,snowballSpeechBox);
+}); 
+
+queschrist1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, queschrist1SpeechBox);
+}); 
+
+queschrist2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, queschrist2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+snowmanImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, snowmanSpeechBox);
+});
+
+bowImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, bowSpeechBox);
+});
+
+stockingImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  stockingSpeechBox);
+  });
+
+wreathImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, wreathSpeechBox);
+  });
+
+presentImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  presentSpeechBox);
+  });
+
+ornamentsImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  ornamentsSpeechBox);
+  });
+
+  christmastreeImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, christmastreeSpeechBox);
+  });
+
+  bellImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, bellSpeechBox);
+  });
+
+  hollyImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, hollySpeechBox);
+  });
+
+
+  candycaneImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   candycaneSpeechBox);
+  });
+
+  tinselImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   tinselSpeechBox);
+  });
+  snowflakesImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   snowflakesSpeechBox);
+  });
+
+  snowImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   snowSpeechBox);
+  });
+  icicleImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   icicleSpeechBox);
+  });
+
+  santaclausImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   santaclausSpeechBox);
+  });
+
+  angelImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   angelSpeechBox);
+  });
+
+  snowballImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   snowballSpeechBox);
+  });
+
+  queschrist1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   queschrist1SpeechBox);
+  });
+
+  queschrist2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   queschrist2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-snowman img', '#snowman');
+playSoundWhenClick('.container-bow img', '#bow');
+playSoundWhenClick('.container-christmastree img', '#christmastree');
+playSoundWhenClick('.container-stocking img', '#stocking');
+playSoundWhenClick('.container-wreath img', '#wreath');
+playSoundWhenClick('.container-present img', '#present');
+playSoundWhenClick('.container-ornaments img', '#ornaments');
+playSoundWhenClick('.container-bell img', '#bell');
+playSoundWhenClick('.container-holly img', '#holly');
+playSoundWhenClick('.container-candycane img', '#candycane')
+playSoundWhenClick('.container-tinsel img', '#tinsel');
+playSoundWhenClick('.container-snowflakes img', '#snowflakes');
+playSoundWhenClick('.container-snow img', '#snow');
+playSoundWhenClick('.container-icicle img', '#icicle');
+playSoundWhenClick('.container-santaclaus img', '#santaclaus');
+playSoundWhenClick('.container-angel img', '#angel');
+playSoundWhenClick('.container-snowball img', '#snowball');
+playSoundWhenClick('.container-queschrist1 img', '#queschrist1');
+playSoundWhenClick('.container-queschrist2 img', '#queschrist2');
+  </script>
+  
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1293 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+
+    
+    <style>
+.navbar {
+  top: 0; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/clothes2/Bg1.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start; 
+}
+
+.container {
+  width: 65%; 
+  height: auto; 
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; 
+  
+}
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-weight: 600;
+  font-size: 60px;
+  color: #C00000;
+ text-shadow: 0 0 20px rgb(	255, 255, 255);
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 1px #FFDE6F;
+  letter-spacing: 4px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -6%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -6%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -6%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*สนามฟุตบอล*/
+.container-footballfield {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 93%; 
+  z-index: 1; 
+}
+
+/*สนามเด็กเล่น*/
+.container-playground {
+  position: absolute;
+  top: 64%;
+  right: 43%;
+  transform: translate(-50%, -50%);
+  width: 33%; 
+  z-index: 1; 
+}
+
+
+/*ผู้ชาย*/
+.container-boy {
+  position: absolute;
+  top: 66.3%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 31%; 
+  z-index: 1; 
+}
+
+/*ต้นไม้ด้านซ้าย*/
+.container-treeleft {
+  position: absolute;
+  top: 37%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 0; 
+}
+
+
+
+
+/*ห้องเรียน*/
+.container-classroom {
+  position: absolute;
+  top: 13%;
+  left: -13%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 2; 
+}
+
+/*หอประชุม*/
+.container-auditorium {
+  position: absolute;
+  top: 13%;
+  left: 113%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 1; 
+}
+
+/*ห้องครูใหญ่*/
+.container-headmaster {
+  position: absolute;
+  top: 38%;
+  left: 113%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 1; 
+}
+
+/*ห้องดนตรี*/
+.container-musicroom {
+  position: absolute;
+  top: 39%;
+  left: -13%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 1; 
+}
+/*ห้องครู*/
+.container-staffroom {
+  position: absolute;
+  top: 63.3%;
+  left: 113%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 3; 
+}
+
+/*ห้องปฏิบัติการทางวิทยาศาสตร์*/
+.container-sciencelab {
+  position: absolute;
+  top: 65%;
+  left: -13%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 3; 
+}
+
+/*ห้องศิลปะ*/
+.container-artroom {
+  position: absolute;
+  top: 91%;
+  left: -13%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 2; 
+}
+
+
+/*ห้องคอมพิวเตอร์*/
+.container-computerroom {
+  position: absolute;
+  top: 117%;
+  left: -13%;
+  transform: translate(-50%, -50%);
+  width: 27%; 
+  z-index: 3; 
+}
+
+/*โรงยิมเนเซียม*/
+.container-gymnasium {
+  position: absolute;
+  top: 115%;
+  left: 17.5%;
+  transform: translate(-50%, -50%);
+  width: 32.3%; 
+  z-index: 1; 
+}
+
+/*ห้องสมุด*/
+.container-library {
+  position: absolute;
+  top: 115%;
+  left: 56.6%;
+  transform: translate(-50%, -50%);
+  width: 45%; 
+  z-index: 3;
+}
+
+/*ห้องน้ำ*/
+.container-toilet {
+  position: absolute;
+  top: 115%;
+  left: 103%;
+  transform: translate(-50%, -50%);
+  width:46.7%; 
+  z-index: 2; 
+}
+
+/*โรงอาหาร*/
+.container-canteen {
+  position: absolute;
+  top: 88.5%;
+  left: 113%;
+  transform: translate(-50%, -50%);
+  width: 27.3%; 
+  z-index: 2; 
+}
+
+/*รถโรงเรียน*/
+.container-schoolbus {
+  position: absolute;
+  top: 85%;
+  left: 76%;
+  transform: translate(-50%, -50%);
+  width: 36%; 
+  z-index: 1; 
+}
+
+/*ตึก, อาคาร*/
+.container-building {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 73%; 
+  z-index: 0; 
+}
+
+
+
+
+
+
+
+.container-building img,.container-auditorium img,.container-library img,.container-canteen img, .container-staffroom img, .container-artroom img,
+.container-computerroom img,.container-headmaster img, .container-schoolbus img,.container-classroom img, .container-sciencelab img, .container-footballfield img, .container-gymnasium img,.container-playground img,.container-musicroom img, .container-quesschoolp1 img, .container-toilet img, .container-quesschoolp2 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+.container-building img:hover,.container-auditorium img:hover,.container-library img:hover,.container-canteen img:hover,.container-staffroom img:hover,
+ .container-computerroom img:hover,  .container-artroom img:hover,
+.container-headmaster img:hover, .container-footballfield img:hover, .container-gymnasium img:hover, .container-toilet img:hover, 
+.container-classroom img:hover, .container-sciencelab img:hover,  .container-playground img:hover,
+.container-musicroom img:hover,.container-quesschoolp1 img:hover, .container-quesschoolp2 img:hover , .container-schoolbus img:hover {
+  transform: translateY(-10px);
+  filter: brightness(80%);
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: 40px;
+  left: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; 
+  padding-top: 5px;
+  z-index: 10; 
+}
+
+.container-footballfield .hover-number{
+  top: 90px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 780px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+/*คำถาม1*/
+.container-quesschoolp1 {
+  position: absolute;
+  top: 51%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 2; 
+}
+
+/*คำถาม2*/
+.container-quesschoolp2 {
+  position: absolute;
+  top: 20%;
+  left: 290%;
+  transform: translate(-50%, -50%);
+  width: 100%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  top: 750%;
+  right: -920%;
+  transform: translate(-50%, -50%);
+  width: 80%; 
+  z-index: 3; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+
+.speech-box {
+  width: 170px;
+  height: 90px;
+  text-align: center;
+  line-height: 28px;
+  top: -10%; 
+  left: 10%;
+  z-index: 1;
+}
+
+
+.speech-box11 {
+  width: 140px;
+  height: 120px;
+  top: -55%;
+  left: 35%;
+  z-index: 2; 
+}
+
+
+
+.speech-box2 {
+  width: 180px;
+  height: 120px;
+  text-align: center;
+  line-height: 35px;
+  top: -60%; 
+  left: 25%;
+  z-index: 1;
+}
+
+.speech-box3 {
+    width: 210px;
+    height: 120px;
+    bottom: 15%; 
+    left: -25%; 
+    transform: translateX(-50%);
+    z-index: 3;
+  }
+
+ /* ห้องคอมพิวเตอร์เทศ,สิงโตทะเล,สนามเด็กเล่น,โรงอาหาร */
+ .speech-box4 {
+   width: 160px;
+   height: 120px; 
+   position: absolute;
+   top: 7%; 
+   left: 90%;
+   z-index: 3;
+   text-align: center;
+   line-height: 27px; 
+ }
+
+ .speech-box5 {
+  width: 170px;
+  height: 120px; 
+  position: absolute;
+  top: 75.6%; 
+  left: 32%;
+  z-index: 2;
+}
+
+   
+  /* ห้องดนตรี */
+  .speech-box6 {
+    width: 140px;
+    height: 120px;
+    bottom: 20%; 
+    left: 120%; 
+    transform: translateX(-50%);
+    z-index: 3;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #e9e8c6;
+  width: 440px; 
+  height: 100px;
+  text-align: center;
+  line-height: 47px; 
+  top: -95%;
+  right: 20%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #e9e8c6;
+      width: 270px; 
+      height: 160px;
+      text-align: center;
+      line-height: 37px; 
+      top: -240%;
+  right: -40%;
+      z-index: -1;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      /* Adjust container sizes and positions */
+      .image {
+        width: 100%;
+        height: 100%;
+        /*margin-left: -5%;*/
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+      
+      h4 {
+        font-size: 12px;
+      }
+      
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: 25px;
+      left: 10px;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../../Testvocab/img/clothes2/speaker.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+      padding-top: 1%;
+      z-index: 4;
+      }
+
+ .container-footballfield .hover-number{
+  top: 40px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 380px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  padding-top: 0.5%;
+  z-index: 4;
+}
+.container-exit {
+  position: absolute;
+  top: 630%;
+  right: -920%;
+  transform: translate(-50%, -50%);
+  width: 80%; 
+  z-index: 3; 
+}
+
+        .speech-box,.speech-box11,.speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+        transform: translateX(-50%);
+      }
+
+      .speech-box{
+        width: 80px;
+        height: 60px;
+        top: -45%; 
+        left: 50%; 
+        line-height: 17px; 
+        z-index: 1;
+              }
+
+      .speech-box11{
+  width: 80px;
+  height: 70px;
+  bottom: 115%; 
+  left: 40%; 
+  z-index: 1;
+        }
+
+      .speech-box2 {
+    width: 100px;
+    height: 70px;
+    top: -80%; 
+    left: 50%;
+    line-height: 17px; 
+    z-index: 1;
+        }
+    
+      .speech-box3{
+    width: 110px;
+    height: 70px;
+    bottom: 7%; 
+    left: -40%; 
+    z-index: 2;
+        }
+
+        .speech-box4 {
+          width: 110px;
+          height: 80px;
+         top: -20%; 
+          left: 140%; 
+          line-height: 17px; 
+          z-index: -1;
+              }
+          
+          .speech-box5{
+          width: 80px;
+          height: 80px;
+          bottom: 97%; 
+          left: 50%; 
+          z-index: -1;
+              }
+
+          .speech-box6{
+            width: 110px;
+          height: 70px;
+         top: -10%; 
+          left: 140%; 
+          line-height: 20px; 
+          z-index: -1;
+              }
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: #e9e8c6;
+        width: 260px; 
+        height: 45px;
+        text-align: center;
+        line-height: 17px; 
+        top: -75%;
+        left: -250%;
+        z-index: -1;
+      }
+
+      .speech-box8{
+        color: #0A2963; 
+        background-color: #e9e8c6;
+        width: 180px; 
+        height: 80px;
+        text-align: center;
+        line-height: 17px; 
+        top: -255%;
+        left: 40%;
+        z-index: -1;
+      }
+    }
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-light position-relative shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+              <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+              <span class="text-primary">Smart Phonics</span>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav font-weight-bold mx-auto py-0">
+                  
+              <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+              <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+              <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+              <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+
+    <h1> SCHOOL PLACES  </h1>
+
+    <!--ส่วนที่เพิ่มเข้ามา-->
+    <h4>ประกอบด้วยคำศัพท์จำนวน 16 คำ</h4>
+
+  <div class="container">
+    <img src="../../Testvocab/img/clothes2/school.png" alt="bird" class="image">
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Ahouse.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="Onthebeach.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+             <!--ห้องสมุด-->
+    <div class="container-library">
+      <img src="../../Testvocab/img/clothes2/library.png" alt="library" class="image">
+      <div class="speech-box2">
+<span style="display: flex; justify-content: center;"> library</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ล้าย-บ่ะ-รี่)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ห้องสมุด</span>
+        <audio id="library" src="../../Testvocab/voice/library.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+    <!--โรงอาหาร-->
+    <div class="container-canteen">
+        <img src="../../Testvocab/img/clothes2/canteen.png" alt="canteen" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">canteen</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(แคน-ที่น)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">โรงอาหาร</span>
+          <audio id="canteen" src="../../Testvocab/voice/canteen.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+        <!--ห้องครู-->
+        <div class="container-staffroom">
+    <img src="../../Testvocab/img/clothes2/staffroom.png" alt="staffroom" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">staffroom</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ซึ-ต้าฟ-รูม)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ห้องครู</span>
+      <audio id="staffroom" src="../../Testvocab/voice/staffroom.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+        <!--ห้องศิลปะ-->
+        <div class="container-artroom">
+            <img src="../../Testvocab/img/clothes2/artroom.png" alt="artroom" class="image">
+            <div class="speech-box6">
+            <span style="display: flex; justify-content: center;">art room</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(อ๊า-ทรูม)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ห้องศิลปะ</span>
+              <audio id="artroom" src="../../Testvocab/voice/artroom.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+           <!--สนามฟุตบอล-->
+           <div class="container-footballfield">
+            <img src="../../Testvocab/img/clothes2/footballfield.png" alt="footballfield" class="image">
+            <div class="speech-box11">
+              <span style="display: flex; justify-content: center;">football field</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ฟุต-บอล ฟีลฺด)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">สนามฟุตบอล</span>
+              <audio id="footballfield" src="../../Testvocab/voice/footballfield.mp3"></audio>
+            </div>
+            <div class="hover-number hover-number-footballfield"></div> 
+        </div>
+
+                <!--โรงยิมเนเซียม-->
+                <div class="container-gymnasium">
+                    <img src="../../Testvocab/img/clothes2/gymnasium.png" alt="gymnasium" class="image">
+                    <div class="speech-box2">
+                    <span style="display: flex; justify-content: center;"> gymnasium</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(จิม-เน้-เสี้ยม)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">โรงยิมเนเซียม</span>
+                      <audio id="gymnasium" src="../../Testvocab/voice/gymnasium.mp3"></audio>
+                    </div>
+                    <div class="hover-number"></div> 
+                </div>        
+
+ <!--ห้องน้ำ-->
+ <div class="container-toilet">
+            <img src="../../Testvocab/img/clothes2/toilet.png" alt="toilet" class="image">
+            <div class="speech-box2">
+              <span style="display: flex; justify-content: center;">toilet</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">(ท้อย-เหล็ท)</span>
+              <span class="thai-text" style="display: flex; justify-content: center;">ห้องน้ำ</span>
+              <audio id="toilet" src="../../Testvocab/voice/toilet.mp3"></audio>
+            </div>
+            <div class="hover-number"></div> 
+        </div>
+
+
+        <!--หอประชุม-->
+        <div class="container-auditorium">
+        <img src="../../Testvocab/img/clothes2/auditorium.png" alt="auditorium" class="image">
+        <div class="speech-box3">
+          <span style="display: flex; justify-content: center;">auditorium</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ออ-ดิ-ท้อ-เรี่ยม)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">หอประชุม</span>
+          <audio id="auditorium" src="../../Testvocab/voice/auditorium.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+    <!--ห้องปฏิบัติการทางวิทยาศาสตร์-->
+    <div class="container-sciencelab">
+      <img src="../../Testvocab/img/clothes2/sciencelab.png" alt="sciencelab" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">science lab</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซ้าย-เอิ้นฺซ แหล็บ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ห้องปฏิบัติการ <br>ทางวิทยาศาสตร์</span>
+      <audio id="sciencelab" src="../../Testvocab/voice/sciencelab.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+ <!--ห้องดนตรี -->
+ <div class="container-musicroom">
+        <img src="../../Testvocab/img/clothes2/musicroom.png" alt="musicroom" class="image">
+        <div class="speech-box6">
+          <span style="display: flex; justify-content: center;">music room</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(มิ้ว-สิค รูม)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ห้องดนตรี</span>
+        <audio id="musicroom" src="../../Testvocab/voice/musicroom.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+   <!--สนามเด็กเล่น-->
+   <div class="container-playground">
+      <img src="../../Testvocab/img/clothes2/playground.png" alt="playground" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">playground</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เพล้-กร่าวฺด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สนามเด็กเล่น</span>
+        <audio id="playground" src="../../Testvocab/voice/playground.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>
+
+
+   <!--ตึก, อาคาร-->
+   <div class="container-building">
+    <img src="../../Testvocab/img/clothes2/building.png" alt="building" class="image">
+    <div class="speech-box">
+      <span style="display: flex; justify-content: center;">building</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(บิ๊ล-ดิ่ง)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ตึก, อาคาร</span>
+      <audio id="building" src="../../Testvocab/voice/building.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+  </div>
+    
+  <div class="container-boy">
+      <img src="../../Testvocab/img/clothes2/boy.png" alt="boy" class="image">
+    </div>
+
+
+    
+ <!--ห้องเรียน-->
+ <div class="container-classroom">
+      <img src="../../Testvocab/img/clothes2/classroom.png" alt="classroom" class="image">
+      <div class="speech-box6">
+        <span style="display: flex; justify-content: center;">classroom</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(คล้าซ-รูม)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ห้องเรียน</span>
+        <audio id="classroom" src="../../Testvocab/voice/classroom.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>    
+     
+
+    <!--ห้องคอมพิวเตอร์-->
+    <div class="container-computerroom">
+      <img src="../../Testvocab/img/clothes2/computerroom.png" alt="computerroom" class="image">
+      <div class="speech-box2">
+        <span style="display: flex; justify-content: center;">computer room</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(คอม-พิ้ว-เท่อะ รูม)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ห้องคอมพิวเตอร์</span>
+      </div>
+      <audio id="computerroom" src="../../Testvocab/voice/computerroom.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>    
+    
+    <!--ห้องครูใหญ่-->
+    <div class="container-headmaster">
+      <img src="../../Testvocab/img/clothes2/headmaster.png" alt="headmaster" class="image">
+      <div class="speech-box3">
+        <span style="display: flex; justify-content: center;">headmaster’s office</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เฮ้ด-มาซ-เติ่ซ อ๊อฟ-ฟิ่ซ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ห้องครูใหญ่</span>
+      </div>
+      <audio id="headmaster" src="../../Testvocab/voice/headmaster.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+            <!--รถโรงเรียน-->
+            <div class="container-schoolbus">
+    <img src="../../Testvocab/img/clothes2/schoolbus.png" alt="schoolbus" class="image">
+    <div class="speech-box2">
+      <span style="display: flex; justify-content: center;">schoolbus</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ซึ-กู๊ล บั่ส)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">รถโรงเรียน</span>
+      <audio id="schoolbus" src="../../Testvocab/voice/schoolbus.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-quesschoolp1">
+          <img src="../../Testvocab/img/clothes2/quesschoolp1.png" alt="quesschoolp1" class="image">
+          <div class="speech-box7">
+          Are there any children in the playground ? <br>
+          <span class="thai-text">มีเด็ก ๆ ในสนามเด็กเล่นบ้างไหมเพื่อน ๆ ?</span>
+          <audio id="quesschoolp1" src="../../Testvocab/voice/quesschoolp1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-quesschoolp2">
+          <img src="../../Testvocab/img/clothes2/quesschoolp2.png" alt="quesschoolp2" class="image">
+          <div class="speech-box8">
+          What are the two children <br> doing in the art room? <br>
+          <span class="thai-text">เด็กสองคนกำลังทำอะไร <br> ในห้องศิลปะ ?</span>
+          </div>
+            <audio id="quesschoolp2" src="../../Testvocab/voice/quesschoolp2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              
+              <div class="container-exit">
+                <a href="../vocab3.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+
+
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var canteenImg = document.querySelector('.container-canteen img');
+var artroomImg = document.querySelector('.container-artroom img');
+var libraryImg = document.querySelector('.container-library img');
+var auditoriumImg = document.querySelector('.container-auditorium img');
+var computerroomImg = document.querySelector('.container-computerroom img');
+var headmasterImg = document.querySelector('.container-headmaster img');
+var classroomImg = document.querySelector('.container-classroom img');
+var sciencelabImg = document.querySelector('.container-sciencelab img');
+var playgroundImg = document.querySelector('.container-playground img');
+var musicroomImg = document.querySelector('.container-musicroom img');
+var staffroomImg = document.querySelector('.container-staffroom img');
+var footballfieldImg = document.querySelector('.container-footballfield img');
+var gymnasiumImg = document.querySelector('.container-gymnasium img');
+var toiletImg = document.querySelector('.container-toilet img');
+var schoolbusImg = document.querySelector('.container-schoolbus img');
+var buildingImg = document.querySelector('.container-building img');
+
+var quesschoolp1Img = document.querySelector('.container-quesschoolp1 img');
+var quesschoolp2Img = document.querySelector('.container-quesschoolp2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var buildingSpeechBox = document.querySelector('.container-building .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var footballfieldSpeechBox = document.querySelector('.container-footballfield .speech-box11');
+
+
+// เลือกอีเลเมนต์ของ speech box2
+var toiletSpeechBox = document.querySelector('.container-toilet .speech-box2');
+var librarySpeechBox = document.querySelector('.container-library .speech-box2');
+var gymnasiumSpeechBox = document.querySelector('.container-gymnasium .speech-box2');
+var schoolbusSpeechBox = document.querySelector('.container-schoolbus .speech-box2');
+var computerroomSpeechBox = document.querySelector('.container-computerroom .speech-box2');
+
+
+// เลือกอีเลเมนต์ของ speech box3
+var auditoriumSpeechBox = document.querySelector('.container-auditorium .speech-box3');
+var headmasterSpeechBox = document.querySelector('.container-headmaster .speech-box3');
+var canteenSpeechBox = document.querySelector('.container-canteen .speech-box3');
+var staffroomSpeechBox = document.querySelector('.container-staffroom .speech-box3');
+
+
+// เลือกอีเลเมนต์ของ speech box4
+var sciencelabSpeechBox = document.querySelector('.container-sciencelab .speech-box4');
+
+
+// เลือกอีเลเมนต์ของ speech box5
+var playgroundSpeechBox = document.querySelector('.container-playground .speech-box5');
+
+
+// เลือกอีเลเมนต์ของ speech box6
+var classroomSpeechBox = document.querySelector('.container-classroom .speech-box6');
+var musicroomSpeechBox = document.querySelector('.container-musicroom .speech-box6');
+var artroomSpeechBox = document.querySelector('.container-artroom .speech-box6');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var quesschoolp1SpeechBox = document.querySelector('.container-quesschoolp1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var quesschoolp2SpeechBox = document.querySelector('.container-quesschoolp2 .speech-box8');
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var libraryNumber = document.querySelector('.container-library .hover-number');
+var canteenNumber = document.querySelector('.container-canteen .hover-number');
+var staffroomNumber = document.querySelector('.container-staffroom .hover-number');
+var artroomNumber = document.querySelector('.container-artroom .hover-number');
+var footballfieldNumber = document.querySelector('.container-footballfield .hover-number');
+var gymnasiumNumber = document.querySelector('.container-gymnasium .hover-number');
+var toiletNumber = document.querySelector('.container-toilet .hover-number');
+var auditoriumNumber = document.querySelector('.container-auditorium .hover-number');
+var sciencelabNumber = document.querySelector('.container-sciencelab .hover-number');
+var musicroomNumber = document.querySelector('.container-musicroom .hover-number');
+var playgroundNumber = document.querySelector('.container-playground .hover-number');
+var buildingNumber = document.querySelector('.container-building .hover-number');
+var classroomNumber = document.querySelector('.container-classroom .hover-number');
+var computerroomNumber = document.querySelector('.container-computerroom .hover-number');
+var headmasterNumber = document.querySelector('.container-headmaster .hover-number');
+var schoolbusNumber = document.querySelector('.container-schoolbus .hover-number');
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(libraryImg, librarySpeechBox, libraryNumber);
+setupHoverEffect(canteenImg, canteenSpeechBox, canteenNumber);
+setupHoverEffect(staffroomImg, staffroomSpeechBox, staffroomNumber);
+setupHoverEffect(artroomImg, artroomSpeechBox, artroomNumber);
+setupHoverEffect(footballfieldImg, footballfieldSpeechBox, footballfieldNumber);
+setupHoverEffect(gymnasiumImg, gymnasiumSpeechBox, gymnasiumNumber);
+setupHoverEffect(toiletImg, toiletSpeechBox, toiletNumber);
+setupHoverEffect(auditoriumImg, auditoriumSpeechBox, auditoriumNumber);
+setupHoverEffect(sciencelabImg, sciencelabSpeechBox, sciencelabNumber);
+setupHoverEffect(musicroomImg, musicroomSpeechBox, musicroomNumber);
+setupHoverEffect(playgroundImg, playgroundSpeechBox, playgroundNumber);
+setupHoverEffect(buildingImg, buildingSpeechBox, buildingNumber);
+setupHoverEffect(classroomImg, classroomSpeechBox, classroomNumber);
+setupHoverEffect(computerroomImg, computerroomSpeechBox, computerroomNumber);
+setupHoverEffect(headmasterImg, headmasterSpeechBox, headmasterNumber);
+setupHoverEffect(schoolbusImg, schoolbusSpeechBox, schoolbusNumber);
+
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+libraryImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, librarySpeechBox);
+});
+
+canteenImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, canteenSpeechBox);
+});
+
+computerroomImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, computerroomSpeechBox);
+}); 
+
+headmasterImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, headmasterSpeechBox);
+}); 
+
+classroomImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, classroomSpeechBox);
+}); 
+
+sciencelabImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, sciencelabSpeechBox);
+}); 
+
+
+playgroundImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, playgroundSpeechBox);
+}); 
+
+musicroomImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, musicroomSpeechBox);
+}); 
+auditoriumImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, auditoriumSpeechBox);
+}); 
+staffroomImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, staffroomSpeechBox);
+}); 
+
+artroomImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, artroomSpeechBox);
+}); 
+
+footballfieldImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,footballfieldSpeechBox);
+}); 
+
+gymnasiumImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,gymnasiumSpeechBox);
+}); 
+
+toiletImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,toiletSpeechBox);
+}); 
+schoolbusImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,schoolbusSpeechBox);
+}); 
+
+buildingImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,buildingSpeechBox);
+}); 
+
+quesschoolp1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesschoolp1SpeechBox);
+}); 
+
+quesschoolp2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, quesschoolp2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+libraryImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, librarySpeechBox);
+});
+
+canteenImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, canteenSpeechBox);
+});
+
+computerroomImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  computerroomSpeechBox);
+  });
+
+
+headmasterImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  headmasterSpeechBox);
+  });
+
+  classroomImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, classroomSpeechBox);
+  });
+
+  sciencelabImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, sciencelabSpeechBox);
+  });
+
+
+  playgroundImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, playgroundSpeechBox);
+  });
+
+  musicroomImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   musicroomSpeechBox);
+  });
+
+  auditoriumImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   auditoriumSpeechBox);
+  });
+  staffroomImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   staffroomSpeechBox);
+  });
+
+  artroomImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   artroomSpeechBox);
+  });
+  footballfieldImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   footballfieldSpeechBox);
+  });
+
+  gymnasiumImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   gymnasiumSpeechBox);
+  });
+  
+  toiletImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   toiletSpeechBox);
+  });
+  schoolbusImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   schoolbusSpeechBox);
+  });
+
+  buildingImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   buildingSpeechBox);
+  });
+
+  quesschoolp1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesschoolp1SpeechBox);
+  });
+
+  quesschoolp2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   quesschoolp2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-library img', '#library');
+playSoundWhenClick('.container-canteen img', '#canteen');
+playSoundWhenClick('.container-playground img', '#playground');
+playSoundWhenClick('.container-classroom img', '#classroom');
+playSoundWhenClick('.container-computerroom img', '#computerroom');
+
+playSoundWhenClick('.container-headmaster img', '#headmaster');
+playSoundWhenClick('.container-sciencelab img', '#sciencelab');
+playSoundWhenClick('.container-musicroom img', '#musicroom')
+
+playSoundWhenClick('.container-auditorium img', '#auditorium');
+playSoundWhenClick('.container-staffroom img', '#staffroom');
+playSoundWhenClick('.container-artroom img', '#artroom');
+playSoundWhenClick('.container-footballfield img', '#footballfield');
+playSoundWhenClick('.container-gymnasium img', '#gymnasium');
+playSoundWhenClick('.container-toilet img', '#toilet');
+playSoundWhenClick('.container-schoolbus img', '#schoolbus');
+playSoundWhenClick('.container-building img', '#building');
+playSoundWhenClick('.container-quesschoolp1 img', '#quesschoolp1');
+playSoundWhenClick('.container-quesschoolp2 img', '#quesschoolp2');
+  </script>
+  
+
+
+
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>

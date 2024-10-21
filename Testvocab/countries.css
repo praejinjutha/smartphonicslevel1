@@ -1,0 +1,608 @@
+
+.navbar {
+  top: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../Testvocab/img/final/bgcountries.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+}
+
+.container {
+  width:100%; 
+  height: 100%;
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; 
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #BAE155;
+  text-shadow: 0 0 10px #1B2654, 0 0 20px #1B2654, 0 0 30px #1B2654;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px #ffffff;
+  letter-spacing: 5px;
+}
+
+h4 {
+  color: green;
+  font-size: 22px;
+}
+
+
+.image {
+  width: 92%;
+  height: 100%;
+  margin-top: 4%;
+  margin-left: 1%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -9%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -9%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -9%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 8%; 
+  z-index: 2; 
+}
+
+
+/*ประเทศเยอรมัน*/
+.container-Germany {
+  position: absolute;
+  top: 16%;
+  left: -3%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 12; 
+}
+
+/*ประเทศสหรัฐอเมริกา*/
+.container-Unitedstateofamerica {
+  position: absolute;
+  top: 19%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 25%; 
+  z-index: 11; 
+}
+
+/*ประเทศฝรั่งเศส*/
+.container-France {
+  position: absolute;
+  top: 44%;
+  left: -6%;
+  transform: translate(-50%, -50%);
+  width: 17%; 
+  z-index: 1; 
+}
+
+/*ประเทศบราซิล*/
+.container-Brazil {
+  position: absolute;
+  top: 54%;
+  left: 22%;
+  transform: translate(-50%, -50%);
+  width: 14%; 
+  z-index: 1; 
+}
+
+/*ประเทศสเปน*/
+.container-Spain{
+  position: absolute;
+  top: 79%;
+  left: -2%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 1; 
+}
+
+/*ประเทศเมียนมาร์*/
+.container-Myanmar {
+  position: absolute;
+  top: 54%;
+  left:46%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 6; 
+}
+
+/*ประเทศไทย*/
+.container-Thailand{
+  position: absolute;
+  top: 49%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 5; 
+}
+
+
+/*ประเทศกัมพูชา*/
+.container-Cambodia {
+  position: absolute;
+  top: 54%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  width: 9.5%; 
+  z-index: 4; 
+}
+
+/*ประเทศอินโดนีเซีย*/
+.container-Indonesia {
+  position: absolute;
+  top: 76%;
+  left: 48%;
+  transform: translate(-50%, -50%);
+  width: 23%; 
+  z-index: 2; 
+}
+
+/*ประเทศอิตาลี*/
+.container-Italy {
+  position: absolute;
+  top: 41%;
+  left: 34%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 6; 
+}
+
+/*ประเทศอังกฤษ*/
+.container-Unitedkingdom {
+  position: absolute;
+  top: 15%;
+  left: 39.5%;
+  transform: translate(-50%, -50%);
+  width: 10%; 
+  z-index: 10; 
+}
+
+/*ประเทศรัสเซีย*/
+.container-Russia {
+  position: absolute;
+  top: 16.5%;
+  left: 64.5%;
+  transform: translate(-50%, -50%);
+  width: 39%; 
+  z-index: 8; 
+}
+
+/*ประเทศจีน*/
+.container-China {
+  position: absolute;
+  top: 32%;
+  left: 66%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 7; 
+}
+
+/*ประเทศญี่ปุ่น*/
+.container-Japan {
+  position: absolute;
+  top: 11%;
+  left: 95%;
+  transform: translate(-50%, -50%);
+  width: 20%; 
+  z-index: 9; 
+}
+
+/*ประเทศเวียดนาม*/
+.container-Vietnam {
+  position: absolute;
+  top: 40%;
+  left: 107%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 1; 
+}
+
+
+/*ประเทศลาว*/
+.container-Laos {
+  position: absolute;
+  top: 69%;
+  left: 104%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 5; 
+}
+
+/*ประเทศออสเตรเลีย*/
+.container-Australia {
+  position: absolute;
+  top: 62.5%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 1;
+}
+
+/*ประเทศเกาหลีใต้*/
+.container-Southkorea {
+  position: absolute;
+  top: 42%;
+  left: 79%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 1; 
+}
+
+/*ประเทศมาเลเซีย*/
+.container-Malaysia {
+  position: absolute;
+  top: 90%;
+  left: 73%;
+  transform: translate(-50%, -50%);
+  width: 22%; 
+  z-index: 3; 
+}
+
+/*ประเทศนิวซีแลนด์*/
+.container-Newzealand {
+  position: absolute;
+  top: 92%;
+  left: 100%;
+  transform: translate(-50%, -50%);
+  width: 19%; 
+  z-index: 5; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -15px;
+      left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8;
+  padding-top: 5px;
+  z-index: 4; 
+}
+
+.container-Southkorea .hover-number{
+  top: 20px;
+  left:80px;
+  z-index: -4; 
+  }
+.container-China .hover-number{
+  top: 20px;
+  left:80px;
+  }
+
+.container-Newzealand .hover-number,
+.container-Malaysia .hover-number,
+.container-Russia .hover-number,
+.container-Unitedstateofamerica .hover-number,
+.container-France .hover-number{
+  top: 20px;
+  left:30px;
+  }
+  
+
+.container-Newzealand img,.container-Malaysia img,.container-Laos img,.container-Australia img,.container-Japan img, .container-China img, .container-Russia img,
+.container-Brazil img, .container-Thailand img, .container-Spain img,.container-France img, .container-Indonesia img,.container-Myanmar img, .container-Vietnam img, .container-Germany img, .container-Unitedkingdom img, .container-Cambodia img,.container-Unitedstateofamerica img,.container-Southkorea img, .container-quescountries1 img, .container-Italy img, .container-quescountries2 img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.container-Newzealand img:hover,.container-Malaysia img:hover,.container-Australia img:hover,.container-Japan img:hover,.container-China img:hover,.container-Laos img:hover,
+ .container-Brazil img:hover,.container-Thailand img:hover, .container-Spain img:hover, .container-Russia img:hover,
+.container-France img:hover, .container-Unitedkingdom img:hover, .container-Cambodia img:hover, .container-Italy img:hover, 
+.container-Myanmar img:hover, .container-Vietnam img:hover, .container-Germany img:hover, .container-Unitedstateofamerica img:hover,
+.container-Southkorea img:hover,.container-quescountries1 img:hover, .container-quescountries2 img:hover , .container-Indonesia img:hover {
+  transform: translateY(-10px);
+  filter: brightness(80%); 
+}
+
+/*คำถาม1*/
+.container-quescountries1 {
+  position: absolute;
+  top: 91%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 4; 
+}
+
+/*คำถาม2*/
+.container-quescountries2 {
+  position: absolute;
+  top: 78%;
+  left: 28%;
+  transform: translate(-50%, -50%);
+  width: 6.5%; 
+  z-index: 2; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -5%;
+  right: -17%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 1; 
+}
+
+.speech-box, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none;
+    font-family: "KG Primary Penmanship 2", sans-serif;
+    font-size: 24px;
+    color: black;
+    background-color: rgba(255, 255, 255, 1);
+    padding: 5px 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    white-space: nowrap;
+  position: absolute;
+
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif;
+}
+
+
+.speech-box {
+  width: 160px;
+  height: 120px;
+  bottom: 21%; 
+  left: -60%; 
+  z-index: -1;
+}
+
+.speech-box11 {
+  width: 160px;
+  height: 100px;
+  bottom: -40%; 
+  left: -40%; 
+  z-index: -1;
+  line-height: 27px; 
+}
+
+
+.speech-box2 {
+  width: 120px;
+  height: 120px;
+  bottom: 1%; 
+  left: 160%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+    width: 160px;
+    height: 120px;
+    bottom: 20%; 
+    left: 80%; 
+    z-index: -1;
+  }
+
+ .speech-box4 {
+  width: 200px;
+  height: 120px;
+  bottom: -50%; 
+  left: 20%; 
+  z-index: -1;
+ }
+
+ .speech-box5 {
+  width: 160px;
+  height: 120px;
+  bottom: 20%; 
+  left: -70%; 
+  z-index: -1;
+}
+
+  .speech-box6 {
+     width: 320px; 
+     height: 120px; 
+     position: absolute;
+     top: 2%; 
+     left: 60%;
+     z-index: -1;
+   }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #C6EDEF;
+  width: 570px; 
+  height: 71px;
+  text-align: center;
+  line-height: 27px; 
+  top: 5%;
+  left: 80%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #F7DAD5;
+      width: 350px; 
+      height: 120px;
+      text-align: center;
+      line-height: 27px; 
+      top: -55%;
+      left: 40%;
+      z-index: -1;
+    }
+
+
+    @media screen and (max-width: 768px) {
+      /* Adjust container sizes and positions */
+      .image {
+        width: 100%;
+        height: 100%;
+        /*margin-left: -5%;*/
+        object-fit: cover;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+      
+      h4 {
+        font-size: 12px;
+      }
+      
+      /*ส่วนที่เพิ่มเข้ามา*/
+    .hover-number {
+      position: absolute;
+      top: -15px;
+      left: 10px;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+      background-image: url('../Testvocab/img/clothes2/speaker.png');
+      width: 20px;
+      height: 20px;
+      background-size: cover; 
+      text-align: center;
+      display: none;
+      opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+      padding-top: 1%;
+      z-index: -4;
+      }
+
+      
+
+        .speech-box,.speech-box11,.speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box7,.speech-box8 {
+        display: none;
+        font-family: "KG Primary Penmanship 2", sans-serif;
+          font-size: 14px;
+          color: black;
+          background-color: rgba(255, 255, 255, 1.8);
+          padding: 5px 10px;
+          border-radius: 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          white-space: nowrap;
+        position: absolute;
+        transform: translateX(-50%);
+      }
+
+      .speech-box{
+        width: 80px;
+        height: 70px;
+        top: -155%; 
+        left: -50%; 
+        z-index: -1;
+              }
+
+      .speech-box11{
+  width: 80px;
+  height: 70px;
+  bottom: 115%; 
+  left: 50%; 
+  z-index: -1;
+        }
+
+      .speech-box2 {
+    width: 80px;
+    height: 70px;
+    bottom: 67%; 
+    left: 160%; 
+
+    z-index: -1;
+        }
+    
+      .speech-box3{
+    width: 60px;
+    height: 80px;
+    bottom: 97%; 
+    left: 10%; 
+
+    z-index: -1;
+        }
+
+        .speech-box4 {
+          width: 90px;
+          height: 80px;
+          bottom: 97%; 
+          left: 130%; 
+          z-index: -1;
+              }
+          
+          .speech-box5{
+          width: 40px;
+          height: 80px;
+          bottom: 97%; 
+          left: 50%; 
+      
+          z-index: -1;
+              }
+    
+      .speech-box7{
+        color: #0A2963; 
+        background-color: #FF9EAE;
+        width: 180px; 
+        height: 65px;
+        text-align: center;
+        line-height: 17px; 
+        top: -75%;
+        left: -850%;
+        z-index: -1;
+      }
+
+      .speech-box8{
+        color: #0A2963; 
+        background-color: #F2FCC8;
+        width: 180px; 
+        height: 50px;
+        text-align: center;
+        line-height: 17px; 
+        top: 25%;
+        left: 540%;
+        z-index: -1;
+      }
+    }
+

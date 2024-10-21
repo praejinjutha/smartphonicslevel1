@@ -1,0 +1,1209 @@
+<?php
+defined('BASEPATH') or exit('No direct script access allowed');
+$themes =  base_url();
+?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Smart Phonics- Home</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Favicon -->
+    <link href="<?= $themes ?>img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&family=Nunito&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap" rel="stylesheet">
+
+    <link href="https://db.onlinewebfonts.com/c/d66fa62dabed66f2226a1b2d17da0579?family=Showcard+Gothic" rel="stylesheet"> <!--หัวเรื่อง-->
+    <link href="https://fonts.cdnfonts.com/css/kg-primary-penmanship-2" rel="stylesheet"> <!--คำศัพท์-->
+     <!--คำไทย-->
+
+    <!-- Flaticon Font -->
+    <link href="<?= $themes ?>assets/lib/flaticon/font/flaticon.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="<?= $themes ?>lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="<?= $themes ?>assets/lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+
+    <style>
+.navbar {
+  top: 0; /* ให้ Navbar อยู่ที่ด้านบนสุดของหน้าจอ */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url('../../Testvocab/img/christmas/Bghome.png');
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* ให้เนื้อหาอยู่ตรงกลางของหน้าจอ */
+  justify-content: flex-start; /* ให้เนื้อหาอยู่ที่ด้านบนของหน้าจอ */
+}
+
+.container {
+  width: auto; 
+  height: 100%; /* ลดความสูงของ container เพื่อให้มีพื้นที่สำหรับ h1 และภาพ */
+  overflow: hidden;
+  margin-top: 1px;
+  position: relative; 
+  overflow: visible; /* ให้คอนเทนเนอร์มีการแสดงรูปภาพเกินขอบ */
+  
+}
+
+
+h1 {
+  font-family: "Showcard Gothic";
+  font-size: 60px;
+  color: #B7332C;
+ text-shadow: 0 0 20px #E3CDAD;
+  margin-bottom: 2px;
+  margin-top: 15px;
+  -webkit-text-stroke: 3px #f8f8f8; /* กำหนดขอบตัวอักษร */
+  letter-spacing: 5px; /* เพิ่มระยะห่างระหว่างตัวอักษร */
+}
+
+
+.image {
+  width: 120%;
+  height: 100%;
+  margin-left: -11.5%;
+  object-fit: cover;
+}
+
+/*icon home*/
+.container-home {
+  position: absolute;
+  top: -7%;
+  left:-8%;
+  transform: translate(-50%, -50%);
+  width: 3.5%; 
+  z-index: 1; 
+}
+
+/*icon preview*/
+.container-preview {
+  position: absolute;
+  top: -7%;
+  right: -7%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 1; 
+}
+
+/*icon next*/
+.container-next {
+  position: absolute;
+  top: -7%;
+  right: -15%;
+  transform: translate(-50%, -50%);
+  width: 5.5%; 
+  z-index: 2; 
+}
+
+
+/*ชั้นสอง*/
+.container-secondfloor {
+  position: absolute;
+  top: 40.3%;
+  left: 14.8%;
+  transform: translate(-50%, -50%);
+  width: 35.3%; 
+  z-index: 1; 
+}
+
+/*ชั้นล่าง*/
+.container-firstfloor {
+  position: absolute;
+  top: 60.7%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 18%; 
+  z-index: 3; 
+}
+
+.container-door2 {
+  position: absolute;
+  top: 60.7%;
+  left: -0.3%;
+  transform: translate(-50%, -50%);
+  width: 11%; 
+  z-index: 2; 
+}
+
+/*พื้น*/
+.container-floor {
+  position: absolute;
+  top: 67.9%;
+  left: 14.8%;
+  transform: translate(-50%, -50%);
+  width: 35.5%; 
+  z-index: 2; 
+}
+
+/*บันได*/
+.container-stairs {
+  position: absolute;
+  top: 63.4%;
+  left: -2.1%;
+  transform: translate(-50%, -50%);
+  width: 8.5%; 
+  z-index: 3; 
+}
+
+/*ประตูรั้ว*/
+.container-gate{
+  position: absolute;
+  top: 87%;
+  left: 81.3%;
+  transform: translate(-50%, -50%);
+  width: 8.5%; 
+  z-index: 6; 
+}
+
+.container-window{
+  position: absolute;
+  top: 65%;
+  left: 84.5%;
+  transform: translate(-50%, -50%);
+  width: 6%; 
+  z-index: 5; 
+}
+
+/*บ้าน*/
+.container-house {
+  position: absolute;
+  top: 51%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  width: 43%; 
+  z-index: 4; 
+}
+
+/*โรงรถ*/
+.container-garage{
+  position: absolute;
+  top: 65.5%;
+  left: 97%;
+  transform: translate(-50%, -50%);
+  width: 12%; 
+  z-index: 3; 
+}
+
+.container-car {
+  position: absolute;
+  top: 70.3%;
+  left: 97%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 5; 
+}
+
+/*ระเบียง*/
+.container-balcony {
+  position: absolute;
+  top: 42%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  width: 7%; 
+  z-index: 4; 
+}
+
+/*สนามหลังบ้าน*/
+.container-backyard {
+  position: absolute;
+  top: 58.8%;
+  left: 73.9%;
+  transform: translate(-50%, -50%);
+  width: 61.3%; 
+  z-index: 0; 
+}
+
+.container-tree {
+  position: absolute;
+  top: 30%;
+  left: 97.6%;
+  transform: translate(-50%, -50%);
+  width: 16%; 
+  z-index: 1; 
+}
+
+/*สนามหน้าบ้าน*/
+.container-frontyard {
+  position: absolute;
+  top: 85.7%;
+  left: 73.6%;
+  transform: translate(-50%, -50%);
+  width: 60.5%; 
+  z-index: 4; 
+}
+
+
+/*ถังขยะ*/
+.container-garbagecan {
+  position: absolute;
+  top: 93%;
+  left: 47%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 5; 
+}
+
+/*หลังคา*/
+.container-roof {
+  position: absolute;
+  top: 50%;
+  left: 67%;
+  transform: translate(-50%, -50%);
+  width: 43%; 
+  z-index: 4;
+}
+
+/*เฉลียงหน้าประตูเข้าบ้าน*/
+.container-porch {
+  position: absolute;
+  top: 72%;
+  left:68%;
+  transform: translate(-50%, -50%);
+  width: 17%; 
+  z-index: 5; 
+}
+
+/*ประตู*/
+.container-door {
+  position: absolute;
+  top: 65%;
+  left: 74%;
+  transform: translate(-50%, -50%);
+  width: 4%; 
+  z-index: 4; 
+}
+
+/*ม้านั่ง*/
+.container-bench {
+  position: absolute;
+  top: 93%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  width: 13%; 
+  z-index: 1; 
+}
+
+.container-grandmom {
+  position: absolute;
+  top: 88%;
+  left: 8%;
+  transform: translate(-50%, -50%);
+  width: 9%; 
+  z-index: 1; 
+}
+
+/*ส่วนที่เพิ่มเข้ามา*/
+.hover-number {
+  position: absolute;
+  top: -25px;
+  left: -25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  background-image: url('../../Testvocab/img/clothes2/speaker.png');
+  width: 40px;
+  height: 40px;
+  background-size: cover; 
+text-align: center;
+  display: none;
+  opacity: 0.8; /* ปรับค่า opacity เพื่อทำให้ภาพ speaker.png จางลง */
+  padding-top: 5px;
+}
+
+.container-garage .hover-number{
+  top: -30px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 100px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-floor .hover-number{
+  top: -30px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 400px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+}
+
+.container-house .hover-number{
+  top: 240px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: -50px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: 10; 
+}
+
+.container-frontyard .hover-number{
+  top: 40px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: -80px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: 10; 
+}
+
+.container-roof .hover-number{
+  top: 45px; /* เปลี่ยนตำแหน่ง top ตามที่ต้องการ */
+  left: 180px; /* เปลี่ยนตำแหน่ง left ตามที่ต้องการ */
+  z-index: 8; 
+}
+
+
+
+
+.container-bench img,.container-door img,.container-garbagecan img,.container-roof img,.container-backyard img, .container-balcony img,.container-stairs img, .container-garage img, .container-gate img,.container-window img,.container-floor img,.container-house img, .container-frontyard img, .container-secondfloor img, .container-firstfloor img,.container-porch img, .container-queshouse1 img,  .container-queshouse2 img {
+  transition: transform 0.3s ease, filter 0.3s ease; /* เพิ่มการเคลื่อนที่อย่างนุ่มนวลและการเปลี่ยนแปลงสีของภาพ */
+}
+
+.container-bench img:hover,.container-door img:hover,.container-roof img:hover,.container-backyard img:hover,.container-balcony img:hover,.container-garbagecan img:hover,
+ .container-stairs img:hover,.container-garage img:hover, .container-gate img:hover, .container-window img:hover,
+.container-floor img:hover,.container-house img:hover, .container-frontyard img:hover, .container-secondfloor img:hover, .container-firstfloor img:hover,
+.container-porch img:hover,.container-queshouse1 img:hover, .container-queshouse2 img:hover {
+  transform: translateY(-10px); /* เมื่อโฮเวอร์ภาพ ให้เคลื่อนที่ขึ้น */
+  filter: brightness(80%); /* ทำให้ภาพจางลง */
+}
+
+/*คำถาม1*/
+.container-queshouse1 {
+  position: absolute;
+  top: 79%;
+  left: 11%;
+  transform: translate(-50%, -50%);
+  width: 5%; 
+  z-index: 4; 
+}
+
+/*คำถาม2*/
+.container-queshouse2 {
+  position: absolute;
+  top: 95%;
+  left:15%;
+  transform: translate(-50%, -50%);
+  width: 4.5%; 
+  z-index: 8; 
+}
+
+/*ออก*/
+.container-exit {
+  position: absolute;
+  bottom: -4.8%;
+  right: -15.8%;
+  transform: translate(-50%, -50%);
+  width: 4%; 
+  z-index: 8; 
+}
+
+.speech-box, .speech-box9, .speech-box11, .speech-box2,.speech-box3,.speech-box4,.speech-box5,.speech-box6,.speech-box7,.speech-box8 {
+  display: none; /* เริ่มต้นโดยซ่อน speech box */
+    font-family: "KG Primary Penmanship 2", sans-serif; /* กำหนดฟอนต์ KG Primary Penmanship 2 */
+    font-size: 24px; /* กำหนดขนาดตัวอักษร */
+    color: black; /* กำหนดสีข้อความ */
+    background-color: rgba(255, 255, 255, 1); /* กำหนดสีพื้นหลังของ speech box */
+    padding: 5px 10px; /* กำหนดการเว้นระยะของข้อความใน speech box */
+    border-radius: 10px; /* กำหนดรูปร่างของ speech box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* กำหนดเงาของ speech box */
+    white-space: nowrap; /* กำหนดให้ข้อความไม่ขึ้นบรรทัดใหม่ */
+  position: absolute;
+}
+
+.thai-text {
+  font-family: "TH Chakra Petch", sans-serif; /* กำหนดฟอนต์ TH Chakra Petch */
+}
+
+
+.speech-box {
+  width: 100px; 
+  height: 120px; 
+  top: 50%;
+  left: 80%; 
+  z-index: 3; 
+}
+
+.speech-box11 {
+  width: 170px;
+  height: 120px;
+  bottom: 107%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box2 {
+  width: 140px;
+  height: 120px;
+  bottom: 1%; 
+  left: 220%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+
+.speech-box3 {
+    width: 120px;
+    height: 120px;
+    bottom: 5%; 
+    left: -50%; 
+    transform: translateX(-50%);
+    z-index: -1;
+  }
+
+
+ .speech-box4 {
+  width: 240px;
+  height: 120px;
+  bottom: 107%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+ }
+
+ .speech-box5 {
+  width: 240px;
+  height: 120px;
+  bottom: 70%; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+  .speech-box6 {
+     width: 170px; 
+     height: 120px; 
+     position: absolute;
+     top: 25%; 
+     right: 110%;
+     z-index: 3;
+   }
+
+   .speech-box9 {
+    width: 170px; 
+    height: 120px; 
+    position: absolute;
+    top: -35%; 
+    right: 85%;
+    z-index: 3;
+  }
+
+    /* คำถามข้อที่ 1*/
+.speech-box7 {
+  font-size: 25px; 
+  color: #0A2963; 
+  background-color: #FBE5D6; /* กำหนดสีพื้นหลังของ speech box */
+  width: 230px; 
+  height: 75px;
+  text-align: center;
+  line-height: 27px; 
+  top: 5%;
+  left: 55%;
+  z-index: -1;
+}
+
+    /* คำถามข้อที่ 2*/
+    .speech-box8 {
+      font-size: 25px; 
+      color: #0A2963; 
+      background-color: #B7E3D5; /* กำหนดสีพื้นหลังของ speech box */
+      width: 290px; 
+      height: 80px;
+      text-align: center;
+      line-height: 27px; 
+      top: -55%;
+      left: 40%;
+      z-index: -1;
+    }
+
+
+/* For screens smaller than 768px (e.g., smartphsecondfloors) */
+@media screen and (max-width: 768px) {
+  /* Adjust container sizes and positions */
+  .container {
+    width: 90vw;
+    height: 80vh;
+  }
+  
+  /* Adjust speech box sizes and positions */
+  .speech-box,
+  .speech-box11,
+  .speech-box2,
+  .speech-box3,
+  .speech-box4,
+  .speech-box5,
+  .speech-box6,
+  .speech-box7,
+  .speech-box9,
+  .speech-box8 {
+    font-size: 16px;
+    width: 80px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+      @media screen and (min-width: 820px) and (max-width: 1180px) {
+      /* Adjust container sizes and positions */
+      .navbar-brand {
+            font-size: 40px !important;
+        }
+
+        .navbar-brand i {
+            font-size: 3rem !important;
+        }
+
+        .navbar-nav .nav-link, 
+        .navbar-nav .dropdown-item {
+            font-size: 18px !important;
+        }
+
+        .btn-primary {
+            padding: 0.5rem 1.5rem !important;
+        }
+}
+    </style>
+</head>
+<body>
+     <!-- Navbar Start -->
+     <div class="container-fluid bg-light position-relative shadow">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5">
+      <a href="../home.html" class="navbar-brand font-weight-bold text-secondary" style="font-size: 50px;">
+              <i class="flaticon-033-blocks"style="font-size: 3.5rem;"></i>
+              <span class="text-primary">Smart Phonics</span>
+          </a>
+          <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+       <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+              <div class="navbar-nav font-weight-bold mx-auto py-0">
+                  
+              <a href="../home.html" class="nav-item nav-link"style="font-size: 20px;">หน้าหลัก</a>
+              <a href="../vdo.html" class="nav-item nav-link"style="font-size: 20px;">วิดีโอสอน</a>
+              <a href="../gallery.html" class="nav-item nav-link"style="font-size: 20px;">เล่มสมุดภาพ</a>
+              <a href="../vocab.html" class="nav-item nav-link active"style="font-size: 20px;">คลังคำศัพท์</a>
+      </nav>
+  </div>
+  <!-- Navbar End -->
+
+
+    <h1> A HOUSE </h1>
+
+         <!--ส่วนที่เพิ่มเข้ามา-->
+         <h4 class="card-title" style="color: black; font-size: 22px;">ประกอบด้วยคำศัพท์จำนวน 16 คำ</h4> 
+
+         
+  <div class="container">
+    <img src="../../Testvocab/img/christmas/ahouse.png" alt="bird" class="image">
+
+
+
+              <!--icon home-->
+              <a href="../vocab.html">
+    <div class="container-home">
+        <img src="../../Testvocab/img/home.png" alt="home" class="image">
+    </div>
+</a>
+
+              <!--icon preview-->
+              <a href="Christmas.html">
+            <div class="container-preview">
+                  <img src="../../Testvocab/img/preview.png" alt="preview" class="image">
+                </a>
+              </div>
+
+
+              <!--icon next-->
+              <a href="School.html">
+              <div class="container-next">
+                <img src="../../Testvocab/img/next.png" alt="next" class="image">
+              </div>
+            </a>
+
+                <!--ชั้นสอง-->
+    <div class="container-secondfloor">
+      <img src="../../Testvocab/img/christmas/secondfloor.png" alt="secondfloor" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">second floor</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เซ-เคิ่น ฟล่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ชั้นสอง</span>
+      </div>
+      <audio id="secondfloor" src="../../Testvocab/voice/secondfloor.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+       <!--ชั้นล่าง-->
+   <div class="container-firstfloor">
+      <img src="../../Testvocab/img/christmas/firstfloor.png" alt="firstfloor" class="image">
+      <div class="speech-box4">
+        <span style="display: flex; justify-content: center;">first floor</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เฟิซฺท-ฟล่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ชั้นล่าง</span>
+        <audio id="firstfloor" src="../../Testvocab/voice/firstfloor.mp3"></audio>
+      </div>
+      <div class="hover-number"></div> 
+    </div>  
+
+
+   <div class="container-door2">
+      <img src="../../Testvocab/img/christmas/door2.png" alt="door2" class="image">
+    </div>  
+    
+    <!--พื้น-->
+    <div class="container-floor">
+      <img src="../../Testvocab/img/christmas/floor.png" alt="floor" class="image">
+      <div class="speech-box">
+        <span style="display: flex; justify-content: center;">floor</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฟล่อ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">พื้น</span>
+      </div>
+      <audio id="floor" src="../../Testvocab/voice/floor.mp3"></audio>
+      <div class="hover-number hover-number-floor"></div> 
+    </div>  
+
+        <!--บันได-->
+        <div class="container-stairs">
+      <img src="../../Testvocab/img/christmas/stairs.png" alt="stairs" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">stairs</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ซึ-แต-ซึ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">บันได</span>
+      </div>
+      <audio id="stairs" src="../../Testvocab/voice/stairs.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>  
+
+    <!--ประตูรั้ว-->
+    <div class="container-gate">
+      <img src="../../Testvocab/img/christmas/gate.png" alt="gate" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">gate </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เก้ท)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">ประตูรั้ว</span>
+      </div>
+      <audio id="gate" src="../../Testvocab/voice/gate.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+        <!--หน้าต่าง-->
+        <div class="container-window">
+      <img src="../../Testvocab/img/christmas/window.png" alt="window" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">window </span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(วิ้น-โด่ว)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">หน้าต่าง</span>
+      </div>
+      <audio id="window" src="../../Testvocab/voice/window.mp3"></audio>
+      <div class="hover-number"></div> 
+    </div>
+
+     <!--บ้าน-->
+ <div class="container-house">
+      <img src="../../Testvocab/img/christmas/house.png" alt="house" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">house</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(เฮ่าส)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">บ้าน</span>
+        <audio id="house" src="../../Testvocab/voice/house.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-house"></div> 
+    </div>
+
+        <!--โรงรถ-->
+        <div class="container-garage">
+      <img src="../../Testvocab/img/christmas/garage.png" alt="garage" class="image">
+      <div class="speech-box11">
+        <span style="display: flex; justify-content: center;">garage</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(กา-ร่าจฺช)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">โรงรถ</span>
+      </div>
+      <audio id="garage" src="../../Testvocab/voice/garage.mp3"></audio>
+      <div class="hover-number hover-number-garage"></div> 
+    </div>
+
+            <div class="container-car">
+      <img src="../../Testvocab/img/christmas/car.png" alt="car" class="image">
+    </div>
+
+
+                <!--ระเบียง-->
+                <div class="container-balcony">
+    <img src="../../Testvocab/img/christmas/balcony.png" alt="balcony" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">balcony</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(บั๊ล-เค่อะ-หนี่)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ระเบียง</span>
+      <audio id="balcony" src="../../Testvocab/voice/balcony.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+
+    <!--สนามหลังบ้าน-->
+    <div class="container-backyard">
+        <img src="../../Testvocab/img/christmas/backyard.png" alt="backyard" class="image">
+        <div class="speech-box9">
+          <span style="display: flex; justify-content: center;">backyard</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(แบ็ค-ยาด)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">สนามหลังบ้าน</span>
+          <audio id="backyard" src="../../Testvocab/voice/backyard.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+        <div class="container-tree">
+        <img src="../../Testvocab/img/christmas/tree.png" alt="tree" class="image">
+    </div>
+
+
+    <!--สนามหน้าบ้าน-->
+    <div class="container-frontyard">
+      <img src="../../Testvocab/img/christmas/frontyard.png" alt="frontyard" class="image">
+      <div class="speech-box6">
+        <span style="display: flex; justify-content: center;">front yard</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(ฟร้อนฺท-หยาด)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">สนามหน้าบ้าน</span>
+      <audio id="frontyard" src="../../Testvocab/voice/frontyard.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-frontyard"></div> 
+    </div>
+
+        <!--ถังขยะ-->
+        <div class="container-garbagecan">
+        <img src="../../Testvocab/img/christmas/garbagecan.png" alt="garbagecan" class="image">
+        <div class="speech-box2">
+          <span style="display: flex; justify-content: center;">garbage can</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(ก๊า-บิจฺช แคน)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">ถังขยะ</span>
+          <audio id="garbagecan" src="../../Testvocab/voice/garbagecan.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+             <!--หลังคา-->
+             <div class="container-roof">
+      <img src="../../Testvocab/img/christmas/roof.png" alt="roof" class="image">
+      <div class="speech-box5">
+        <span style="display: flex; justify-content: center;">roof</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">(รู่ฟ)</span>
+        <span class="thai-text" style="display: flex; justify-content: center;">หลังคา</span>
+        <audio id="roof" src="../../Testvocab/voice/roof.mp3"></audio>
+      </div>
+      <div class="hover-number hover-number-roof"></div> 
+    </div>
+
+
+ <!--เฉลียงหน้าประตูเข้าบ้าน -->
+ <div class="container-porch">
+        <img src="../../Testvocab/img/christmas/porch.png" alt="porch" class="image">
+        <div class="speech-box11">
+          <span style="display: flex; justify-content: center;">porch</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">(พ่อช)</span>
+          <span class="thai-text" style="display: flex; justify-content: center;">เฉลียงหน้าประตูเข้าบ้าน</span>
+        <audio id="porch" src="../../Testvocab/voice/porch.mp3"></audio>
+        </div>
+        <div class="hover-number"></div> 
+    </div>
+
+
+ <!--ประตู -->
+ <div class="container-door">
+    <img src="../../Testvocab/img/christmas/door.png" alt="door" class="image">
+    <div class="speech-box11">
+      <span style="display: flex; justify-content: center;">door</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(ด้อ)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ประตู</span>
+    <audio id="door" src="../../Testvocab/voice/door.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <!--ม้านั่ง -->
+ <div class="container-bench">
+    <img src="../../Testvocab/img/christmas/bench.png" alt="bench" class="image">
+    <div class="speech-box3">
+      <span style="display: flex; justify-content: center;">bench</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">(เบ้นฺช)</span>
+      <span class="thai-text" style="display: flex; justify-content: center;">ม้านั่ง</span>
+    <audio id="bench" src="../../Testvocab/voice/bench.mp3"></audio>
+    </div>
+    <div class="hover-number"></div> 
+</div>
+
+ <div class="container-grandmom">
+    <img src="../../Testvocab/img/christmas/grandmom.png" alt="grandmom" class="image">
+</div>
+
+        <!--คำถาม1-->
+        <div class="container-queshouse1">
+          <img src="../../Testvocab/img/christmas/queshouse1.png" alt="queshouse1" class="image">
+          <div class="speech-box7">
+          Where is the car ? <br>
+          <span class="thai-text">รถจอดอยู่ที่ไหนคะ ?</span>
+          </div>
+          <audio id="queshouse1" src="../../Testvocab/voice/queshouse1.mp3"></audio>
+        </div>
+
+        <!--คำถาม2-->
+        <div class="container-queshouse2">
+          <img src="../../Testvocab/img/christmas/queshouse2.png" alt="queshouse2" class="image">
+          <div class="speech-box8">
+          What color is the roof ? <br>
+          <span class="thai-text">หลังคาบ้านสีอะไรเพื่อน ๆ ?</span>
+          </div>
+            <audio id="queshouse2" src="../../Testvocab/voice/queshouse2.mp3"></audio>
+        </div>
+     
+
+        <!--ออก-->
+              <div class="container-exit">
+                <a href="../vocab3.html">
+    <img src="../../Testvocab/img/exit.png" alt="exit" class="image">
+    </div>
+</a>
+  </div>
+
+  <script>
+    // เลือกอีเลเมนต์ของรูปภาพ
+var roofImg = document.querySelector('.container-roof img');
+var backyardImg = document.querySelector('.container-backyard img');
+var garbagecanImg = document.querySelector('.container-garbagecan img');
+var stairsImg = document.querySelector('.container-stairs img');
+var gateImg = document.querySelector('.container-gate img');
+var windowImg = document.querySelector('.container-window img');
+var garageImg = document.querySelector('.container-garage img');
+var floorImg = document.querySelector('.container-floor img');
+var houseImg = document.querySelector('.container-house img');
+var frontyardImg = document.querySelector('.container-frontyard img');
+var secondfloorImg = document.querySelector('.container-secondfloor img');
+var firstfloorImg = document.querySelector('.container-firstfloor img');
+var porchImg = document.querySelector('.container-porch img');
+var balconyImg = document.querySelector('.container-balcony img');
+var doorImg = document.querySelector('.container-door img');
+var benchImg = document.querySelector('.container-bench img');
+var queshouse1Img = document.querySelector('.container-queshouse1 img');
+var queshouse2Img = document.querySelector('.container-queshouse2 img');
+
+
+// เลือกอีเลเมนต์ของ speech box
+var floorSpeechBox = document.querySelector('.container-floor .speech-box');
+
+// เลือกอีเลเมนต์ของ speech box11
+var balconySpeechBox = document.querySelector('.container-balcony .speech-box11');
+var porchSpeechBox = document.querySelector('.container-porch .speech-box11');
+var doorSpeechBox = document.querySelector('.container-door .speech-box11');
+var stairsSpeechBox = document.querySelector('.container-stairs .speech-box11');
+var garageSpeechBox = document.querySelector('.container-garage .speech-box11');
+var houseSpeechBox = document.querySelector('.container-house .speech-box11');
+var gateSpeechBox = document.querySelector('.container-gate .speech-box11');
+var windowSpeechBox = document.querySelector('.container-window .speech-box11');
+
+// เลือกอีเลเมนต์ของ speech box2
+var garbagecanSpeechBox = document.querySelector('.container-garbagecan .speech-box2');
+
+// เลือกอีเลเมนต์ของ speech box3
+var benchSpeechBox = document.querySelector('.container-bench .speech-box3');
+
+// เลือกอีเลเมนต์ของ speech box4
+var firstfloorSpeechBox = document.querySelector('.container-firstfloor .speech-box4');
+var secondfloorSpeechBox = document.querySelector('.container-secondfloor .speech-box4');
+
+// เลือกอีเลเมนต์ของ speech box5
+var roofSpeechBox = document.querySelector('.container-roof .speech-box5');
+
+var frontyardSpeechBox = document.querySelector('.container-frontyard .speech-box6');
+var backyardSpeechBox = document.querySelector('.container-backyard .speech-box9');
+
+
+// เลือกอีเลเมนต์ของ speech box7
+var queshouse1SpeechBox = document.querySelector('.container-queshouse1 .speech-box7');
+
+
+// เลือกอีเลเมนต์ของ speech box8
+var queshouse2SpeechBox = document.querySelector('.container-queshouse2 .speech-box8');
+
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+var secondfloorNumber = document.querySelector('.container-secondfloor .hover-number');
+var firstfloorNumber = document.querySelector('.container-firstfloor .hover-number');
+var floorNumber = document.querySelector('.container-floor .hover-number');
+var stairsNumber = document.querySelector('.container-stairs .hover-number');
+var gateNumber = document.querySelector('.container-gate .hover-number');
+var windowNumber = document.querySelector('.container-window .hover-number');
+
+var houseNumber = document.querySelector('.container-house .hover-number');
+var garageNumber = document.querySelector('.container-garage .hover-number');
+
+var balconyNumber = document.querySelector('.container-balcony .hover-number');
+var backyardNumber = document.querySelector('.container-backyard .hover-number');
+var frontyardNumber = document.querySelector('.container-frontyard .hover-number');
+
+var garbagecanNumber = document.querySelector('.container-garbagecan .hover-number');
+var roofNumber = document.querySelector('.container-roof .hover-number');
+var porchNumber = document.querySelector('.container-porch .hover-number');
+var doorNumber = document.querySelector('.container-door .hover-number');
+var benchNumber = document.querySelector('.container-bench .hover-number');
+
+
+
+var hoverCounter = 0;
+var hoveredElements = [];
+
+// ส่วนที่เพิ่มเข้ามาแบบใส่เลข
+function setupHoverEffect(imgElement, speechBox, numberElement) {
+  imgElement.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, speechBox);
+    if (!hoveredElements.includes(imgElement)) {
+      hoverCounter++;
+      numberElement.textContent = hoverCounter;
+      numberElement.style.display = 'block';
+      hoveredElements.push(imgElement);
+    }
+  });
+}
+
+setupHoverEffect(secondfloorImg, secondfloorSpeechBox, secondfloorNumber);
+setupHoverEffect(firstfloorImg, firstfloorSpeechBox, firstfloorNumber);
+setupHoverEffect(floorImg, floorSpeechBox, floorNumber);
+setupHoverEffect(stairsImg, stairsSpeechBox, stairsNumber);
+setupHoverEffect(gateImg, gateSpeechBox, gateNumber);
+setupHoverEffect(windowImg, windowSpeechBox, windowNumber);
+
+setupHoverEffect(houseImg, houseSpeechBox, houseNumber);
+setupHoverEffect(garageImg, garageSpeechBox, garageNumber);
+
+setupHoverEffect(balconyImg, balconySpeechBox, balconyNumber);
+setupHoverEffect(backyardImg, backyardSpeechBox, backyardNumber);
+setupHoverEffect(frontyardImg, frontyardSpeechBox, frontyardNumber);
+
+setupHoverEffect(garbagecanImg, garbagecanSpeechBox, garbagecanNumber);
+setupHoverEffect(roofImg, roofSpeechBox, roofNumber);
+setupHoverEffect(porchImg, porchSpeechBox, porchNumber);
+setupHoverEffect(doorImg, doorSpeechBox, doorNumber);
+setupHoverEffect(benchImg, benchSpeechBox, benchNumber);
+
+
+// ฟังก์ชันที่จะแสดง speech box เมื่อเมาส์วางที่รูปภาพ
+function showSpeechBox(event, speechBox) {
+  speechBox.style.display = 'block';
+}
+
+// ฟังก์ชันที่จะซ่อน speech box เมื่อเมาส์ออกจากรูปภาพ
+function hideSpeechBox(event, speechBox) {
+  speechBox.style.display = 'none';
+}
+
+
+
+// เพิ่ม event listener เมื่อเมาส์วางที่แต่ละรูปภาพ
+roofImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, roofSpeechBox);
+});
+
+backyardImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, backyardSpeechBox);
+});
+
+stairsImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, stairsSpeechBox);
+}); 
+
+gateImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, gateSpeechBox);
+});
+
+windowImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, windowSpeechBox);
+});
+
+garageImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, garageSpeechBox);
+}); 
+
+floorImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, floorSpeechBox);
+}); 
+
+houseImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, houseSpeechBox);
+}); 
+
+frontyardImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, frontyardSpeechBox);
+}); 
+
+secondfloorImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, secondfloorSpeechBox);
+}); 
+
+firstfloorImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, firstfloorSpeechBox);
+}); 
+
+porchImg.addEventListener('mouseover', function(event) {
+    showSpeechBox(event, porchSpeechBox);
+}); 
+garbagecanImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, garbagecanSpeechBox);
+}); 
+balconyImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, balconySpeechBox);
+}); 
+
+doorImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,doorSpeechBox);
+}); 
+
+benchImg.addEventListener('mouseover', function(event) {
+  showSpeechBox(event,benchSpeechBox);
+}); 
+
+queshouse1Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, queshouse1SpeechBox);
+}); 
+
+queshouse2Img.addEventListener('mouseover', function(event) {
+  showSpeechBox(event, queshouse2SpeechBox);
+}); 
+
+
+
+
+
+// เพิ่ม event listener เมื่อเมาส์ออกจากรูปภาพ
+roofImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, roofSpeechBox);
+});
+
+backyardImg.addEventListener('mouseout', function(event) {
+  hideSpeechBox(event, backyardSpeechBox);
+});
+
+stairsImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  stairsSpeechBox);
+  });
+
+gateImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, gateSpeechBox);
+  });
+
+  windowImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, windowSpeechBox);
+  });
+
+garageImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  garageSpeechBox);
+  });
+
+floorImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,  floorSpeechBox);
+  });
+
+  houseImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, houseSpeechBox);
+  });
+
+  frontyardImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, frontyardSpeechBox);
+  });
+
+  secondfloorImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, secondfloorSpeechBox);
+  });
+  
+  firstfloorImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event, firstfloorSpeechBox);
+  });
+
+  porchImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   porchSpeechBox);
+  });
+
+  garbagecanImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   garbagecanSpeechBox);
+  });
+  balconyImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   balconySpeechBox);
+  });
+
+
+
+  doorImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   doorSpeechBox);
+  });
+
+  benchImg.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   benchSpeechBox);
+  });
+
+  queshouse1Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   queshouse1SpeechBox);
+  });
+
+  queshouse2Img.addEventListener('mouseout', function(event) {
+    hideSpeechBox(event,   queshouse2SpeechBox);
+  });
+
+  
+
+// ฟังก์ชันเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+function playSoundWhenClick(imageSelector, soundSelector) {
+  const image = document.querySelector(imageSelector);
+  const sound = document.querySelector(soundSelector);
+
+  image.addEventListener('click', () => {
+    sound.play();
+  });
+
+  image.addEventListener('mouseout', () => {
+    sound.pause();
+    sound.currentTime = 0;
+  });
+}
+
+// สร้างการเรียกใช้งานฟังก์ชันเพื่อเพิ่ม Event Listener และเล่นเสียงเมื่อโฮเวอร์ที่รูปภาพ
+playSoundWhenClick('.container-roof img', '#roof');
+playSoundWhenClick('.container-backyard img', '#backyard');
+playSoundWhenClick('.container-firstfloor img', '#firstfloor');
+playSoundWhenClick('.container-house img', '#house');
+playSoundWhenClick('.container-stairs img', '#stairs');
+playSoundWhenClick('.container-gate img', '#gate');
+playSoundWhenClick('.container-window img', '#window');
+playSoundWhenClick('.container-garage img', '#garage');
+playSoundWhenClick('.container-floor img', '#floor');
+playSoundWhenClick('.container-frontyard img', '#frontyard');
+playSoundWhenClick('.container-secondfloor img', '#secondfloor');
+playSoundWhenClick('.container-porch img', '#porch')
+playSoundWhenClick('.container-garbagecan img', '#garbagecan');
+playSoundWhenClick('.container-balcony img', '#balcony');
+playSoundWhenClick('.container-door img', '#door');
+playSoundWhenClick('.container-bench img', '#bench');
+playSoundWhenClick('.container-queshouse1 img', '#queshouse1');
+playSoundWhenClick('.container-queshouse2 img', '#queshouse2');
+
+  </script>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/easing/easing.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="<?= $themes ?>assets/lib/lightbox/js/lightbox.min.js"></script>
+
+
+    <!-- Template Javascript -->
+    <script src="<?= $themes ?>assets/js/main.js"></script>
+</body>
+
+</html>
